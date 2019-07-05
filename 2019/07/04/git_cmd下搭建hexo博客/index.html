@@ -15,16 +15,23 @@
   </script>
 
   
-  <title>Archives: 2019 | Yichangkong</title>
+  <title>git_cmd下搭建hexo博客 | Yichangkong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="yichangkong 个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yichangkong">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="哈哈，进入b站那么久了，也早就了解到有博客这个东西，因此就一直想着搭建一个属于自己的技术博客，但是还是因为自己的技术问题以及等等，还是停留了许久。竟然初心是记录自己的技术成长的过程。那便可不必纠结是否整个网站都是自己一点一滴的建立起来。因此我利用hexo这个博客框架来快速建立自己的小乐园。下面就一起来操作吧。一、下载git（安装就一直next) you know! 二、利用git cmd 进行命令">
+<meta name="keywords" content="快速搭建个人博客Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git_cmd下搭建hexo博客">
+<meta property="og:url" content="http://yoursite.com/2019/07/04/git_cmd下搭建hexo博客/index.html">
 <meta property="og:site_name" content="Yichangkong">
+<meta property="og:description" content="哈哈，进入b站那么久了，也早就了解到有博客这个东西，因此就一直想着搭建一个属于自己的技术博客，但是还是因为自己的技术问题以及等等，还是停留了许久。竟然初心是记录自己的技术成长的过程。那便可不必纠结是否整个网站都是自己一点一滴的建立起来。因此我利用hexo这个博客框架来快速建立自己的小乐园。下面就一起来操作吧。一、下载git（安装就一直next) you know! 二、利用git cmd 进行命令">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562314728184&di=e9a138d51674a19e81a47cda7272ca7b&imgtype=0&src=http%3A%2F%2Fnewsimg.5054399.com%2Fuploads%2Fuserup%2F1902%2F151524461154.jpg">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562910995&di=edd17820e5627f8f6500b3809f8f4790&imgtype=jpg&er=1&src=http%3A%2F%2Fimage.bubuko.com%2Finfo%2F201807%2F20180720154704366185.gif">
+<meta property="og:updated_time" content="2019-07-05T06:10:38.344Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yichangkong">
+<meta name="twitter:title" content="git_cmd下搭建hexo博客">
+<meta name="twitter:description" content="哈哈，进入b站那么久了，也早就了解到有博客这个东西，因此就一直想着搭建一个属于自己的技术博客，但是还是因为自己的技术问题以及等等，还是停留了许久。竟然初心是记录自己的技术成长的过程。那便可不必纠结是否整个网站都是自己一点一滴的建立起来。因此我利用hexo这个博客框架来快速建立自己的小乐园。下面就一起来操作吧。一、下载git（安装就一直next) you know! 二、利用git cmd 进行命令">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562314728184&di=e9a138d51674a19e81a47cda7272ca7b&imgtype=0&src=http%3A%2F%2Fnewsimg.5054399.com%2Fuploads%2Fuserup%2F1902%2F151524461154.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Yichangkong" type="application/atom+xml">
   
@@ -110,164 +117,107 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
     }
 
-    .primary-container .post-hover {
-        background: black;
+    .flow-chart {
+        text-align: center;
     }
 
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
+    img[alt="post-cover"] {
+        display: none;
     }
-
 </style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2019/07/04/git_cmd下搭建hexo博客/">
-            <div class="full-height post-hover"
-                 style="
-                         background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562314728184&di=e9a138d51674a19e81a47cda7272ca7b&imgtype=0&src=http%3A%2F%2Fnewsimg.5054399.com%2Fuploads%2Fuserup%2F1902%2F151524461154.jpg');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            git_cmd下搭建hexo博客
-                        </h1>
-                        <div>
-                        
-                            `
-                                <span class="tag is-post-tag">快速搭建个人博客Hexo</span>
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            哈哈，进入b站那么久了，也早就了解到有博客这个东西，因此就一直想着搭建一个属于自己的技术博客，但是还是因为自己的技术问题以及等等，还是停留了许久。竟然初心是记录自己的技术成长的过程。那便可不必纠结是否整个网站都是自己一点一滴的建立起来。..
-                        </p>
-                        <p class="date text-shadow">2019-07-04</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>git_cmd下搭建hexo博客</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="https://img2.woyaogexing.com/2019/05/30/b9247346b5d44d6fbdf08ecbf8738b87!400x400.jpeg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> YichangKong</span>
+                <span class="post-date sub-title">at: 2019-07-04</span>
             </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
-                
-<a class="post-hover" href="/2019/07/03/hello-world/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                Hello World
-            </h3>
-            
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                Welcome to Hexo! This is your very first post. C..
-            </p>
-            <p class="date text-shadow is-marginless">2019-07-03</p>
-        </div>
-    </div>
-</a>
-            
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/快速搭建个人博客Hexo/">快速搭建个人博客Hexo</a>
+                    
+                </div>
             
         </div>
-    </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2019/07/03/hello-world/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                Hello World
-            </h3>
-            
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                Welcome to Hexo! This is your very first post. C..
-            </p>
-            <p class="date text-shadow is-marginless">2019-07-03</p>
+        <div class="content" style="overflow: auto">
+            <h2 id><a href="#" class="headerlink" title></a><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562314728184&di=e9a138d51674a19e81a47cda7272ca7b&imgtype=0&src=http%3A%2F%2Fnewsimg.5054399.com%2Fuploads%2Fuserup%2F1902%2F151524461154.jpg" alt></h2><h2 id="哈哈，进入b站那么久了，也早就了解到有博客这个东西，因此就一直想着搭建一个属于自己的技术博客，但是还是因为自己的技术问题以及等等，还是停留了许久。竟然初心是记录自己的技术成长的过程。那便可不必纠结是否整个网站都是自己一点一滴的建立起来。因此我利用hexo这个博客框架来快速建立自己的小乐园。下面就一起来操作吧。"><a href="#哈哈，进入b站那么久了，也早就了解到有博客这个东西，因此就一直想着搭建一个属于自己的技术博客，但是还是因为自己的技术问题以及等等，还是停留了许久。竟然初心是记录自己的技术成长的过程。那便可不必纠结是否整个网站都是自己一点一滴的建立起来。因此我利用hexo这个博客框架来快速建立自己的小乐园。下面就一起来操作吧。" class="headerlink" title="哈哈，进入b站那么久了，也早就了解到有博客这个东西，因此就一直想着搭建一个属于自己的技术博客，但是还是因为自己的技术问题以及等等，还是停留了许久。竟然初心是记录自己的技术成长的过程。那便可不必纠结是否整个网站都是自己一点一滴的建立起来。因此我利用hexo这个博客框架来快速建立自己的小乐园。下面就一起来操作吧。"></a>哈哈，进入b站那么久了，也早就了解到有博客这个东西，因此就一直想着搭建一个属于自己的技术博客，但是还是因为自己的技术问题以及等等，还是停留了许久。竟然初心是记录自己的技术成长的过程。那便可不必纠结是否整个网站都是自己一点一滴的建立起来。因此我利用hexo这个博客框架来快速建立自己的小乐园。下面就一起来操作吧。</h2><p>一、下载git（安装就一直next) you know!</p>
+<h2 id="-1"><a href="#-1" class="headerlink" title></a><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562910995&di=edd17820e5627f8f6500b3809f8f4790&imgtype=jpg&er=1&src=http%3A%2F%2Fimage.bubuko.com%2Finfo%2F201807%2F20180720154704366185.gif" alt></h2><h2 id="二、利用git-cmd-进行命令行操作。"><a href="#二、利用git-cmd-进行命令行操作。" class="headerlink" title="二、利用git cmd 进行命令行操作。"></a>二、利用git cmd 进行命令行操作。</h2><h2 id="三、建立个人博客文件夹（blog）。"><a href="#三、建立个人博客文件夹（blog）。" class="headerlink" title="三、建立个人博客文件夹（blog）。"></a>三、建立个人博客文件夹（blog）。</h2><h2 id="四、初始化Hexo博客。"><a href="#四、初始化Hexo博客。" class="headerlink" title="四、初始化Hexo博客。"></a>四、初始化Hexo博客。</h2><h2 id="五、本地运行loactlhost：4000。"><a href="#五、本地运行loactlhost：4000。" class="headerlink" title="五、本地运行loactlhost：4000。"></a>五、本地运行loactlhost：4000。</h2><h2 id="六、部署到GitHub或者Gitee（两者各有千秋）。"><a href="#六、部署到GitHub或者Gitee（两者各有千秋）。" class="headerlink" title="六、部署到GitHub或者Gitee（两者各有千秋）。"></a>六、部署到GitHub或者Gitee（两者各有千秋）。</h2><h2 id="七、编写markdown的语法。"><a href="#七、编写markdown的语法。" class="headerlink" title="七、编写markdown的语法。"></a>七、编写markdown的语法。</h2><h2 id="八、更换主题。"><a href="#八、更换主题。" class="headerlink" title="八、更换主题。"></a>八、更换主题。</h2>
         </div>
-    </div>
-</a>
-        
-        
-    </div>
-</div>
+        <div class="post-reply">
+            
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
 
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/03/hello-world/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Hello World</h3>
-                                        
-                                        <p>
-                                            
-                                        </p>
-                                        <p>
-                                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can a..
-                                        </p>
-                                        <p>2019-07-03</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                </nav>
-            </section>
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+            
             
         </div>
     </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
