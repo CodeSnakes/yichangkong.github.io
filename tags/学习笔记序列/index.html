@@ -15,22 +15,16 @@
   </script>
 
   
-  <title>spring_AOP | Yichangkong</title>
+  <title>Tag: 学习笔记序列 | Yichangkong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.AOP介绍 aop的全称-Aspect Oriented Programming 1)意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。 2)AOP是OOP（面向对象编程）的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。 3)利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，">
-<meta name="keywords" content="AOP的学习笔记">
-<meta property="og:type" content="article">
-<meta property="og:title" content="spring_AOP">
-<meta property="og:url" content="http://yoursite.com/2019/07/17/spring-AOP/index.html">
+  <meta name="keywords" content="yichangkong 个人博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yichangkong">
+<meta property="og:url" content="http://yoursite.com/tags/学习笔记序列/index.html">
 <meta property="og:site_name" content="Yichangkong">
-<meta property="og:description" content="1.AOP介绍 aop的全称-Aspect Oriented Programming 1)意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。 2)AOP是OOP（面向对象编程）的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。 3)利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://img3.imgtn.bdimg.com/it/u=49453341,2859298398&fm=26&gp=0.jpg">
-<meta property="og:updated_time" content="2019-07-17T15:01:11.055Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="spring_AOP">
-<meta name="twitter:description" content="1.AOP介绍 aop的全称-Aspect Oriented Programming 1)意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。 2)AOP是OOP（面向对象编程）的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。 3)利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，">
-<meta name="twitter:image" content="http://img3.imgtn.bdimg.com/it/u=49453341,2859298398&fm=26&gp=0.jpg">
+<meta name="twitter:title" content="Yichangkong">
   
     <link rel="alternate" href="/atom.xml" title="Yichangkong" type="application/atom+xml">
   
@@ -116,145 +110,56 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <!--博文页面-->
-
-<style>
-    .header-box {
-        height: 370px;
-        filter: blur(10px);
-        background-size: cover;
-        background-color: lightsteelblue;
+          <style>
+    .container.tag-cate-wrap {
+        min-height: 93vh;
     }
 
-    .post-box {
-        padding: 15px;
-        padding-top: 60px;
-        min-height: 80vh;
-        margin-top: -200px;
-        border-radius: 4px;
-        background-color: rgba(255,255,255,.8);
+    .category-title-inner {
+        padding-top: 50px;
     }
 
-    .post-avatar {
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-    }
-
-    .flow-chart {
-        text-align: center;
-    }
-
-    img[alt="post-cover"] {
-        display: none;
+    strong {
+        text-transform: capitalize;
     }
 </style>
-<header>
-    <div id="header_box" class="header-box"></div>
-</header>
-<section>
-    <div class="container post-box">
-        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
-            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
-                <strong>spring_AOP</strong>
-            </h1>
-            
-            <div class="is-flex align-center">
-                <img class="post-avatar" src="https://img2.woyaogexing.com/2019/05/30/b9247346b5d44d6fbdf08ecbf8738b87!400x400.jpeg">
-                <span style="padding:0 10px;"> <span class="sub-title">By</span> YichangKong</span>
-                <span class="post-date sub-title">at: 2019-07-17</span>
-            </div>
-            
-                <div>
-                    
-                         <a class="tag is-post-tag" href="/tags/AOP的学习笔记/">AOP的学习笔记</a>
-                    
-                </div>
-            
-        </div>
-        <div class="content" style="overflow: auto">
-            <p><img src="http://img3.imgtn.bdimg.com/it/u=49453341,2859298398&fm=26&gp=0.jpg" alt></p>
-<h3 id="1-AOP介绍"><a href="#1-AOP介绍" class="headerlink" title="1.AOP介绍"></a>1.AOP介绍</h3><blockquote>
-<p><strong>aop的全称-Aspect Oriented Programming</strong></p>
-<p>1)意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。</p>
-<p>2)AOP是OOP（面向对象编程）的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。</p>
-<p>3)利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。</p>
-<p>4)AOP采取横向抽取机制，取代了传统纵向继承体系重复性代码</p>
-<p>5)经典应用：事务管理、性能监视、安全检查、缓存 、日志等【画图】</p>
-<p>6)Spring AOP使用纯Java实现，不需要专门的编译过程和类加载器，在运行期通过代理方式向目标类织入增强代码</p>
-<p>7)AspectJ是一个基于Java语言的AOP框架，Spring2.0开始，Spring AOP引入对Aspect的支持，AspectJ扩展了Java语言，提供了一个专门的编译器，在编译时提供横向代码的织入</p>
-</blockquote>
-<h3 id="2-spring-实现AOP的两种原理"><a href="#2-spring-实现AOP的两种原理" class="headerlink" title="2.spring 实现AOP的两种原理"></a>2.spring 实现AOP的两种原理</h3><blockquote>
-<p>a.aop底层将采用代理机制进行实现。</p>
-<p>b.接口 + 实现类 ：spring采用 jdk 的动态代理Proxy。</p>
-<p>c.实现类：spring 采用 cglib字节码增强。</p>
-</blockquote>
-<h3 id="3-AOP的术语"><a href="#3-AOP的术语" class="headerlink" title="3.AOP的术语"></a>3.AOP的术语</h3><blockquote>
-<p>1.target：目标类，需要被代理的类。例如：UserService</p>
-</blockquote>
-<blockquote>
-<p>2.Joinpoint(连接点):所谓连接点是指那些可能被拦截到的方法。例如：所有的方法</p>
-</blockquote>
-<blockquote>
-<p>3.PointCut 切入点：已经被增强的连接点。例如：addUser()</p>
-</blockquote>
-<blockquote>
-<p>4.advice 通知/增强，增强代码。例如：after、before</p>
-</blockquote>
-<blockquote>
-<p>5.Weaving(织入):是指把增强advice应用到目标对象target来创建新的代理对象proxy的过程.</p>
-</blockquote>
-<blockquote>
-<p>6.proxy 代理类</p>
-</blockquote>
-<blockquote>
-<p>7.Aspect(切面): 是切入点pointcut和通知advice的结合</p>
-</blockquote>
-<p>   一个线是一个特殊的面。<br>   一个切入点和一个通知，组成成一个特殊的面。</p>
 
-        </div>
-        <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
 
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
-            
-            
-        </div>
+<div class="container tag-cate-wrap">
+    <div class="category-title-inner content has-text-centered">
+        <h1><strong style="border-top: 2px solid; border-bottom: 2px solid;">tag·学习笔记序列</strong></h1>
     </div>
-</section>
-<script>
-    // 获取第一张图, 用以当封面背景图
-    var img = document.querySelectorAll('img')[1]
 
-    if (img) {
-        var header_box = document.querySelector('#header_box')
-        header_box.style.backgroundImage = 'url('+ img.src +')'
-    }
-</script>
-
-<!-- for code block highlight --> 
-<!-- theme.block_highlight -->
-<!-- we do not guarantee the char sequences spell right, usr himself do it -->
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
-<script src="/js/highlight.min.js"></script>
-<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
-
+    
+    
+        <div class="box">
+            <article class="media">
+                
+                <a href="/2019/07/22/bootStrap学习笔记/">
+                    
+                    <div class="media-left">
+                        <figure class="image is-128x128">
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563776659689&di=9ba05a212e9694b94544cf3f14c79db4&imgtype=0&src=http%3A%2F%2Fcodegeekz.com%2Fwp-content%2Fuploads%2FBootstrap.jpg" style="height: 100%; width: 100%">
+                        </figure>
+                    </div>
+                    
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>bootStrap学习笔记</strong> <small class="post-date">at: 2019-07-22</small>
+                                <br>
+                                Bootstrap
+1.介绍
+Bootstrap，来自 Twitter，是目前最受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。Bootstrap 目前的最新版本是 Bootstrap4，利用我们提供的 Sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、基..
+                            </p>
+                            <button class="button is-info">Read</button>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    
+</div>
       </div>
   </div>
   <style>
