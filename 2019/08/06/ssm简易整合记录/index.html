@@ -15,16 +15,20 @@
   </script>
 
   
-  <title>Archives: 2019/8 | Yichangkong</title>
+  <title>ssm简易整合记录 | Yichangkong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="yichangkong 个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yichangkong">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
+  <meta name="description" content="1.环境搭建 因为Sprin框架3.2jar版本没有和jdk1.8完全搭配，会有bug，所以采用jdk1.8加spring4.0. eclipse——web版本为3.0 tomcat版本为8.52.如何在eclipse工程下建立资源文件夹">
+<meta name="keywords" content="整合技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ssm简易整合记录">
+<meta property="og:url" content="http://yoursite.com/2019/08/06/ssm简易整合记录/index.html">
 <meta property="og:site_name" content="Yichangkong">
+<meta property="og:description" content="1.环境搭建 因为Sprin框架3.2jar版本没有和jdk1.8完全搭配，会有bug，所以采用jdk1.8加spring4.0. eclipse——web版本为3.0 tomcat版本为8.52.如何在eclipse工程下建立资源文件夹">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-06T14:54:48.209Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yichangkong">
+<meta name="twitter:title" content="ssm简易整合记录">
+<meta name="twitter:description" content="1.环境搭建 因为Sprin框架3.2jar版本没有和jdk1.8完全搭配，会有bug，所以采用jdk1.8加spring4.0. eclipse——web版本为3.0 tomcat版本为8.52.如何在eclipse工程下建立资源文件夹">
   
     <link rel="alternate" href="/atom.xml" title="Yichangkong" type="application/atom+xml">
   
@@ -110,290 +114,111 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
     }
 
-    .primary-container .post-hover {
-        background: black;
+    .flow-chart {
+        text-align: center;
     }
 
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
+    img[alt="post-cover"] {
+        display: none;
     }
-
 </style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2019/08/06/ssm简易整合记录/">
-            <div class="full-height post-hover"
-                 style="
-                         background-image: url('');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            ssm简易整合记录
-                        </h1>
-                        <div>
-                        
-                            `
-                                <span class="tag is-post-tag">整合技术</span>
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            1.环境搭建
-因为Sprin框架3.2jar版本没有和jdk1.8完全搭配，会有bug，所以采用jdk1.8加spring4.0.
-eclipse——web版本为3.0
-tomcat版本为8.52.如何在eclipse工程下建立资源文件..
-                        </p>
-                        <p class="date text-shadow">2019-08-06</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>ssm简易整合记录</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="https://img2.woyaogexing.com/2019/05/30/b9247346b5d44d6fbdf08ecbf8738b87!400x400.jpeg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> YichangKong</span>
+                <span class="post-date sub-title">at: 2019-08-06</span>
             </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
-                
-<a class="post-hover" href="/2019/08/06/SpringMVC学习/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5wxvlml4zj30x70ib43w.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                SpringMVC学习
-            </h3>
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/整合技术/">整合技术</a>
+                    
+                </div>
             
-            
-            <span class="tag is-post-tag">学习笔记</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.介绍
-
-Spring MVC是Spring提供的一个强大而灵活的web框架。`借助于注解`，..
-            </p>
-            <p class="date text-shadow is-marginless">2019-08-06</p>
         </div>
-    </div>
-</a>
-            
-            
-                
-<a class="post-hover" href="/2019/08/03/Tomcat的坑或者eclipse的坑/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5mpne6ofnj30wx04udg8.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                Tomcat的坑或者eclipse的坑
-            </h3>
-            
-            
-            <span class="tag is-post-tag">web项目运行错误</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.错误展示
+        <div class="content" style="overflow: auto">
+            <h3 id="1-环境搭建"><a href="#1-环境搭建" class="headerlink" title="1.环境搭建"></a>1.环境搭建</h3><ol>
+<li>因为Sprin框架3.2jar版本没有和jdk1.8完全搭配，会有bug，所以采用jdk1.8加spring4.0.</li>
+<li>eclipse——web版本为3.0</li>
+<li>tomcat版本为8.5<h3 id="2-如何在eclipse工程下建立资源文件夹"><a href="#2-如何在eclipse工程下建立资源文件夹" class="headerlink" title="2.如何在eclipse工程下建立资源文件夹"></a>2.如何在eclipse工程下建立资源文件夹</h3></li>
+</ol>
 
-
-– 
-2.错误的指向
-1.2.3.4.5.
-
-– 
-4.错误的解决
-首先检查下..
-            </p>
-            <p class="date text-shadow is-marginless">2019-08-03</p>
         </div>
-    </div>
-</a>
+        <div class="post-reply">
+            
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+            
             
         </div>
     </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2019/08/06/SpringMVC学习/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5wxvlml4zj30x70ib43w.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                SpringMVC学习
-            </h3>
-            
-            
-            <span class="tag is-post-tag">学习笔记</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.介绍
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
 
-Spring MVC是Spring提供的一个强大而灵活的web框架。`借助于注解`，..
-            </p>
-            <p class="date text-shadow is-marginless">2019-08-06</p>
-        </div>
-    </div>
-</a>
-        
-        
-        
-<a class="post-hover" href="/2019/08/03/Tomcat的坑或者eclipse的坑/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5mpne6ofnj30wx04udg8.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                Tomcat的坑或者eclipse的坑
-            </h3>
-            
-            
-            <span class="tag is-post-tag">web项目运行错误</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.错误展示
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
 
-
-– 
-2.错误的指向
-1.2.3.4.5.
-
-– 
-4.错误的解决
-首先检查下..
-            </p>
-            <p class="date text-shadow is-marginless">2019-08-03</p>
-        </div>
-    </div>
-</a>
-        
-    </div>
-</div>
-
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/08/06/SpringMVC学习/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5wxvlml4zj30x70ib43w.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>SpringMVC学习</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">学习笔记</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.介绍
-
-Spring MVC是Spring提供的一个强大而灵活的web框架。`借助于注解`，Spring MVC提供了几乎是POJO的开发
-模式，使得控制器的开发和测试更加简单。这些控制器一般不直接处理请求，而是将其委托给Spring上下文中 
-的其他bean，通过Spring的依赖注入功能，这些bean被注入到控制器中。
-
-Spring MVC是S..
-                                        </p>
-                                        <p>2019-08-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/08/03/Tomcat的坑或者eclipse的坑/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5mpne6ofnj30wx04udg8.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Tomcat的坑或者eclipse的坑</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">web项目运行错误</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.错误展示
-
-
-– 
-2.错误的指向
-1.2.3.4.5.
-
-– 
-4.错误的解决
-首先检查下eclipse是否设置了Project自动编译了：eclipse—》Project —》Build Automatically，该选项必选打勾，如果没有打勾则打勾后就行。如图：
-
-注意这里有工程也有全局的，必须两个都设置对了才可以编译。
- 如图：
- 具体工程的..
-                                        </p>
-                                        <p>2019-08-03</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                </nav>
-            </section>
-            
-        </div>
-    </div>
-</div>
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
