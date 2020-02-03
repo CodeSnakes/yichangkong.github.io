@@ -15,16 +15,31 @@
   </script>
 
   
-  <title>Tag: 学习笔记 | Yichangkong</title>
+  <title>position详解 | Yichangkong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="yichangkong 个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yichangkong">
-<meta property="og:url" content="http://yoursite.com/tags/学习笔记/index.html">
+  <meta name="description" content="Css 详细解读定位属性 position 以及参数参考链接 简介position 定位属性，是CSS中非常重要的属性。除了文档流布局，就是定位布局了。但是很多人都不清楚position参数。详细解读一下position 以及参数。 1.W3c介绍 定义和用法 position 属性规定元素的定位类型。  说明 这个属性定义建立元素布局所用的定位机制。任何元素都可以定位，不过绝对或固定元素">
+<meta name="keywords" content="学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="position详解">
+<meta property="og:url" content="http://yoursite.com/2020/02/03/position详解/index.html">
 <meta property="og:site_name" content="Yichangkong">
+<meta property="og:description" content="Css 详细解读定位属性 position 以及参数参考链接 简介position 定位属性，是CSS中非常重要的属性。除了文档流布局，就是定位布局了。但是很多人都不清楚position参数。详细解读一下position 以及参数。 1.W3c介绍 定义和用法 position 属性规定元素的定位类型。  说明 这个属性定义建立元素布局所用的定位机制。任何元素都可以定位，不过绝对或固定元素">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007SCiiVgy1gbj7vr8hu0j30i207d3ym.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw690/459e195ajw1eye7cznpydj20ee06uwej.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/459e195ajw1eye7u70wnuj20ef06v0t2.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/459e195ajw1eye84a2kb8j20mm0afdh1.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/459e195ajw1eye8454x0sj20mm0afq3x.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/459e195ajw1eye8ok45vuj20o20i50u0.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/459e195ajw1eye936bxeyj20o20i5t9t.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/459e195ajw1eyechudvxxj20i10hx75a.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/459e195ajw1eyedejrgpbj20la0i6my7.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/459e195ajw1eyedktnqnoj20la0i6dgw.jpg">
+<meta property="og:updated_time" content="2020-02-03T08:12:42.804Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yichangkong">
+<meta name="twitter:title" content="position详解">
+<meta name="twitter:description" content="Css 详细解读定位属性 position 以及参数参考链接 简介position 定位属性，是CSS中非常重要的属性。除了文档流布局，就是定位布局了。但是很多人都不清楚position参数。详细解读一下position 以及参数。 1.W3c介绍 定义和用法 position 属性规定元素的定位类型。  说明 这个属性定义建立元素布局所用的定位机制。任何元素都可以定位，不过绝对或固定元素">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/007SCiiVgy1gbj7vr8hu0j30i207d3ym.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Yichangkong" type="application/atom+xml">
   
@@ -110,181 +125,295 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .container.tag-cate-wrap {
-        min-height: 93vh;
+          <!--博文页面-->
+
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
+        background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .category-title-inner {
-        padding-top: 50px;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    strong {
-        text-transform: capitalize;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+
+    .flow-chart {
+        text-align: center;
+    }
+
+    img[alt="post-cover"] {
+        display: none;
     }
 </style>
-
-
-<div class="container tag-cate-wrap">
-    <div class="category-title-inner content has-text-centered">
-        <h1><strong style="border-top: 2px solid; border-bottom: 2px solid;">tag·学习笔记</strong></h1>
-    </div>
-
-    
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2020/02/03/position详解/">
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>position详解</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbb9ho4ywkj30jg0jgwew.jpg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> YichangKong</span>
+                <span class="post-date sub-title">at: 2020-02-03</span>
+            </div>
+            
+                <div>
                     
-                    <div class="media-left">
-                        <figure class="image is-128x128">
-                            <img src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbj7vr8hu0j30i207d3ym.jpg" style="height: 100%; width: 100%">
-                        </figure>
-                    </div>
+                         <a class="tag is-post-tag" href="/tags/学习笔记/">学习笔记</a>
                     
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>position详解</strong> <small class="post-date">at: 2020-02-03</small>
-                                <br>
-                                
+                </div>
+            
+        </div>
+        <div class="content" style="overflow: auto">
+            <div style="text-align: center;">
+<img src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbj7vr8hu0j30i207d3ym.jpg">
+</div>
 
-
-
-Css 详细解读定位属性 position 以及参数参考链接
-简介position 定位属性，是CSS中非常重要的属性。除了文档流布局，就是定位布局了。但是很多人都不清楚position参数。详细解读一下position 以及参数。
-1.W3c介绍
-定义和用法
-position 属性规定元素的定位类型。
+<h1 id="Css-详细解读定位属性-position-以及参数"><a href="#Css-详细解读定位属性-position-以及参数" class="headerlink" title="Css 详细解读定位属性 position 以及参数"></a>Css 详细解读定位属性 position 以及参数</h1><p><a href="https://blog.csdn.net/FungLeo/article/details/50056111" target="_blank" rel="noopener">参考链接</a></p>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h3><p>position 定位属性，是CSS中非常重要的属性。除了文档流布局，就是定位布局了。<br>但是很多人都不清楚position参数。详细解读一下position 以及参数。</p>
+<h3 id="1-W3c介绍"><a href="#1-W3c介绍" class="headerlink" title="1.W3c介绍"></a><strong>1.W3c介绍</strong></h3><ul>
+<li><p>定义和用法</p>
+<pre><code>position 属性规定元素的定位类型。
 
 说明
-这个属性定义建立元素布局所用的定位..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
+这个属性定义建立元素布局所用的定位机制。任何元素都可以定位，不过绝对或固定元素会生成一个块级框，而不论该元素本身是什么类型。相对定位元素会相对于它在正常流中的默认位置偏移。
+
+默认值：    static
+继承性：    no
+版本：    CSS2
+JavaScript 语法：    object.style.position=&quot;absolute&quot;</code></pre></li>
+</ul>
+<ul>
+<li><p>可能的值</p>
+<pre><code>值    描述
+absolute    
+生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。
+
+元素的位置通过 &quot;left&quot;, &quot;top&quot;, &quot;right&quot; 以及 &quot;bottom&quot; 属性进行规定。
+
+fixed    
+生成绝对定位的元素，相对于浏览器窗口进行定位。
+
+元素的位置通过 &quot;left&quot;, &quot;top&quot;, &quot;right&quot; 以及 &quot;bottom&quot; 属性进行规定。
+
+relative    
+生成相对定位的元素，相对于其正常位置进行定位。
+
+因此，&quot;left:20&quot; 会向元素的 LEFT 位置添加 20 像素。
+
+static    默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。
+inherit    规定应该从父元素继承 position 属性的值。</code></pre></li>
+</ul>
+<h3 id="1-基础解释"><a href="#1-基础解释" class="headerlink" title="1.基础解释"></a><strong>1.基础解释</strong></h3><p><code>static</code> 默认值，就是没有定位，那就没必要多解释了。<code>inherit</code> 继承父元素，基本上这个参数用得相当少，所以也不做过多的解释。</p>
+<h3 id="2-文档流布局的概念"><a href="#2-文档流布局的概念" class="headerlink" title="2.文档流布局的概念"></a><strong>2.文档流布局的概念</strong></h3><p>什么是文档流布局？我百度了一下相对严谨的解释:</p>
+<p><strong>将窗体自上而下分成一行行， 并在每行中按从左至右的顺序排放元素，即为文档流。<br>每个非浮动块级元素都独占一行， 浮动元素则按规定浮在行的一端。 若当前行容不下， 则另起新行再浮动。<br>内联元素也不会独占一行。 几乎所有元素(包括块级，内联和列表元素）均可生成子行， 用于摆放子元素。<br>有三种情况将使得元素脱离文档流而存在，分别是 浮动，绝对定位， 固定定位。 但是在IE6中浮动元素也存在于文档流中。</strong></p>
+<p>关于浮动会脱离文档流，这里我就不解释了。因为我们一般会大力避免这种问题，而使用清除浮动的方法。上面引用的文字中，绝对定位 是指 position:absolute ，而 固定定位 是指 position:fixed。</p>
+<p><img src="http://ww2.sinaimg.cn/mw690/459e195ajw1eye7cznpydj20ee06uwej.jpg" alt><br>如上图所示，这就是正常的文档流布局。一个一个挨着的，到头了，另起一行，接着排布。</p>
+<p>理解文档流布局，是理解本文的基础，文档流布局也是css布局最基础的知识。这里就不详细赘述了。</p>
+<h3 id="3-position-relative-相对定位"><a href="#3-position-relative-相对定位" class="headerlink" title="3.position:relative 相对定位"></a><strong>3.position:relative 相对定位</strong></h3><p>什么是相对定位？相对什么定位？这是重要的问题。我的回答是——<strong>相对自己文档流中的原始位置定位。它的特点是——不会脱离文档流。</strong></p>
+<p>也就是说，使用position:relative定位，其元素依旧在文档流中，他的位置可以使用 left、right、top、bottom、z-index等定位参数，但是，他的存在，还是会影响文档中紧跟在他周围的元素的。</p>
+<p>无论多少文字描述，可能都无法让你理解。下面，我们看一下实际效果。</p>
+<p>position:relative定位效果</p>
+<p>如上图的演示，我给test3加上了position:relative定位效果。代码如下：</p>
+<p>position: relative;left: -20px;top: 20px;<br><img src="http://ww2.sinaimg.cn/large/459e195ajw1eye7u70wnuj20ef06v0t2.jpg" alt></p>
+<p>大家可以清晰的从图上看出来，test3根据CSS参数left: -20px;top: 20px;发生了位移。</p>
+<p>但是！但是！但是！重要的事情说三遍，<strong>它的唯一并没有对周围的元素有任何的影响！！<br>它依然存在于文档流中。它的位移是根据它在文档流中的原始位置发生的！！</strong>这一点非常非常重要。</p>
+<p>通过上面的图片和阐释，我相信大家都对position:relative参数有了深刻的理解了。但这没完。下面我们还有关于它的内容。</p>
+<h3 id="4-position-fixed-相对浏览器定位"><a href="#4-position-fixed-相对浏览器定位" class="headerlink" title="4.position:fixed 相对浏览器定位"></a><strong>4.position:fixed 相对浏览器定位</strong></h3><p>相比而言，这个参数是最好理解的。它相对于浏览器的窗口进行定位。同时——它会脱离文档流</p>
+<p>好，还是上图片。<br><img src="http://ww4.sinaimg.cn/large/459e195ajw1eye84a2kb8j20mm0afdh1.jpg" alt></p>
+<p>position:fixed相对浏览器定位效果一</p>
+<p>代码如下：</p>
+<p>position: fixed;right:20px;top: 20px;<br>1</p>
+<p>这是初始状态，<strong>我们可以看到它的特点：</strong></p>
+<ul>
+<li>它脱离了文档流，原来文档流中不存在它的位置，test4好像test3不存在一样的紧贴在了test2的后面。</li>
+<li>它的right:20px;top: 20px;参数是相对浏览器窗口定位的。</li>
+</ul>
+<p>好，我们再来看一下，当页面发生滚动的效果图。<br><img src="http://ww2.sinaimg.cn/large/459e195ajw1eye8454x0sj20mm0afq3x.jpg" alt></p>
+<p>position:fixed相对浏览器定位效果二</p>
+<p>当页面发生了滚动，我们可以看到，页面的内容已经根据滚动条的位置发生了位移。但是我们的test3 依旧是在相对于浏览器的位置。</p>
+<p>通过上面的图文阐释，我相信，大家对于 position:fixed 参数已经有了深刻的理解了。</p>
+<p>其实position:fixed不难理解。</p>
+<h3 id="5-position-absolute-绝对定位"><a href="#5-position-absolute-绝对定位" class="headerlink" title="5.position:absolute 绝对定位"></a><strong>5.position:absolute 绝对定位</strong></h3><p>绝对定位是一个非常牛逼的属性，牛逼到，你不知道会发生什么。<br>注意，它的解释是什么——“生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。”</p>
+<p>也就是说，它可以相对于各种各样的东西进行定位。除了 static 其他都可以！！！注意！注意！注意！ 是 除了 ！</p>
+<p>也正是因为这一牛逼特性，导致很多人对此概念混乱。其实，这个一点也不混乱，我们可以将概念理顺了，分成几个情况来说。</p>
+<pre><code>PS:position:absolute和position:fixed一样是会脱离文档流的。这里就不解释脱离文档流的问题，主要研究它的定位问题。</code></pre><h3 id="6-它的所有父元素的属性都是-position-static"><a href="#6-它的所有父元素的属性都是-position-static" class="headerlink" title="6.它的所有父元素的属性都是 position:static"></a><strong>6.它的所有父元素的属性都是 position:static</strong></h3><p>怎么理解这个标题？position:static 是所有html元素默认参数。就是说，这个元素的所有上级元素，你都没有使用过定位方式。</p>
+<p>我们通过如下代码模拟一个场景：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        div {font-size: 15px;color: #fff;}
+        .test1 {width: 500px;height: 500px;background: #123;}
+        .test2 {width: 400px;height: 400px;background: #234;}
+        .test3 {width: 300px;height: 300px;background: #345;position: absolute;right: 20px;top: 20px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;test1&quot;&gt;
+        test1
+        &lt;div class=&quot;test2&quot;&gt;
+            test2
+            &lt;div class=&quot;test3&quot;&gt;test3&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><p>如上，test3是test2的子元素，test1的孙元素。我们来看一下效果图：<br><img src="http://ww2.sinaimg.cn/large/459e195ajw1eye8ok45vuj20o20i50u0.jpg" alt="position:absolute效果一"></p>
+<p><strong>如上图所示。我们可以看到，test3既没有相对于父元素定位，也没有相对于爷元素定位。它居然和position:fixed一样！相对于浏览器定位了！！</strong></p>
+<p>！！！这是一个错觉！！</p>
+<p>我们来看一下浏览器发生滚动之后的效果，如下图所示：</p>
+<p><img src="http://ww3.sinaimg.cn/large/459e195ajw1eye936bxeyj20o20i5t9t.jpg" alt="position:absolute效果2"></p>
+<p>如上图所示，它并非是相对于浏览器定位，而是相对于文档定位。</p>
+<p>如果你有一点js基础的话，那么应该很容易理解。$(document)和$(window)的差别（为了看得清楚，用了JQ写法）</p>
+<p>相对于文档，就是相对于整个页面来进行布局，而相对于窗口，则是相对于浏览器的可视区域进行定位，这二者有本质的区别的。</p>
+<p>这种情况在实际应用中有，但是不多。下面，我们再来看其他情况。</p>
+<h3 id="它的父元素的属性是-position-relative"><a href="#它的父元素的属性是-position-relative" class="headerlink" title="它的父元素的属性是 position:relative"></a><strong>它的父元素的属性是 position:relative</strong></h3><p>上面，我们已经说过了，position:relative是相对于自身原始位置定位，其自身并没有脱离文档流。而它的子元素，使用position:absolute参数是什么效果呢？我们来做个试验。下面是代码：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        div {font-size: 15px;color: #fff;}
+        .test1 {width: 500px;height: 500px;background: #123;}
+        .test2 {width: 400px;height: 400px;background: #234;position: relative;left: 50px;top: 50px;}
+        .test3 {width: 300px;height: 300px;background: #345;position: absolute;right: -20px;top: -20px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;test1&quot;&gt;
+        test1
+        &lt;div class=&quot;test2&quot;&gt;
+            test2
+            &lt;div class=&quot;test3&quot;&gt;test3&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><p>我们给test2加上了position:relative属性，并给出了偏移值，然后，再给test3使用绝对定位，使用了为负数的偏移值，我们来看一下效果图，如下：</p>
+<p><img src="http://ww4.sinaimg.cn/large/459e195ajw1eyechudvxxj20i10hx75a.jpg" alt></p>
+<p>从上图我们可以看到，test2如我们所愿的，相对于自身的位置发生了偏移，而test3则相对于test2发生了偏移。</p>
+<p>从这个试验我们可以看出，当一个元素设置了position:absolute属性之后，而它的父元素的属性为position:relative则，<strong>它不再是相对于文档定位，而是相对于父元素定位</strong>。</p>
+<p>这一点非常重要。最最重要的是，父元素设置为position:relative并不会脱离文档流，也就是说——利用给父元素设置position:relative属性，再将子元素设置为position:absolute就可以在文档流中实现需要的定位</p>
+<p>这一点异常重要，也是非常常用的方法！<br>（PS:<strong>基本上焦点图等常见应用，都是使用了这种方式</strong>）</p>
+<h3 id="它的父元素的属性是-position-fixed"><a href="#它的父元素的属性是-position-fixed" class="headerlink" title="它的父元素的属性是 position:fixed"></a><strong>它的父元素的属性是 position:fixed</strong></h3><p>上面，我们说了父元素为position:relative的情况，这种情况比较常见，那么它的父元素为 position:fixed 又是什么情况呢？如果你聪明的话，应该有了答案。我们来做一个试验，来印证一下你的想法。代码如下：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        div {font-size: 15px;color: #fff;}
+        .test1 {width: 500px;height: 500px;background: #123;}
+        .test2 {width: 400px;height: 400px;background: #234;position: fixed;right: 20px;top: 20px;}
+        .test3 {width: 300px;height: 300px;background: #345;position: absolute;left: -40px;top: 40px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;test1&quot;&gt;
+        test1
+        &lt;div class=&quot;test2&quot;&gt;
+            test2
+            &lt;div class=&quot;test3&quot;&gt;test3&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><p>好，我们可以看到我给test2加上了position: fixed;right: 20px;top: 20px; 它会相对于浏览器窗口定位，而test3作为test2的子元素，我们加上了position: absolute;left: -40px;top: 40px;那么，根据我们的想象，它应该相对于test2作出偏移。那么是不是这个情况呢？我们来看一下效果图：<br><img src="http://ww2.sinaimg.cn/large/459e195ajw1eyedejrgpbj20la0i6my7.jpg" alt></p>
+<p>如上图所示，看到了具体的效果了吧！是不是和你想象的是一样的呢？</p>
+<h3 id="它的父元素的属性是-position-absolute"><a href="#它的父元素的属性是-position-absolute" class="headerlink" title="它的父元素的属性是 position:absolute"></a><strong>它的父元素的属性是 position:absolute</strong></h3><p>好，我们来看一下，如果position:absolute嵌套position:absolute元素将会出现什么情况呢？</p>
+<p>写了这么多，其实你应该有了一定的预见性了吧？好，我们来做试验，代码如下：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        div {font-size: 15px;color: #fff;}
+        .test1 {width: 500px;height: 500px;background: #123;}
+        .test2 {width: 400px;height: 400px;background: #234;position: absolute;right: 20px;top: 20px;}
+        .test3 {width: 300px;height: 300px;background: #345;position: absolute;right: 20px;top: 20px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;test1&quot;&gt;
+        test1
+        &lt;div class=&quot;test2&quot;&gt;
+            test2
+            &lt;div class=&quot;test3&quot;&gt;test3&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><p>如上所示，test2我们使用了position: absolute;right: 20px;top: 20px;参数，那么，它会相对于<strong>文档</strong>作出设定的偏移值。而我们给test3使用了同样的css样式。如果test3也是<strong>相对于文档定位</strong>的话，那么它和test2应该是重叠的。</p>
+<p>但是，我们根据上面的解释，test3应该相对于test2定位才对，那么是不是呢？我们看效果图：<br><img src="http://ww4.sinaimg.cn/large/459e195ajw1eyedktnqnoj20la0i6dgw.jpg" alt></p>
+<p>如上图所示，果然，test2相对于文档偏移，而test3相对于test2偏移。 </p>
+<h3 id="position-以及参数总结"><a href="#position-以及参数总结" class="headerlink" title="position 以及参数总结"></a><strong>position 以及参数总结</strong></h3><ul>
+<li>position: relative;不会脱离文档流，position: fixed;position: absolute;会脱离文档流</li>
+<li>position: relative; 相对于自己在文档流中的初始位置偏移定位。</li>
+<li>position: fixed; 相对于浏览器窗口定位。</li>
+<li>position: absolute; 是相对于父级非position:static 浏览器定位。<br>如果没有任何一个父级元素是非position:static属性，则会相对于文档定位。<br>这里它的父级元素是包含爷爷级元素、祖爷爷级元素、祖宗十八代级元素的。任意一级都可以。<br>如果它的父级元素和爷爷级元素都是非position:static 属性，则，它会选择距离最近的父元素。</li>
+</ul>
+
         </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2020/01/28/HTML5技术概述/">
-                    
-                    <div class="media-left">
-                        <figure class="image is-128x128">
-                            <img src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbcdr3swixj303k03k3ya.jpg" style="height: 100%; width: 100%">
-                        </figure>
-                    </div>
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>HTML5技术概述</strong> <small class="post-date">at: 2020-01-28</small>
-                                <br>
-                                
+        <div class="post-reply">
+            
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
 
+                            if (typeof LivereTower === 'function') { return; }
 
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
 
-
-
-1. H5概述HTML5 是定义 HTML 标准的最新的版本。 该术语通过两个不同的概念来表现：
-它是一个新版本的HTML语言，具有新的元素，属性和行为，它有更大的技术集，允许构建更多样化和更强大的网站和应用程序。这个集合有时称为HTML5和它的朋友们，不过大多数时候仅缩写为一个词 HTML5。设计为所有Open Web开发人员都可以使用，此..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+            
+            
         </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/11/25/UML学习/">
-                    
-                    <div class="media-left">
-                        <figure class="image is-128x128">
-                            <img src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbb9xbqj2mj30jq0jraaj.jpg" style="height: 100%; width: 100%">
-                        </figure>
-                    </div>
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>UML学习</strong> <small class="post-date">at: 2019-11-25</small>
-                                <br>
-                                
-1.简介统一建模语言(Unified Modeling Language，UML)是一种为面向对象系统的产品进行说明、可视化和编制文档的一种标准语言，是非专利的第三代建模和规约语言。UML使用面向对象设计的的建模工具，但独立于任何具体程序设计语言。
-2.项目实际操作
-整体设计    
-概要设计    
+    </div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
 
-“首页商品的特定显示”模块概要设计    
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
 
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
-..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/08/06/SpringMVC学习/">
-                    
-                    <div class="media-left">
-                        <figure class="image is-128x128">
-                            <img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5wxvlml4zj30x70ib43w.jpg" style="height: 100%; width: 100%">
-                        </figure>
-                    </div>
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>SpringMVC学习</strong> <small class="post-date">at: 2019-08-06</small>
-                                <br>
-                                1.介绍
-
-Spring MVC是Spring提供的一个强大而灵活的web框架。`借助于注解`，Spring MVC提供了几乎是POJO的开发
-模式，使得控制器的开发和测试更加简单。这些控制器一般不直接处理请求，而是将其委托给Spring上下文中 
-的其他bean，通过Spring的依赖注入功能，这些bean被注入到控制器中。
-
-Spring MVC是S..
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-        <div class="box">
-            <article class="media">
-                
-                <a href="/2019/07/29/MyBatise学习笔记/">
-                    
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>MyBatise学习笔记</strong> <small class="post-date">at: 2019-07-29</small>
-                                <br>
-                                MyBatise1.介绍2.学习问题
-                            </p>
-                            <button class="button is-info">Read</button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-        </div>
-    
-</div>
       </div>
   </div>
   <style>
