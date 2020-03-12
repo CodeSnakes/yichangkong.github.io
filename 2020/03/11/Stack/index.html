@@ -15,16 +15,22 @@
   </script>
 
   
-  <title>Archives | Yichangkong</title>
+  <title>Stack | Yichangkong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="yichangkong 个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yichangkong">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="1.简介栈（stack）又名堆栈，它是一种运算受限的线性表。限定仅在表尾进行插入和删除操作的线性表。这一端被称为栈顶，相对地，把另一端称为栈底。向一个栈插入新元素又称作进栈、入栈或压栈，它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；从一个栈删除元素又称作出栈或退栈，它是把栈顶元素删除掉，使其相邻的元素成为新的栈顶元素。 2.基本算法1．进栈（PUSH）算法     ①若TOP≥n时，则给">
+<meta name="keywords" content="数据结构学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Stack">
+<meta property="og:url" content="http://yoursite.com/2020/03/11/Stack/index.html">
 <meta property="og:site_name" content="Yichangkong">
+<meta property="og:description" content="1.简介栈（stack）又名堆栈，它是一种运算受限的线性表。限定仅在表尾进行插入和删除操作的线性表。这一端被称为栈顶，相对地，把另一端称为栈底。向一个栈插入新元素又称作进栈、入栈或压栈，它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；从一个栈删除元素又称作出栈或退栈，它是把栈顶元素删除掉，使其相邻的元素成为新的栈顶元素。 2.基本算法1．进栈（PUSH）算法     ①若TOP≥n时，则给">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://gitee.com//yichangkong/FigureBed/raw/master/img/stack.png">
+<meta property="og:updated_time" content="2020-03-12T09:32:15.605Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yichangkong">
+<meta name="twitter:title" content="Stack">
+<meta name="twitter:description" content="1.简介栈（stack）又名堆栈，它是一种运算受限的线性表。限定仅在表尾进行插入和删除操作的线性表。这一端被称为栈顶，相对地，把另一端称为栈底。向一个栈插入新元素又称作进栈、入栈或压栈，它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；从一个栈删除元素又称作出栈或退栈，它是把栈顶元素删除掉，使其相邻的元素成为新的栈顶元素。 2.基本算法1．进栈（PUSH）算法     ①若TOP≥n时，则给">
+<meta name="twitter:image" content="https://gitee.com//yichangkong/FigureBed/raw/master/img/stack.png">
   
     <link rel="alternate" href="/atom.xml" title="Yichangkong" type="application/atom+xml">
   
@@ -110,513 +116,206 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
     }
 
-    .primary-container .post-hover {
-        background: black;
+    .flow-chart {
+        text-align: center;
     }
 
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
+    img[alt="post-cover"] {
+        display: none;
     }
-
 </style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2020/03/11/Stack/">
-            <div class="full-height post-hover"
-                 style="
-                         background-image: url('https://gitee.com//yichangkong/FigureBed/raw/master/img/stack.png');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            Stack
-                        </h1>
-                        <div>
-                        
-                            `
-                                <span class="tag is-post-tag">数据结构学习</span>
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            
-1.简介栈（stack）又名堆栈，它是一种运算受限的线性表。限定仅在表尾进行插入和删除操作的线性表。这一端被称为栈顶，相对地，把另一端称为栈底。向一个栈插入新元素又称作进栈、入栈或压栈，它是把新元素放到栈顶元素的上面，使之成为新的栈顶..
-                        </p>
-                        <p class="date text-shadow">2020-03-11</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>Stack</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbb9ho4ywkj30jg0jgwew.jpg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> YichangKong</span>
+                <span class="post-date sub-title">at: 2020-03-11</span>
             </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
-                
-<a class="post-hover" href="/2020/02/03/position详解/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('http://ww1.sinaimg.cn/large/007SCiiVgy1gbj7vr8hu0j30i207d3ym.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                position详解
-            </h3>
-            
-            
-            <span class="tag is-post-tag">学习笔记</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-
-
-
-Css 详细解读定位属性 position 以及参数参考链接
-简介position 定位..
-            </p>
-            <p class="date text-shadow is-marginless">2020-02-03</p>
-        </div>
-    </div>
-</a>
-            
-            
-                
-<a class="post-hover" href="/2020/01/28/HTML5技术概述/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('http://ww1.sinaimg.cn/large/007SCiiVgy1gbcdr3swixj303k03k3ya.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                HTML5技术概述
-            </h3>
-            
-            
-            <span class="tag is-post-tag">学习笔记</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-
-
-
-
-
-1. H5概述HTML5 是定义 HTML 标准的最新的版本。 该术语通过两个不同的..
-            </p>
-            <p class="date text-shadow is-marginless">2020-01-28</p>
-        </div>
-    </div>
-</a>
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/数据结构学习/">数据结构学习</a>
+                    
+                </div>
             
         </div>
-    </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2020/02/03/position详解/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('http://ww1.sinaimg.cn/large/007SCiiVgy1gbj7vr8hu0j30i207d3ym.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                position详解
-            </h3>
-            
-            
-            <span class="tag is-post-tag">学习笔记</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
+        <div class="content" style="overflow: auto">
+            <p><img src="https://gitee.com//yichangkong/FigureBed/raw/master/img/stack.png" alt></p>
+<h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h3><p>栈（stack）又名堆栈，它是一种运算受限的线性表。限定仅在表尾进行插入和删除操作的线性表。这一端被称为栈顶，相对地，把另一端称为栈底。向一个栈插入新元素又称作进栈、入栈或压栈，它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；从一个栈删除元素又称作出栈或退栈，它是把栈顶元素删除掉，使其相邻的元素成为新的栈顶元素。</p>
+<h3 id="2-基本算法"><a href="#2-基本算法" class="headerlink" title="2.基本算法"></a>2.基本算法</h3><pre><code>1．进栈（PUSH）算法
+    ①若TOP≥n时，则给出溢出信息，作出错处理（进栈前首先检查栈是否已满，满则溢出；不满则作②）；
+    ②置TOP=TOP+1（栈指针加1，指向进栈地址）；
+    ③S(TOP)=X，结束（X为新进栈的元素）；
+2．退栈（POP）算法
+    ①若TOP≤0，则给出下溢信息，作出错处理(退栈前先检查是否已为空栈， 空则下溢；不空则作②)；
+    ②X=S(TOP)，（退栈后的元素赋给X）：
+    ③TOP=TOP-1，结束（栈指针减1，指向栈顶）。</code></pre><h3 id="3-项目实践"><a href="#3-项目实践" class="headerlink" title="3.项目实践"></a>3.项目实践</h3><pre><code>package DataStructures.Stack;
+
+/**
+ * @author yichangkong
+ * @create 2020-03-10-16:29
+ * &lt;p&gt;用数组模拟栈结构
+ */
+public class ArrayStackDemo {
+
+    public static void main(String[] args) {
+
+        //测试
+        //添加数据
+        ArrayStack stack = new ArrayStack(8);
+
+        stack.push(1);
+        stack.push(2);
+        stack.push(8);
+        stack.push(4);
+        stack.push(5);
+        stack.list();
+    }
+    static class ArrayStack {
+        private int maxSize;//栈的大小
+        private int[] stack;//数组模拟栈  测试数据放在数组
+        private int top = -1;
+
+        //构造器
+        public ArrayStack(int maxSize) {
+            this.maxSize = maxSize;
+            stack = new int[this.maxSize];
+        }
 
 
+        //判断是否栈满
+        public boolean ifFull() {
+            return top == maxSize - 1;
 
-Css 详细解读定位属性 position 以及参数参考链接
-简介position 定位..
-            </p>
-            <p class="date text-shadow is-marginless">2020-02-03</p>
+        }
+
+        //判断栈是否为空
+        public boolean ifEmpty() {
+
+            return top == -1;
+        }
+
+        //入栈
+        public void push(int value) {
+
+            //判断是否栈满
+            if (ifFull()) return;
+            //添加
+            top++;
+            stack[top] = value;
+
+        }
+
+        //出栈 先入后出
+        public int pop() {
+
+            //判断是否kong
+            if (ifEmpty()) {
+                System.out.println(&quot;栈空 请插入数据进行测试&quot;);
+                return 0;
+            }
+            //try { return stack[top]; } finally { top--; }这个方法着实有些撒比了
+            //以为 show 和 pop两个之间的top会影响
+
+            int cur = top;
+
+            int value = stack[top];
+            top--;
+            return value;
+
+        }
+        //显示栈的情况 比如栈的size
+
+        public void list() {
+            if (ifEmpty()) {
+                System.out.println(&quot;栈空 请插入数据进行测试&quot;);
+                return;
+            }
+            for (int i = top; i &gt; -1; i--) {
+
+                System.out.println(stack[i]);
+
+            }
+
+        }
+    }
+
+}</code></pre>
         </div>
-    </div>
-</a>
-        
-        
-        
-<a class="post-hover" href="/2020/01/28/HTML5技术概述/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('http://ww1.sinaimg.cn/large/007SCiiVgy1gbcdr3swixj303k03k3ya.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                HTML5技术概述
-            </h3>
+        <div class="post-reply">
             
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
             
-            <span class="tag is-post-tag">学习笔记</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-
-
-
-
-
-1. H5概述HTML5 是定义 HTML 标准的最新的版本。 该术语通过两个不同的..
-            </p>
-            <p class="date text-shadow is-marginless">2020-01-28</p>
-        </div>
-    </div>
-</a>
-        
-    </div>
-</div>
-
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/02/03/position详解/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://ww1.sinaimg.cn/large/007SCiiVgy1gbj7vr8hu0j30i207d3ym.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>position详解</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">学习笔记</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-
-
-Css 详细解读定位属性 position 以及参数参考链接
-简介position 定位属性，是CSS中非常重要的属性。除了文档流布局，就是定位布局了。但是很多人都不清楚position参数。详细解读一下position 以及参数。
-1.W3c介绍
-定义和用法
-position 属性规定元素的定位类型。
-
-说明
-这个属性定义建立元素布局所用的定位..
-                                        </p>
-                                        <p>2020-02-03</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/01/28/HTML5技术概述/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://ww1.sinaimg.cn/large/007SCiiVgy1gbcdr3swixj303k03k3ya.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>HTML5技术概述</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">学习笔记</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-
-
-
-
-1. H5概述HTML5 是定义 HTML 标准的最新的版本。 该术语通过两个不同的概念来表现：
-它是一个新版本的HTML语言，具有新的元素，属性和行为，它有更大的技术集，允许构建更多样化和更强大的网站和应用程序。这个集合有时称为HTML5和它的朋友们，不过大多数时候仅缩写为一个词 HTML5。设计为所有Open Web开发人员都可以使用，此..
-                                        </p>
-                                        <p>2020-01-28</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/12/16/Vue/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://ww1.sinaimg.cn/large/007SCiiVgy1gbb9zebfg2j30b40b4dfn.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Vue</h3>
-                                        
-                                        <p>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-                                        </p>
-                                        <p>2019-12-16</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/11/25/UML学习/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://ww1.sinaimg.cn/large/007SCiiVgy1gbb9xbqj2mj30jq0jraaj.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>UML学习</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">学习笔记</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-1.简介统一建模语言(Unified Modeling Language，UML)是一种为面向对象系统的产品进行说明、可视化和编制文档的一种标准语言，是非专利的第三代建模和规约语言。UML使用面向对象设计的的建模工具，但独立于任何具体程序设计语言。
-2.项目实际操作
-整体设计    
-概要设计    
-
-“首页商品的特定显示”模块概要设计    
-
-
-..
-                                        </p>
-                                        <p>2019-11-25</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/11/10/vue的学习报错/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>vue的学习报错</h3>
-                                        
-                                        <p>
-                                            
-                                        </p>
-                                        <p>
-                                            
-                                        </p>
-                                        <p>2019-11-10</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/11/04/springMvc错误/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>springMVC错误</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">错误笔记</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.程序环境SpringSpringMVCMyBatisejdk 1.8Tomcat 7.0
-2.错误现象
-后台并没有报任何错误！就是进入不了整个动态Web项目页面。
-导致整个的Controller层，没有响应。3.错误导致原因
-因为业务所需，我在PC端的indexController 新增一个模块服务。
-@Autowired （xxxSerice）
-但..
-                                        </p>
-                                        <p>2019-11-04</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/10/22/MultipartFile/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572336684&di=508f5780d849981c25a837714431089e&imgtype=jpg&er=1&src=http%3A%2F%2Fwww.pianshen.com%2Fimages%2F166%2F3e7f81e416235133bd7619b155ec962e.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>MultipartFile</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">技术学习</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-MultipartFile类（Spring框架）
-起源 ： 在学习一个商城的web应用时，发现UpdateFile的控制器内部使用的就是这个技术类。
-
-1. 配置文件SpringMVC 用的是 的MultipartFile来进行文件上传 所以我们首先要配置MultipartResolver用于处理表单中的file
-&lt;!-- 配置Multipart..
-                                        </p>
-                                        <p>2019-10-22</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/10/05/Python学习/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570271320744&di=e361d62c365751315a3a7fdc72465311&imgtype=0&src=http%3A%2F%2Fpic4.zhimg.com%2Fv2-2aa01d018e440c39c0c29e7e148fc5ae_1200x500.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Python学习</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">Python</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-开胃菜python简介
-Python 是一种易于学习又功能强大的编程语言。它提供了高效的高级数据结构，还有简单有效的面向对
-象编程。Python 优雅的语法和动态类型，以及解释型语言的本质，使它成为多数平台上写脚本和快速开发应用的理想语言。
-
-Python 解释器及丰富的标准库以源码或机器码的形式提供，可以到 Python 官网 https://
-ww..
-                                        </p>
-                                        <p>2019-10-05</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/09/27/云计算介绍/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=dd611ad65cda81cb5aeb8b9f330fbb73/d6ca7bcb0a46f21fce06ac71fb246b600c33aee6.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>云计算介绍</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">技术学习方向</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.简单介绍
-云计算（cloud computing）是分布式计算的一种，指的是通过网络“云”将巨大的数据计算处理程序分解成无数个小程序，然后，通过多部服务器组成的系统进行处理和分析这些小程序得到结果并返回给用户。云计算早期，简单地说，就是简单的分布式计算，解决任务分发，并进行计算结果的合并。因而，云计算又称为网格计算。通过这项技术，可以在很短的时间内（..
-                                        </p>
-                                        <p>2019-09-27</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                </nav>
-            </section>
             
         </div>
     </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
