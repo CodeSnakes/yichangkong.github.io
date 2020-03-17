@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200317184637.png">
 <meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200317185400.png">
 <meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200317185922.png">
-<meta property="og:updated_time" content="2020-03-17T12:33:21.601Z">
+<meta property="og:updated_time" content="2020-03-17T12:41:01.854Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2020年02月04日软件设计师每日一练">
 <meta name="twitter:description" content="1.数据库设计过程1.题型 2.解析​        本题的正确选项为A。需求分析阶段的任务是：对现实世界要处理的对象（组织、部门、企业等）进行详细调查，在了解现行系统的概况，确定新系统功能的过程中，确定系统边界、收集支持系统目标的基础数据及其处理方法。 逻辑设计阶段的任务之一是对关系模式进一步的规范化处理。因为生成的初始关系模式并不能完全符合要求，会有数据冗余、更新异常存在，这就需要根据规范化理">
@@ -189,7 +189,11 @@
 <h4 id="2-解析"><a href="#2-解析" class="headerlink" title="2.解析"></a>2.解析</h4><p>​        本题的正确选项为A。<br><code>需求分析阶段的任务是：</code>对现实世界要处理的对象（组织、部门、企业等）进行详细调查，在了解现行系统的概况，确定新系统功能的过程中，确定系统边界、收集支持系统目标的基础数据及其处理方法。</p>
 <p><code>逻辑设计阶段的</code>任务之一是对关系模式进一步的规范化处理。因为生成的初始关系模式并不能完全符合要求，会有数据冗余、更新异常存在，这就需要根据规范化理论对关系模式进行分解，以消除冗余和更新异常。不过有时根据处理要求，可能还需要增加部分冗余以满足处理要求。逻辑设计阶段的任务就需要作部分关系模式的处理，分解、合并或增加冗余属性，提高存储效率和处理效率。 </p>
 <h3 id="2-段页式存储"><a href="#2-段页式存储" class="headerlink" title="2.段页式存储"></a><strong>2.段页式存储</strong></h3><h4 id="1-题型-1"><a href="#1-题型-1" class="headerlink" title="1.题型"></a>1.题型</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200317180958.png" alt></p>
-<h4 id="2-解析-1"><a href="#2-解析-1" class="headerlink" title="2.解析"></a>2.解析</h4><p>​            及页内地址最大的寻址空间。存储管理系统中的地址长度均表示为最大的寻址空间。<br>页内地址为13位，即页大小为2<sup>13</sup>=8K；页号地址为11位，即页数最多为2<sup>11</sup>=2048；段号地址为8位，即段数最多为2<sup>8</sup>=256。</p>
+<h4 id="2-解析-1"><a href="#2-解析-1" class="headerlink" title="2.解析"></a>2.解析</h4><ol>
+<li>根据公式 ，可以分别计算段号，页号以及页内地址最大的寻址空间。</li>
+<li>存储管理系统中的地址长度均表示为最大的寻址空间。及页内地址最大的寻址空间。存储管理系统中的地址长度均表示为最大的寻址空间。</li>
+<li>页内地址为13位，即页大小为2<sup>13</sup>=8K；页号地址为11位，即页数最多为2<sup>11</sup>=2048；段号地址为8位，即段数最多为2<sup>8</sup>=256。</li>
+</ol>
 <h4 id="3-段页式存储"><a href="#3-段页式存储" class="headerlink" title="3.段页式存储"></a>3.段页式存储</h4><ol>
 <li><strong>段页式存储管理方式</strong>即先将用户程序分成若干个段，再把每个段分成若干个页，并为每一个段赋予一个段名。右图示出了一个作业的地址空间和地址结构。</li>
 </ol>
