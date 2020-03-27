@@ -15,16 +15,30 @@
   </script>
 
   
-  <title>Archives: 2020 | Yichangkong</title>
+  <title>2020年02月14日软件设计师每日一练 | Yichangkong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="yichangkong 个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yichangkong">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="1.拓扑排序1.题目 答案：A 我的答案：C 2.题目解析  本题考查图数据结构。　　对有向图进行拓扑排序的方法如下：　　（1）在AOV网中选择一个入度为0（没有前驱）的顶点且输出它。　　（2）从网中删除该顶点及其与该顶点有关的所有边。　　（3）重复上述两步，直至网中不存在入度为0的顶点为止。　　执行的结果会有两种情况：一种是所有顶点己输出，此时整个拓扑排序完成，说明网中不存在回路；另一种是尚有未">
+<meta name="keywords" content="软件设计师考题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年02月14日软件设计师每日一练">
+<meta property="og:url" content="http://yoursite.com/2020/03/27/2020年02月14日软件设计师每日一练/index.html">
 <meta property="og:site_name" content="Yichangkong">
+<meta property="og:description" content="1.拓扑排序1.题目 答案：A 我的答案：C 2.题目解析  本题考查图数据结构。　　对有向图进行拓扑排序的方法如下：　　（1）在AOV网中选择一个入度为0（没有前驱）的顶点且输出它。　　（2）从网中删除该顶点及其与该顶点有关的所有边。　　（3）重复上述两步，直至网中不存在入度为0的顶点为止。　　执行的结果会有两种情况：一种是所有顶点己输出，此时整个拓扑排序完成，说明网中不存在回路；另一种是尚有未">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327204350.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327204644.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205318.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205423.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205555.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205704.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205856.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327210006.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327210157.png">
+<meta property="og:updated_time" content="2020-03-27T13:02:40.629Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yichangkong">
+<meta name="twitter:title" content="2020年02月14日软件设计师每日一练">
+<meta name="twitter:description" content="1.拓扑排序1.题目 答案：A 我的答案：C 2.题目解析  本题考查图数据结构。　　对有向图进行拓扑排序的方法如下：　　（1）在AOV网中选择一个入度为0（没有前驱）的顶点且输出它。　　（2）从网中删除该顶点及其与该顶点有关的所有边。　　（3）重复上述两步，直至网中不存在入度为0的顶点为止。　　执行的结果会有两种情况：一种是所有顶点己输出，此时整个拓扑排序完成，说明网中不存在回路；另一种是尚有未">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327204350.png">
   
     <link rel="alternate" href="/atom.xml" title="Yichangkong" type="application/atom+xml">
   
@@ -110,501 +124,161 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
     }
 
-    .primary-container .post-hover {
-        background: black;
+    .flow-chart {
+        text-align: center;
     }
 
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
+    img[alt="post-cover"] {
+        display: none;
     }
-
 </style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2020/03/27/2020年02月14日软件设计师每日一练/">
-            <div class="full-height post-hover"
-                 style="
-                         background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327204350.png');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            2020年02月14日软件设计师每日一练
-                        </h1>
-                        <div>
-                        
-                            `
-                                <span class="tag is-post-tag">软件设计师考题</span>
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            1.拓扑排序1.题目
-答案：A
-我的答案：C
-2.题目解析
- 本题考查图数据结构。　　对有向图进行拓扑排序的方法如下：　　（1）在AOV网中选择一个入度为0（没有前驱）的顶点且输出它。　　（2）从网中删除该顶点及其与该顶点有关的所有边。..
-                        </p>
-                        <p class="date text-shadow">2020-03-27</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>2020年02月14日软件设计师每日一练</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbb9ho4ywkj30jg0jgwew.jpg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> YichangKong</span>
+                <span class="post-date sub-title">at: 2020-03-27</span>
             </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
-                
-<a class="post-hover" href="/2020/03/26/2020年02月13日软件设计师每日一练/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200326182818.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                2020年02月13日软件设计师每日一练
-            </h3>
-            
-            
-            <span class="tag is-post-tag">软件设计师考题</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.编译与解释1.题目
-2.题目解析
-​    死循环错误属于典型的语义错误，但静态的语义错误可..
-            </p>
-            <p class="date text-shadow is-marginless">2020-03-26</p>
-        </div>
-    </div>
-</a>
-            
-            
-                
-<a class="post-hover" href="/2020/03/25/2020年02月12日软件设计师每日一练/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200325213244.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                2020年02月12日软件设计师每日一练
-            </h3>
-            
-            
-            <span class="tag is-post-tag">软件设计师考题</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.软件保护期限1.题目
-2.题目解析
- 我国《著作权法》对著作权的保护期限作了如下规定: (1..
-            </p>
-            <p class="date text-shadow is-marginless">2020-03-25</p>
-        </div>
-    </div>
-</a>
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/软件设计师考题/">软件设计师考题</a>
+                    
+                </div>
             
         </div>
-    </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2020/03/26/2020年02月13日软件设计师每日一练/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200326182818.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                2020年02月13日软件设计师每日一练
-            </h3>
-            
-            
-            <span class="tag is-post-tag">软件设计师考题</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.编译与解释1.题目
-2.题目解析
-​    死循环错误属于典型的语义错误，但静态的语义错误可..
-            </p>
-            <p class="date text-shadow is-marginless">2020-03-26</p>
+        <div class="content" style="overflow: auto">
+            <h3 id="1-拓扑排序"><a href="#1-拓扑排序" class="headerlink" title="1.拓扑排序"></a><strong>1.拓扑排序</strong></h3><h4 id="1-题目"><a href="#1-题目" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327204350.png" alt></p>
+<p>答案：A</p>
+<p>我的答案：C</p>
+<h4 id="2-题目解析"><a href="#2-题目解析" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p> 本题考查图数据结构。<br>　　对有向图进行拓扑排序的方法如下：<br>　　（1）在AOV网中选择一个入度为0（没有前驱）的顶点且输出它。<br>　　（2）从网中删除该顶点及其与该顶点有关的所有边。<br>　　（3）重复上述两步，直至网中不存在入度为0的顶点为止。<br>　　执行的结果会有两种情况：一种是所有顶点己输出，此时整个拓扑排序完成，说明网中不存在回路；另一种是尚有未输出的顶点，剩余的顶点均有前驱顶点，表明网中存在回路，拓扑排序无法进行下去。 </p>
+</blockquote>
+<h3 id="2-容量的计算"><a href="#2-容量的计算" class="headerlink" title="2.容量的计算"></a><strong>2.容量的计算</strong></h3><h4 id="1-题目-1"><a href="#1-题目-1" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327204644.png" alt></p>
+<h4 id="2-题目解析-1"><a href="#2-题目解析-1" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>本题考查内存容量的计算。<br><br>给定起、止地址码的内存容量=终止地址-起始地址+1。<br></p>
+<p>将终止地址加1等于E000H，再减去起始地址，即E0000H-A0000H=40000H。十六进制的（40000）<sub>16</sub>=2<sup>18</sup><br> 　　组成内存储器的芯片数量=内存储器的容量/单个芯片的容量。 答案：C</p>
+</blockquote>
+<h3 id="3-数字证书"><a href="#3-数字证书" class="headerlink" title="3.数字证书"></a><strong>3.数字证书</strong></h3><h4 id="1-题目-2"><a href="#1-题目-2" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205318.png" alt></p>
+<h4 id="2-题目解析-2"><a href="#2-题目解析-2" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p> <code>数字证书</code>就是互联网通讯中标志通讯各方身份信息的一系列数据，就好比日常生活中个人身份证一样。</p>
+<p>数字证书是由一个权威机构证书授权中心（CA）发行的。</p>
+<p>最简单的证书包含一个公开密钥、名称以及证书授权中心的数字签名。</p>
+<p>其中证书授权中心的数字签名是用它自己的私钥完成的，而它的公钥也是公开的，大家可以通过它的公钥来验证该证书是否是某证书授权中心发行的，以达到验证数字证书的真实性。因此本题答案选C。</p>
+</blockquote>
+<h3 id="4-程序语言"><a href="#4-程序语言" class="headerlink" title="4.程序语言"></a><strong>4.程序语言</strong></h3><h4 id="1-题目-3"><a href="#1-题目-3" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205423.png" alt></p>
+<h4 id="2-题目解析-3"><a href="#2-题目解析-3" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>程序设计语言的基本成分包括</p>
+<p>数据、运算、控制和传输等。</p>
+<p>程序设计语言的控制成分包括<strong>顺序、选择和循环3种结构</strong>。<br>所以本题选择A选项。 </p>
+</blockquote>
+<h3 id="5-软件测试"><a href="#5-软件测试" class="headerlink" title="5.软件测试"></a><strong>5.软件测试</strong></h3><h4 id="1-题目-4"><a href="#1-题目-4" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205555.png" alt></p>
+<h4 id="2-题目解析-4"><a href="#2-题目解析-4" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>本题考查系统测试中的确认测试。</p>
+<p>确认测试首先要进行有效性测试以及软件配置审查，然后进行验收测试和安装测试。</p>
+<p>其中有效性测试，就是在模拟环境下，通过黑盒测试检验所开发的软件是否与需求规格说明书一致。</p>
+</blockquote>
+<h3 id="6-数据表示"><a href="#6-数据表示" class="headerlink" title="6.数据表示"></a><strong>6.数据表示</strong></h3><h4 id="1-题目-5"><a href="#1-题目-5" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205704.png" alt></p>
+<h4 id="2-题目解析-5"><a href="#2-题目解析-5" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>本题考查计算机系统<strong>数据编码基础知识</strong>。<br><br>    　　设机器字长为n（即采用n个二进制位表示数据），最高位是符号位，0表示正号，1表示负号。<br><br>    　　原码表示方式下，除符号位外，n-1位表示数值的绝对值。因此，n为8时，[+0]原=0 0000000，[-0]原=1 0000000。<br><br>    　　正数的反码与原码相同，负数的反码则是其绝对值按位求反。n为8时，数值0的反码表示有两种形式：[+0]反=0 0000000，[-0]反=11111111。<br><br>    　　正数的补码与其原码和反码相同，负数的补码则等于其反码的末尾加1。在补码表示中，0有唯一的编码：[+0]补=0 0000000，[-0]补=00000000。<br><br>    　　移码表示法是在数X上增加一个偏移量来定义的，常用于表示浮点数中的阶码。机器字长为n时，在偏移量为2<sup>n-1</sup>的情况下，只要将补码的符号位取反便可获得相应的移码表示。</p>
+</blockquote>
+<h3 id="7-传址与传值"><a href="#7-传址与传值" class="headerlink" title="7.传址与传值"></a><strong>7.传址与传值</strong></h3><h4 id="1-题目-6"><a href="#1-题目-6" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205856.png" alt></p>
+<p>答案：D</p>
+<p>我的：A</p>
+<h4 id="2-题目解析-6"><a href="#2-题目解析-6" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>传值调用中，形参取的是实参的值，形参的改变不会导致调用点所传的实参的值发生改变；而引用（传址）调用中，形参取的是实参的地址，即相当于实参存储单元的地址引用，因此其值的改变同时就改变了实参的值。<br><br>x = 2*10-1=19；<br><br>a是引用传递，所以a=a+x=10+19=29，结果为29。</p>
+</blockquote>
+<h3 id="8-运算器和控制器"><a href="#8-运算器和控制器" class="headerlink" title="8.运算器和控制器"></a><strong>8.运算器和控制器</strong></h3><h4 id="1-题目-7"><a href="#1-题目-7" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327210006.png" alt></p>
+<h4 id="2-题目解析-7"><a href="#2-题目解析-7" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>CPU是一台计算机的<strong>运算核心</strong>和<strong>控制核心</strong>，</p>
+<p>其由<strong>运算器、控制器、寄存器</strong>及实现它们之间联系的数据、控制及状态的总线构成。其中</p>
+<ul>
+<li>运算器负责相关的逻辑、算术运算，</li>
+<li>寄存器用来存放一些相关的数据，而</li>
+<li>内部总线负责各部件间信息的传递，而</li>
+<li>控制器不仅要保证指令的正确执行，还要能够处理异常事件。</li>
+</ul>
+</blockquote>
+<h3 id="9-面向对象的基本概念"><a href="#9-面向对象的基本概念" class="headerlink" title="9.面向对象的基本概念"></a><strong>9.面向对象的基本概念</strong></h3><h4 id="1-题目-8"><a href="#1-题目-8" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327210157.png" alt></p>
+<h4 id="2-题目解析-8"><a href="#2-题目解析-8" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p> <code>多态</code>：同一操作作用于不同的对象，可以有不同的解释，产生不同的执行结果。在运行时，可以通过指向基类的指针，来调用实现派生类中的方法。也就是说客户类其实在调用方法时，并不需要知道特定子类的实现，都会用统一的方式来调用。</p>
+</blockquote>
+<h4 id><a href="#" class="headerlink" title=" "></a> </h4>
         </div>
-    </div>
-</a>
-        
-        
-        
-<a class="post-hover" href="/2020/03/25/2020年02月12日软件设计师每日一练/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200325213244.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                2020年02月12日软件设计师每日一练
-            </h3>
+        <div class="post-reply">
             
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
             
-            <span class="tag is-post-tag">软件设计师考题</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.软件保护期限1.题目
-2.题目解析
- 我国《著作权法》对著作权的保护期限作了如下规定: (1..
-            </p>
-            <p class="date text-shadow is-marginless">2020-03-25</p>
-        </div>
-    </div>
-</a>
-        
-    </div>
-</div>
-
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/26/2020年02月13日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200326182818.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月13日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.编译与解释1.题目
-2.题目解析
-​    死循环错误属于典型的语义错误，但静态的语义错误可被编译器发现，到程序真正陷入死循环说明编译器并未发现，所以属于动态语义错误。
-
-2.软件维护类型1.题目
-2.题目解析
- 软件维护的内容一般包括
-准确性维护》适应性维护》完善性维护》预防性维护。
-
-正确性维护是指改正在系统开发阶段已发生而系统测试阶段尚未发现的..
-                                        </p>
-                                        <p>2020-03-26</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/25/2020年02月12日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200325213244.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月12日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.软件保护期限1.题目
-2.题目解析
- 我国《著作权法》对著作权的保护期限作了如下规定: (1)著作权中的署名权、修改权、保护作品完整权的保护期不受限制。
-
-2.专业英语1.题目
-2.题目解析
-不变只是愿望，变化才是永恒。—SWIFT
-​        一个接一个的软件项目都是一开始设计算法，然后将算法应用到待发布的软件中，接着根据时间进度把第一次开发..
-                                        </p>
-                                        <p>2020-03-25</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/24/2020年02月11日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200325214951.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月11日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.媒体的种类1.题目
-2.题目解析
-
-感觉媒体：指人们接触信息的感觉形式。如：视觉、听觉、触觉、嗅觉和味觉等。 
-
-表示媒体：指信息的表示形式。如：文字、图形、图像、动画、音频和视频等。 
-
-显示媒体（表现媒体）：表现和获取信息的物理设备。如：输入显示媒体键盘、鼠标和麦克风等；输出显示媒体显示器、打印机和音箱等。
-
-存储媒体：存储数据的物理设备，如磁盘..
-                                        </p>
-                                        <p>2020-03-24</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/23/后缀表达式算法/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>后缀表达式算法</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">数据结构算法</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.概念解析​    实现逆波兰式的算法，难度并不大，但为什么要将看似简单的中序表达式转换为复杂的逆波兰式？原因就在于这个简单是相对人类的思维结构来说的，对计算机而言中序表达式是非常复杂的结构。相对的，逆波兰式在计算机看来却是比较简单易懂的结构。因为计算机普遍采用的内存结构是栈式结构，它执行先进后出的顺序。
-2.实现算法1.算法一
-
-1) 初始化两个栈：..
-                                        </p>
-                                        <p>2020-03-23</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/23/2020年02月10日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200323210023.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月10日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.软件的可维护性1.题目
-2.题目解析
- 本题考查系统的可维护性评价指标。系统的可维护性可以定性地定义为:维护人员理解、改正、改动和改进这个软件的难易程度，其评价指标包括可理解性、可测试性和可修改性。
-2..数据的表示1.题目
-2.题目解析 
-答案 D
- 在计算机中，n位补码（表示数据位），表示范围是-2n-1~+2n-1-1，其中最小值为人为定义，以..
-                                        </p>
-                                        <p>2020-03-23</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/22/2020年02月09日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322205126.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月09日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.逻辑网络设计1.题目
-2.题目解析 本题考查的是网络系统设计原则，其中答案A不符合其中的实用性原则，
-网络方案设计中应把握“够用”和“实用”原则。网络系统应采用成熟可靠的技术和设备，达到实用、经济和有效的目的。答案B不符合可扩展性原则，网络总体设计不仅要考虑到近期目标，也要为网络的进一步发展留有扩展的余地。
-答案C说法正确，符合开放性原则。答案D不正..
-                                        </p>
-                                        <p>2020-03-22</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/21/简单算法优化/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>简单算法优化</h3>
-                                        
-                                        <p>
-                                            
-                                        </p>
-                                        <p>
-                                            
-                                        </p>
-                                        <p>2020-03-21</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/21/2020年02月08日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200321220324.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月08日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1..数据结构1.题目
-2.题目解析 在不考虑字对齐规则的情况下，C语言中一个结构体变量的存储区大小就是其所有成员所需存储区大小之和，一个联合体变量的存储区大小就是其各成员所需存储区大小中的最大者。因此题目中给定的联合体union T变量需要的存储区大小就是存储一个double类型变量的大小（即8字节），struct T类型变量的存储区最小应为int类型..
-                                        </p>
-                                        <p>2020-03-21</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/20/2020年02月07日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320232539.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月07日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.面向对象的基本概念1.题目
-
-2.解析
-开-闭原则要求一个软件实体应当对扩展开放，对修改关闭。也就是说，我们在设计一个模块的时候，应当使这个模块可以在不被修改的前提下被扩展，换句话说就是，应当可以在不必修改源代码的情况下改变这个模块的行为。
-
-里氏代换原则要求子类型必须能够替换它们的基类型，所以在里氏代换原则中，任何可基类对象可以出现的地方，子类对象..
-                                        </p>
-                                        <p>2020-03-20</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                </nav>
-            </section>
             
         </div>
     </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
