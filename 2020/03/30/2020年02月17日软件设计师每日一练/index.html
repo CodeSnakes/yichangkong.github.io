@@ -15,16 +15,31 @@
   </script>
 
   
-  <title>Archives | Yichangkong</title>
+  <title>2020年02月17日软件设计师每日一练 | Yichangkong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="yichangkong 个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yichangkong">
-<meta property="og:url" content="http://yoursite.com/archives/page/4/index.html">
+  <meta name="description" content="1.总线系统1.题目 2.题目解析  总线复用，顾名思义就是一条总线实现多种功能。 常见的总线复用方式有总线分时复用，它是指在不同时段利用总线上同一个信号线传送不同信号，例如，地址总线和数据总线共用一组信号线。采用这种方式的目的是减少总线数量，提高总线的利用率。  2.编译与解释1.题目 2.题目解析 ​    用高级语言编写的程序不能直接被机器执行，而是经过相关的处理后，将其变成目标程序后才能被">
+<meta name="keywords" content="软件设计师考题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年02月17日软件设计师每日一练">
+<meta property="og:url" content="http://yoursite.com/2020/03/30/2020年02月17日软件设计师每日一练/index.html">
 <meta property="og:site_name" content="Yichangkong">
+<meta property="og:description" content="1.总线系统1.题目 2.题目解析  总线复用，顾名思义就是一条总线实现多种功能。 常见的总线复用方式有总线分时复用，它是指在不同时段利用总线上同一个信号线传送不同信号，例如，地址总线和数据总线共用一组信号线。采用这种方式的目的是减少总线数量，提高总线的利用率。  2.编译与解释1.题目 2.题目解析 ​    用高级语言编写的程序不能直接被机器执行，而是经过相关的处理后，将其变成目标程序后才能被">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225223.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225434.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225525.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225658.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225921.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230047.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230256.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230416.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230441.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230555.png">
+<meta property="og:updated_time" content="2020-03-30T15:07:19.704Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yichangkong">
+<meta name="twitter:title" content="2020年02月17日软件设计师每日一练">
+<meta name="twitter:description" content="1.总线系统1.题目 2.题目解析  总线复用，顾名思义就是一条总线实现多种功能。 常见的总线复用方式有总线分时复用，它是指在不同时段利用总线上同一个信号线传送不同信号，例如，地址总线和数据总线共用一组信号线。采用这种方式的目的是减少总线数量，提高总线的利用率。  2.编译与解释1.题目 2.题目解析 ​    用高级语言编写的程序不能直接被机器执行，而是经过相关的处理后，将其变成目标程序后才能被">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225223.png">
   
     <link rel="alternate" href="/atom.xml" title="Yichangkong" type="application/atom+xml">
   
@@ -110,514 +125,157 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
     }
 
-    .primary-container .post-hover {
-        background: black;
+    .flow-chart {
+        text-align: center;
     }
 
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
+    img[alt="post-cover"] {
+        display: none;
     }
-
 </style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2019/09/02/mybatis报错/">
-            <div class="full-height post-hover"
-                 style="
-                         background-image: url('');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            mybatis报错java.lang.UnsupportedOperationException..
-                        </h1>
-                        <div>
-                        
-                            `
-                                <span class="tag is-post-tag">mybatis报错</span>
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            
-起因
-
-今天在请求数据库数据时报错java.lang.UnsupportedOperationException，从字面上理解错误的含义就是不支持的操作异常，后面定位到错误发生在数据库sql语句中，具体原因就是resultType=”..
-                        </p>
-                        <p class="date text-shadow">2019-09-02</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>2020年02月17日软件设计师每日一练</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbb9ho4ywkj30jg0jgwew.jpg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> YichangKong</span>
+                <span class="post-date sub-title">at: 2020-03-30</span>
             </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
-                
-<a class="post-hover" href="/2019/08/16/Maven项目关键点/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                Maven项目关键点
-            </h3>
-            
-            
-            <span class="tag is-post-tag">Maven项目</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.Maven打包 install
-因为使用ssm架构，所有存在java类文件下放Mapping..
-            </p>
-            <p class="date text-shadow is-marginless">2019-08-16</p>
-        </div>
-    </div>
-</a>
-            
-            
-                
-<a class="post-hover" href="/2019/08/06/ssm简易整合记录/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                ssm简易整合记录
-            </h3>
-            
-            
-            <span class="tag is-post-tag">整合技术</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.环境搭建
-因为Sprin框架3.2jar版本没有和jdk1.8完全搭配，会有bug，所以采用..
-            </p>
-            <p class="date text-shadow is-marginless">2019-08-06</p>
-        </div>
-    </div>
-</a>
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/软件设计师考题/">软件设计师考题</a>
+                    
+                </div>
             
         </div>
-    </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2019/08/16/Maven项目关键点/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                Maven项目关键点
-            </h3>
-            
-            
-            <span class="tag is-post-tag">Maven项目</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.Maven打包 install
-因为使用ssm架构，所有存在java类文件下放Mapping..
-            </p>
-            <p class="date text-shadow is-marginless">2019-08-16</p>
+        <div class="content" style="overflow: auto">
+            <h3 id="1-总线系统"><a href="#1-总线系统" class="headerlink" title="1.总线系统"></a>1.总线系统</h3><h4 id="1-题目"><a href="#1-题目" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225223.png" alt></p>
+<h4 id="2-题目解析"><a href="#2-题目解析" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p> 总线复用，顾名思义就是一条总线实现多种功能。</p>
+<p>常见的总线复用方式有<strong>总线分时复用</strong>，它是指在不同时段利用总线上同一个信号线传送不同信号，例如，地址总线和数据总线共用一组信号线。采用这种方式的目的是减少总线数量，提高总线的利用率。</p>
+</blockquote>
+<h3 id="2-编译与解释"><a href="#2-编译与解释" class="headerlink" title="2.编译与解释"></a>2.编译与解释</h3><h4 id="1-题目-1"><a href="#1-题目-1" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225434.png" alt></p>
+<h4 id="2-题目解析-1"><a href="#2-题目解析-1" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>​    用高级语言编写的程序不能直接被机器执行，而是经过相关的处理后，将其变成目标程序后才能被机器执行，而这一过程就是一个编译的过程，而实现这个功能的程序就称为编译程序。</p>
+</blockquote>
+<h3 id="3-算法基础与常见的算法"><a href="#3-算法基础与常见的算法" class="headerlink" title="3.算法基础与常见的算法"></a>3.算法基础与常见的算法</h3><h4 id="1-题目-2"><a href="#1-题目-2" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225525.png" alt></p>
+<h4 id="2-题目解析-2"><a href="#2-题目解析-2" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<ul>
+<li><p><strong>分治法</strong>的设计思想是将一个难以直接解决的大问题分解成一些规模较少的相同问题以便各个击破，分而治之。<br></p>
+</li>
+<li><p><strong>动态规划法</strong>与分治法类似，其基本思想也是将待求解问题分解成若干个子问题，先求解子问题，然后从这些子问题的解得到原问题的解。与分治法不同的是，适合于用动态规划法求解的问题，经分解得到的子问题往往不是独立的。若用分治法来解这类问题，则相同的子问题会被求解多次，以至于最后解决原问题需要耗费指数级时间。动态规划法可求解的问题一般具有最优子结构和重叠子问题，因此本题第一空选择B选项动态规划法。<br></p>
+</li>
+<li><p><strong>贪心法</strong>经常用于解决最优化问题，但他的最优往往是从局部最优来考虑的，每一步都选最优的方案，但这种方案不一定能得到整体上的最优解。<br></p>
+</li>
+<li><p><strong>回溯法</strong>是一种既带有系统性又带有跳跃性的搜索算法。它在包含问题的所有解的解空间树中，按照深度优先的策略，从根节点出发搜索解空间树。因此本题第二空选择C选项回溯法。</p><p></p>
+</li>
+</ul>
+</blockquote>
+<h3 id="4-Gant图和Pert图"><a href="#4-Gant图和Pert图" class="headerlink" title="4.Gant图和Pert图"></a>4.Gant图和Pert图</h3><h4 id="1-题目-3"><a href="#1-题目-3" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225658.png" alt></p>
+<h4 id="2-题目解析-3"><a href="#2-题目解析-3" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>本题考查软件项目计划基础知识。<br></p>
+<p>软件项目计划的一个重要内容是<strong>安排进度</strong>，</p>
+<p>常用的方法有Gantt图和PERT图。</p>
+<ul>
+<li>Gantt图用水平条状图描述，它以日历为基准描述项目任务，可以清楚地表示任务的持续时间和任务之间的并行，但是不能清晰地描述各个任务之间的<strong>依赖关系</strong>。</li>
+<li>PERT图是一种网络模型，描述一个项目任务之间的关系。可以明确表达任务之间的依赖关系，即哪些任务完成后才能开始另一些任务，以及如期完成整个工程的关键路径。<br></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp; 图中任务流1→2→5→7→9的持续时间是15， 1→2→5→8→9的持续时间是13，1→3→6→8→9的持续时间是8， 4→6→8→9的持续时间为9。所以项目关键路径长度为15。事件6在非关键路径上，其后的任务需要时间为5，所以最晚开始时间=15-5=10。</p>
+</blockquote>
+<h3 id="5-多媒体技术概念"><a href="#5-多媒体技术概念" class="headerlink" title="5.多媒体技术概念"></a>5.多媒体技术概念</h3><h4 id="1-题目-4"><a href="#1-题目-4" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225921.png" alt></p>
+<h4 id="2-题目解析-4"><a href="#2-题目解析-4" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>图像分辨率与显示分辨率是两个不同的概念。图像分辨率确定的是组成一幅图像像素的数目，而显示分辨率确定的是显示图像的区域大小。它们之间的关系是:<br><br> 　　①图像分辨率大于显示分辨率时，在屏幕上只能显示部分图像。例如，当图像分辨率为800 X 600，屏幕分辨率为640 X 480时，屏幕上只能显示一幅图像的64%左右。<br><br> 　　②图像分辨率小于屏幕分辨率时，图像只占屏幕的一部分。例如，当图像分辨率为320 X 240，屏幕分辨率为640 X 480时，图像只占屏幕的1/4 。</p>
+</blockquote>
+<h3 id="6-CVS"><a href="#6-CVS" class="headerlink" title="6.CVS"></a>6.CVS</h3><h4 id="1-题目-5"><a href="#1-题目-5" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230047.png" alt></p>
+<h4 id="2-题目解析-5"><a href="#2-题目解析-5" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>   CVS的全称是Concurrent Version System，它是一个免费的协同版本控制工具，主要用于软件源码的维护。此外CVS可以维护任意文档的开发和使用，例如共享文件的编辑修改，而不仅仅局限于程序设计。CVS维护的文件类型可以是文本类型也可以是二进制类型。CVS基于客户端朋及务器模式，多个用户可通过网络（或本地）方式同时访问，从而使得CVS成为位于不同地点的人同时处理数据文件（特别是程序的源代码）时的首选。</p>
+</blockquote>
+<h3 id="7-数据库模式"><a href="#7-数据库模式" class="headerlink" title="7.数据库模式"></a>7.数据库模式</h3><h4 id="1-题目-6"><a href="#1-题目-6" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230256.png" alt></p>
+<h4 id="2-题目解析-6"><a href="#2-题目解析-6" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230416.png" alt></p>
+<h3 id="8-TCP-IP协议族"><a href="#8-TCP-IP协议族" class="headerlink" title="8.TCP/IP协议族"></a>8.TCP/IP协议族</h3><h4 id="1-题目-7"><a href="#1-题目-7" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230441.png" alt></p>
+<h4 id="2-题目解析-7"><a href="#2-题目解析-7" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p> DHCP客户端可从DHCP服务器获得本机IP地址、DNS服务器的地址、DHCP服务器的地址、默认网关的地址等，但没有Web服务器、邮件服务器地址。</p>
+</blockquote>
+<h3 id="9-协议"><a href="#9-协议" class="headerlink" title="9.协议"></a>9.协议</h3><h4 id="1-题目-8"><a href="#1-题目-8" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230555.png" alt></p>
+<h4 id="2-题目解析-8"><a href="#2-题目解析-8" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p> IEEE 802.11标准定义的分布式协调功能采用了载波监听多路访问肿突避免（CSMA/CA协议）。在无线网中进行冲突检测是有困难的。例如，两个站由于距离过大或中间障碍物的分隔而检测不到冲突，但是位于它们之间的第三个站可能会检测到冲突，这就是所谓隐蔽终端问题。采用冲突避免的办法可以解决隐蔽终端的问题。802.11定义了一个帧间隔（Inter Frame Spacing ，IFS ）时间。另外还有一个后退计数器，其初始值是由随机数发生器设置的，递减计数直到0。基本的操作过程如下：<br><br> 　　（1）如果一个站有数据要发送并且监听到信道忙，则产生一个随机数设置自己的后退计数器并坚持监听；<br><br> 　　（2）监听到信道空闲后等待一个IFS时间，然后开始计数，最先计数完的站可以开始发送；<br><br> 　　（3）其他站在监听到有新的站开始发送后暂停计数，在新的站发送完成后再等待一个 IFS时间继续计数，直到计数完成开始发送。<br><br> 　　CSMA/CA协议可以采用载波检测方法发现信道空闲，也可以采用能量检测方法发现信道空闲。这个算法对参与竞争的站是公平的，基本上是按先来先服务的顺序获得发送的机会。 </p>
+</blockquote>
+
         </div>
-    </div>
-</a>
-        
-        
-        
-<a class="post-hover" href="/2019/08/06/ssm简易整合记录/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                ssm简易整合记录
-            </h3>
+        <div class="post-reply">
             
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
             
-            <span class="tag is-post-tag">整合技术</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.环境搭建
-因为Sprin框架3.2jar版本没有和jdk1.8完全搭配，会有bug，所以采用..
-            </p>
-            <p class="date text-shadow is-marginless">2019-08-06</p>
-        </div>
-    </div>
-</a>
-        
-    </div>
-</div>
-
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/08/16/Maven项目关键点/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Maven项目关键点</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">Maven项目</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.Maven打包 install
-因为使用ssm架构，所有存在java类文件下放Mapping的xml文件，但是maven 打包时是不会解析xml文件的，因为只是解析java文件成为class文件，所有测试路径时报错。
-
-解决方法，添加插件
- &lt;plugin&gt;
-    &lt;artifactId&gt;maven-resources-pl..
-                                        </p>
-                                        <p>2019-08-16</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/08/06/ssm简易整合记录/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>ssm简易整合记录</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">整合技术</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.环境搭建
-因为Sprin框架3.2jar版本没有和jdk1.8完全搭配，会有bug，所以采用jdk1.8加spring4.0.
-eclipse——web版本为3.0
-tomcat版本为8.52.如何在eclipse工程下建立资源文件夹
-
-
-                                        </p>
-                                        <p>2019-08-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/08/06/SpringMVC学习/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5wxvlml4zj30x70ib43w.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>SpringMVC学习</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">学习笔记</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.介绍
-
-Spring MVC是Spring提供的一个强大而灵活的web框架。`借助于注解`，Spring MVC提供了几乎是POJO的开发
-模式，使得控制器的开发和测试更加简单。这些控制器一般不直接处理请求，而是将其委托给Spring上下文中 
-的其他bean，通过Spring的依赖注入功能，这些bean被注入到控制器中。
-
-Spring MVC是S..
-                                        </p>
-                                        <p>2019-08-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/08/03/Tomcat的坑或者eclipse的坑/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5mpne6ofnj30wx04udg8.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Tomcat的坑或者eclipse的坑</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">web项目运行错误</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.错误展示
-
-
-– 
-2.错误的指向
-1.2.3.4.5.
-
-– 
-4.错误的解决
-首先检查下eclipse是否设置了Project自动编译了：eclipse—》Project —》Build Automatically，该选项必选打勾，如果没有打勾则打勾后就行。如图：
-
-注意这里有工程也有全局的，必须两个都设置对了才可以编译。
- 如图：
- 具体工程的..
-                                        </p>
-                                        <p>2019-08-03</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/29/MyBatise学习笔记/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>MyBatise学习笔记</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">学习笔记</span>
-                                            
-                                        </p>
-                                        <p>
-                                            MyBatise1.介绍2.学习问题
-                                        </p>
-                                        <p>2019-07-29</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/26/荒唐/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564164004295&di=8f89cb163c3f9b325d7cb5c24442e96f&imgtype=0&src=http%3A%2F%2Fpic.qqtn.com%2Ffile%2F2013%2F2015-4%2F2015042808453014392.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>荒唐</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">诗歌</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-
-
-听过的流行歌一样
-起初循环 再者沉底 
-白狐老道  
-喜欢
-翻页不停的故事书
-像极了 
-翻云覆雨的天气
-不惊讶夏天里的蝉鸣
-和一片蛙声
-慌忙于
-手脚两边
-奋力于你爱的颜色
-
-
-                                        </p>
-                                        <p>2019-07-26</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/26/webService-wsdl2java运行错误！/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5dmf9ebsij30en08474t.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>webService wsdl2java运行错误！</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">环境配置</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.错误展示
-
-
-
-
-
-
-2.问题分析过程
-
-
-当我cxf的环境配置没问题时，再输入wsdl2java -v cmd提示系统找不到路径！这时我是很蒙蔽的！而且一直多以为是cxf的配置问题，一度让我重新下了一个比较新版本的cxf，结果可想而知，还是不行！搞了几个小时，心态也崩了，就干脆算了！
-呃呃呃，晚上我出去跑步回来，洗完澡，准备接着往前学习，倔强的我又..
-                                        </p>
-                                        <p>2019-07-26</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/25/WebService-学习笔记/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564653557&di=72ecca34df371fc685b2e15933d16711&imgtype=jpg&er=1&src=http%3A%2F%2Fupload.nxing.cn%2Fuploads%2Fuploads%2F2017%2F02%2F26%2F0000027%2F201702260908002721bf4af-size853x486.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>WebService 学习笔记</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">WebService的学习</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-1.介绍
-Web service 即web服务，它是一种跨编程语言和跨操作系统平台的远程调用技术即跨平台远程调用技术。 
-Web service是一个平台独立的，低耦合的，自包含的、基于可编程的web的应用程序，使用开放的XML（标准通用标记语言下的一个子集）标准来描述、发布、发现、协调和配置这些应用程序，用于开发分布式的互操作的应用程序。 
-Web ..
-                                        </p>
-                                        <p>2019-07-25</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/22/bootStrap学习笔记/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563776659689&di=9ba05a212e9694b94544cf3f14c79db4&imgtype=0&src=http%3A%2F%2Fcodegeekz.com%2Fwp-content%2Fuploads%2FBootstrap.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>bootStrap学习笔记</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">学习笔记序列</span>
-                                            
-                                        </p>
-                                        <p>
-                                            Bootstrap
-1.介绍
-Bootstrap，来自 Twitter，是目前最受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。Bootstrap 目前的最新版本是 Bootstrap4，利用我们提供的 Sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、基..
-                                        </p>
-                                        <p>2019-07-22</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                </nav>
-            </section>
             
         </div>
     </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
