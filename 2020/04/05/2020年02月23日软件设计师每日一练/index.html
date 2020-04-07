@@ -15,16 +15,31 @@
   </script>
 
   
-  <title>Archives | Yichangkong</title>
+  <title>2020年02月23日软件设计师每日一练 | Yichangkong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="yichangkong 个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yichangkong">
-<meta property="og:url" content="http://yoursite.com/archives/page/4/index.html">
+  <meta name="description" content="1.树与二叉树1.题目 2.题目解析 &amp;nbsp;&amp;nbsp;&amp;nbsp; 本题考查哈夫曼树。 ​    构造最优二叉树的哈夫曼算法如下。​    &amp;nbsp;&amp;nbsp;&amp;nbsp; ① 根据给定的n个权值｛w1， w2，…，Wn｝构成n棵二叉树的集合F= {T1.T2，…，Tn}，其中每棵树T;中只有一个带权为w;的根结点，其左右子树均空。​    &amp;nbsp;&amp;nbsp;&amp;nbsp; ② 在">
+<meta name="keywords" content="软件设计师考题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年02月23日软件设计师每日一练">
+<meta property="og:url" content="http://yoursite.com/2020/04/05/2020年02月23日软件设计师每日一练/index.html">
 <meta property="og:site_name" content="Yichangkong">
+<meta property="og:description" content="1.树与二叉树1.题目 2.题目解析 &amp;nbsp;&amp;nbsp;&amp;nbsp; 本题考查哈夫曼树。 ​    构造最优二叉树的哈夫曼算法如下。​    &amp;nbsp;&amp;nbsp;&amp;nbsp; ① 根据给定的n个权值｛w1， w2，…，Wn｝构成n棵二叉树的集合F= {T1.T2，…，Tn}，其中每棵树T;中只有一个带权为w;的根结点，其左右子树均空。​    &amp;nbsp;&amp;nbsp;&amp;nbsp; ② 在">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407214828.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407215151.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407215326.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407215749.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407215834.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407215925.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407220126.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407220524.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407220618.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407220745.png">
+<meta property="og:updated_time" content="2020-04-07T14:08:34.035Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yichangkong">
+<meta name="twitter:title" content="2020年02月23日软件设计师每日一练">
+<meta name="twitter:description" content="1.树与二叉树1.题目 2.题目解析 &amp;nbsp;&amp;nbsp;&amp;nbsp; 本题考查哈夫曼树。 ​    构造最优二叉树的哈夫曼算法如下。​    &amp;nbsp;&amp;nbsp;&amp;nbsp; ① 根据给定的n个权值｛w1， w2，…，Wn｝构成n棵二叉树的集合F= {T1.T2，…，Tn}，其中每棵树T;中只有一个带权为w;的根结点，其左右子树均空。​    &amp;nbsp;&amp;nbsp;&amp;nbsp; ② 在">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407214828.png">
   
     <link rel="alternate" href="/atom.xml" title="Yichangkong" type="application/atom+xml">
   
@@ -110,475 +125,173 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
     }
 
-    .primary-container .post-hover {
-        background: black;
+    .flow-chart {
+        text-align: center;
     }
 
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
+    img[alt="post-cover"] {
+        display: none;
     }
-
 </style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2019/11/10/vue的学习报错/">
-            <div class="full-height post-hover"
-                 style="
-                         background-image: url('');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            vue的学习报错
-                        </h1>
-                        <div>
-                        
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            
-                        </p>
-                        <p class="date text-shadow">2019-11-10</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>2020年02月23日软件设计师每日一练</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbb9ho4ywkj30jg0jgwew.jpg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> YichangKong</span>
+                <span class="post-date sub-title">at: 2020-04-05</span>
             </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
-                
-<a class="post-hover" href="/2019/11/04/springMvc错误/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                springMVC错误
-            </h3>
-            
-            
-            <span class="tag is-post-tag">错误笔记</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.程序环境SpringSpringMVCMyBatisejdk 1.8Tomcat 7.0
-2..
-            </p>
-            <p class="date text-shadow is-marginless">2019-11-04</p>
-        </div>
-    </div>
-</a>
-            
-            
-                
-<a class="post-hover" href="/2019/10/22/MultipartFile/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572336684&di=508f5780d849981c25a837714431089e&imgtype=jpg&er=1&src=http%3A%2F%2Fwww.pianshen.com%2Fimages%2F166%2F3e7f81e416235133bd7619b155ec962e.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                MultipartFile
-            </h3>
-            
-            
-            <span class="tag is-post-tag">技术学习</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-MultipartFile类（Spring框架）
-起源 ： 在学习一个商城的web应用时，发现..
-            </p>
-            <p class="date text-shadow is-marginless">2019-10-22</p>
-        </div>
-    </div>
-</a>
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/软件设计师考题/">软件设计师考题</a>
+                    
+                </div>
             
         </div>
-    </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2019/11/04/springMvc错误/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                springMVC错误
-            </h3>
-            
-            
-            <span class="tag is-post-tag">错误笔记</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.程序环境SpringSpringMVCMyBatisejdk 1.8Tomcat 7.0
-2..
-            </p>
-            <p class="date text-shadow is-marginless">2019-11-04</p>
+        <div class="content" style="overflow: auto">
+            <h3 id="1-树与二叉树"><a href="#1-树与二叉树" class="headerlink" title="1.树与二叉树"></a>1.树与二叉树</h3><h4 id="1-题目"><a href="#1-题目" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407214828.png" alt></p>
+<h4 id="2-题目解析"><a href="#2-题目解析" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>&nbsp;&nbsp;&nbsp; 本题考查哈夫曼树。<br></p>
+<p>​    构造最优二叉树的哈夫曼算法如下。<br><br>​    &nbsp;&nbsp;&nbsp; ① 根据给定的n个权值｛w1， w2，…，Wn｝构成n棵二叉树的集合F= {T1.T2，…，Tn}，其中每棵树T;中只有一个带权为w;的根结点，其左右子树均空。<br><br>​    &nbsp;&nbsp;&nbsp; ② 在F中选取两棵根结点的权值最小的树作为左右子树，构造一棵新的二叉树，置新构造二叉树的根结点的权值为其左、右子树根结点的权值之和。<br><br>​    &nbsp;&nbsp;&nbsp; ③从F中删除这两棵树，同时将新得到的二叉树加入到F中。<br><br>​    &nbsp;&nbsp;&nbsp; 重复②、③，直到F中只含一棵树时为止。这棵树便是最优二叉树（哈夫曼树）。从树中一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称为路径长度。树的路径长度是从树根到每一个结点的路径长度之和。树的带权路径长度为树中所有叶子结点的带权路径长度之和。<br><br>​    &nbsp;&nbsp;&nbsp; 因此，C为最优二叉树，其带权路径长度（12+6）<em>3+15</em>2+23<em>2+29</em>2=188。<br></p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407215151.png" alt></p>
+</blockquote>
+<h4 id="3-知识牵引（哈夫曼树）"><a href="#3-知识牵引（哈夫曼树）" class="headerlink" title="3.知识牵引（哈夫曼树）"></a>3.知识牵引（哈夫曼树）</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407215326.png" alt></p>
+<blockquote>
+<p>在<a href="https://baike.baidu.com/item/计算机" target="_blank" rel="noopener">计算机</a><a href="https://baike.baidu.com/item/数据处理" target="_blank" rel="noopener">数据处理</a>中，哈夫曼编码使用<a href="https://baike.baidu.com/item/变长编码表" target="_blank" rel="noopener">变长编码表</a>对源符号（如文件中的一个字母）进行编码，其中<a href="https://baike.baidu.com/item/变长编码表" target="_blank" rel="noopener">变长编码表</a>是通过一种评估来源符号出现机率的方法得到的，出现机率高的字母使用较短的编码，反之出现机率低的则使用较长的编码，这便使编码之后的字符串的平均长度、<a href="https://baike.baidu.com/item/期望值" target="_blank" rel="noopener">期望值</a>降低，从而达到<a href="https://baike.baidu.com/item/无损压缩" target="_blank" rel="noopener">无损压缩</a>数据的目的。</p>
+<p>例如，在英文中，e的出现<a href="https://baike.baidu.com/item/机率" target="_blank" rel="noopener">机率</a>最高，而z的出现概率则最低。当利用哈夫曼编码对一篇英文进行压缩时，e极有可能用一个<a href="https://baike.baidu.com/item/比特" target="_blank" rel="noopener">比特</a>来表示，而z则可能花去25个<a href="https://baike.baidu.com/item/比特" target="_blank" rel="noopener">比特</a>（不是26）。用普通的表示方法时，每个英文字母均占用一个<a href="https://baike.baidu.com/item/字节" target="_blank" rel="noopener">字节</a>，即8个<a href="https://baike.baidu.com/item/比特" target="_blank" rel="noopener">比特</a>。二者相比，e使用了一般编码的1/8的长度，z则使用了3倍多。倘若我们能实现对于英文中各个字母出现概率的较准确的估算，就可以大幅度提高无损压缩的比例。</p>
+<p>哈夫曼树又称最优二叉树，是一种带权路径长度最短的<a href="https://baike.baidu.com/item/二叉树" target="_blank" rel="noopener">二叉树</a>。所谓树的带权路径长度，就是树中所有的叶结点的权值乘上其到根结点的路径长度（若根结点为0层，叶结点到根结点的路径长度为叶结点的层数）。树的路径长度是从树根到每一结点的路径长度之和，记为WPL=（W1<em>L1+W2</em>L2+W3<em>L3+…+Wn</em>Ln），N个权值Wi（i=1,2,…n）构成一棵有N个叶结点的二叉树，相应的叶结点的路径长度为Li（i=1,2,…n）。可以证明哈夫曼树的WPL是最小的。</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p><strong>1、</strong><a href="https://baike.baidu.com/item/哈夫曼编码" target="_blank" rel="noopener">哈夫曼编码</a></p>
+<p>在数据通信中，需要将传送的文字转换成二进制的字符串，用0，1码的不同排列来表示字符。例如，需传送的报文为“AFTER DATA EAR ARE ART AREA”，这里用到的字符集为“A，E，R，T，F，D”，各字母出现的次数为{8，4，5，3，1，1}。现要求为这些字母设计编码。要区别6个字母，最简单的二进制编码方式是等长编码，固定采用3位二进制，可分别用000、001、010、011、100、101对“A，E，R，T，F，D”进行编码发送，当对方接收报文时再按照三位一分进行译码。显然编码的长度取决报文中不同字符的个数。若报文中可能出现26个不同字符，则固定编码长度为5。然而，传送报文时总是希望总长度尽可能短。在实际应用中，各个字符的出现频度或使用次数是不相同的，如A、B、C的使用频率远远高于X、Y、Z，自然会想到设计编码时，让使用频率高的用短码，使用频率低的用长码，以优化整个报文编码。</p>
+<p>为使不等长编码为前缀<a href="https://baike.baidu.com/item/编码/80092" target="_blank" rel="noopener">编码</a>(即要求一个字符的编码不能是另一个字符编码的前缀)，可用字符集中的每个字符作为叶子结点生成一棵编码二叉树，为了获得传送报文的最短长度，可将每个字符的出现频率作为字符结点的权值赋予该结点上，显然字使用频率越小权值越小，权值越小叶子就越靠下，于是频率小编码长，频率高编码短，这样就保证了此树的最小带权路径长度效果上就是传送报文的最短长度。因此，求传送报文的最短长度问题转化为求由字符集中的所有字符作为叶子结点，由字符出现频率作为其权值所产生的哈夫曼树的问题。利用哈夫曼树来设计二进制的前缀编码，既满足前缀编码的条件，又保证报文编码总长最短。</p>
+<p><strong>哈夫曼静态编码：</strong>它对需要编码的数据进行两遍扫描：第一遍统计原数据中各字符出现的频率，利用得到的频率值创建哈夫曼树，并必须把树的信息保存起来，即把字符0-255(2^8=256)的频率值以2-4BYTES的长度顺序存储起来，（用4Bytes的长度存储频率值，频率值的表示范围为0–2^32-1，这已足够表示大文件中字符出现的频率了）以便解压时创建同样的哈夫曼树进行解压；第二遍则根据第一遍扫描得到的哈夫曼树进行编码，并把编码后得到的码字存储起来。</p>
+<p><strong>哈夫曼动态编码：</strong>动态哈夫曼编码使用一棵动态变化的哈夫曼树，对第t+1个字符的编码是根据原始数据中前t个字符得到的哈夫曼树来进行的，编码和解码使用相同的初始哈夫曼树，每处理完一个字符，编码和解码使用相同的方法修改哈夫曼树，所以没有必要为解码而保存哈夫曼树的信息。编码和解码一个字符所需的时间与该字符的编码长度成正比，所以动态哈夫曼编码可实时进行。</p>
+<p><strong>2、哈夫曼<a href="https://baike.baidu.com/item/译码" target="_blank" rel="noopener">译码</a></strong></p>
+<p>在通信中，若将字符用哈夫曼编码形式发送出去，对方接收到编码后，将编码还原成字符的过程，称为哈夫曼译码。</p>
+<h2 id="基本术语"><a href="#基本术语" class="headerlink" title="基本术语"></a>基本术语</h2><p>哈夫曼树又称为最优树.</p>
+<p><strong>1、路径和路径长度</strong></p>
+<p>在一棵树中，从一个结点往下可以达到的孩子或孙子结点之间的通路，称为路径。通路中分支的数目称为路径长度。若规定根结点的层数为1，则从根结点到第L层结点的路径长度为L-1。</p>
+<p><strong>2、结点的权及带权路径长度</strong></p>
+<p>若将树中结点赋给一个有着某种含义的数值，则这个数值称为该结点的权。结点的带权路径长度为：从根结点到该结点之间的路径长度与该结点的权的乘积。<img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407215749.png" alt></p>
+<p><strong>3、树的带权路径长度</strong></p>
+<p>树的带权路径长度规定为所有叶子结点的带权路径长度之和，记为WPL。</p>
+</blockquote>
+<h3 id="2-多种程序语言特点"><a href="#2-多种程序语言特点" class="headerlink" title="2.多种程序语言特点"></a>2.多种程序语言特点</h3><h4 id="1-题目-1"><a href="#1-题目-1" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407215834.png" alt></p>
+<h4 id="2-题目解析-1"><a href="#2-题目解析-1" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>​    HTML：静态网页<br><br>​    LISP：一种基于λ演算的函数式编程语言<br><br>​    PHP ：混合了C、Java、Perl以及PHP自创的语法。它可以比CGI或者Perl更快速地执行动态网页。</p>
+</blockquote>
+<h3 id="3-其他"><a href="#3-其他" class="headerlink" title="3.其他"></a>3.其他</h3><h4 id="1-题目-2"><a href="#1-题目-2" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407215925.png" alt></p>
+<h4 id="2-题目解析-2"><a href="#2-题目解析-2" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>&nbsp;&nbsp;&nbsp; 商标专用权是企业、事业单位和个体工商业者，对其生产、制造、加工、拣选或者经销的商品，向商标局申请商品商标注册，经商标局核准注册的商标为注册商标，所取得的专用权，受法律保护。并且，促使生产者、制造者、加工者或经销者保证商品质量和维护商标信誉，对其使用注册商标的商品质量负责，便于各级工商行政管理部门通过商标管理，监督商品质量，制止欺骗消费者的行为。<br><br> &nbsp;&nbsp;&nbsp; 实用新型专利权是受我国《专利法》保护的发明创造权利。实用新型专利权被授予后，除法律另有规定的以外，任何单位或者个人未经专利权人许可，不得为生产经营目的制造、使用、销售其专利产品，或者使用其专利方法以及使用、销售依照该专利方法直接获得的产品。<br><br> &nbsp;&nbsp;&nbsp; 因此，小王购买了“海之久”牌活动硬盘，只享有该U盘的所有权，而不享有题目中所提及活动硬盘的其他权利。</p>
+</blockquote>
+<h3 id="4-编译与解析"><a href="#4-编译与解析" class="headerlink" title="4.编译与解析"></a>4.编译与解析</h3><h4 id="1-题目-3"><a href="#1-题目-3" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407220126.png" alt></p>
+<h4 id="2-题目解析-3"><a href="#2-题目解析-3" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>本题考查程序语言基础知识。<br><br>    编译正确的程序可以消除词法及语法错误，但不能完全消除语义错误。<br><br>    语义错误分两类，静态语义错误可以通过编译程序检测发现，而动态语义错误需要到运行时才能被发现</p>
+</blockquote>
+<h4 id="3-知识牵引（编程语言的语法和语义）"><a href="#3-知识牵引（编程语言的语法和语义）" class="headerlink" title="3.知识牵引（编程语言的语法和语义）"></a>3.知识牵引（<a href="https://www.cnblogs.com/feng9exe/p/6420516.html" target="_blank" rel="noopener">编程语言的语法和语义</a>）</h4><blockquote>
+<p>为了完整地定义编程语言，我们需要：<br>语法，描述程序看起来是什么样的；<br>语义，描述程序的含义。</p>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><h2 id="语法的定义"><a href="#语法的定义" class="headerlink" title="语法的定义"></a>语法的定义</h2><p>每一种编程语言都有一系列规则，描述在那种语言中什么样的字符串被认为是有效程序。这些规则定义了这种语言的语法。通过语言的语法规则，我们能把像 y = x + 1 这样可能有效的程序与像 &gt;/;x:1@4 这样毫无意义的字符串区分开。</p>
+<h2 id="抽象语法树"><a href="#抽象语法树" class="headerlink" title="抽象语法树"></a>抽象语法树</h2><p>当然，计算机程序的预期用途是被计算机读取，而要读程序就需要语法解析器：这个分析器程序能够读取代表程序的字符串，根据语法规则检查它是否有效，然后把它转换成一个适合被进一步处理的结构化表示。<br>有各种各样的工具能把一种语言的语法规则自动转换成一个语法解析器。<br>总体来讲一个语法解析器应该读入像 y = x + 1 这样的字符串，然后把它转换成抽象语法树（ AST）。抽象语法树是源代码的一种表示，去掉了空格之类的无关细节，而只关注程序的分层结构。</p>
+<h2 id="语法总结"><a href="#语法总结" class="headerlink" title="语法总结"></a>语法总结</h2><p>语法关心的只是程序的表面是什么样的，而不是它的含义。程序有可能语法正确但没有任何实际意义。例如，程序 y = x + 1 本身可能没有任何意义，因为并没有事先说明 x 是什么，而程序 z = true + 1 可能会在运行时候报错，因为它试图在一个布尔型值上加数字。</p>
+<h1 id="操作语义"><a href="#操作语义" class="headerlink" title="操作语义"></a>操作语义</h1><h2 id="操作语义定义"><a href="#操作语义定义" class="headerlink" title="操作语义定义"></a>操作语义定义</h2><p>考虑程序含义的最实际方法是思考它做了些什么：在运行程序的时候，我们期望发生什么呢？在运行时编程语言中不同的结构都是如何表现的？把它们放到一起组成更大的程序时会是什么效果？<br>这是操作语义学（ operational semantic）的基础，这种方法为程序在某种机器上的执行定义一些规则，以此来捕捉编程语言的含义。这个机器常常是一种抽象的机器：</p>
+<h2 id="小步规约"><a href="#小步规约" class="headerlink" title="小步规约"></a>小步规约</h2><p>那么，我们如何设计一台抽象机器，并使用它定义一种编程语言的操作语义呢？一种方法就是假想一台机器，用这台机器直接按照这种语言的语法进行操作一小步一小步地对其进行反复规约，从而对一个程序求值。不管最后得到的结果含义是什么，我们每一步都能让程序更接近最终结果。</p>
+<p>这种小步规约类似于对代数式求值的方式。例如， 为了对 (1×2) + (3×4) 求值，我们知道应该：</p>
+<ol>
+<li>执行左侧的乘法（ 1×2 变成了 2），这样表达式就规约成了 2 + (3×4)；</li>
+<li>执行右侧的乘法（ 3×4 变成了 12），这样表达式规约成了 2 + 12</li>
+<li>执行加法（ 2 + 12 变成了 14），最终得到 14。</li>
+</ol>
+<p>我们可以认为 14 就是结果， 因为通过上面步骤已经不能再进一步规约了；我们认为 14 是一个特殊代数表达式，它是一个值，有自己的含义，不需要进一步的努力了。</p>
+<h2 id="小步规约的形式化规则"><a href="#小步规约的形式化规则" class="headerlink" title="小步规约的形式化规则"></a>小步规约的形式化规则</h2><p>把如何进行每一小步的规约写成形式化规则，这个非形式化的过程就可以转换成一个操作语义。<br>这些规则本身需要用某种语言（ 元语言）写下来，而这种语言通常是数学符号。 </p>
+</blockquote>
+<h3 id="5-时间复杂度与空间复杂度"><a href="#5-时间复杂度与空间复杂度" class="headerlink" title="5.时间复杂度与空间复杂度**"></a>5.时间复杂度与空间复杂度**</h3><h4 id="1-题目-4"><a href="#1-题目-4" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407220524.png" alt></p>
+<h4 id="2-题目解析-4"><a href="#2-题目解析-4" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>这是典型的01背包问题，动态规划算法中，自底向上（递推）：从小范围递推计算到大范围，可以看到装第一个和第五个物品价值是最高的，这时候V=12了，然后占了6的重量了，只能装物品2了，价值15。<br><br>    而此时的算法过程是对物品n和背包容量W分别进行比较以找到最优结果，因此时间复杂度为O(nW)。<br><br>    <br><br>    空（3）（4）是部分背包，部分背包的时候计算每个物品单位重量价值多少，单位重量v={3 1.5 5/6 0.8 1.5},可以看到1 2 5的单位价值最高，选择125后背包重量还只有8，还有2个重量可以选择3得等5/3的价值，就是1.67，所以第三问为16.67。<br><br>    再来看时间复杂度，本题先进行归并排序，然后再根据有序序列来选择放入背包的物品，因此算法分两部分，首先是归并排序时间复杂度为O(nlgn)，然后是放背包，因为已经排过序，所以只需要线性处理即可，此时时间复杂度为O(n)，综合起来，由于O(nlgn)&gt;O(n)，因此整体时间复杂度为O(nlgn)。</p>
+</blockquote>
+<h3 id="6-软件设计"><a href="#6-软件设计" class="headerlink" title="6.软件设计"></a>6.软件设计</h3><h4 id="1-题目-5"><a href="#1-题目-5" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407220618.png" alt></p>
+<h4 id="2-题目解析-5"><a href="#2-题目解析-5" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>内聚是指模块内部各元素之间联系的紧密程度，模块的内聚类型通常可以分为7种，根据内聚度从高到低排序分别如下：<br><br>    功能内聚：完成一个单一功能，各个部分协同工作，缺一不可。<br><br>    顺序内聚：处理元素相关，而且必须顺序执行。<br><br>    通信内聚：所有处理元素集中在一个数据结构的区域上。<br><br>    过程内聚：处理元素相关，而且必须按特定的次序执行。<br><br>    瞬时内聚：所包含的任务必须在同一时间间隔内执行（如初始化模块）。<br><br>    逻辑内聚：完成逻辑上相关的一组任务。<br><br>    偶然内聚：完成一组没有关系或松散关系的任务。</p>
+</blockquote>
+<h3 id="7-总线系统"><a href="#7-总线系统" class="headerlink" title="7.总线系统"></a>7.总线系统</h3><h4 id="1-题目-6"><a href="#1-题目-6" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407220745.png" alt></p>
+<h4 id="2-题目解析-6"><a href="#2-题目解析-6" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><p>​               总线的带宽指单位时间内传输的数据总量。 </p>
+<blockquote>
+<p>在计算机当中，时钟频率是其时钟周期的倒数，表示时间的度量，本题时钟周期为1/200MHz。<br><br>总线宽度是指总线的线数，即数据信号并行传输的能力，本题传送大小与总线宽度一致，不需要处理。<br><br><br><br>传送32bit的字，即数据总量为32bit；5个时钟周期，即(1/200MHz) *5，为总时间。<br><br><br><br>带宽=数据总量/总时间（注意单位的转换）<br><br><br><br>即总带宽=32bit/（5/200MHz）=1280Mbit/s=160MB/s。<br><br><br></p>
+</blockquote>
+
         </div>
-    </div>
-</a>
-        
-        
-        
-<a class="post-hover" href="/2019/10/22/MultipartFile/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572336684&di=508f5780d849981c25a837714431089e&imgtype=jpg&er=1&src=http%3A%2F%2Fwww.pianshen.com%2Fimages%2F166%2F3e7f81e416235133bd7619b155ec962e.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                MultipartFile
-            </h3>
+        <div class="post-reply">
             
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
             
-            <span class="tag is-post-tag">技术学习</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-MultipartFile类（Spring框架）
-起源 ： 在学习一个商城的web应用时，发现..
-            </p>
-            <p class="date text-shadow is-marginless">2019-10-22</p>
-        </div>
-    </div>
-</a>
-        
-    </div>
-</div>
-
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/11/04/springMvc错误/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>springMVC错误</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">错误笔记</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.程序环境SpringSpringMVCMyBatisejdk 1.8Tomcat 7.0
-2.错误现象
-后台并没有报任何错误！就是进入不了整个动态Web项目页面。
-导致整个的Controller层，没有响应。3.错误导致原因
-因为业务所需，我在PC端的indexController 新增一个模块服务。
-@Autowired （xxxSerice）
-但..
-                                        </p>
-                                        <p>2019-11-04</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/10/22/MultipartFile/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572336684&di=508f5780d849981c25a837714431089e&imgtype=jpg&er=1&src=http%3A%2F%2Fwww.pianshen.com%2Fimages%2F166%2F3e7f81e416235133bd7619b155ec962e.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>MultipartFile</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">技术学习</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-MultipartFile类（Spring框架）
-起源 ： 在学习一个商城的web应用时，发现UpdateFile的控制器内部使用的就是这个技术类。
-
-1. 配置文件SpringMVC 用的是 的MultipartFile来进行文件上传 所以我们首先要配置MultipartResolver用于处理表单中的file
-&lt;!-- 配置Multipart..
-                                        </p>
-                                        <p>2019-10-22</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/10/05/Python学习/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570271320744&di=e361d62c365751315a3a7fdc72465311&imgtype=0&src=http%3A%2F%2Fpic4.zhimg.com%2Fv2-2aa01d018e440c39c0c29e7e148fc5ae_1200x500.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Python学习</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">Python</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-开胃菜python简介
-Python 是一种易于学习又功能强大的编程语言。它提供了高效的高级数据结构，还有简单有效的面向对
-象编程。Python 优雅的语法和动态类型，以及解释型语言的本质，使它成为多数平台上写脚本和快速开发应用的理想语言。
-
-Python 解释器及丰富的标准库以源码或机器码的形式提供，可以到 Python 官网 https://
-ww..
-                                        </p>
-                                        <p>2019-10-05</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/09/27/云计算介绍/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=dd611ad65cda81cb5aeb8b9f330fbb73/d6ca7bcb0a46f21fce06ac71fb246b600c33aee6.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>云计算介绍</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">技术学习方向</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.简单介绍
-云计算（cloud computing）是分布式计算的一种，指的是通过网络“云”将巨大的数据计算处理程序分解成无数个小程序，然后，通过多部服务器组成的系统进行处理和分析这些小程序得到结果并返回给用户。云计算早期，简单地说，就是简单的分布式计算，解决任务分发，并进行计算结果的合并。因而，云计算又称为网格计算。通过这项技术，可以在很短的时间内（..
-                                        </p>
-                                        <p>2019-09-27</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/09/06/石英调度/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>石英调度</h3>
-                                        
-                                        <p>
-                                            
-                                        </p>
-                                        <p>
-                                            
-                                        </p>
-                                        <p>2019-09-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/09/02/mybatis报错/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>mybatis报错java.lang.UnsupportedOperationException原因及处理方法</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">mybatis报错</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-起因
-
-今天在请求数据库数据时报错java.lang.UnsupportedOperationException，从字面上理解错误的含义就是不支持的操作异常，后面定位到错误发生在数据库sql语句中，具体原因就是resultType=”java.util.List”有问题。返回的结果是一个List类型的集合，所有我用了这个resultType，但是不对的..
-                                        </p>
-                                        <p>2019-09-02</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/08/16/Maven项目关键点/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Maven项目关键点</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">Maven项目</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.Maven打包 install
-因为使用ssm架构，所有存在java类文件下放Mapping的xml文件，但是maven 打包时是不会解析xml文件的，因为只是解析java文件成为class文件，所有测试路径时报错。
-
-解决方法，添加插件
- &lt;plugin&gt;
-    &lt;artifactId&gt;maven-resources-pl..
-                                        </p>
-                                        <p>2019-08-16</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/08/06/ssm简易整合记录/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>ssm简易整合记录</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">整合技术</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.环境搭建
-因为Sprin框架3.2jar版本没有和jdk1.8完全搭配，会有bug，所以采用jdk1.8加spring4.0.
-eclipse——web版本为3.0
-tomcat版本为8.52.如何在eclipse工程下建立资源文件夹
-
-
-                                        </p>
-                                        <p>2019-08-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/08/06/SpringMVC学习/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5wxvlml4zj30x70ib43w.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>SpringMVC学习</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">学习笔记</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.介绍
-
-Spring MVC是Spring提供的一个强大而灵活的web框架。`借助于注解`，Spring MVC提供了几乎是POJO的开发
-模式，使得控制器的开发和测试更加简单。这些控制器一般不直接处理请求，而是将其委托给Spring上下文中 
-的其他bean，通过Spring的依赖注入功能，这些bean被注入到控制器中。
-
-Spring MVC是S..
-                                        </p>
-                                        <p>2019-08-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                </nav>
-            </section>
             
         </div>
     </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
