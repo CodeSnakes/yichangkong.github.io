@@ -15,16 +15,32 @@
   </script>
 
   
-  <title>Yichangkong</title>
+  <title>2020年02月20日软件设计师每日一练 | Yichangkong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="yichangkong 个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yichangkong">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="1.传址与传值1.题目 2.题目解析 传值调用最显著的特征就是被调用的函数内部对形参的修改不影响实参的值。 引用调用是将实参的地址传递给形参，使得形参的地址就是实参的地址。  2.RUP1.题目 2.题目解析  本题考查RUP中每个阶段结束时所产生的里程碑。初启阶段结束时的里程碑是生命周期目标；精化阶段结束时的里程碑是生命周期架构；构建阶段结束时的里程碑是最初运作能力；移交阶段的里程碑是产品发布。">
+<meta name="keywords" content="软件设计师考题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年02月20日软件设计师每日一练">
+<meta property="og:url" content="http://yoursite.com/2020/04/02/2020年02月20日软件设计师每日一练/index.html">
 <meta property="og:site_name" content="Yichangkong">
+<meta property="og:description" content="1.传址与传值1.题目 2.题目解析 传值调用最显著的特征就是被调用的函数内部对形参的修改不影响实参的值。 引用调用是将实参的地址传递给形参，使得形参的地址就是实参的地址。  2.RUP1.题目 2.题目解析  本题考查RUP中每个阶段结束时所产生的里程碑。初启阶段结束时的里程碑是生命周期目标；精化阶段结束时的里程碑是生命周期架构；构建阶段结束时的里程碑是最初运作能力；移交阶段的里程碑是产品发布。">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407185110.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407185217.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407185435.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407185645.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407193138.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407193704.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407193402.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407193450.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407193627.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407193856.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407194000.png">
+<meta property="og:updated_time" content="2020-04-07T11:43:46.231Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yichangkong">
+<meta name="twitter:title" content="2020年02月20日软件设计师每日一练">
+<meta name="twitter:description" content="1.传址与传值1.题目 2.题目解析 传值调用最显著的特征就是被调用的函数内部对形参的修改不影响实参的值。 引用调用是将实参的地址传递给形参，使得形参的地址就是实参的地址。  2.RUP1.题目 2.题目解析  本题考查RUP中每个阶段结束时所产生的里程碑。初启阶段结束时的里程碑是生命周期目标；精化阶段结束时的里程碑是生命周期架构；构建阶段结束时的里程碑是最初运作能力；移交阶段的里程碑是产品发布。">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407185110.png">
   
     <link rel="alternate" href="/atom.xml" title="Yichangkong" type="application/atom+xml">
   
@@ -110,754 +126,235 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
-    }
-
-    .primary-container .post-hover {
-        background: black;
-    }
-
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
-    }
-
-</style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2020/04/04/2020年02月22日软件设计师每日一练/">
-            <div class="full-height post-hover"
-                 style="
-                         background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407200002.png');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            2020年02月22日软件设计师每日一练
-                        </h1>
-                        <div>
-                        
-                            `
-                                <span class="tag is-post-tag">软件设计师考题</span>
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            1.关系代数1.题目
-2.题目解析
- 关系R（A,B,C,D）和S（A,C,E,F）做自然连接时，会以两个关系公共字段做等值连接，然后将操作结果集中重复列去除，所以运算后属性列有（4+4）-2=6个。（A、C为重复列）因此，本题选择C选..
-                        </p>
-                        <p class="date text-shadow">2020-04-04</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
-            </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
-            
-                
-<a class="post-hover" href="/2020/04/03/2020年02月21日软件设计师每日一练/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407181939.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                2020年02月21日软件设计师每日一练
-            </h3>
-            
-            
-            <span class="tag is-post-tag">软件设计师考题</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.算法分析方法1.题目
-2.题目解析
-本题考查基本的算法分析方法。 　　根据递归定义式，对F（..
-            </p>
-            <p class="date text-shadow is-marginless">2020-04-03</p>
-        </div>
-    </div>
-</a>
-            
-            
-                
-<a class="post-hover" href="/2020/04/02/2020年02月20日软件设计师每日一练/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407185110.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                2020年02月20日软件设计师每日一练
-            </h3>
-            
-            
-            <span class="tag is-post-tag">软件设计师考题</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.传址与传值1.题目
-2.题目解析
-传值调用最显著的特征就是被调用的函数内部对形参的修改不影响..
-            </p>
-            <p class="date text-shadow is-marginless">2020-04-02</p>
-        </div>
-    </div>
-</a>
-            
-        </div>
-    </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2020/04/03/2020年02月21日软件设计师每日一练/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407181939.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                2020年02月21日软件设计师每日一练
-            </h3>
-            
-            
-            <span class="tag is-post-tag">软件设计师考题</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.算法分析方法1.题目
-2.题目解析
-本题考查基本的算法分析方法。 　　根据递归定义式，对F（..
-            </p>
-            <p class="date text-shadow is-marginless">2020-04-03</p>
-        </div>
-    </div>
-</a>
-        
-        
-        
-<a class="post-hover" href="/2020/04/02/2020年02月20日软件设计师每日一练/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407185110.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                2020年02月20日软件设计师每日一练
-            </h3>
-            
-            
-            <span class="tag is-post-tag">软件设计师考题</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.传址与传值1.题目
-2.题目解析
-传值调用最显著的特征就是被调用的函数内部对形参的修改不影响..
-            </p>
-            <p class="date text-shadow is-marginless">2020-04-02</p>
-        </div>
-    </div>
-</a>
-        
-    </div>
-</div>
-
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/04/03/2020年02月21日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407181939.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月21日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.算法分析方法1.题目
-2.题目解析
-本题考查基本的算法分析方法。 　　根据递归定义式，对F（5）的求解过程可由以下递推式表示: &nbsp;&nbsp;&nbsp; F（5）=F（4）+F（3）=F（3）+ F（2）+F（3）=F（2）+F（1）+F（2）+F（2）+F（1） &nbsp; =F（1）+F（0）+ F（1）+ F（1）+ F（0）+ ..
-                                        </p>
-                                        <p>2020-04-03</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/04/02/2020年02月20日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407185110.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月20日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.传址与传值1.题目
-2.题目解析
-传值调用最显著的特征就是被调用的函数内部对形参的修改不影响实参的值。
-引用调用是将实参的地址传递给形参，使得形参的地址就是实参的地址。
-
-2.RUP1.题目
-2.题目解析
- 本题考查RUP中每个阶段结束时所产生的里程碑。初启阶段结束时的里程碑是生命周期目标；精化阶段结束时的里程碑是生命周期架构；构建阶段结束时的里程碑..
-                                        </p>
-                                        <p>2020-04-02</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/04/01/2020年02月19日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401160441.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月19日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.索引文件1.题目
-2.题目解析
-设块长为512B，每个块号占3B，一个物理块可放：512/3=170个目录项（向下取整），也即：    一个一级索引可存放的文件大小为：（170×512）B/1024=85KB。    一个二级索引可存放文件的大小为：（170×170×512）B/1024=14,450KB。    一个三级索引可存放文件的大小为：（1..
-                                        </p>
-                                        <p>2020-04-01</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/31/2020年02月18日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200331164511.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月18日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.有限自动机1.题目
-2.题目解析
-1 既是初态也是终态，从图中可以看出a能连续出现，保持在状态1。                                                                              
-
-2.UML1.题目
-2.题目解析正确答案： C　C　我的答案：C B
-
-序列图主要用于按照交互..
-                                        </p>
-                                        <p>2020-03-31</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/30/2020年02月17日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225223.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月17日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.总线系统1.题目
-2.题目解析
- 总线复用，顾名思义就是一条总线实现多种功能。
-常见的总线复用方式有总线分时复用，它是指在不同时段利用总线上同一个信号线传送不同信号，例如，地址总线和数据总线共用一组信号线。采用这种方式的目的是减少总线数量，提高总线的利用率。
-
-2.编译与解释1.题目
-2.题目解析
-​    用高级语言编写的程序不能直接被机器执行，而..
-                                        </p>
-                                        <p>2020-03-30</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/29/2020年02月16日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223304.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月16日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.代数关系1.题目
-
-2.题目解析
-
-
-2.编译与解析1.题目
-2.题目解析
-在编译时产生的目标文件都是从地址0开始的，连接时将各个目标文件进行符号替换，这时会修改相应的地址，最后产生一个从地址0开始的可执行文件。在该可执行文件中的地址称为逻辑地址。
-
-3.数据压缩技术1.题目
-2.题目解析
-本题主要考查编码方法。
-根据解码后数据与原始数据是否完全一致..
-                                        </p>
-                                        <p>2020-03-29</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/28/2020年02月15日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200328181826.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月15日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.开发模型1.题目
-2.解析
-增量模型又称为渐增模型，也称为有计划的产品改进模型，
-它从一组给定的需求开始，通过构造一系列可执行中间版本来实施开发活动。第一个版本纳入一部分需求，下一个版本纳入更多的需求，依此类推，直到系统完成。每个中间版本都要执行必需的过程、活动和任务。
-
-增量模型是瀑布模型和原型进化模型的综合，它对软件过程的考虑是：
-在整体上按照瀑..
-                                        </p>
-                                        <p>2020-03-28</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/27/2020年02月14日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327204350.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月14日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.拓扑排序1.题目
-答案：A
-我的答案：C
-2.题目解析
- 本题考查图数据结构。　　对有向图进行拓扑排序的方法如下：　　（1）在AOV网中选择一个入度为0（没有前驱）的顶点且输出它。　　（2）从网中删除该顶点及其与该顶点有关的所有边。　　（3）重复上述两步，直至网中不存在入度为0的顶点为止。　　执行的结果会有两种情况：一种是所有顶点己输出，此时整个拓扑..
-                                        </p>
-                                        <p>2020-03-27</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/03/26/2020年02月13日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200326182818.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月13日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.编译与解释1.题目
-2.题目解析
-​    死循环错误属于典型的语义错误，但静态的语义错误可被编译器发现，到程序真正陷入死循环说明编译器并未发现，所以属于动态语义错误。
-
-2.软件维护类型1.题目
-2.题目解析
- 软件维护的内容一般包括
-准确性维护》适应性维护》完善性维护》预防性维护。
-
-正确性维护是指改正在系统开发阶段已发生而系统测试阶段尚未发现的..
-                                        </p>
-                                        <p>2020-03-26</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                        
-                        
-                            <a class="pagination-next" href="/page/2/">Next page</a>
-                        
-                    
-                </nav>
-            </section>
-            
-                <style>
-    /*user info start*/
-    .user-info {
-        padding: 15px 0 0;
-    }
-
-    .user-info .avatar {
-        width: 155px;
-        height: 155px;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
         border-radius: 50%;
     }
 
-    .sns-container {
-        flex-wrap: wrap;
-    }
-
-    .sns-container a{
-        color: black;
-    }
-    /*user info end*/
-
-    /*Tag start*/
-    #tag_cloud .tags-item{
-        display: inline-block;
-        color: #000;
-        border: 1px solid gray;
-
-        margin: 4px 2px;
-        padding: 0 4px;
-        border-radius: 6px;
-    }
-    /*Tag end*/
-
-    /*Site box start*/
-    .site-box {
-        height: 60px;
-    }
-    /*Site box end*/
-
-    .category-list-item,
-    .archive-list-item {
-        display: flex;
-        margin-bottom: 4px;
-        justify-content: space-between;
-    }
-    .category-list-link,
-    .archive-list-link {
-        color: black;
-    }
-
-    .category-list-count,
-    .archive-list-count {
-        width: 32px;
+    .flow-chart {
         text-align: center;
-        border-radius: 4px;
-        color: #fff;
-        background-color: gray;
+    }
+
+    img[alt="post-cover"] {
+        display: none;
     }
 </style>
-<aside class="column is-hidden-touch is-3" style="max-width: 280px; min-width: 230px">
-    <div class="content-box user-info">
-        <div class="has-padding">
-            <header class="has-text-centered">
-                <img class="avatar" src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbb9ho4ywkj30jg0jgwew.jpg">
-            </header>
-            <section class="has-text-centered">
-                <h3><strong>YichangKong</strong></h3>
-                <p class="sub-title">繁华落尽一场空：风往尘香花已尽</p>
-                
-                <p class="is-flex center" style=" color: gray">
-                    <i class="fa fa-map-marker" style="padding: 5px"></i>
-                    吉普岛
-                </p>
-                
-            </section>
-        </div>
-        <div class="top-line">
-            <ul class="sns-container justify-center is-flex has-padding">
-                
-
-                
-
-                
-                <li>
-                    <a target="_blank" href="https://www.zhihu.com/people/yichangkong">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa  fa-stack-1x fa-inverse">知</i>
-                                        </span>
-                    </a>
-                </li>
-                
-
-                
-
-                
-
-                
-                <li>
-                    <a target="_blank" href="https://github.com/YichangKong">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                        </span>
-                    </a>
-                </li>
-                
-
-                
-            </ul>
-        </div>
-    </div>
-    <div class="content-box">
-        <!--post数量和tag category 数量-->
-        <div class="site-box is-flex">
-            <div class="flex-1 is-flex flex-column center full-height right-line">
-                <strong>49</strong>
-                <p>Posts</p>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>2020年02月20日软件设计师每日一练</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbb9ho4ywkj30jg0jgwew.jpg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> YichangKong</span>
+                <span class="post-date sub-title">at: 2020-04-02</span>
             </div>
-            <div class="flex-1 is-flex flex-column center full-height">
-                <strong>19</strong>
-                <p>Tags</p>
-            </div>
+            
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/软件设计师考题/">软件设计师考题</a>
+                    
+                </div>
+            
+        </div>
+        <div class="content" style="overflow: auto">
+            <h3 id="1-传址与传值"><a href="#1-传址与传值" class="headerlink" title="1.传址与传值"></a>1.传址与传值</h3><h4 id="1-题目"><a href="#1-题目" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407185110.png" alt></p>
+<h4 id="2-题目解析"><a href="#2-题目解析" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>传值调用最显著的特征就是被调用的函数内部对形参的修改不影响实参的值。</p>
+<p>引用调用是将实参的地址传递给形参，使得形参的地址就是实参的地址。</p>
+</blockquote>
+<h3 id="2-RUP"><a href="#2-RUP" class="headerlink" title="2.RUP"></a>2.RUP</h3><h4 id="1-题目-1"><a href="#1-题目-1" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407185217.png" alt></p>
+<h4 id="2-题目解析-1"><a href="#2-题目解析-1" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p> 本题考查RUP中每个阶段结束时所产生的里程碑。初启阶段结束时的里程碑是生命周期目标；精化阶段结束时的里程碑是生命周期架构；构建阶段结束时的里程碑是最初运作能力；移交阶段的里程碑是产品发布。</p>
+</blockquote>
+<h4 id="3-知识牵引（RUP）"><a href="#3-知识牵引（RUP）" class="headerlink" title="3.知识牵引（RUP）"></a>3.知识牵引（RUP）</h4><blockquote>
+<p>RUP（Rational Unified Process），<a href="https://baike.baidu.com/item/统一软件开发过程/2088774" target="_blank" rel="noopener">统一软件开发过程</a>，<a href="https://baike.baidu.com/item/统一软件过程" target="_blank" rel="noopener">统一软件过程</a>是一个<a href="https://baike.baidu.com/item/面向对象/2262089" target="_blank" rel="noopener">面向对象</a>且基于网络的程序开发方法论。</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407185435.png" alt></p>
+</blockquote>
+<blockquote>
+<p>软件统一过程（RUP）是Rational软件公司（Rational公司被IBM并购）创造的软件工程方法。RUP描述了如何有效地利用商业的可靠的方法开发和部署软件，是一种重量级过程（也被称作厚方法学），因此特别适用于大型软件团队开发大型项目。</p>
+<h2 id="三大特点"><a href="#三大特点" class="headerlink" title="三大特点"></a>三大特点</h2><p>RUP最重要的它有三大特点：1）软件开发是一个迭代过程，2）软件开发是由Use Case驱动的，3）软件开发是以架构设计（Architectural Design）为中心的。</p>
+<h3 id="迭代模型"><a href="#迭代模型" class="headerlink" title="迭代模型"></a>迭代模型</h3><p>RUP强调软件开发是一个迭代模型(Iterative Model)，它定义了四个阶段(Phase)：初始(Inception)、细化(Elaboration)、构造(Construction)、交付(Transition)。其中每个阶段都有可能经历以上所提到的从商务需求分析开始的各个步骤，只是每个步骤的高峰期会发生在相应的阶段，例如开发实现的高峰期是发生在构造阶段。实际上这样的一个开发方法论是一个二维模型，这种迭代模型的实现在很大程度上提供了及早发现隐患和错误的机会，因此被现代大型信息技术项目所采用。 [2] </p>
+<h3 id="用例驱动"><a href="#用例驱动" class="headerlink" title="用例驱动"></a>用例驱动</h3><p>RUP的另一大特征是用例驱动。用例是RUP方法论中一个非常重要的概念。简单地说，一个用例就是系统的一个功能。在系统分析和系统设计中，用例被用来将一个复杂的庞大系统分割、定义成一个个小的单元，这个小的单元就是用例。然后以每个小的单元为对象进行开发。按照RUP过程模型的描述，用例贯穿整个软件开发的生命周期。在需求分析中，客户或用户对用例进行描述，在系统分布和系统设计过程中，设计师对用例进行分析，在开发实现过程中，开发编程人员对用例进行实现，在测试过程中，测试人员对用例进行检验。 [2] </p>
+<h3 id="以架构为中心"><a href="#以架构为中心" class="headerlink" title="以架构为中心"></a>以架构为中心</h3><p>RUP的第三大特征是它强调软件开发是以构架为中心的。构架设计(ArchitecturalDesign)是系统设计的一个重要组成部分。在构架设计过程中，设计师(Architect)必须完成对技术和运行平台的选取，整个项目的基础框架( Framework)的设计，完成对公共组件的设计，如审计( Auditing)系统、日志(Iog)系统、错误处理(Exception Handling)系统、安全(Security)系统等。设计师必须对系统的可扩展性( Extensibility)、安全性(Security)、可维护性( Maintainability)、可延拓性(Scalability)、可重用性(Reusability)和运行速度(Performance)提出可行的解决方案。 [2]</p>
+<h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><h3 id="迭代式开发"><a href="#迭代式开发" class="headerlink" title="迭代式开发"></a>迭代式开发</h3><p>在软件开发的初期就想完全、准确地获得用户的需求基本是不可能的。实际上，设计者常常碰到的问题是需求在整个软件开发过程中经常会发生变化。而迭代式开发允许每次迭代开发过程中需求发生变化，它正是通过不断迭代来细化对问题的理解。这样，迭代式开发大大降低了项目开发的风险，提高了软件开发的效率。 [1] </p>
+<h3 id="需求管理"><a href="#需求管理" class="headerlink" title="需求管理"></a>需求管理</h3><p>准确地确定系统的需求是一个连续渐进的过程，开发人员不可能在系统开发之前就完全详细地理解系统的全部需求。而RUP正是提供了如何获得、组织系统的功能和约束条件并将其文档化的方法。 [1] </p>
+<h3 id="便于复用的软件体系结构"><a href="#便于复用的软件体系结构" class="headerlink" title="便于复用的软件体系结构"></a>便于复用的软件体系结构</h3><p>组件是可复用的单位，为了达到软件复用的目的，可以由组件来组成系统。基于独立的、可替换的、模块化组件的体系结构的优点是它方便管理，并能有效地提高软件的重用性。RUP展示了如何设计一个灵活的、有很强适应性的、有利于理解和便于复用的软件体系结构。 [1] </p>
+<h3 id="有利于可视化建模"><a href="#有利于可视化建模" class="headerlink" title="有利于可视化建模"></a>有利于可视化建模</h3><p>RUP常常和UML相互联系，这就有利于建立软件系统的可视化模型。RUP提供了对软件系统进行可视化建模的方法。 [1] </p>
+<h3 id="对软件质量进行验证"><a href="#对软件质量进行验证" class="headerlink" title="对软件质量进行验证"></a>对软件质量进行验证</h3><p>在RUP中，软件质量的评估不再是事后进行或单独小组进行的分离活动，而是贯穿于软件开发的过程中，这样就有利于及早发现软件中存在的不足。 [1]</p>
+<h2 id="开发过程"><a href="#开发过程" class="headerlink" title="开发过程"></a>开发过程</h2><p>RUP中的<a href="https://baike.baidu.com/item/软件生命周期" target="_blank" rel="noopener">软件生命周期</a>在时间上被分解为四个顺序的阶段，分别是：初始阶段（Inception）、细化阶段（Elaboration）、构造阶段（Construction）和交付阶段（Transition）。每个阶段结束于一个主要的里程碑（Major Milestones）；每个阶段本质上是两个里程碑之间的时间跨度。在每个阶段的结尾执行一次评估以确定这个阶段的目标是否已经满足。如果评估结果令人满意的话，可以允许项目进入下一个阶段。</p>
+<h3 id="初始阶段"><a href="#初始阶段" class="headerlink" title="初始阶段"></a>初始阶段</h3><p>初始阶段的目标是为系统建立商业案例并确定项目的边界。为了达到该目的必须识别所有与系统交互的外部实体，在较高层次上定义交互的特性。本阶段具有非常重要的意义，在这个阶段中所关注的是整个项目进行中的业务和需求方面的主要风险。对于建立在原有系统基础上的开发项目来讲，初始阶段可能很短。初始阶段结束时是第一个重要的里程碑：生命周期目标（Lifecycle Objective）里程碑。生命周期目标里程碑评价项目基本的生存能力。</p>
+<h3 id="细化阶段"><a href="#细化阶段" class="headerlink" title="细化阶段"></a>细化阶段</h3><p>细化阶段的目标是分析问题领域，建立健全的<a href="https://baike.baidu.com/item/体系结构" target="_blank" rel="noopener">体系结构</a>基础，编制<a href="https://baike.baidu.com/item/项目计划" target="_blank" rel="noopener">项目计划</a>，淘汰项目中最高风险的元素。为了达到该目的，必须在理解整个系统的基础上，对体系结构作出决策，包括其范围、主要功能和诸如性能等非功能需求。同时为项目建立支持环境，包括创建开发案例，创建模板、准则并准备工具。细化阶段结束时第二个重要的里程碑：生命周期结构（Lifecycle Architecture）里程碑。生命周期结构里程碑为系统的结构建立了管理基准并使项目小组能够在构建阶段中进行衡量。此刻，要检验详细的系统目标和范围、结构的选择以及主要风险的解决方案。</p>
+<h3 id="构造阶段"><a href="#构造阶段" class="headerlink" title="构造阶段"></a>构造阶段</h3><p>在构建阶段，所有剩余的<a href="https://baike.baidu.com/item/构件" target="_blank" rel="noopener">构件</a>和应用程序功能被开发并集成为产品，所有的功能被详细测试。从某种意义上说，构建阶段是一个制造过程，其重点放在管理资源及控制运作以优化成本、进度和质量。构建阶段结束时是第三个重要的里程碑：初始功能（Initial Operational）里程碑。初始功能里程碑决定了产品是否可以在<a href="https://baike.baidu.com/item/测试环境" target="_blank" rel="noopener">测试环境</a>中进行部署。此刻，要确定软件、环境、用户是否可以开始系统的运作。此时的产品版本也常被称为“beta”版。</p>
+<h3 id="交付阶段"><a href="#交付阶段" class="headerlink" title="交付阶段"></a>交付阶段</h3><p>交付阶段的重点是确保软件对最终用户是可用的。交付阶段可以跨越几次迭代，包括为发布做准备的产品测试，基于用户反馈的少量的调整。在生命周期的这一点上，用户反馈应主要集中在产品调整，设置、安装和可用性问题，所有主要的结构问题应该已经在<a href="https://baike.baidu.com/item/项目生命周期" target="_blank" rel="noopener">项目生命周期</a>的早期阶段解决了。在交付阶段的终点是第四个里程碑：产品发布（Product Release）里程碑。此时，要确定目标是否实现，是否应该开始另一个开发周期。在一些情况下这个里程碑可能与下一个周期的初始阶段的结束重合。</p>
+<p>知识网址<a href="https://baike.baidu.com/item/RUP/8924595?fr=aladdin" target="_blank" rel="noopener"></a></p>
+</blockquote>
+<h3 id="3-开发模型（敏捷开发方法）"><a href="#3-开发模型（敏捷开发方法）" class="headerlink" title="3.开发模型（敏捷开发方法）"></a>3.开发模型（敏捷开发方法）</h3><h4 id="1-题目-2"><a href="#1-题目-2" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407185645.png" alt></p>
+<h4 id="2-题目解析-2"><a href="#2-题目解析-2" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>本题考查敏捷开发方法。<br><br>    　　极限编程（XP）是敏捷开发的典型方法之一，是一种轻量级（敏捷）、高效、低风险、柔性、可预测的、科学的软件开发方法，它由价值观、原则、实践和行为4个部分组成。其中4大价值观为沟通、简单性、反馈和勇气。</p>
+</blockquote>
+<h4 id="3-知识牵引"><a href="#3-知识牵引" class="headerlink" title="3.知识牵引"></a>3.知识牵引</h4><blockquote>
+<p>敏捷开发模式</p>
+<p>是一种从1990年代开始逐渐引起广泛关注的一些新型<a href="https://baike.baidu.com/item/软件开发方法/971447" target="_blank" rel="noopener">软件开发方法</a>，是一种<strong>应对快速变化的需求</strong>的一种软件开发能力。它们的具体名称、理念、过程、术语都不尽相同，相对于”非敏捷”，更强调程序员团队与业务专家之间的紧密协作、面对面的沟通（认为比书面的文档更有效）、频繁交付新的软件版本、紧凑而<a href="https://baike.baidu.com/item/自我组织" target="_blank" rel="noopener">自我组织</a>型的团队、能够很好地适应需求变化的代码编写和团队组织方法，也更注重做为软件开发中人的作用。</p>
+<h2 id="对比其它方法"><a href="#对比其它方法" class="headerlink" title="对比其它方法"></a>对比其它方法</h2><h3 id="1-瀑布模型"><a href="#1-瀑布模型" class="headerlink" title="1.瀑布模型"></a>1.瀑布模型</h3><p>瀑布模型是由W.W.Royce在1970年最初提出的软件开发模型，　瀑布式开发是一种老旧的计算机软件开发方法。</p>
+<p>瀑布模型式是最典型的预见性的方法，严格遵循预先计划的需求分析、设计、编码、集成、测试、维护的步骤顺序进行。</p>
+<p>步骤成果作为衡量进度的方法，例如需求规格，设计文档，测试计划和代码审阅等等。</p>
+<p>瀑布式的主要的问题是它的严格分级导致的自由度降低，项目早期即作出承诺导致对后期需求的变化难以调整，</p>
+<p>代价高昂。瀑布式方法在需求不明并且在项目进行过程中可能变化的情况下基本是不可行的。</p>
+<h3 id="2-迭代式开发"><a href="#2-迭代式开发" class="headerlink" title="2.迭代式开发"></a>2.迭代式开发</h3><p>迭代式开发也被称作迭代增量式开发或迭代进化式开发，是一种与传统的瀑布式开发相反的软件开发过程，它弥补了传统开发方式中的一些弱点，具有更高的成功率和生产率。</p>
+<p>什么是迭代式开发？</p>
+<p>每次只设计和实现这个产品的一部分,</p>
+<p>逐步逐步完成的方法叫迭代开发,</p>
+<p>每次设计和实现一个阶段叫做一个迭代.</p>
+<p>在迭代式开发方法中，整个开发工作被组织为一系列的短小的、</p>
+<p>固定长度（如3周）的小项目，被称为一系列的迭代。</p>
+<p>每一次迭代都包括了需求分析、设计、实现与测试。</p>
+<p>采用这种方法，开发工作可以在需求被完整地确定之前启动，</p>
+<p>并在一次迭代中完成系统的一部分功能或业务逻辑的开发工作。</p>
+<p>再通过客户的反馈来细化需求，并开始新一轮的迭代。</p>
+<p>迭代式开发的优点：</p>
+<p>1、降低风险</p>
+<p>2、得到早期用户反馈</p>
+<p>3、持续的测试和集成</p>
+<p>4、使用变更</p>
+<p>5、提高复用性</p>
+<h3 id="3-螺旋开发"><a href="#3-螺旋开发" class="headerlink" title="3.螺旋开发"></a>3.螺旋开发</h3><p>螺旋开发，1988年，巴利·玻姆(Barry Boehm)正式发表了软件系统开发的“螺旋模型”，它将瀑布模型和快速原型模型结合起来，强调了其他模型所忽视的风险分析，特别适合于大型复杂的系统。</p>
+<p>“螺旋模型”刚开始规模很小，当项目被定义得更好、更稳定时，逐渐展开。</p>
+<p>“螺旋模型”的核心就在于您不需要在刚开始的时候就把所有事情都定义的清清楚楚。您轻松上阵，定义最重要的功能，实现它，然后听取客户的意见，之后再进入到下一个阶段。如此不断轮回重复，直到得到您满意的最终产品。</p>
+<p>（1）制定计划：确定软件目标，选定实施方案，弄清项目开发的限制条件；</p>
+<p>（2）风险分析：分析评估所选方案，考虑如何识别和消除风险；</p>
+<p>（3）实施工程：实施软件开发和验证；</p>
+<p>（4）客户评估：评价开发工作，提出修正建议，制定下一步计划。</p>
+<p>螺旋模型很大程度上是一种风险驱动的方法体系，因为在每个阶段之前及经常发生的循环之前，都必须首先进行风险评估。</p>
+<h3 id="4-敏捷开发"><a href="#4-敏捷开发" class="headerlink" title="4.敏捷开发"></a>4.敏捷开发</h3><p>敏捷软件开发又称敏捷开发，是一种从1990年代开始逐渐引起广泛关注的一些新型软件开发方法，是一种应对快速变化的需求的一种软件开发能力。它们的具体名称、理念、过程、术语都不尽相同，相对于“非敏捷”，更强调程序员团队与业务专家之间的紧密协作、面对面的沟通（认为比书面的文档更有效）、频繁交付新的软件版本、紧凑而自我组织型的团队、能够很好地适应需求变化的代码编写和团队组织方法，也更注重软件开发中人的作用。</p>
+<ul>
+<li>人和交互重于过程和工具。</li>
+<li>可以工作的软件重于求全而完备的文档。</li>
+<li>客户协作重于合同谈判。</li>
+<li>随时应对变化重于循规蹈矩。</li>
+</ul>
+<p>其中位于右边的内容虽然也有其价值，但是左边的内容最为重要。</p>
+<p>人员彼此信任 人少但是精干 可以面对面的沟通</p>
+<p>项目的敏捷开发：</p>
+<p>敏捷开发小组主要的工作方式可以归纳为：作为一个整体工作； 按短迭代周期工作； 每次迭代交付一些成果；</p>
+<p>关注业务优先级； 检查与调整。</p>
+<p>最重要的因素恐怕是项目的规模。规模增长，面对面的沟通就愈加困难，</p>
+<p>因此敏捷方法更适用于较小的队伍，40、30、20、10人或者更少。</p>
+<p>大规模的敏捷软件开发尚处于积极研究的领域。</p>
+<h3 id="四者对比区别："><a href="#四者对比区别：" class="headerlink" title="四者对比区别："></a>四者对比区别：</h3><p>传统的瀑布式开发，也就是从需求到设计，从设计到编码，从编码到测试，从测试到提交大概这样的流程，要求每一个开发阶段都要做到最好。</p>
+<p>特别是前期阶段，设计的越完美，提交后的成本损失就越少。</p>
+<p>迭代式开发，不要求每一个阶段的任务做的都是最完美的，而是明明知道还有很多不足的地方，却偏偏不去完善它，而是把主要功能先搭建起来为目的，以最短的时间，</p>
+<p>最少的损失先完成一个“不完美的成果物”直至提交。然后再通过客户或用户的反馈信息，在这个“不完美的成果物”上逐步进行完善。</p>
+<p>螺旋开发，很大程度上是一种风险驱动的方法体系，因为在每个阶段之前及经常发生的循环之前，都必须首先进行风险评估。</p>
+<p>敏捷开发，相比迭代式开发两者都强调在较短的开发周期提交软件，但是，敏捷开发的周期可能更短，并且更加强调队伍中的高度协作。</p>
+<p>敏捷方法有时候被误认为是无计划性和纪律性的方法，实际上更确切的说法是敏捷方法强调适应性而非预见性。</p>
+<p>适应性的方法集中在快速适应现实的变化。当项目的需求起了变化，团队应该迅速适应。这个团队可能很难确切描述未来将会如何变化.</p>
+</blockquote>
+<h3 id="4-磁盘存储"><a href="#4-磁盘存储" class="headerlink" title="4.磁盘存储"></a>4.磁盘存储</h3><h4 id="1-题目-3"><a href="#1-题目-3" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407193138.png" alt></p>
+<h4 id="2-题目解析-3"><a href="#2-题目解析-3" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><p>系统读记录的时间为27/9=3ms， </p>
+<blockquote>
+<p>系统读记录的时间为27/9=3ms</p>
+<p>对R0的处理，先读出记录需要3ms，然后处理需要3ms，同时磁头也在转动，当处理完R0时，磁头已经到达R2的位置。 </p>
+<p>再处理R1 ，磁头需要旋转到R1的开始位置，再加上读取R0块和处理R0块的时间，至此，一共花费了30ms。<br><br><br><br>……<br><br><br><br>后面的R2至R8依此类推，当处理完R7并将磁头移到R8时总共耗时：8*30=240ms，再加上R8的读取和处理时间， </p>
+<p>因此整个的时间为：8*30+3+3=246ms<br><br><br>对于第二种情况，若对信息进行分布优化的结果如下所示：  </p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407193704.png" alt></p>
+<p>从上表可以看出，当读出记录R1并处理结束后，磁头刚好转至R2记录的开始处，立即就可以读出并处理，因此处理9个记录的总时间为： &gt;<br>&nbsp;&nbsp;&nbsp; 9×（3ms（读记录）＋3ms（处理记录））＝9 × 6ms=54ms</p>
+</blockquote>
+<h3 id="5-知识产权人确定"><a href="#5-知识产权人确定" class="headerlink" title="5.知识产权人确定"></a>5.知识产权人确定</h3><h4 id="1-题目-4"><a href="#1-题目-4" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407193402.png" alt></p>
+<h4 id="2-题目解析-4"><a href="#2-题目解析-4" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p> &nbsp;　　因李某大学毕业后在M公司销售部门工作，后由于该公司软件开发部门人手较紧，李某被暂调到该公司软件开发部开发新产品，2周后，李某开发出一种新软件。该软件与工作任务有关，属于职务作品。所以，该项作品应属于软件公司所有。<br><br> 　　法律依据:著作权法规定“执行本单位的任务或者主要是利用本单位的物质条件所完成的职务作品，其权利属于该单位。”<br><br> 　　职务作品人是指作品人或者设计入执行本单位的任务，或者主要是利用本单位的物质技术条件所完成的作品的人。该作品的权利为该作品人所在单位所有。职务作品包括以下情形:<br><br> 　　①在本职工作中做出的作品。<br><br> 　　②履行本单位交付的本职工作之外的任务所做出的作品。<br><br> 　　③退职、退休或者调动工作后1年内做出的，与其在原单位承担的本职工作或者原单位分配的任务有关的作品。<br><br> 　　④主要利用本单位的物质技术条件（包括本单位的资金、设备、不对外公开的技术资料等）完成的作品。 </p>
+</blockquote>
+<h3 id="6-系统可靠性计算"><a href="#6-系统可靠性计算" class="headerlink" title="6.系统可靠性计算"></a>6.系统可靠性计算</h3><h4 id="1-题目-5"><a href="#1-题目-5" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407193450.png" alt></p>
+<h4 id="2-题目解析-5"><a href="#2-题目解析-5" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>本题描述的系统中，两个P1部件形成<code>并联算法</code>，其可靠度为：<br><br>    &nbsp;&nbsp;&nbsp; 1-（1-0.9） ×（1-0.9）=0.99<br><br>    　　同样，两个P2部件形成并联子系统，其可称度为0.99。这两个并联子系统形成串联系统。所以整个系统的可靠性就是两个子系统可靠性的乘积，即0.99 × 0.99 =0.9801 。</p>
+</blockquote>
+<h3 id="7-时间复杂度和空间复杂度"><a href="#7-时间复杂度和空间复杂度" class="headerlink" title="7.时间复杂度和空间复杂度"></a>7.时间复杂度和空间复杂度</h3><h4 id="1-题目-6"><a href="#1-题目-6" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407193627.png" alt></p>
+<h4 id="2-题目解析-6"><a href="#2-题目解析-6" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>本题考查算法分析的基础知识。<br><br>    　　在算法分析中，符号O用于表示算法运行时间的上限。从定义上说，对一个函g(n)，O(g(n))表示函数集合：<br><br>    　　｛f(n)：存在正常数c和n0，使得对所有的n≥n0，有0≤f(n)≤cg(n)｝<br><br>    　　根据上述定义，可以知道表达式T(n)=an<sup>2</sup>+bnlgn+cn+d在函数集合O(n<sup>2</sup>)中。对此问题，</p>
+<p>简单的做法是忽略n的低阶项和最高阶项n<sup>2</sup>的常系数，故答案应为O(n<sup>2</sup>)。</p>
+</blockquote>
+<h3 id="8-设计模式"><a href="#8-设计模式" class="headerlink" title="8.设计模式"></a>8.设计模式</h3><h4 id="1-题目-7"><a href="#1-题目-7" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407193856.png" alt></p>
+<h4 id="2-题目解析-7"><a href="#2-题目解析-7" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>适配器模式将一个接口转换成为客户想要的另一个接口，适配器模式使接口不兼容的那些类可以一起工作。<br></p>
+<p>代理模式通过提供与对象相同的接口来控制对这个对象的访问。<br></p>
+<p>组合模式组合多个对象形成树型结构以表示整体—部分的结构层次。<br></p>
+<p>装饰器模式动态地给一个对象增加其他职责，就增加对象功能来说，装饰模式比生成子类实现更为灵活。</p>
+</blockquote>
+<h3 id="9-图"><a href="#9-图" class="headerlink" title="9.图"></a>9.图</h3><h4 id="1-题目-8"><a href="#1-题目-8" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407194000.png" alt></p>
+<h4 id="2-题目解析-8"><a href="#2-题目解析-8" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>本题主要考查图的存储结构，</p>
+<p>常见的图的存储结构有邻接矩阵存储和邻接表存储，其中在邻接矩阵存储方式中，矩阵中每个元素的值都表示两个点之间的边的信息，如果每两个点之间都有变的信息，那么矩阵中的所有元素都是有效元素，那么从存储空间的利用率角度来看，其利用率较高，而采用邻接表存储其存储空间利用率肯定低于邻接矩阵，</p>
+<p>因为采用邻接表存储，不仅要存储边的信息，还要存储节点信息，指针信息等。<br></p>
+<p>这种情况下，这个图很显然是一个完全图，因此从存储空间的利用率角度来看，完全图适合采用邻接矩阵存储。</p>
+</blockquote>
+
+        </div>
+        <div class="post-reply">
+            
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+            
+            
         </div>
     </div>
-    <div id='tag_cloud' class="content-inner content-box">
-        <div class="has-text-centered">
-            <strong>Tags</strong>
-        </div>
-        <div class="content-inner is-flex flex-wrap justify-space-between">
-            
-                <a class="tags-item" href="tags/软件设计师考题/" title="软件设计师考题" rel="22">
-                    软件设计师考题
-                </a>
-            
-                <a class="tags-item" href="tags/学习笔记/" title="学习笔记" rel="5">
-                    学习笔记
-                </a>
-            
-                <a class="tags-item" href="tags/Python/" title="Python" rel="1">
-                    Python
-                </a>
-            
-                <a class="tags-item" href="tags/Maven项目/" title="Maven项目" rel="1">
-                    Maven项目
-                </a>
-            
-                <a class="tags-item" href="tags/技术学习/" title="技术学习" rel="1">
-                    技术学习
-                </a>
-            
-                <a class="tags-item" href="tags/spring-Component注解时的错误/" title="spring @Component注解时的错误" rel="1">
-                    spring @Component注解时的错误
-                </a>
-            
-                <a class="tags-item" href="tags/web项目运行错误/" title="web项目运行错误" rel="1">
-                    web项目运行错误
-                </a>
-            
-                <a class="tags-item" href="tags/数据结构学习/" title="数据结构学习" rel="1">
-                    数据结构学习
-                </a>
-            
-                <a class="tags-item" href="tags/WebService的学习/" title="WebService的学习" rel="1">
-                    WebService的学习
-                </a>
-            
-                <a class="tags-item" href="tags/快速搭建个人博客Hexo/" title="快速搭建个人博客Hexo" rel="1">
-                    快速搭建个人博客Hexo
-                </a>
-            
-                <a class="tags-item" href="tags/学习笔记序列/" title="学习笔记序列" rel="1">
-                    学习笔记序列
-                </a>
-            
-                <a class="tags-item" href="tags/mybatis报错/" title="mybatis报错" rel="1">
-                    mybatis报错
-                </a>
-            
-                <a class="tags-item" href="tags/AOP的学习笔记/" title="AOP的学习笔记" rel="1">
-                    AOP的学习笔记
-                </a>
-            
-                <a class="tags-item" href="tags/错误笔记/" title="错误笔记" rel="1">
-                    错误笔记
-                </a>
-            
-                <a class="tags-item" href="tags/整合技术/" title="整合技术" rel="1">
-                    整合技术
-                </a>
-            
-                <a class="tags-item" href="tags/环境配置/" title="环境配置" rel="1">
-                    环境配置
-                </a>
-            
-                <a class="tags-item" href="tags/技术学习方向/" title="技术学习方向" rel="1">
-                    技术学习方向
-                </a>
-            
-                <a class="tags-item" href="tags/诗歌/" title="诗歌" rel="1">
-                    诗歌
-                </a>
-            
-                <a class="tags-item" href="tags/数据结构算法/" title="数据结构算法" rel="1">
-                    数据结构算法
-                </a>
-            
-        </div>
-    </div>
-    <div class="content-inner content-box">
-        <div class="has-text-centered">
-            <strong>Categories</strong>
-        </div>
-        <div class="content-inner">
-            
-        </div>
-    </div>
-    <div class="content-inner content-box">
-        <div class="has-text-centered">
-            <strong>Archives</strong>
-        </div>
-        <div class="content-inner">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">9</span></li></ul>
-        </div>
-    </div>
-</aside>
-            
-        </div>
-    </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
