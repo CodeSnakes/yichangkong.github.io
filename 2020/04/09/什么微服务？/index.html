@@ -15,16 +15,25 @@
   </script>
 
   
-  <title>Archives | Yichangkong</title>
+  <title>什么是微服务？ | Yichangkong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="yichangkong 个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yichangkong">
-<meta property="og:url" content="http://yoursite.com/archives/page/6/index.html">
+  <meta name="description" content="转载网址    前言 最近几年微服务很火，大家都在建设微服务，仿佛不谈点微服务相关的技术，都显得不是那么主流了。 近几年见识到身边朋友的很多公司和团队都在尝试进行微服务的改变，但很多团队并没有实际微服务踩坑经验，很多团队甚至强行为了微服务而去微服务，最终写成一个大型的分布式单体应用，就是改造后的系统既没有微服务的快速扩容，灵活发布的特性，也让原本的单体应用失去了方便开发，部署容易的特性（项目拆为多">
+<meta name="keywords" content="概念解析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是微服务？">
+<meta property="og:url" content="http://yoursite.com/2020/04/09/什么微服务？/index.html">
 <meta property="og:site_name" content="Yichangkong">
+<meta property="og:description" content="转载网址    前言 最近几年微服务很火，大家都在建设微服务，仿佛不谈点微服务相关的技术，都显得不是那么主流了。 近几年见识到身边朋友的很多公司和团队都在尝试进行微服务的改变，但很多团队并没有实际微服务踩坑经验，很多团队甚至强行为了微服务而去微服务，最终写成一个大型的分布式单体应用，就是改造后的系统既没有微服务的快速扩容，灵活发布的特性，也让原本的单体应用失去了方便开发，部署容易的特性（项目拆为多">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409190332.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409191408.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409191717.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409192152.png">
+<meta property="og:updated_time" content="2020-04-09T11:47:37.256Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yichangkong">
+<meta name="twitter:title" content="什么是微服务？">
+<meta name="twitter:description" content="转载网址    前言 最近几年微服务很火，大家都在建设微服务，仿佛不谈点微服务相关的技术，都显得不是那么主流了。 近几年见识到身边朋友的很多公司和团队都在尝试进行微服务的改变，但很多团队并没有实际微服务踩坑经验，很多团队甚至强行为了微服务而去微服务，最终写成一个大型的分布式单体应用，就是改造后的系统既没有微服务的快速扩容，灵活发布的特性，也让原本的单体应用失去了方便开发，部署容易的特性（项目拆为多">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409190332.png">
   
     <link rel="alternate" href="/atom.xml" title="Yichangkong" type="application/atom+xml">
   
@@ -110,359 +119,200 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
     }
 
-    .primary-container .post-hover {
-        background: black;
+    .flow-chart {
+        text-align: center;
     }
 
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
+    img[alt="post-cover"] {
+        display: none;
     }
-
 </style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2019/07/25/WebService-学习笔记/">
-            <div class="full-height post-hover"
-                 style="
-                         background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564653557&di=72ecca34df371fc685b2e15933d16711&imgtype=jpg&er=1&src=http%3A%2F%2Fupload.nxing.cn%2Fuploads%2Fuploads%2F2017%2F02%2F26%2F0000027%2F201702260908002721bf4af-size853x486.png');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            WebService 学习笔记
-                        </h1>
-                        <div>
-                        
-                            `
-                                <span class="tag is-post-tag">WebService的学习</span>
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            
-1.介绍
-Web service 即web服务，它是一种跨编程语言和跨操作系统平台的远程调用技术即跨平台远程调用技术。 
-Web service是一个平台独立的，低耦合的，自包含的、基于可编程的web的应用程序，使用开放的XML（标准..
-                        </p>
-                        <p class="date text-shadow">2019-07-25</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>什么是微服务？</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbb9ho4ywkj30jg0jgwew.jpg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> YichangKong</span>
+                <span class="post-date sub-title">at: 2020-04-09</span>
             </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
-                
-<a class="post-hover" href="/2019/07/22/bootStrap学习笔记/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563776659689&di=9ba05a212e9694b94544cf3f14c79db4&imgtype=0&src=http%3A%2F%2Fcodegeekz.com%2Fwp-content%2Fuploads%2FBootstrap.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                bootStrap学习笔记
-            </h3>
-            
-            
-            <span class="tag is-post-tag">学习笔记序列</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                Bootstrap
-1.介绍
-Bootstrap，来自 Twitter，是目前最受欢迎的前端框架..
-            </p>
-            <p class="date text-shadow is-marginless">2019-07-22</p>
-        </div>
-    </div>
-</a>
-            
-            
-                
-<a class="post-hover" href="/2019/07/17/spring-AOP/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('http://img3.imgtn.bdimg.com/it/u=49453341,2859298398&fm=26&gp=0.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                spring_AOP
-            </h3>
-            
-            
-            <span class="tag is-post-tag">AOP的学习笔记</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-1.AOP介绍
-aop的全称-Aspect Oriented Programming
-1)意为..
-            </p>
-            <p class="date text-shadow is-marginless">2019-07-17</p>
-        </div>
-    </div>
-</a>
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/概念解析/">概念解析</a>
+                    
+                </div>
             
         </div>
-    </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2019/07/22/bootStrap学习笔记/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563776659689&di=9ba05a212e9694b94544cf3f14c79db4&imgtype=0&src=http%3A%2F%2Fcodegeekz.com%2Fwp-content%2Fuploads%2FBootstrap.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                bootStrap学习笔记
-            </h3>
-            
-            
-            <span class="tag is-post-tag">学习笔记序列</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                Bootstrap
-1.介绍
-Bootstrap，来自 Twitter，是目前最受欢迎的前端框架..
-            </p>
-            <p class="date text-shadow is-marginless">2019-07-22</p>
-        </div>
-    </div>
-</a>
-        
-        
-        
-<a class="post-hover" href="/2019/07/17/spring-AOP/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('http://img3.imgtn.bdimg.com/it/u=49453341,2859298398&fm=26&gp=0.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                spring_AOP
-            </h3>
-            
-            
-            <span class="tag is-post-tag">AOP的学习笔记</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-1.AOP介绍
-aop的全称-Aspect Oriented Programming
-1)意为..
-            </p>
-            <p class="date text-shadow is-marginless">2019-07-17</p>
-        </div>
-    </div>
-</a>
-        
-    </div>
-</div>
-
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/22/bootStrap学习笔记/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563776659689&di=9ba05a212e9694b94544cf3f14c79db4&imgtype=0&src=http%3A%2F%2Fcodegeekz.com%2Fwp-content%2Fuploads%2FBootstrap.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>bootStrap学习笔记</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">学习笔记序列</span>
-                                            
-                                        </p>
-                                        <p>
-                                            Bootstrap
-1.介绍
-Bootstrap，来自 Twitter，是目前最受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。Bootstrap 目前的最新版本是 Bootstrap4，利用我们提供的 Sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、基..
-                                        </p>
-                                        <p>2019-07-22</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/17/spring-AOP/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://img3.imgtn.bdimg.com/it/u=49453341,2859298398&fm=26&gp=0.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>spring_AOP</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">AOP的学习笔记</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-1.AOP介绍
-aop的全称-Aspect Oriented Programming
-1)意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。
-2)AOP是OOP（面向对象编程）的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。
-3)利用AOP可以对业务逻辑的各个部分进行隔..
-                                        </p>
-                                        <p>2019-07-17</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/06/Spring错误解决/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g4q9dp09gbj314h0423yu.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Spring错误解决？</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">spring @Component注解时的错误</span>
-                                            
-                                        </p>
-                                        <p>
-                                            在运行spring的注解时出的错误，现在还没有找到答案，应该是Spring版本的问题，运行环境是jdk1.8、spring3.2、commen-loggin1.2。
-1.解决办法，更换spring框架版本
-由原来的3.2版本更换为4，在除了核心jar包外，又加入了另一个依赖包
+        <div class="content" style="overflow: auto">
+            <h5 id="转载网址"><a href="#转载网址" class="headerlink" title="转载网址"></a><a href="https://www.cnblogs.com/xiao2shiqi/p/11298663.html" target="_blank" rel="noopener">转载网址</a></h5><blockquote>
+<img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409190332.png" style="zoom:80%;">
+</blockquote>
+<ol>
+<li><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>最近几年微服务很火，大家都在建设微服务，仿佛不谈点微服务相关的技术，都显得不是那么主流了。</p>
+<p>近几年见识到身边朋友的很多公司和团队都在尝试进行微服务的改变，但很多团队并没有实际微服务踩坑经验，很多团队甚至强行为了微服务而去微服务，最终写成一个大型的分布式单体应用，就是改造后的系统既没有微服务的快速扩容，灵活发布的特性，也让原本的单体应用失去了方便开发，部署容易的特性（项目拆为多份，开发部署复杂度都提高了），不得不说是得不偿失。</p>
+<ol>
+<li>什么是微服务？为什么要用微服务？</li>
+<li>微服务解决什么问题，又引入了什么问题？</li>
+<li>使用微服务应该要遵循哪些原则？什么样的情况你不应该使用微服务？</li>
+</ol>
+<p>（PS：因为市面上太多对如果使用微服务框架工具的教程，所以本篇只是一篇关于微服务的总体概述性文章，不涉及各种微服务框架的安装和使用教程，我们只谈论微服务本身的设计模式的优缺点和适合应用的场景）</p>
+</blockquote>
+</li>
+<li><h3 id="什么是微服务？为什么要用微服务？"><a href="#什么是微服务？为什么要用微服务？" class="headerlink" title="什么是微服务？为什么要用微服务？"></a>什么是微服务？为什么要用微服务？</h3><ol>
+<li><p>什么是微服务？ </p>
+<blockquote>
+<p>简单举例：看军事新闻的同学应该都知道，一艘航空母舰作战能力虽然很强，但是弱点太明显，就是防御能力太差，单艘的航空母舰很少单独行动，通常航空母舰战斗群才是主要军事力量，你可以把</p>
+<p>单艘航母理解为的<strong>单体应用</strong>（防御差，机动性不好），</p>
+<p>航母战斗群（调度复杂，维护费用高）理解为<strong>微服务</strong>。</p>
+<p>大部分的开发者经历和开发过单体应用，无论是传统的 Servlet + JSP，还是 SSM，还是现在的 SpringBoot，它们都是单体应用，那么长期陪伴我们的单体应用有什么弊端？我们是面临了什么问题，导致我们要抛弃单体应用转向微服务架构？个人总结主要问题如下：</p>
+<ul>
+<li>部署成本高（无论是修改1行代码，还是10行代码，都要全量替换）</li>
+<li>改动影响大，风险高（不论代码改动多小，成本都相同）</li>
+<li>因为成本高，风险高，所以导致部署频率低（无法快速交付客户需求）</li>
+</ul>
+<p>当然还有例如无法满足快速扩容，弹性伸缩，无法适应云环境特性等问题，但我们不一一详谈了，以上的问题，都是微服务架构要解决的问题，至于具体是怎么解决的，我们先放到后面再聊</p>
+<img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409191408.png" style="zoom:50%;">
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="3">
+<li><h3 id="微服务解决什么问题，又引入了什么问题？"><a href="#微服务解决什么问题，又引入了什么问题？" class="headerlink" title="微服务解决什么问题，又引入了什么问题？"></a>微服务解决什么问题，又引入了什么问题？</h3><blockquote>
+<p>我们先看看微服务能带给我们什么？微服务架构的特点：</p>
+<ul>
+<li>针对特定服务发布，影响小，风险小，成本低</li>
+<li>频繁发布版本，快速交付需求</li>
+<li>低成本扩容，弹性伸缩，适应云环境</li>
+</ul>
+<p>我们知道一个朴素的理念，没有任何事物是完美的，任何东西都有两面性，有得必有失，那么在选择微服务在解决了快速响应和弹性伸缩的问题同时，它又给我们带来了什么问题？个人总结如下：</p>
+<ul>
+<li>分布式系统的复杂性</li>
+<li>部署，测试和监控的成本问题</li>
+<li>分布式事务和CAP的相关问题</li>
+</ul>
+<p>系统应用由原来的单体变成几十到几百个不同的工程，会所产生例如包括服务间的依赖，服务如何拆封，内部接口规范，数据传递等等问题，尤其是服务拆分，需要团队熟悉业务流程，懂得取舍，要保证拆分的粒度服务既符合“高内聚，低耦合”的基本原则，还要兼顾业务的发展以及公司的愿景，要还要说服团队成员为之努力，并且积极投入，在多方中间取得平衡。</p>
+<p>对于分布式系统，部署，测试和监控都需要大量的中间件来支撑，而且中间件本身也要维护，原先单体应用很简单的事务问题 ，转到分布式环境就变得很复杂，分布式事务是采用简单的重试+补偿机制，还是采用二阶段提交协议等强一致性方法来解决，就要取决对业务场景的熟悉加上反复的权衡了，相同问题还包括对 CAP 模型的权衡，总之微服务对团队整体的技术栈水平整体要求更高</p>
+<p>monolithic单片  microserives 微服务</p>
+<img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409191717.png" style="zoom:50%;">
 
 
-2.在寻找错误时，如果是@Test 下测试
-可以借助 JUnil 进行错误..
-                                        </p>
-                                        <p>2019-07-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/04/git_cmd下搭建hexo博客/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562314728184&di=e9a138d51674a19e81a47cda7272ca7b&imgtype=0&src=http%3A%2F%2Fnewsimg.5054399.com%2Fuploads%2Fuserup%2F1902%2F151524461154.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>git_cmd下搭建hexo博客</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">快速搭建个人博客Hexo</span>
-                                            
-                                        </p>
-                                        <p>
-                                            哈哈，进入b站那么久了，也早就了解到有博客这个东西，因此就一直想着搭建一个属于自己的技术博客，但是还是因为自己的技术问题以及等等，还是停留了许久。竟然初心是记录自己的技术成长的过程。那便可不必纠结是否整个网站都是自己一点一滴的建立起来。因此我利用hexo这个博客框架来快速建立自己的小乐园。下面就一起来操作吧。
-一、下载git（安装就一直next)
+</blockquote>
+</li>
+</ol>
+<ol start="4">
+<li><h3 id="使用微服务应该遵循哪些原则？"><a href="#使用微服务应该遵循哪些原则？" class="headerlink" title="使用微服务应该遵循哪些原则？"></a>使用微服务应该遵循哪些原则？</h3><blockquote>
+<p>古人云：兵马未动，粮草先行。建设微服务是需要建立长远规划，不是像写CMS那样建好数据库表，然后就开始干活，这样十有八九是会失败的。我们要进行微服务改造前，架构师要提前做好规划，我们把这里分为三步，前期阶段，设计阶段，技术阶段</p>
+<p>前期阶段，大致要做好如下事情：</p>
+<ul>
+<li>和多方充分沟通，确保能符合客户和组织的需求，并且得到认同</li>
+<li>和团队沟通，让队友（开发/测试/运维）理解，并且积极投入</li>
+<li>和业务部门沟通，指定版本计划和上线时间</li>
+</ul>
+<p>设计阶段，参考 Sam Newman 的著作<a href="https://book.douban.com/subject/26772677/" target="_blank" rel="noopener">《微服务设计》</a>，单微服务必须要满足以下的条件，才符合微服务的基本要求：</p>
+<ul>
+<li>标准的 <strong>REST 风格</strong>接口（基于 HTTP 和 JSON 格式）</li>
+<li><strong>独立部署</strong>，避免共享数据库（避免因为数据库而影响整个分布式系统）</li>
+<li>业务上的高内聚，<strong>减少依赖</strong>（从设计上要避免服务过大或者太小）</li>
+</ul>
+<p>庞大的分布式系统，需要强大基础设施来支撑，微服务涉及哪些基础设施？</p>
+<ul>
+<li>CI/CD和自动化（分布式系统几乎不可能通过人工手动发布）</li>
+<li>虚拟化技术（要保证微服务运行环境隔离，目前行业主流的是使用 <strong>Docker 容器</strong>）</li>
+<li>日志聚合，全链路监控（高度可观察和分析诊断问题）</li>
+</ul>
+<p>说了那么多，那什么样的情况下，你的团队不适合建设微服务？（请勿对号入座）</p>
+<ol>
+<li><p>开发团队不具备自主性，所在组织对开发团队限制非常多（具体请参考 <a href="https://zh.wikipedia.org/wiki/康威定律" target="_blank" rel="noopener">康威定律</a>）</p>
+</li>
+<li><p>团队不熟悉业务，无法识别出服务的边界，进行合理的拆分（请参考 DDD <a href="https://en.wikipedia.org/wiki/Domain-driven_design" target="_blank" rel="noopener">领域驱动设计</a>）</p>
+<img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409192152.png" style="zoom:50%;">
+</li>
+</ol>
+</blockquote>
+</li>
+<li><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
+<p>微服务设计其实是很早就有的设计思想，因为随着虚拟化技术的崛起，微服务可以低成本的实现，所以也开始流行和兴起。</p>
+<p>微服务的内涵很深，其中就包括，自动化，去中心化，独立性等等，其中细节无法用一篇文章概述清楚，我们在做技术选型或者方案的时候，尽可能多去了解技术的本身和起源再结合我们业务的特点，进行更好的选择。</p>
+</blockquote>
+</li>
+</ol>
 
-再下..
-                                        </p>
-                                        <p>2019-07-04</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/03/hello-world/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Hello World</h3>
-                                        
-                                        <p>
-                                            
-                                        </p>
-                                        <p>
-                                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can a..
-                                        </p>
-                                        <p>2019-07-03</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                </nav>
-            </section>
+        </div>
+        <div class="post-reply">
+            
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+            
             
         </div>
     </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
