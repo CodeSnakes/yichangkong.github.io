@@ -15,16 +15,33 @@
   </script>
 
   
-  <title>Yichangkong</title>
+  <title>2020年02月28日软件设计师每日一练 | Yichangkong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="yichangkong 个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yichangkong">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="1.排序与查找1.题目 2.题目解析 插入排序的基本思想是逐个将待排序元素插入到已排序的有序表中。 假设n个待排序元素存储在数组R[n+1]中(R[0]预留)，则：(1)初始时数组R[1..1]中只包含元素R[1]，则数组R[1..1]必定有序；(2)从i=2到n，执行步骤3；(3)此时，数组R被划分成两个子区间，分别是有序区间R[1..i-1]和无序区间R[i..n]，将当前无序区间的第1个记录">
+<meta name="keywords" content="软件设计师考题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年02月28日软件设计师每日一练">
+<meta property="og:url" content="http://yoursite.com/2020/04/10/2020年02月28日软件设计师每日一练/index.html">
 <meta property="og:site_name" content="Yichangkong">
+<meta property="og:description" content="1.排序与查找1.题目 2.题目解析 插入排序的基本思想是逐个将待排序元素插入到已排序的有序表中。 假设n个待排序元素存储在数组R[n+1]中(R[0]预留)，则：(1)初始时数组R[1..1]中只包含元素R[1]，则数组R[1..1]必定有序；(2)从i=2到n，执行步骤3；(3)此时，数组R被划分成两个子区间，分别是有序区间R[1..i-1]和无序区间R[i..n]，将当前无序区间的第1个记录">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410113412.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410113917.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410114309.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410114331.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410114427.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410114444.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410114503.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410114839.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410115029.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410120707.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410120927.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410120953.png">
+<meta property="og:updated_time" content="2020-04-10T04:10:07.630Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yichangkong">
+<meta name="twitter:title" content="2020年02月28日软件设计师每日一练">
+<meta name="twitter:description" content="1.排序与查找1.题目 2.题目解析 插入排序的基本思想是逐个将待排序元素插入到已排序的有序表中。 假设n个待排序元素存储在数组R[n+1]中(R[0]预留)，则：(1)初始时数组R[1..1]中只包含元素R[1]，则数组R[1..1]必定有序；(2)从i=2到n，执行步骤3；(3)此时，数组R被划分成两个子区间，分别是有序区间R[1..i-1]和无序区间R[i..n]，将当前无序区间的第1个记录">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410113412.png">
   
     <link rel="alternate" href="/atom.xml" title="Yichangkong" type="application/atom+xml">
   
@@ -110,752 +127,169 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
-    }
-
-    .primary-container .post-hover {
-        background: black;
-    }
-
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
-    }
-
-</style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2020/04/10/2020年02月28日软件设计师每日一练/">
-            <div class="full-height post-hover"
-                 style="
-                         background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410113412.png');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            2020年02月28日软件设计师每日一练
-                        </h1>
-                        <div>
-                        
-                            `
-                                <span class="tag is-post-tag">软件设计师考题</span>
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            1.排序与查找1.题目
-2.题目解析
-插入排序的基本思想是逐个将待排序元素插入到已排序的有序表中。
-假设n个待排序元素存储在数组R[n+1]中(R[0]预留)，则：(1)初始时数组R[1..1]中只包含元素R[1]，则数组R[1..1]..
-                        </p>
-                        <p class="date text-shadow">2020-04-10</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
-            </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
-            
-                
-<a class="post-hover" href="/2020/04/09/SpringBoot详解/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409202136.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                SpringBoot介绍
-            </h3>
-            
-            
-            <span class="tag is-post-tag">技术介绍</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-官方文档解析
-1.介绍Spring Boot
-Spring Boot可以轻松创建可以运行的独立..
-            </p>
-            <p class="date text-shadow is-marginless">2020-04-09</p>
-        </div>
-    </div>
-</a>
-            
-            
-                
-<a class="post-hover" href="/2020/04/09/什么微服务？/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409190332.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                什么是微服务？
-            </h3>
-            
-            
-            <span class="tag is-post-tag">概念解析</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                转载网址
-
-
-
-前言
-最近几年微服务很火，大家都在建设微服务，仿佛不谈点微服务相关的技术，都显得..
-            </p>
-            <p class="date text-shadow is-marginless">2020-04-09</p>
-        </div>
-    </div>
-</a>
-            
-        </div>
-    </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2020/04/09/SpringBoot详解/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409202136.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                SpringBoot介绍
-            </h3>
-            
-            
-            <span class="tag is-post-tag">技术介绍</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-官方文档解析
-1.介绍Spring Boot
-Spring Boot可以轻松创建可以运行的独立..
-            </p>
-            <p class="date text-shadow is-marginless">2020-04-09</p>
-        </div>
-    </div>
-</a>
-        
-        
-        
-<a class="post-hover" href="/2020/04/09/什么微服务？/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409190332.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                什么是微服务？
-            </h3>
-            
-            
-            <span class="tag is-post-tag">概念解析</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                转载网址
-
-
-
-前言
-最近几年微服务很火，大家都在建设微服务，仿佛不谈点微服务相关的技术，都显得..
-            </p>
-            <p class="date text-shadow is-marginless">2020-04-09</p>
-        </div>
-    </div>
-</a>
-        
-    </div>
-</div>
-
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/04/09/SpringBoot详解/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409202136.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>SpringBoot介绍</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">技术介绍</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-官方文档解析
-1.介绍Spring Boot
-Spring Boot可以轻松创建可以运行的独立的，生产级的基于Spring的应用程序。我们对Spring平台和第三方库采取自己的看法，以便您尽可能轻松地使用本教程。大多数Spring Boot应用程序只需要很少的Spring配置。
-您可以使用Spring Boot来创建可以使用java -jar或更传统的..
-                                        </p>
-                                        <p>2020-04-09</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/04/09/什么微服务？/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409190332.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>什么是微服务？</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">概念解析</span>
-                                            
-                                        </p>
-                                        <p>
-                                            转载网址
-
-
-
-前言
-最近几年微服务很火，大家都在建设微服务，仿佛不谈点微服务相关的技术，都显得不是那么主流了。
-近几年见识到身边朋友的很多公司和团队都在尝试进行微服务的改变，但很多团队并没有实际微服务踩坑经验，很多团队甚至强行为了微服务而去微服务，最终写成一个大型的分布式单体应用，就是改造后的系统既没有微服务的快速扩容，灵活发布的特性，也让原本的单体应..
-                                        </p>
-                                        <p>2020-04-09</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/04/09/2020年02月27日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409160004.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月27日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.正规式1.题目
-2.题目解析
-  B项从0到1然后走不了了，C项在3状态结束，不对；D项也只到1状态。 
-
-2.其他1.题目
-2.题目解析
- 运行Web浏览器的计算机与网页所在的计算机首先要建立TCP连接，采用HTTP协议传输网页文件。
-HTTF是Hyper Text Transportation Protocol（超文本传输协议）的缩写，是计算机之..
-                                        </p>
-                                        <p>2020-04-09</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/04/08/2020年02月26日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200408162457.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月26日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.编译与解释1.题目
-2.题目解析
-本题考查程序语言基础知识。
-对C源程序进行编译时，需建立符号表，其作用是记录源程序中各个符号（变量等）的必要信息，以辅助语义的正确性检查和代码生成，在编译过程中需要对符号表进行快速有效地查找、插入、修改和删除等操作。符号表的建立可以始于词法分析阶段，也可以放到语法分析和语义分析阶段，但符号表的使用有时会延续到目标代码..
-                                        </p>
-                                        <p>2020-04-08</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/04/07/2020年02月25日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200408155828.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月25日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.网络安全协议1.题目
-2.题目解析
-TLS是安全传输层协议的简称，用于在两个通信应用程序之间提供保密性和数据完整性。
-SSL是安全套接层协议的简称，它也是一种为网络通信提供安全和数据完整性的协议，它与TLS非常接近，它们都是在传输层对网络连接进行加密。
-PGP是一个基于RSA公匙加密体系的邮件加密软件。，用它可以对邮件保密以防止非授权者阅读。
-HTT..
-                                        </p>
-                                        <p>2020-04-07</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/04/06/2020年02月24日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200408154537.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月24日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.SQL语言1.题目
-2.题目解析
- 赋予用户权限命令的简单格式可以概括为：GRANT 权限ON 数据库对象TO 用户 WITH GRANT OPTION。 而WITH GRANT OPTION是可选项，表示用户可以将其权限通过GRANT语句授权给其它用户。因此本题的正确答案应分别是INSERT ON和WITH GRANT OPTION。
-
-2.UML..
-                                        </p>
-                                        <p>2020-04-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/04/05/2020年02月23日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407214828.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月23日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.树与二叉树1.题目
-2.题目解析
-&nbsp;&nbsp;&nbsp; 本题考查哈夫曼树。
-​    构造最优二叉树的哈夫曼算法如下。​    &nbsp;&nbsp;&nbsp; ① 根据给定的n个权值｛w1， w2，…，Wn｝构成n棵二叉树的集合F= {T1.T2，…，Tn}，其中每棵树T;中只有一个带权为w;的根结点，其左右子树均空。​    ..
-                                        </p>
-                                        <p>2020-04-05</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/04/04/2020年02月22日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407200002.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月22日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.关系代数1.题目
-2.题目解析
- 关系R（A,B,C,D）和S（A,C,E,F）做自然连接时，会以两个关系公共字段做等值连接，然后将操作结果集中重复列去除，所以运算后属性列有（4+4）-2=6个。（A、C为重复列）因此，本题选择C选项。
-对于问题2，求自然连接的笛卡尔积等价表达式，首先笛卡尔积需要选取同属性名则值相等的元组，本题A、C为同属性名，因此..
-                                        </p>
-                                        <p>2020-04-04</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2020/04/03/2020年02月21日软件设计师每日一练/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://gitee.com/yichangkong/FigureBed/raw/master/img/20200407181939.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>2020年02月21日软件设计师每日一练</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">软件设计师考题</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.算法分析方法1.题目
-2.题目解析
-本题考查基本的算法分析方法。 　　根据递归定义式，对F（5）的求解过程可由以下递推式表示: &nbsp;&nbsp;&nbsp; F（5）=F（4）+F（3）=F（3）+ F（2）+F（3）=F（2）+F（1）+F（2）+F（2）+F（1） &nbsp; =F（1）+F（0）+ F（1）+ F（1）+ F（0）+ ..
-                                        </p>
-                                        <p>2020-04-03</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                        
-                        
-                            <a class="pagination-next" href="/page/2/">Next page</a>
-                        
-                    
-                </nav>
-            </section>
-            
-                <style>
-    /*user info start*/
-    .user-info {
-        padding: 15px 0 0;
-    }
-
-    .user-info .avatar {
-        width: 155px;
-        height: 155px;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
         border-radius: 50%;
     }
 
-    .sns-container {
-        flex-wrap: wrap;
-    }
-
-    .sns-container a{
-        color: black;
-    }
-    /*user info end*/
-
-    /*Tag start*/
-    #tag_cloud .tags-item{
-        display: inline-block;
-        color: #000;
-        border: 1px solid gray;
-
-        margin: 4px 2px;
-        padding: 0 4px;
-        border-radius: 6px;
-    }
-    /*Tag end*/
-
-    /*Site box start*/
-    .site-box {
-        height: 60px;
-    }
-    /*Site box end*/
-
-    .category-list-item,
-    .archive-list-item {
-        display: flex;
-        margin-bottom: 4px;
-        justify-content: space-between;
-    }
-    .category-list-link,
-    .archive-list-link {
-        color: black;
-    }
-
-    .category-list-count,
-    .archive-list-count {
-        width: 32px;
+    .flow-chart {
         text-align: center;
-        border-radius: 4px;
-        color: #fff;
-        background-color: gray;
+    }
+
+    img[alt="post-cover"] {
+        display: none;
     }
 </style>
-<aside class="column is-hidden-touch is-3" style="max-width: 280px; min-width: 230px">
-    <div class="content-box user-info">
-        <div class="has-padding">
-            <header class="has-text-centered">
-                <img class="avatar" src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbb9ho4ywkj30jg0jgwew.jpg">
-            </header>
-            <section class="has-text-centered">
-                <h3><strong>YichangKong</strong></h3>
-                <p class="sub-title">繁华落尽一场空：风往尘香花已尽</p>
-                
-                <p class="is-flex center" style=" color: gray">
-                    <i class="fa fa-map-marker" style="padding: 5px"></i>
-                    吉普岛
-                </p>
-                
-            </section>
-        </div>
-        <div class="top-line">
-            <ul class="sns-container justify-center is-flex has-padding">
-                
-
-                
-
-                
-                <li>
-                    <a target="_blank" href="https://www.zhihu.com/people/yichangkong">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa  fa-stack-1x fa-inverse">知</i>
-                                        </span>
-                    </a>
-                </li>
-                
-
-                
-
-                
-
-                
-                <li>
-                    <a target="_blank" href="https://github.com/YichangKong">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                        </span>
-                    </a>
-                </li>
-                
-
-                
-            </ul>
-        </div>
-    </div>
-    <div class="content-box">
-        <!--post数量和tag category 数量-->
-        <div class="site-box is-flex">
-            <div class="flex-1 is-flex flex-column center full-height right-line">
-                <strong>57</strong>
-                <p>Posts</p>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>2020年02月28日软件设计师每日一练</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbb9ho4ywkj30jg0jgwew.jpg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> YichangKong</span>
+                <span class="post-date sub-title">at: 2020-04-10</span>
             </div>
-            <div class="flex-1 is-flex flex-column center full-height">
-                <strong>21</strong>
-                <p>Tags</p>
-            </div>
-        </div>
-    </div>
-    <div id='tag_cloud' class="content-inner content-box">
-        <div class="has-text-centered">
-            <strong>Tags</strong>
-        </div>
-        <div class="content-inner is-flex flex-wrap justify-space-between">
             
-                <a class="tags-item" href="tags/软件设计师考题/" title="软件设计师考题" rel="28">
-                    软件设计师考题
-                </a>
-            
-                <a class="tags-item" href="tags/技术学习/" title="技术学习" rel="1">
-                    技术学习
-                </a>
-            
-                <a class="tags-item" href="tags/学习笔记/" title="学习笔记" rel="5">
-                    学习笔记
-                </a>
-            
-                <a class="tags-item" href="tags/Maven项目/" title="Maven项目" rel="1">
-                    Maven项目
-                </a>
-            
-                <a class="tags-item" href="tags/spring-Component注解时的错误/" title="spring @Component注解时的错误" rel="1">
-                    spring @Component注解时的错误
-                </a>
-            
-                <a class="tags-item" href="tags/数据结构学习/" title="数据结构学习" rel="1">
-                    数据结构学习
-                </a>
-            
-                <a class="tags-item" href="tags/Python/" title="Python" rel="1">
-                    Python
-                </a>
-            
-                <a class="tags-item" href="tags/学习笔记序列/" title="学习笔记序列" rel="1">
-                    学习笔记序列
-                </a>
-            
-                <a class="tags-item" href="tags/技术介绍/" title="技术介绍" rel="1">
-                    技术介绍
-                </a>
-            
-                <a class="tags-item" href="tags/WebService的学习/" title="WebService的学习" rel="1">
-                    WebService的学习
-                </a>
-            
-                <a class="tags-item" href="tags/快速搭建个人博客Hexo/" title="快速搭建个人博客Hexo" rel="1">
-                    快速搭建个人博客Hexo
-                </a>
-            
-                <a class="tags-item" href="tags/mybatis报错/" title="mybatis报错" rel="1">
-                    mybatis报错
-                </a>
-            
-                <a class="tags-item" href="tags/web项目运行错误/" title="web项目运行错误" rel="1">
-                    web项目运行错误
-                </a>
-            
-                <a class="tags-item" href="tags/AOP的学习笔记/" title="AOP的学习笔记" rel="1">
-                    AOP的学习笔记
-                </a>
-            
-                <a class="tags-item" href="tags/错误笔记/" title="错误笔记" rel="1">
-                    错误笔记
-                </a>
-            
-                <a class="tags-item" href="tags/整合技术/" title="整合技术" rel="1">
-                    整合技术
-                </a>
-            
-                <a class="tags-item" href="tags/环境配置/" title="环境配置" rel="1">
-                    环境配置
-                </a>
-            
-                <a class="tags-item" href="tags/技术学习方向/" title="技术学习方向" rel="1">
-                    技术学习方向
-                </a>
-            
-                <a class="tags-item" href="tags/概念解析/" title="概念解析" rel="1">
-                    概念解析
-                </a>
-            
-                <a class="tags-item" href="tags/诗歌/" title="诗歌" rel="1">
-                    诗歌
-                </a>
-            
-                <a class="tags-item" href="tags/数据结构算法/" title="数据结构算法" rel="1">
-                    数据结构算法
-                </a>
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/软件设计师考题/">软件设计师考题</a>
+                    
+                </div>
             
         </div>
-    </div>
-    <div class="content-inner content-box">
-        <div class="has-text-centered">
-            <strong>Categories</strong>
+        <div class="content" style="overflow: auto">
+            <h3 id="1-排序与查找"><a href="#1-排序与查找" class="headerlink" title="1.排序与查找"></a>1.排序与查找</h3><h4 id="1-题目"><a href="#1-题目" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410113412.png" alt></p>
+<h4 id="2-题目解析"><a href="#2-题目解析" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p><strong>插入排序的基本思想是逐个将待排序元素插入到已排序的有序表中。</strong></p>
+<p>假设n个待排序元素存储在数组R[n+1]中(R[0]预留)，则：<br><br>(1)初始时数组R[1..1]中只包含元素R[1]，则数组R[1..1]必定有序；<br><br>(2)从i=2到n，执行步骤3；<br><br>(3)此时，数组R被划分成两个子区间，分别是有序区间R[1..i-1]和无序区间R[i..n]，将当前无序区间的第1个记录R[i]插入到有序区间R[1..i]中适当的位置上，使R[1..i]变为新的有序区间。<br><br>在实现的过程中，设置监视哨R[0]，并从R[i-1]到R[0]查找元素R[i]的插入位置<br><br>那么用插入排序对数组&lt;3，1，4，1，5，9，6，5&gt;进行排序的过程为：<br><br>原元素序列：&nbsp; 监视哨&nbsp; &nbsp;（3），1，4，1，5，9，6，5<br></p>
+<p>第一趟排序：&nbsp; &nbsp;&nbsp;1&nbsp; （1，3），4，1，5，9，6，5&nbsp;&nbsp;&nbsp; 1插入时与3比较1次<br><br>第二趟排序：&nbsp; &nbsp;&nbsp;4&nbsp; （1，3，4），1，5，9，6，5&nbsp;&nbsp;&nbsp; 4插入时与3比较1次<br><br>第三趟排序：&nbsp; &nbsp;&nbsp;1&nbsp; （1，1，3，4），5，9，6，5&nbsp;&nbsp;&nbsp; 1插入时分别与4、3、1比较1次，共比较3次<br><br>第四趟排序：&nbsp; &nbsp;&nbsp;5&nbsp; （1，1，3，4，5），9，6，5&nbsp;&nbsp;&nbsp; 5插入时与4比较1次<br><br>第五趟排序：&nbsp; &nbsp;&nbsp;9&nbsp; （1，1，3，4，5，9），6，5&nbsp;&nbsp;&nbsp; 9插入时与5比较1次<br><br>第六趟排序：&nbsp;&nbsp;&nbsp; 6&nbsp; （1，1，3，4，5，6，9），5&nbsp;&nbsp;&nbsp; 6插入时与9和5分别比较1次，共比较2次<br><br>第七趟排序：&nbsp;&nbsp;&nbsp; 5&nbsp; （1，1，3，4，5，5，6，9）&nbsp;&nbsp; 5插入时与9，6，5分别比较1次，共比较3次。<br><br>那么整个排序过程需要比较的次数为12次。<br></p>
+<p><strong>归并排序的思想是将两个相邻的有序子序列归并为一个有序序列，然后再将新产生的相邻序列进行归并，当只剩下一个有序序列时算法结束。</strong></p>
+<p>其基本步骤如下：<br><br>(1)将n个元素的待排序序列中每个元素看成有序子序列，对相邻子序列两两合并，则将生成n/2个子有序序列，这些子序列中除了最后一个子序列长度可能小于2外，其他的序列长度都等于2；<br><br>(2)对上述n/2个长度为2的子序列再进行相邻子序列的两两合并，则产生n/4个子有序序列，同理，只有最后一个子序列的长度可能小于4；<br><br>(3)第i趟归并排序为，对上述n/i个长度为i的子序列两两合并，产生n/2i个长度为2i的子有序序列；<br><br>(4)重复执行此步骤，直到生成长度为n的序列为止。<br><br>那么用归并排序对数组&lt;3，1，4，1，5，9，6，5&gt;进行排序的过程为：<br><br>原元素序列：&nbsp; 3，1，4，1，5，9，6，5<br><br>第一趟排序： [1，3]，[1，4]，[5，9]，[5，6]&nbsp;&nbsp;&nbsp; 比较4次<br><br>第二趟排序： [1，1，3，4]， [5，5，6，9]&nbsp;&nbsp; &nbsp;&nbsp;前半部分比较3次，后半部分比较3次<br><br>第三趟排序： [1，1，3，4，5，5，6，9]&nbsp;&nbsp; 5分别与1，1，3，4比较一次，共比较4次，后面的序列都不小于5，因此可以直接复制到结果序列。<br><br>所以整个排序过程需要比较的次数为14次。 </p>
+</blockquote>
+<h3 id="2-Linux命令行"><a href="#2-Linux命令行" class="headerlink" title="2.Linux命令行"></a>2.Linux命令行</h3><h4 id="1-题目-1"><a href="#1-题目-1" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410113917.png" alt></p>
+<h4 id="2-题目解析-1"><a href="#2-题目解析-1" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>修改linux文件权限命令：chmod。</p>
+</blockquote>
+<h4 id="3-知识牵引"><a href="#3-知识牵引" class="headerlink" title="3.知识牵引"></a>3.知识牵引</h4><blockquote>
+<p><a href="https://blog.csdn.net/u012104219/article/details/79125771" target="_blank" rel="noopener">Linux命令行详解</a></p>
+</blockquote>
+<h3 id="3-数据的表示"><a href="#3-数据的表示" class="headerlink" title="3.数据的表示"></a>3.数据的表示</h3><h4 id="1-题目-2"><a href="#1-题目-2" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410114309.png" alt></p>
+<h4 id="2-题目解析-2"><a href="#2-题目解析-2" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410114331.png" alt></p>
+</blockquote>
+<h3 id="4-磁盘存储"><a href="#4-磁盘存储" class="headerlink" title="4.磁盘存储"></a>4.磁盘存储</h3><h4 id="1-题目-3"><a href="#1-题目-3" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410114427.png" alt></p>
+<h4 id="2-题目解析-3"><a href="#2-题目解析-3" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410114444.png" alt></p>
+</blockquote>
+<h3 id="5-开发系统互连参考模型"><a href="#5-开发系统互连参考模型" class="headerlink" title="5.开发系统互连参考模型"></a>5.开发系统互连参考模型</h3><h4 id="1-题目-4"><a href="#1-题目-4" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410114503.png" alt></p>
+<h4 id="2-题目解析-4"><a href="#2-题目解析-4" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>路由器是用于连接多个<strong>逻辑上分开</strong>的网络，所谓</p>
+<ul>
+<li>逻辑网络是代表一个单独的网络或者一个子网。当数据从一个子网传输到另一个子网时，可通过路由器的路由功能来完成。因此，<strong>路由器具有判断网络地址和选择IP路径的功能。</strong> </li>
+<li>路由器的每个端口所连接的网络都独自构成一个广播域。</li>
+</ul>
+<p>集线器内部，各接口都是通过背板总线连接在一起的，在逻辑上构成一个共享的总线。所以，集线器和所有接口的主机共同构成了一个冲突域和一个广播域。</p>
+<p> 交换机上每个接口都是自己的一个冲突域。交换机和所有的接口所连接的主机共同构成了一个广播域。</p>
+</blockquote>
+<h3 id="6-HTML语言"><a href="#6-HTML语言" class="headerlink" title="6.HTML语言"></a>6.HTML语言</h3><h4 id="1-题目-5"><a href="#1-题目-5" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410114839.png" alt></p>
+<h4 id="2-题目解析-5"><a href="#2-题目解析-5" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p> 本题考查的是HTML基本标签的使用。</p>
+<ul>
+<li>alink用于设置正在被击中的链接的颜色。</li>
+<li>vlink用于设置已使用的链接的颜色。</li>
+<li>background用于设置背景图片的URL。</li>
+<li>bgcolor用于设置文档整体背景颜色。</li>
+</ul>
+</blockquote>
+<h3 id="7-软件设计"><a href="#7-软件设计" class="headerlink" title="7.软件设计"></a>7.软件设计</h3><h4 id="1-题目-6"><a href="#1-题目-6" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410115029.png" alt></p>
+<h4 id="2-题目解析-6"><a href="#2-题目解析-6" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>数据耦合:两个模块彼此间通过数据参数交换信息。 </p>
+<br>
+标记耦合:一组模块通过参数表传递记录信息，这个记录是某一个数据结构的子结构，而不是简单变量。<br>
+<br>
+控制耦合:两个模块彼此间传递的信息中有控制信息。<br>
+<br>
+内容耦合:一个模块需要涉及到另一个模块的内部信息。<br>
+<br>
+本题应该选择B选项。
+</blockquote>
+<h3 id="8-面向对象的基本概念"><a href="#8-面向对象的基本概念" class="headerlink" title="8.面向对象的基本概念"></a>8.面向对象的基本概念</h3><h4 id="1-题目-7"><a href="#1-题目-7" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410120707.png" alt></p>
+<h4 id="2-题目解析-7"><a href="#2-题目解析-7" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p>聚合对象是指一个对象包含其他对象。</p>
+</blockquote>
+<h3 id="9-线性表"><a href="#9-线性表" class="headerlink" title="9.线性表"></a>9.线性表</h3><h4 id="1-题目-8"><a href="#1-题目-8" class="headerlink" title="1.题目"></a>1.题目</h4><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410120927.png" alt></p>
+<h4 id="2-题目解析-8"><a href="#2-题目解析-8" class="headerlink" title="2.题目解析"></a>2.题目解析</h4><blockquote>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200410120953.png" alt></p>
+</blockquote>
+
         </div>
-        <div class="content-inner">
+        <div class="post-reply">
+            
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+            
             
         </div>
     </div>
-    <div class="content-inner content-box">
-        <div class="has-text-centered">
-            <strong>Archives</strong>
-        </div>
-        <div class="content-inner">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">9</span></li></ul>
-        </div>
-    </div>
-</aside>
-            
-        </div>
-    </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
