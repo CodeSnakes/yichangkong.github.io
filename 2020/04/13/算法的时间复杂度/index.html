@@ -15,16 +15,31 @@
   </script>
 
   
-  <title>Archives | Yichangkong</title>
+  <title>算法复杂度 | Yichangkong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="yichangkong 个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yichangkong">
-<meta property="og:url" content="http://yoursite.com/archives/page/6/index.html">
+  <meta name="description" content="1.简单介绍 算法复杂度O 包括时间复杂度、空间复杂度  2.时间复杂度 介绍  赋值语句决定了程序运行时间，赋值语句越多，时间越长。 大O表示法：T(n)表示主导的数量级 一般情况下，算法中的基本操作语句的重复执行次数是问题规模n的某个函数，用T(n)表示，若有某个辅助函数f(n)，使得当n趋近于无穷大时，T(n) / f(n) 的极限值为不等于零的常数，则称f(n)是T(n)的同数量级函数。">
+<meta name="keywords" content="知识点讲解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法复杂度">
+<meta property="og:url" content="http://yoursite.com/2020/04/13/算法的时间复杂度/index.html">
 <meta property="og:site_name" content="Yichangkong">
+<meta property="og:description" content="1.简单介绍 算法复杂度O 包括时间复杂度、空间复杂度  2.时间复杂度 介绍  赋值语句决定了程序运行时间，赋值语句越多，时间越长。 大O表示法：T(n)表示主导的数量级 一般情况下，算法中的基本操作语句的重复执行次数是问题规模n的某个函数，用T(n)表示，若有某个辅助函数f(n)，使得当n趋近于无穷大时，T(n) / f(n) 的极限值为不等于零的常数，则称f(n)是T(n)的同数量级函数。">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413162417.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413163922.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413163936.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164208.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164222.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164650.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164635.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413165537.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413171319.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413165059.png">
+<meta property="og:updated_time" content="2020-04-13T09:14:01.542Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yichangkong">
+<meta name="twitter:title" content="算法复杂度">
+<meta name="twitter:description" content="1.简单介绍 算法复杂度O 包括时间复杂度、空间复杂度  2.时间复杂度 介绍  赋值语句决定了程序运行时间，赋值语句越多，时间越长。 大O表示法：T(n)表示主导的数量级 一般情况下，算法中的基本操作语句的重复执行次数是问题规模n的某个函数，用T(n)表示，若有某个辅助函数f(n)，使得当n趋近于无穷大时，T(n) / f(n) 的极限值为不等于零的常数，则称f(n)是T(n)的同数量级函数。">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413162417.png">
   
     <link rel="alternate" href="/atom.xml" title="Yichangkong" type="application/atom+xml">
   
@@ -110,534 +125,264 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
     }
 
-    .primary-container .post-hover {
-        background: black;
+    .flow-chart {
+        text-align: center;
     }
 
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
+    img[alt="post-cover"] {
+        display: none;
     }
-
 </style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2019/08/06/SpringMVC学习/">
-            <div class="full-height post-hover"
-                 style="
-                         background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5wxvlml4zj30x70ib43w.jpg');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            SpringMVC学习
-                        </h1>
-                        <div>
-                        
-                            `
-                                <span class="tag is-post-tag">学习笔记</span>
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            1.介绍
-
-Spring MVC是Spring提供的一个强大而灵活的web框架。`借助于注解`，Spring MVC提供了几乎是POJO的开发
-模式，使得控制器的开发和测试更加简单。这些控制器一般不直接处理请求，而是将其委托给Sprin..
-                        </p>
-                        <p class="date text-shadow">2019-08-06</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>算法复杂度</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbb9ho4ywkj30jg0jgwew.jpg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> YichangKong</span>
+                <span class="post-date sub-title">at: 2020-04-13</span>
             </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
-                
-<a class="post-hover" href="/2019/08/03/Tomcat的坑或者eclipse的坑/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5mpne6ofnj30wx04udg8.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                Tomcat的坑或者eclipse的坑
-            </h3>
-            
-            
-            <span class="tag is-post-tag">web项目运行错误</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.错误展示
-
-
-– 
-2.错误的指向
-1.2.3.4.5.
-
-– 
-4.错误的解决
-首先检查下..
-            </p>
-            <p class="date text-shadow is-marginless">2019-08-03</p>
-        </div>
-    </div>
-</a>
-            
-            
-                
-<a class="post-hover" href="/2019/07/29/MyBatise学习笔记/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                MyBatise学习笔记
-            </h3>
-            
-            
-            <span class="tag is-post-tag">学习笔记</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                MyBatise1.介绍2.学习问题
-            </p>
-            <p class="date text-shadow is-marginless">2019-07-29</p>
-        </div>
-    </div>
-</a>
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/知识点讲解/">知识点讲解</a>
+                    
+                </div>
             
         </div>
-    </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2019/08/03/Tomcat的坑或者eclipse的坑/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5mpne6ofnj30wx04udg8.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                Tomcat的坑或者eclipse的坑
-            </h3>
-            
-            
-            <span class="tag is-post-tag">web项目运行错误</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.错误展示
+        <div class="content" style="overflow: auto">
+            <p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413162417.png" alt="**常用算法的时间复杂度和空间复杂度**"></p>
+<h3 id="1-简单介绍"><a href="#1-简单介绍" class="headerlink" title="1.简单介绍"></a>1.简单介绍</h3><ul>
+<li><a href="https://www.cnblogs.com/yeshengCqupt/p/12495526.html" target="_blank" rel="noopener">算法复杂度O</a></li>
+<li>包括时间复杂度、空间复杂度</li>
+</ul>
+<h3 id="2-时间复杂度"><a href="#2-时间复杂度" class="headerlink" title="2.时间复杂度"></a>2.时间复杂度</h3><ol>
+<li><p>介绍</p>
+<ol>
+<li>赋值语句决定了程序运行时间，赋值语句越多，时间越长。</li>
+<li>大O表示法：<strong>T(n)</strong>表示主导的数量级</li>
+<li>一般情况下，算法中的基本操作语句的重复执行次数是问题规模n的某个函数，用T(n)表示，若有某个辅助函数f(n)，使得当n趋近于无穷大时，T(n) / f(n) 的极限值为不等于零的常数，则称f(n)是T(n)的同数量级函数。记作 T(n)=Ｏ( f(n) )，称Ｏ( f(n) )  为算法的渐进时间复杂度，简称时间复杂度。</li>
+<li>T(n) 不同，但时间复杂度可能相同。 如：T(n)=n²+7n+6 与 T(n)=3n²+2n+2 它们的T(n) 不同，但时间复杂度相同，都为O(n²)。</li>
+<li>计算时间复杂度的方法：<ul>
+<li>用常数1代替运行时间中的所有加法常数  T(n)=n²+7n+6  =&gt; T(n)=n²+7n+1</li>
+<li>修改后的运行次数函数中，只保留最高阶项  T(n)=n²+7n+1 =&gt; T(n) = n²</li>
+<li>去除最高阶项的系数 T(n) = n² =&gt; T(n) = n² =&gt; O(n²)</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>计算方式 </p>
+<ul>
+<li><strong>事后统计</strong>的方法: 这种方法可行, 但是有两个问题：一是要想对设计的算法的运行性能进行评测，需要实际运行该程序；二是所得时间的统计量依赖于计算机的硬件、软件等环境因素, 这种方式，要在同一台计算机的相同状态下运行，才能比较那个算法速度更快。</li>
+<li><strong>事前估算</strong>的方法: 通过分析某个算法的时间复杂度来判断哪个算法更优.</li>
+</ul>
+</li>
+<li><p>时间频度</p>
+<ul>
+<li><p>时间频度：一个算法花费的时间与算法中语句的执行次数成正比例，哪个算法中语句执行次数多，它花费时间就多。一个算法中的语句执行次数称为语句频度或时间频度。记为T(n)</p>
+</li>
+<li><p>举例说明 </p>
+<ul>
+<li><p>比如计算1-100所有数字之和, 我们设计两种算法：</p>
+</li>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> total = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> end = <span class="number">100</span>;</span><br><span class="line"><span class="comment">//使用for循环计算</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=end;i++)&#123;</span><br><span class="line">    total+=i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//时间复杂度T(n)=n+1;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//直接计算</span></span><br><span class="line">total=(<span class="number">1</span>+end)*end/<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>计算时可进行忽略部分</p>
+<ul>
+<li>忽略常数项 <ol>
+<li><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413163922.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413163936.png" alt></li>
+<li>结论<ul>
+<li>2n+20 和 2n 随着n 变大，执行曲线无限接近, 20可以忽略</li>
+<li>3n+10 和 3n 随着n 变大，执行曲线无限接近, 10可以忽略 </li>
+</ul>
+</li>
+</ol>
+</li>
+<li>忽略低次项<ol>
+<li><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164208.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164222.png" alt></li>
+<li>结论 <ul>
+<li>2n^2+3n+10 和 2n^2 随着n 变大, 执行曲线无限接近, 可以忽略 3n+10</li>
+<li>n^2+5n+20 和 n^2 随着n 变大,执行曲线无限接近, 可以忽略 5n+20</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>忽略系数<ol>
+<li><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164650.png" alt> <img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164635.png" alt></li>
+<li>结论 <ul>
+<li>随着n值变大，5n^2+7n 和 3n^2 + 2n ，执行曲线重合, 说明  这种情况下, 5和3可以忽略。</li>
+<li>而n^3+5n 和 6n^3+4n  ，执行曲线分离，说明多少次方式关键</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>常见的时间复杂度</p>
+<ol>
+<li><p>常数阶O(1) </p>
+<ul>
+<li><p>无论代码执行了多少行，只要是没有循环等复杂结构，那这个代码的时间复杂度就都是O(1)</p>
+</li>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> j = <span class="number">2</span>;</span><br><span class="line">++i;</span><br><span class="line">j++;</span><br><span class="line"><span class="keyword">int</span> m = i + j;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上述代码在执行的时候，它消耗的时候并不随着某个变量的增长而增长，那么无论这类代码有多长，即使有几万几十万行，都可以用O(1)来表示它的时间复杂度。</p>
+</li>
+</ul>
+</li>
+<li><p>对数阶O(log2n) </p>
+<ul>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(i&lt;n)&#123;</span><br><span class="line">    i = i * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>说明：在while循环里面，每次都将 i 乘以 2，乘完之后，i 距离 n 就越来越近了。假设循环x次之后，i 就大于 2 了，此时这个循环就退出了，也就是说 2 的 x 次方等于 n，那么 x = log2n也就是说当循环 log2n 次以后，这个代码就结束了。因此这个代码的时间复杂度为：O(log2n)  。 O(log2n) 的这个2 时间上是根据代码变化的，i = i * 3 ，则是 O(log3n) </p>
+</li>
+<li><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413165537.png" style="zoom:150%;">
+</li>
+<li><p>N=2^x  <strong>&gt;</strong>  n= 2^i    ;  1024=2^10  log2(1024)=10</p>
+</li>
+<li><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413171319.png" alt></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="3">
+<li><p>线性阶O(n) </p>
+<ul>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;=n; ++i)&#123;</span><br><span class="line">    j = i;</span><br><span class="line">    j++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这段代码，for循环里面的代码会执行n遍，因此它消耗的时间是随着n的变化而变化的，因此这类代码都可以用O(n)来表示它的时间复杂度</p>
+</li>
+</ul>
+</li>
+<li><p>线性对数阶O(nlog2n) </p>
+<ul>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(m = <span class="number">1</span>;m&lt;n;m++)&#123;</span><br><span class="line">    i=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;n)&#123;</span><br><span class="line">        i = <span class="number">1</span> * <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>线性对数阶O(nlogN) 其实非常容易理解，将时间复杂度为O(logn)的代码循环N遍的话，那么它的时间复杂度就是 n * O(logN)，也就是了O(nlogN)</p>
+</li>
+</ul>
+</li>
+<li><p>平方阶O(n^2)</p>
+<ul>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(x = <span class="number">1</span>;x&lt;=n;x++)&#123;</span><br><span class="line">     <span class="keyword">for</span> (i = <span class="number">1</span>; i&lt;=n; i++)&#123;</span><br><span class="line">    </span><br><span class="line">   &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>平方阶O(n²) 就更容易理解了，如果把 O(n) 的代码再嵌套循环一遍，它的时间复杂度就是 O(n²)，这段代码其实就是嵌套了2层n循环，它的时间复杂度就是 O(n<em>n)，即  O(n²) 如果将其中一层循环的n改成m，那它的时间复杂度就变成了 O(m</em>n)</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="6">
+<li><p>立方阶O(n^3)</p>
+</li>
+<li><p>k次方阶O(n^k)</p>
+</li>
+<li><p>指数阶O(2^n) </p>
+</li>
+<li><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413165059.png" alt></p>
+</li>
+<li><p>说明 </p>
+<ul>
+<li>常见的算法时间复杂度由小到大依次为：<strong>Ο(1)＜Ο(log2n)＜Ο(n)＜Ο(nlog2n)＜Ο(n2)＜Ο(n3)＜ Ο(nk) ＜Ο(2n)</strong> ，随着问题规模n的不断增大，上述时间复杂度不断增大，算法的执行效率越低</li>
+<li>从图中可见，我们应该尽可能避免使用指数阶的算法</li>
+</ul>
+</li>
+</ol>
+<ol start="6">
+<li><h3 id="3-空间复杂度-待完整更新"><a href="#3-空间复杂度-待完整更新" class="headerlink" title="3.空间复杂度(待完整更新)"></a>3.空间复杂度(待完整更新)</h3></li>
+<li><p><strong>空间复杂度</strong></p>
+<ul>
+<li>算法的空间复杂度通过计算算法所需的存储空间实现，算法的空间复杂度的计算公式记作：S(n)=O(f(n))，其中，n为问题的规模，f(n)为语句关于n所占存储空间的函数，也是一种“渐进表示法”，这些所需要的内存空间通常分为“固定空间内存”（包括基本程序代码、常数、变量等）和“变动空间内存”（随程序运行时而改变大小的使用空间）。</li>
+</ul>
+</li>
+<li><p>计算方法</p>
+<ul>
+<li>例如递归算法。忽略常数，用O(1)表示 ，递归算法的空间复杂度=递归深度N*每次递归所要的辅助空间， 对于单线程来说，递归有运行时堆栈，求的是递归最深的那一次压栈所耗费的空间的个数，因为递归最深的那一次所耗费的空间足以容纳它所有递归过程。</li>
+</ul>
+</li>
+</ol>
 
-
-– 
-2.错误的指向
-1.2.3.4.5.
-
-– 
-4.错误的解决
-首先检查下..
-            </p>
-            <p class="date text-shadow is-marginless">2019-08-03</p>
         </div>
-    </div>
-</a>
-        
-        
-        
-<a class="post-hover" href="/2019/07/29/MyBatise学习笔记/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                MyBatise学习笔记
-            </h3>
+        <div class="post-reply">
             
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
             
-            <span class="tag is-post-tag">学习笔记</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                MyBatise1.介绍2.学习问题
-            </p>
-            <p class="date text-shadow is-marginless">2019-07-29</p>
-        </div>
-    </div>
-</a>
-        
-    </div>
-</div>
-
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/08/03/Tomcat的坑或者eclipse的坑/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5mpne6ofnj30wx04udg8.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Tomcat的坑或者eclipse的坑</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">web项目运行错误</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.错误展示
-
-
-– 
-2.错误的指向
-1.2.3.4.5.
-
-– 
-4.错误的解决
-首先检查下eclipse是否设置了Project自动编译了：eclipse—》Project —》Build Automatically，该选项必选打勾，如果没有打勾则打勾后就行。如图：
-
-注意这里有工程也有全局的，必须两个都设置对了才可以编译。
- 如图：
- 具体工程的..
-                                        </p>
-                                        <p>2019-08-03</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/29/MyBatise学习笔记/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>MyBatise学习笔记</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">学习笔记</span>
-                                            
-                                        </p>
-                                        <p>
-                                            MyBatise1.介绍2.学习问题
-                                        </p>
-                                        <p>2019-07-29</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/26/荒唐/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564164004295&di=8f89cb163c3f9b325d7cb5c24442e96f&imgtype=0&src=http%3A%2F%2Fpic.qqtn.com%2Ffile%2F2013%2F2015-4%2F2015042808453014392.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>荒唐</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">诗歌</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-
-
-听过的流行歌一样
-起初循环 再者沉底 
-白狐老道  
-喜欢
-翻页不停的故事书
-像极了 
-翻云覆雨的天气
-不惊讶夏天里的蝉鸣
-和一片蛙声
-慌忙于
-手脚两边
-奋力于你爱的颜色
-
-
-                                        </p>
-                                        <p>2019-07-26</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/26/webService-wsdl2java运行错误！/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g5dmf9ebsij30en08474t.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>webService wsdl2java运行错误！</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">环境配置</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.错误展示
-
-
-
-
-
-
-2.问题分析过程
-
-
-当我cxf的环境配置没问题时，再输入wsdl2java -v cmd提示系统找不到路径！这时我是很蒙蔽的！而且一直多以为是cxf的配置问题，一度让我重新下了一个比较新版本的cxf，结果可想而知，还是不行！搞了几个小时，心态也崩了，就干脆算了！
-呃呃呃，晚上我出去跑步回来，洗完澡，准备接着往前学习，倔强的我又..
-                                        </p>
-                                        <p>2019-07-26</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/25/WebService-学习笔记/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564653557&di=72ecca34df371fc685b2e15933d16711&imgtype=jpg&er=1&src=http%3A%2F%2Fupload.nxing.cn%2Fuploads%2Fuploads%2F2017%2F02%2F26%2F0000027%2F201702260908002721bf4af-size853x486.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>WebService 学习笔记</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">WebService的学习</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-1.介绍
-Web service 即web服务，它是一种跨编程语言和跨操作系统平台的远程调用技术即跨平台远程调用技术。 
-Web service是一个平台独立的，低耦合的，自包含的、基于可编程的web的应用程序，使用开放的XML（标准通用标记语言下的一个子集）标准来描述、发布、发现、协调和配置这些应用程序，用于开发分布式的互操作的应用程序。 
-Web ..
-                                        </p>
-                                        <p>2019-07-25</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/22/bootStrap学习笔记/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563776659689&di=9ba05a212e9694b94544cf3f14c79db4&imgtype=0&src=http%3A%2F%2Fcodegeekz.com%2Fwp-content%2Fuploads%2FBootstrap.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>BootStrap</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">技术介绍</span>
-                                            
-                                        </p>
-                                        <p>
-                                            Bootstrap
-1.介绍
-Bootstrap，来自 Twitter，是目前最受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。Bootstrap 目前的最新版本是 Bootstrap4，利用我们提供的 Sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、基..
-                                        </p>
-                                        <p>2019-07-22</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/17/spring-AOP/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://img3.imgtn.bdimg.com/it/u=49453341,2859298398&fm=26&gp=0.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>spring_AOP</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">AOP的学习笔记</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-1.AOP介绍
-aop的全称-Aspect Oriented Programming
-1)意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。
-2)AOP是OOP（面向对象编程）的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。
-3)利用AOP可以对业务逻辑的各个部分进行隔..
-                                        </p>
-                                        <p>2019-07-17</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/06/Spring错误解决/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('http://ww1.sinaimg.cn/large/007SCiiVly1g4q9dp09gbj314h0423yu.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Spring错误解决？</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">spring @Component注解时的错误</span>
-                                            
-                                        </p>
-                                        <p>
-                                            在运行spring的注解时出的错误，现在还没有找到答案，应该是Spring版本的问题，运行环境是jdk1.8、spring3.2、commen-loggin1.2。
-1.解决办法，更换spring框架版本
-由原来的3.2版本更换为4，在除了核心jar包外，又加入了另一个依赖包
-
-
-2.在寻找错误时，如果是@Test 下测试
-可以借助 JUnil 进行错误..
-                                        </p>
-                                        <p>2019-07-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/04/git_cmd下搭建hexo博客/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562314728184&di=e9a138d51674a19e81a47cda7272ca7b&imgtype=0&src=http%3A%2F%2Fnewsimg.5054399.com%2Fuploads%2Fuserup%2F1902%2F151524461154.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>git_cmd下搭建hexo博客</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">快速搭建个人博客Hexo</span>
-                                            
-                                        </p>
-                                        <p>
-                                            哈哈，进入b站那么久了，也早就了解到有博客这个东西，因此就一直想着搭建一个属于自己的技术博客，但是还是因为自己的技术问题以及等等，还是停留了许久。竟然初心是记录自己的技术成长的过程。那便可不必纠结是否整个网站都是自己一点一滴的建立起来。因此我利用hexo这个博客框架来快速建立自己的小乐园。下面就一起来操作吧。
-一、下载git（安装就一直next)
-
-再下..
-                                        </p>
-                                        <p>2019-07-04</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                </nav>
-            </section>
             
         </div>
     </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
