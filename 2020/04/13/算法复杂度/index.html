@@ -32,8 +32,11 @@
 <meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164222.png">
 <meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164650.png">
 <meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164635.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413165537.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413171319.png">
 <meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413165059.png">
-<meta property="og:updated_time" content="2020-04-13T09:26:23.604Z">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415220226.png">
+<meta property="og:updated_time" content="2020-04-15T14:07:54.805Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法复杂度">
 <meta name="twitter:description" content="1.简单介绍 算法复杂度O 包括时间复杂度、空间复杂度  2.时间复杂度 介绍  赋值语句决定了程序运行时间，赋值语句越多，时间越长。 大O表示法：T(n)表示主导的数量级 一般情况下，算法中的基本操作语句的重复执行次数是问题规模n的某个函数，用T(n)表示，若有某个辅助函数f(n)，使得当n趋近于无穷大时，T(n) / f(n) 的极限值为不等于零的常数，则称f(n)是T(n)的同数量级函数。">
@@ -186,7 +189,7 @@
 <li>包括时间复杂度、空间复杂度</li>
 </ul>
 <h3 id="2-时间复杂度"><a href="#2-时间复杂度" class="headerlink" title="2.时间复杂度"></a>2.时间复杂度</h3><ol>
-<li><p>介绍</p>
+<li><p><strong>介绍</strong></p>
 <ol>
 <li>赋值语句决定了程序运行时间，赋值语句越多，时间越长。</li>
 <li>大O表示法：<strong>T(n)</strong>表示主导的数量级</li>
@@ -200,39 +203,33 @@
 </li>
 </ol>
 </li>
-<li><p>计算方式 </p>
+<li><p><strong>计算方式</strong> </p>
 <ul>
 <li><strong>事后统计</strong>的方法: 这种方法可行, 但是有两个问题：一是要想对设计的算法的运行性能进行评测，需要实际运行该程序；二是所得时间的统计量依赖于计算机的硬件、软件等环境因素, 这种方式，要在同一台计算机的相同状态下运行，才能比较那个算法速度更快。</li>
 <li><strong>事前估算</strong>的方法: 通过分析某个算法的时间复杂度来判断哪个算法更优.</li>
 </ul>
 </li>
-<li><p>时间频度</p>
+<li><p><strong>时间频度</strong></p>
 <ul>
 <li><p>时间频度：一个算法花费的时间与算法中语句的执行次数成正比例，哪个算法中语句执行次数多，它花费时间就多。一个算法中的语句执行次数称为语句频度或时间频度。记为T(n)</p>
 </li>
 <li><p>举例说明 </p>
-<ul>
-<li><p>比如计算1-100所有数字之和, 我们设计两种算法：</p>
-</li>
-<li><pre><code>int total = 0;
-int end = 100;
-//使用for循环计算
-for(int i=0;i&lt;=end;i++){
-    total+=i;
-}
-//时间复杂度T(n)=n+1;</code></pre></li>
-</ul>
+<p>比如计算1-100所有数字之和, 我们设计两种算法：</p>
 </li>
 </ul>
 </li>
 </ol>
-<pre><code>- 
-      //直接计算
-      total=(1+end)*end/2;
+<pre><code>​    int total = 0;
+​    int end = 100;
+​    //使用for循环计算
+​    for(int i=0;i&lt;=end;i++){
+​        total+=i;
+​    }
+​    //时间复杂度T(n)=n+1;
 
-
-- </code></pre><ol start="4">
-<li><p>计算时可进行忽略部分</p>
+  //直接计算
+  total=(1+end)*end/2;</code></pre><ol start="4">
+<li><p><strong>计算时可进行忽略部分</strong></p>
 <ul>
 <li>忽略常数项 <ol>
 <li><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413163922.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413163936.png" alt></li>
@@ -263,7 +260,7 @@ for(int i=0;i&lt;=end;i++){
 </li>
 </ul>
 </li>
-<li><p>常见的时间复杂度</p>
+<li><p><strong>常见的时间复杂度</strong></p>
 <ol>
 <li><p>常数阶O(1) </p>
 <ul>
@@ -271,24 +268,31 @@ for(int i=0;i&lt;=end;i++){
 </li>
 <li><p>int i = 1;<br>int j = 2;<br>++i;<br>j++;<br>int m = i + j;</p>
 </li>
+<li><p>上述代码在执行的时候，它消耗的时候并不随着某个变量的增长而增长，那么无论这类代码有多长，即使有几万几十万行，都可以用O(1)来表示它的时间复杂度。</p>
+</li>
+</ul>
+</li>
+<li><p>对数阶O(log2n) </p>
+<ul>
+<li>int i = 1;<br>while(i&lt;n){<pre><code>i = i * 2;</code></pre>}</li>
 </ul>
 </li>
 </ol>
 </li>
 </ol>
-<pre><code>- 上述代码在执行的时候，它消耗的时候并不随着某个变量的增长而增长，那么无论这类代码有多长，即使有几万几十万行，都可以用O(1)来表示它的时间复杂度。</code></pre><ol start="2">
-<li><p>对数阶O(log2n) </p>
-<p>-<br>  int i = 1;<br>  while(i&lt;n){</p>
-<pre><code>i = i * 2;</code></pre><p>  }</p>
+<ul>
+<li><p>说明：在while循环里面，每次都将 i 乘以 2，乘完之后，i 距离 n 就越来越近了。假设循环x次之后，i 就大于 2 了，此时这个循环就退出了，也就是说 2 的 x 次方等于 n，那么 x = log2n也就是说当循环 log2n 次以后，这个代码就结束了。因此这个代码的时间复杂度为：O(log2n)  。 O(log2n) 的这个2 时间上是根据代码变化的，i = i * 3 ，则是 O(log3n) </p>
+<ul>
+<li><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413165537.png" style="zoom:150%;">
 </li>
-</ol>
-<pre><code>- 说明：在while循环里面，每次都将 i 乘以 2，乘完之后，i 距离 n 就越来越近了。假设循环x次之后，i 就大于 2 了，此时这个循环就退出了，也就是说 2 的 x 次方等于 n，那么 x = log2n也就是说当循环 log2n 次以后，这个代码就结束了。因此这个代码的时间复杂度为：O(log2n)  。 O(log2n) 的这个2 时间上是根据代码变化的，i = i * 3 ，则是 O(log3n) 
-
--  &lt;img src=&quot;https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413165537.png&quot; style=&quot;zoom:150%;&quot; /&gt;
-
-- N=2^x  **&gt;**  n= 2^i    ;  1024=2^10  log2(1024)=10
-
-- ![](https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413171319.png)</code></pre><ol start="3">
+</ul>
+</li>
+<li><p>N=2^x  <strong>&gt;</strong>  n= 2^i    ;  1024=2^10  log2(1024)=10</p>
+</li>
+<li><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413171319.png" alt></p>
+</li>
+</ul>
+<ol start="3">
 <li><p>线性阶O(n) </p>
 <ul>
 <li>for (int i = 1; i&lt;=n; ++i){<pre><code>j = i;
@@ -296,23 +300,28 @@ j++;</code></pre>}</li>
 </ul>
 </li>
 </ol>
-<pre><code>- 这段代码，for循环里面的代码会执行n遍，因此它消耗的时间是随着n的变化而变化的，因此这类代码都可以用O(n)来表示它的时间复杂度</code></pre><ol start="4">
+<ul>
+<li>这段代码，for循环里面的代码会执行n遍，因此它消耗的时间是随着n的变化而变化的，因此这类代码都可以用O(n)来表示它的时间复杂度</li>
+</ul>
+<ol start="4">
 <li><p>线性对数阶O(nlog2n) </p>
 <ul>
-<li>for(m = 1;m&lt;n;m++){<br>   i=1;<br>   while(i&lt;n){<pre><code>i = 1 * 2;</code></pre>   }<br>}</li>
+<li><p>for(m = 1;m&lt;n;m++){<br>   i=1;<br>   while(i&lt;n){</p>
+<pre><code>i = 1 * 2;</code></pre><p>   }<br>}</p>
+</li>
+<li><p>线性对数阶O(nlogN) 其实非常容易理解，将时间复杂度为O(logn)的代码循环N遍的话，那么它的时间复杂度就是 n * O(logN)，也就是了O(nlogN)</p>
+</li>
 </ul>
 </li>
-</ol>
-<pre><code>- 线性对数阶O(nlogN) 其实非常容易理解，将时间复杂度为O(logn)的代码循环N遍的话，那么它的时间复杂度就是 n * O(logN)，也就是了O(nlogN)</code></pre><ol start="5">
 <li><p>平方阶O(n^2)</p>
 <ul>
 <li><p>for(x = 1;x&lt;=n;x++){</p>
 <pre><code>for (i = 1; i&lt;=n; i++){</code></pre><p>  }<br>}</p>
 </li>
+<li><p>平方阶O(n²) 就更容易理解了，如果把 O(n) 的代码再嵌套循环一遍，它的时间复杂度就是 O(n²)，这段代码其实就是嵌套了2层n循环，它的时间复杂度就是 O(n<em>n)，即  O(n²) 如果将其中一层循环的n改成m，那它的时间复杂度就变成了 O(m</em>n)</p>
+</li>
 </ul>
 </li>
-</ol>
-<pre><code>- 平方阶O(n²) 就更容易理解了，如果把 O(n) 的代码再嵌套循环一遍，它的时间复杂度就是 O(n²)，这段代码其实就是嵌套了2层n循环，它的时间复杂度就是 O(n*n)，即  O(n²) 如果将其中一层循环的n改成m，那它的时间复杂度就变成了 O(m*n)</code></pre><ol start="6">
 <li><p>立方阶O(n^3)</p>
 </li>
 <li><p>k次方阶O(n^k)</p>
@@ -321,22 +330,39 @@ j++;</code></pre>}</li>
 </li>
 <li><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413165059.png" alt></p>
 </li>
-<li><p>说明 </p>
+<li><p><strong>说明</strong> </p>
 <ul>
 <li>常见的算法时间复杂度由小到大依次为：<strong>Ο(1)＜Ο(log2n)＜Ο(n)＜Ο(nlog2n)＜Ο(n2)＜Ο(n3)＜ Ο(nk) ＜Ο(2n)</strong> ，随着问题规模n的不断增大，上述时间复杂度不断增大，算法的执行效率越低</li>
 <li>从图中可见，我们应该尽可能避免使用指数阶的算法</li>
 </ul>
 </li>
+<li><p><strong>平均时间复杂度和最坏时间复杂度</strong></p>
+<ol>
+<li><p>平均时间复杂度是指所有可能的输入实例均以等概率出现的情况下，该算法的运行时间。</p>
+</li>
+<li><p>最坏情况下的时间复杂度称最坏时间复杂度。一般讨论的时间复杂度均是最坏情况下的时间复杂度。 这样做的原因是：最坏情况下的时间复杂度是算法在任何输入实例上运行时间的界限，这就保证了算法的运行时间不会比最坏情况更长。</p>
+</li>
+<li><p>平均时间复杂度和最坏时间复杂度是否一致，和算法有关(如图:)。</p>
+</li>
+<li><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415220226.png" alt></p>
+</li>
 </ol>
-<ol start="6">
-<li><h3 id="3-空间复杂度-待完整更新"><a href="#3-空间复杂度-待完整更新" class="headerlink" title="3.空间复杂度(待完整更新)"></a>3.空间复杂度(待完整更新)</h3></li>
-<li><p><strong>空间复杂度</strong></p>
-<ul>
-<li>算法的空间复杂度通过计算算法所需的存储空间实现，算法的空间复杂度的计算公式记作：S(n)=O(f(n))，其中，n为问题的规模，f(n)为语句关于n所占存储空间的函数，也是一种“渐进表示法”，这些所需要的内存空间通常分为“固定空间内存”（包括基本程序代码、常数、变量等）和“变动空间内存”（随程序运行时而改变大小的使用空间）。</li>
+</li>
+</ol>
+<h3 id="3-空间复杂度"><a href="#3-空间复杂度" class="headerlink" title="3.空间复杂度"></a>3.空间复杂度</h3><ol>
+<li>基本介绍<ul>
+<li>类似于时间复杂度的讨论，一个算法的空间复杂度(Space Complexity)定义为该算法所耗费的存储空间，它也是问题规模n的函数。</li>
+<li>空间复杂度(Space Complexity)是对一个算法在运行过程中临时占用存储空间大小的量度。有的算法需要占用的临时工作单元数与解决问题的规模n有关，它随着n的增大而增大，当n较大时，将占用较多的存储单元，例如快速排序和归并排序算法就属于这种情况</li>
+<li>在做算法分析时，主要讨论的是时间复杂度。从用户使用体验上看，更看重的程序执行的速度。一些缓存产品(redis, memcache)和算法(基数排序)本质就是用空间换时间.</li>
 </ul>
 </li>
-<li><p>计算方法</p>
-<ul>
+<li><strong>空间复杂度</strong><ul>
+<li>算法的空间复杂度通过计算算法所需的存储空间实现，</li>
+<li>算法的空间复杂度的计算公式记作：S(n)=O(f(n))，其中，n为问题的规模，f(n)为语句关于n所占存储空间的函数，也是一种“渐进表示法”，这些所需要的内存空间通常分为“<strong>固定空间内存</strong>”</li>
+<li>（包括基本程序代码、常数、变量等）和“变动空间内存”（随程序运行时而改变大小的使用空间）。</li>
+</ul>
+</li>
+<li>计算方法<ul>
 <li>例如递归算法。忽略常数，用O(1)表示 ，递归算法的空间复杂度=递归深度N*每次递归所要的辅助空间， 对于单线程来说，递归有运行时堆栈，求的是递归最深的那一次压栈所耗费的空间的个数，因为递归最深的那一次所耗费的空间足以容纳它所有递归过程。</li>
 </ul>
 </li>
