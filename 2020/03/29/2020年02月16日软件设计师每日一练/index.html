@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.0.0-rc.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.0.0-rc.0" type="image/png" sizes="32x32"><meta name="description" content="1.代数关系                            1.题目                              2.题目解析                               2.编译与解析                            1.题目                             2.题目解析">
+<meta name="keywords" content="软件设计师考题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年02月16日软件设计师每日一练">
+<meta property="og:url" content="https://yichangkong.github.io/2020/03/29/2020年02月16日软件设计师每日一练/index.html">
+<meta property="og:site_name" content="YiChangKong">
+<meta property="og:description" content="1.代数关系                            1.题目                              2.题目解析                               2.编译与解析                            1.题目                             2.题目解析">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223304.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223332.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223359.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223454.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223521.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223635.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224044.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224346.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224441.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224700.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224756.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224858.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225104.png">
+<meta property="og:updated_time" content="2020-03-30T14:51:37.944Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2020年02月16日软件设计师每日一练">
+<meta name="twitter:description" content="1.代数关系                            1.题目                              2.题目解析                               2.编译与解析                            1.题目                             2.题目解析">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223304.png"><meta name="keywords" content="Liu Jun, YiChangKong"><meta name="description" content="爱了"><title>2020年02月16日软件设计师每日一练</title><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">2020年02月16日软件设计师每日一练</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-30</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2020/03/29/2020年02月16日软件设计师每日一练/" data-flag-title="2020年02月16日软件设计师每日一练"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value leancloud-visitors-count"></span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body">
+        <h3 id="1代数关系">
+          <a href="#1代数关系" class="heading-link"><i class="fas fa-link"></i></a>1.代数关系</h3>
+      
+
+        <h4 id="1题目">
+          <a href="#1题目" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223304.png" alt></p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223332.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223359.png" alt></p>
+
+        <h4 id="2题目解析">
+          <a href="#2题目解析" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223454.png" alt></p>
+</blockquote>
+
+        <h3 id="2编译与解析">
+          <a href="#2编译与解析" class="heading-link"><i class="fas fa-link"></i></a>2.编译与解析</h3>
+      
+
+        <h4 id="1题目-2">
+          <a href="#1题目-2" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223521.png" alt></p>
+
+        <h4 id="2题目解析-2">
+          <a href="#2题目解析-2" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>在编译时产生的<strong>目标文件</strong>都是从地址0开始的，连接时将各个目标文件进行符号替换，这时会修改相应的地址，最后产生一个从地址0开始的可执行文件。在该可执行文件中的地址称为逻辑地址。</p>
+</blockquote>
+
+        <h3 id="3数据压缩技术">
+          <a href="#3数据压缩技术" class="heading-link"><i class="fas fa-link"></i></a>3.数据压缩技术</h3>
+      
+
+        <h4 id="1题目-3">
+          <a href="#1题目-3" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223635.png" alt></p>
+
+        <h4 id="2题目解析-3">
+          <a href="#2题目解析-3" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>本题主要考查编码方法。<br></p>
+<p>根据解码后数据与原始数据是否完全一致可以分为两大类：</p>
+<p>一类是熵编码、冗余压缩法，也称无损压缩法、无失真压缩法；</p>
+<p>二是熵压缩法，也称有损压缩法、有失真压缩法。其中熵编码的一个重要特征就是解码后数据与原始数据完全一致，要达到这种效果，显然，那么压缩比就较低。这种方法一般适用于文本、数据的压缩，当然，如果要求有高质量的视音频的话，也可以采用这种方式压缩。</p>
+<p>常见的熵编码方法有</p>
+<p>​			LZ编码（Lempel-Zev编码）、行程编码、哈夫曼编码（Huffman编码）。而小波变换编码、线性预测编			码、		PCM、DPCM都是有损压缩。<br></p>
+<p>哈夫曼编码是一种可变长的编码方式，该方法完全依据字符出现的概率来构造异字头的平均长度最短的码字。<br><br>
+小波变换编码的原理是因为大多数语音和图像信号倾向于非均匀频谱，即只集中在某一时间段的某一频段，小波包基表示信号时正好有这种自适应性，可通过选定一个阈值将这此时间段和频段的相应系数保留编码而丢弃其他时间段和频段上的小幅值的系数；另外，小波包基的每次分解都把信号分成低频和高频两部分，而多数的语音和图像信号的统计特性表明大幅值的系数往往集中在低频区内，这样可给那些小幅值系数分配很少的比特数，甚至可以不传输或存储，从而压缩了数据。<br></p>
+<p>线性预测编码中被预测的信号各样值都是此前样值的线性组合的预测编码。<br></p>
+<p>PCM（脉冲编码调制）是把一个时间连续，取值连续的模拟信号变换成时间离散，取值离散的数字信号后在信道中传输。脉冲编码调制就是对模拟信号先抽样，再对样值幅度量化，编码的过程。</p>
+</blockquote>
+
+        <h3 id="4tcpip协议族">
+          <a href="#4tcpip协议族" class="heading-link"><i class="fas fa-link"></i></a>4.TCP/IP协议族</h3>
+      
+
+        <h4 id="1题目-4">
+          <a href="#1题目-4" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224044.png" alt></p>
+
+        <h4 id="2题目解析-4">
+          <a href="#2题目解析-4" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>TCP与UDP区别：</p>
+<p>1、TCP面向连接（如打电话要先拨号建立连接）;UDP是无连接的，即发送数据之前不需要建立连接；</p>
+<p>2、TCP提供可靠的服务。也就是说，通过TCP连接传送的数据，无差错，不丢失，不重复，且按序到达;UDP尽最大努力交付，即不保证可靠交付；</p>
+<p>3、TCP面向字节流，实际上是TCP把数据看成一连串无结构的字节流;UDP是面向报文的；UDP没有拥塞控制，因此网络出现拥塞不会使源主机的发送速率降低（对实时应用很有用，如IP电话，实时视频会议等）；</p>
+<p>4、每一条TCP连接只能是点到点的;UDP支持一对一，一对多，多对一和多对多的交互通信；</p>
+<p>5、TCP首部开销20字节;UDP的首部开销小，只有8个字节；</p>
+<p>6、TCP的逻辑通信信道是全双工的可靠信道，UDP则是不可靠信道，整体来看UDP开销较小。</p>
+</blockquote>
+
+        <h3 id="5面向对象的基本概念">
+          <a href="#5面向对象的基本概念" class="heading-link"><i class="fas fa-link"></i></a>5.面向对象的基本概念</h3>
+      
+
+        <h4 id="1题目-5">
+          <a href="#1题目-5" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224346.png" alt></p>
+
+        <h4 id="2题目解析-5">
+          <a href="#2题目解析-5" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>静态绑定：绑定的是对象的静态类型，某特性（比如函数）依赖于对象的静态类型，发生在编译期。<br><br>
+动态绑定：绑定的是对象的动态类型，某特性（比如函数）依赖于对象的动态类型，发生在运行期。</p>
+</blockquote>
+
+        <h3 id="6数据库设计过程">
+          <a href="#6数据库设计过程" class="heading-link"><i class="fas fa-link"></i></a>6.数据库设计过程</h3>
+      
+
+        <h4 id="1题目-6">
+          <a href="#1题目-6" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224441.png" alt></p>
+
+        <h4 id="2题目解析-6">
+          <a href="#2题目解析-6" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>软件设计必须依据对软件的需求来进行，结构化分析的结果为结构化设计提供了最基本的输入信息。从分析到设计往往经历以下流程：<br></p>
+<p>（1）研究、分析和审查数据流图。根据穿越系统边界的信息流初步确定系统与外部接口。<br><br>
+（2）根据数据流图决定问题的类型。数据处理问题通常有两种类型：变换型和事务型。针对两种不同的类型分别进行分析处理。<br><br>
+（3）由数据流图推导出系统的初始结构图。<br><br>
+（4）利用一些启发式原则来改进系统的初始结构图，直到得到符合要求的结构图为止。<br><br>
+（5）根据分析模型中的实体关系图和数据字典进行数据设计，包括数据库设计或数据文件的设计。<br><br>
+（6）在设计的基础上，依旧分析模型中的加工规格说明、状态转换图进行过程设计。<br><br>
+所以接口设计的主要依据是数据流图，接口设计的任务主要是描述软件与外部环境之间的交互关系，软件内模块之间的调用关系。</p>
+</blockquote>
+
+        <h3 id="7排序与查找">
+          <a href="#7排序与查找" class="heading-link"><i class="fas fa-link"></i></a>7.排序与查找</h3>
+      
+
+        <h4 id="1题目-7">
+          <a href="#1题目-7" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224700.png" alt></p>
+
+        <h4 id="2题目解析-7">
+          <a href="#2题目解析-7" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>装填因子α表示了哈希表的装满程度，显然，α越大发生冲突的可能性就越大。</p>
+</blockquote>
+
+        <h3 id="8保护期限">
+          <a href="#8保护期限" class="heading-link"><i class="fas fa-link"></i></a>8.保护期限</h3>
+      
+
+        <h4 id="1题目-8">
+          <a href="#1题目-8" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224756.png" alt></p>
+
+        <h4 id="2题目解析-8">
+          <a href="#2题目解析-8" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>根据《中华人民共和国商标法》第三十八条：注册商标有效期满，需要继续使用的，应当在期满前六个月内申请续展注册。专利权和著作权到期后都无法延长，而商业秘密权无期限限制</p>
+</blockquote>
+
+        <h3 id="9dns查询">
+          <a href="#9dns查询" class="heading-link"><i class="fas fa-link"></i></a>9.DNS查询</h3>
+      
+
+        <h4 id="1题目-9">
+          <a href="#1题目-9" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224858.png" alt></p>
+
+        <h4 id="2题目解析-9">
+          <a href="#2题目解析-9" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+
+        <h4 id="3知识引申">
+          <a href="#3知识引申" class="heading-link"><i class="fas fa-link"></i></a>3.知识引申</h4>
+      
+<blockquote>
+<p>DNS域名系统（服务）协议</p>
+<p>域名系统（服务）协议（DNS）<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E6%98%AF" target="_blank" rel="noopener">是</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>一种<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BD%91%E7%BB%9C/8951687" target="_blank" rel="noopener">分布式网络</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%9B%AE%E5%BD%95%E6%9C%8D%E5%8A%A1/10413830" target="_blank" rel="noopener">目录服务</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，主要用于域名与 IP 地址的相互转换，以及控制因特网的电子邮件的发送。</p>
+<p>大多数因特网服务依赖于 DNS 而工作，一旦 DNS 出错，就无法连接 Web 站点，电子邮件的发送也会中止。</p>
+<p>DNS 有两个独立的方面 ：</p>
+<p>定义了命名语法和规范，以利于通过名称委派域名权限。基本语法是： local.group.site； 定义了如何实现一个<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">分布式计算机系统</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，以便有效地将域名转换成 IP 地址</p>
+<p>在 DNS 命名方式中，采用了分散和分层的机制来实现域名空间的委派授权以及域名与地址相转换的授权。通过使用 DNS 的命名方式来为遍布全球的<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87" target="_blank" rel="noopener">网络设备</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>分配域名，而这则是由分散在世界各地的服务器实现的。</p>
+<p>理论上， DNS 协议中的域名标准阐述了一种可用任意标签值的分布式的抽象域名空间。任何组织都可以建立域名系统，为其所有分布结构选择标签，但大多数 DNS 协议用户遵循官方因特网域名系统使用的分级标签。常见的顶级域是： COM 、 EDU 、 GOV 、 NET 、 ORG 、 BIZ ，另外还有一些带国家代码的顶级域。</p>
+<p>DNS 的分布式机制支持有效且可靠的名字到 IP 地址的映射。多数名字可以在本地映射，不同站点的服务器相互合作能够解决大网络的名字与 IP 地址的映射问题。单个服务器的故障不会影响 DNS 的正确操作。 DNS 是一种通用协议，它并不仅限于网络设备名称。</p>
+
+        <h2 id="域名系统">
+          <a href="#域名系统" class="heading-link"><i class="fas fa-link"></i></a>域名系统</h2>
+      
+<p>域名系统（Domain Name System缩写DNS，Domain Name被译为域名）是因特网的一项核心服务，它作为可以将域名和IP地址相互映射的一个分布式数据库，能够使人更方便的访问互联网，而不用去记住能够被机器直接读取的IP数串。</p>
+<p>域名系统(Domain Name System,DNS)是Internet上解决网上机器命名的一种系统。就像拜访朋友要先知道别人家怎么走一样，Internet上当一台主机要访问另外一台主机时，必须首先获知其地址，TCP/IP中的IP地址是由四段以“.”分开的数字组成，记起来总是不如名字那么方便，所以，就采用了域名系统来管理名字和IP的对应关系。</p>
+</blockquote>
+
+        <h3 id="10内存">
+          <a href="#10内存" class="heading-link"><i class="fas fa-link"></i></a>10.内存</h3>
+      
+
+        <h4 id="1题目-10">
+          <a href="#1题目-10" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225104.png" alt></p>
+
+        <h4 id="2题目解析-10">
+          <a href="#2题目解析-10" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>本题考查计算机组成基础知识。<br><br>
+本题是按<strong>字节编址</strong>，因此一个存储单元容量为1B，直接计算16进制地址包含的存储单元个数即可。<br><br>
+DABFFH-B3000H+1=27C00H=12<em>16<sup>2</sup>+7</em>16<sup>3</sup>+2*16<sup>4</sup>=159K，按字节编址，故此区域的存储容量为159KB。<br></p>
+</blockquote>
+<h4 id><a class="markdownIt-Anchor" href="#"></a> </h4>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/03/29/2020年02月16日软件设计师每日一练/">https://yichangkong.github.io/2020/03/29/2020年02月16日软件设计师每日一练/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/软件设计师考题/">软件设计师考题</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/03/30/2020年02月17日软件设计师每日一练/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">2020年02月17日软件设计师每日一练</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/03/28/2020年02月15日软件设计师每日一练/"><span class="paginator-prev__text">2020年02月15日软件设计师每日一练</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1代数关系"><span class="toc-number">1.</span> <span class="toc-text">
+          1.代数关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目"><span class="toc-number">1.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析"><span class="toc-number">1.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2编译与解析"><span class="toc-number">2.</span> <span class="toc-text">
+          2.编译与解析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-2"><span class="toc-number">2.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-2"><span class="toc-number">2.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3数据压缩技术"><span class="toc-number">3.</span> <span class="toc-text">
+          3.数据压缩技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-3"><span class="toc-number">3.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-3"><span class="toc-number">3.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4tcpip协议族"><span class="toc-number">4.</span> <span class="toc-text">
+          4.TCP/IP协议族</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-4"><span class="toc-number">4.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-4"><span class="toc-number">4.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5面向对象的基本概念"><span class="toc-number">5.</span> <span class="toc-text">
+          5.面向对象的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-5"><span class="toc-number">5.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-5"><span class="toc-number">5.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6数据库设计过程"><span class="toc-number">6.</span> <span class="toc-text">
+          6.数据库设计过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-6"><span class="toc-number">6.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-6"><span class="toc-number">6.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7排序与查找"><span class="toc-number">7.</span> <span class="toc-text">
+          7.排序与查找</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-7"><span class="toc-number">7.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-7"><span class="toc-number">7.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8保护期限"><span class="toc-number">8.</span> <span class="toc-text">
+          8.保护期限</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-8"><span class="toc-number">8.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-8"><span class="toc-number">8.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9dns查询"><span class="toc-number">9.</span> <span class="toc-text">
+          9.DNS查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-9"><span class="toc-number">9.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-9"><span class="toc-number">9.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3知识引申"><span class="toc-number">9.3.</span> <span class="toc-text">
+          3.知识引申</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#域名系统"><span class="toc-number"></span> <span class="toc-text">
+          域名系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10内存"><span class="toc-number">1.</span> <span class="toc-text">
+          10.内存</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-10"><span class="toc-number">1.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-10"><span class="toc-number">1.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">1.3.</span> <span class="toc-text"> </span></a></li></ol></li></ol></li></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-gitee"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">66</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = 'nick,mail,link';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#valine-container',
+    appId: 'xuXblFdHlR0fcnQsdkLwkqvG-gzGzoHsz',
+    appKey: 'ac3XS1leXcL95PWUhYV6gx0E',
+    notify: true,
+    verify: true,
+    placeholder: 'Just go go',
+    avatar: 'mp',
+    meta: guest_info,
+    pageSize: '10' || 10,
+    visitor: true,
+    recordIP: false,
+    lang: '' || 'zh-cn',
+    path: window.location.pathname
+  });
+}
+
+if (false) {
+  loadValine();
+} else {
+  window.addEventListener('DOMContentLoaded', loadValine, false);
+}</script><script src="/js/utils.js?v=2.0.0-rc.0"></script><script src="/js/stun-boot.js?v=2.0.0-rc.0"></script><script src="/js/scroll.js?v=2.0.0-rc.0"></script><script src="/js/header.js?v=2.0.0-rc.0"></script><script src="/js/sidebar.js?v=2.0.0-rc.0"></script></body></html>

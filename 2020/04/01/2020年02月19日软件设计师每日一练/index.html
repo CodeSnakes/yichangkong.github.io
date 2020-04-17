@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.0.0-rc.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.0.0-rc.0" type="image/png" sizes="32x32"><meta name="description" content="1.索引文件                            1.题目                             2.题目解析         设块长为512B，每个块号占3B，一个物理块可放：512/3=170个目录项（向下取整），也即： 一个一级索引可存放的文件大小为：（170×512）B/1024=85KB。 一个二级索引可存放文件">
+<meta name="keywords" content="软件设计师考题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年02月19日软件设计师每日一练">
+<meta property="og:url" content="https://yichangkong.github.io/2020/04/01/2020年02月19日软件设计师每日一练/index.html">
+<meta property="og:site_name" content="YiChangKong">
+<meta property="og:description" content="1.索引文件                            1.题目                             2.题目解析         设块长为512B，每个块号占3B，一个物理块可放：512/3=170个目录项（向下取整），也即： 一个一级索引可存放的文件大小为：（170×512）B/1024=85KB。 一个二级索引可存放文件">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401160441.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401161033.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401161135.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401180616.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401180945.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401181005.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401181720.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401182130.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401182141.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401182418.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401182641.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401182711.png">
+<meta property="og:updated_time" content="2020-04-01T10:27:55.687Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2020年02月19日软件设计师每日一练">
+<meta name="twitter:description" content="1.索引文件                            1.题目                             2.题目解析         设块长为512B，每个块号占3B，一个物理块可放：512/3=170个目录项（向下取整），也即： 一个一级索引可存放的文件大小为：（170×512）B/1024=85KB。 一个二级索引可存放文件">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401160441.png"><meta name="keywords" content="Liu Jun, YiChangKong"><meta name="description" content="爱了"><title>2020年02月19日软件设计师每日一练</title><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">2020年02月19日软件设计师每日一练</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-04-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-01</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2020/04/01/2020年02月19日软件设计师每日一练/" data-flag-title="2020年02月19日软件设计师每日一练"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value leancloud-visitors-count"></span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body">
+        <h3 id="1索引文件">
+          <a href="#1索引文件" class="heading-link"><i class="fas fa-link"></i></a>1.索引文件</h3>
+      
+
+        <h4 id="1题目">
+          <a href="#1题目" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401160441.png" alt></p>
+
+        <h4 id="2题目解析">
+          <a href="#2题目解析" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>设块长为512B，每个块号占3B，一个物理块可放：512/3=170个目录项（向下取整），也即：<br><br>
+一个一级索引可存放的文件大小为：（170×512）B/1024=85KB。<br><br>
+一个二级索引可存放文件的大小为：（170×170×512）B/1024=14,450KB。<br><br>
+一个三级索引可存放文件的大小为：（170×170×170×512）B/1024=2,456,500KB。<br><br>
+这里还要请大家注意，计算过程中，对于1个物理块可放的目录项需要向下取整，并且注意单位转换。</p>
+</blockquote>
+
+        <h3 id="2可靠性">
+          <a href="#2可靠性" class="heading-link"><i class="fas fa-link"></i></a>2.可靠性</h3>
+      
+
+        <h4 id="1题目-2">
+          <a href="#1题目-2" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401161033.png" alt></p>
+
+        <h4 id="2题目解析-2">
+          <a href="#2题目解析-2" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>可靠性指的是，软件产品与在规定的一段时间内和规定的条件下维持其性能水平有关的能力，是一个系统对于给定时间间隔内、在给定条件下无失效运作的概率。</p>
+<p>它的子特性包括：成熟性、容错性、易恢复性，对于软件可靠性与软件潜在错误的数量、位置有关，并且与软件产品的使用方式有关，</p>
+<p>对于软件产品的开发方式并不能决定软件产品的可靠性。</p>
+</blockquote>
+
+        <h3 id="3运算器和控制器">
+          <a href="#3运算器和控制器" class="heading-link"><i class="fas fa-link"></i></a>3.运算器和控制器</h3>
+      
+
+        <h4 id="1题目-3">
+          <a href="#1题目-3" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401161135.png" alt></p>
+
+        <h4 id="2题目解析-3">
+          <a href="#2题目解析-3" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>运算器：</p>
+<p>① 算术逻辑单元ALU</p>
+<p>② 累加寄存器</p>
+<p>③ 数据缓冲寄存器</p>
+<p>④ 状态条件寄存器</p>
+<p>控制器：</p>
+<p>① 程序计数器PC</p>
+<p>② 指令寄存器IR</p>
+<p>③ 指令译码器</p>
+<p>④ 时序部件</p>
+</blockquote>
+
+        <h3 id="4专业英语">
+          <a href="#4专业英语" class="heading-link"><i class="fas fa-link"></i></a>4.专业英语</h3>
+      
+
+        <h4 id="1题目-4">
+          <a href="#1题目-4" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401180616.png" alt></p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401180945.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401181005.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401181720.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401182130.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401182141.png" alt></p>
+
+        <h4 id="2题目解析-4">
+          <a href="#2题目解析-4" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>基本上，云计算仅仅意味着将IT资源作为服务来提供。几乎所有的IT资源都可以作为一个云服务来提供：如应用程序，计算能力，存储容量，网络，编程工具，甚至通讯服务和协作工具。<br></p>
+<p>开始大规模提供云计算的互联网服务提供商有谷歌，亚马逊和其他一些基础建设商。云架构的特点是：系统不断扩大，水平分布系统资源，抽象的虚拟服务和管理，然后不断配置，汇集资源。在这种体系结构中，数据主要存放在“互联网某处”的服务器和“云服务”与客户端运行的应用程序上。</p>
+<p>要想建立一个能收取使用费的云网格，必须要建立经得起单个元素或节点失败的云网格。当用网格来处理一批日常工作时，需要定义一个明确的开始和结束点，云服务可以是连续的。但更重要的是，云可以扩展可用的文件存储，数据库，网络服务来适用于网络和企业应用。</p>
+</blockquote>
+
+        <h3 id="5多级存储体系">
+          <a href="#5多级存储体系" class="heading-link"><i class="fas fa-link"></i></a>5.多级存储体系</h3>
+      
+
+        <h4 id="1题目-5">
+          <a href="#1题目-5" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401182418.png" alt></p>
+
+        <h4 id="2题目解析-5">
+          <a href="#2题目解析-5" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>题目中的存储设备按访问速度排序为：通用寄存器&gt; Cache&gt;内存&gt;硬盘。</p>
+</blockquote>
+
+        <h3 id="6数据库模式">
+          <a href="#6数据库模式" class="heading-link"><i class="fas fa-link"></i></a>6.数据库模式</h3>
+      
+
+        <h4 id="1题目-6">
+          <a href="#1题目-6" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401182641.png" alt></p>
+
+        <h4 id="2题目解析-6">
+          <a href="#2题目解析-6" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>计算机数据库中的视图是一个虚拟表，其内容由查询定义。同真实的表一样，视图包含一系列带有名称的列和行数据。但是，视图并不在数据库中以存储的数据值集形式存在。行和列数据来自由定义视图的查询所引用的表，并且在引用视图时动态生成。</p>
+</blockquote>
+
+        <h3 id="7知识产权人确定">
+          <a href="#7知识产权人确定" class="heading-link"><i class="fas fa-link"></i></a>7.知识产权人确定</h3>
+      
+
+        <h4 id="1题目-7">
+          <a href="#1题目-7" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200401182711.png" alt></p>
+
+        <h4 id="2题目解析-7">
+          <a href="#2题目解析-7" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>本题考查软件著作权方面的基础知识。接受他人委托开发的软件，其著作权的归属由委托人与受托人签订书面合同约定；无书面合同或者合同未作明确约定的，其著作权由受托人享有。</p>
+</blockquote>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/04/01/2020年02月19日软件设计师每日一练/">https://yichangkong.github.io/2020/04/01/2020年02月19日软件设计师每日一练/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/软件设计师考题/">软件设计师考题</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/04/02/2020年02月20日软件设计师每日一练/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">2020年02月20日软件设计师每日一练</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/03/31/2020年02月18日软件设计师每日一练/"><span class="paginator-prev__text">2020年02月18日软件设计师每日一练</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1索引文件"><span class="toc-number">1.</span> <span class="toc-text">
+          1.索引文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目"><span class="toc-number">1.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析"><span class="toc-number">1.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2可靠性"><span class="toc-number">2.</span> <span class="toc-text">
+          2.可靠性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-2"><span class="toc-number">2.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-2"><span class="toc-number">2.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3运算器和控制器"><span class="toc-number">3.</span> <span class="toc-text">
+          3.运算器和控制器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-3"><span class="toc-number">3.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-3"><span class="toc-number">3.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4专业英语"><span class="toc-number">4.</span> <span class="toc-text">
+          4.专业英语</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-4"><span class="toc-number">4.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-4"><span class="toc-number">4.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5多级存储体系"><span class="toc-number">5.</span> <span class="toc-text">
+          5.多级存储体系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-5"><span class="toc-number">5.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-5"><span class="toc-number">5.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6数据库模式"><span class="toc-number">6.</span> <span class="toc-text">
+          6.数据库模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-6"><span class="toc-number">6.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-6"><span class="toc-number">6.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7知识产权人确定"><span class="toc-number">7.</span> <span class="toc-text">
+          7.知识产权人确定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-7"><span class="toc-number">7.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-7"><span class="toc-number">7.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-gitee"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">66</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = 'nick,mail,link';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#valine-container',
+    appId: 'xuXblFdHlR0fcnQsdkLwkqvG-gzGzoHsz',
+    appKey: 'ac3XS1leXcL95PWUhYV6gx0E',
+    notify: true,
+    verify: true,
+    placeholder: 'Just go go',
+    avatar: 'mp',
+    meta: guest_info,
+    pageSize: '10' || 10,
+    visitor: true,
+    recordIP: false,
+    lang: '' || 'zh-cn',
+    path: window.location.pathname
+  });
+}
+
+if (false) {
+  loadValine();
+} else {
+  window.addEventListener('DOMContentLoaded', loadValine, false);
+}</script><script src="/js/utils.js?v=2.0.0-rc.0"></script><script src="/js/stun-boot.js?v=2.0.0-rc.0"></script><script src="/js/scroll.js?v=2.0.0-rc.0"></script><script src="/js/header.js?v=2.0.0-rc.0"></script><script src="/js/sidebar.js?v=2.0.0-rc.0"></script></body></html>

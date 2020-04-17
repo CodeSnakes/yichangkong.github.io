@@ -1,0 +1,356 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.0.0-rc.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.0.0-rc.0" type="image/png" sizes="32x32"><meta name="description" content="Css 详细解读定位属性 position 以及参数        参考链接                     简介        position 定位属性，是CSS中非常重要的属性。除了文档流布局，就是定位布局了。 但是很多人都不清楚position参数。详细解读一下position 以及参数。                     1.W">
+<meta name="keywords" content="知识点讲解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="position详解">
+<meta property="og:url" content="https://yichangkong.github.io/2020/02/03/position详解/index.html">
+<meta property="og:site_name" content="YiChangKong">
+<meta property="og:description" content="Css 详细解读定位属性 position 以及参数        参考链接                     简介        position 定位属性，是CSS中非常重要的属性。除了文档流布局，就是定位布局了。 但是很多人都不清楚position参数。详细解读一下position 以及参数。                     1.W">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007SCiiVgy1gbj7vr8hu0j30i207d3ym.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw690/459e195ajw1eye7cznpydj20ee06uwej.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/459e195ajw1eye7u70wnuj20ef06v0t2.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/459e195ajw1eye84a2kb8j20mm0afdh1.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/459e195ajw1eye8454x0sj20mm0afq3x.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/459e195ajw1eye8ok45vuj20o20i50u0.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/459e195ajw1eye936bxeyj20o20i5t9t.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/459e195ajw1eyechudvxxj20i10hx75a.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/459e195ajw1eyedejrgpbj20la0i6my7.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/459e195ajw1eyedktnqnoj20la0i6dgw.jpg">
+<meta property="og:updated_time" content="2020-04-13T08:17:10.871Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="position详解">
+<meta name="twitter:description" content="Css 详细解读定位属性 position 以及参数        参考链接                     简介        position 定位属性，是CSS中非常重要的属性。除了文档流布局，就是定位布局了。 但是很多人都不清楚position参数。详细解读一下position 以及参数。                     1.W">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/007SCiiVgy1gbj7vr8hu0j30i207d3ym.jpg"><meta name="keywords" content="Liu Jun, YiChangKong"><meta name="description" content="爱了"><title>position详解</title><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">position详解</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-02-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-13</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2020/02/03/position详解/" data-flag-title="position详解"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value leancloud-visitors-count"></span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><div style="text-align: center;">
+<img src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbj7vr8hu0j30i207d3ym.jpg">
+</div>
+
+        <h1 id="css-详细解读定位属性-position-以及参数">
+          <a href="#css-详细解读定位属性-position-以及参数" class="heading-link"><i class="fas fa-link"></i></a>Css 详细解读定位属性 position 以及参数</h1>
+      
+<p><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/FungLeo/article/details/50056111" target="_blank" rel="noopener">参考链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="简介">
+          <a href="#简介" class="heading-link"><i class="fas fa-link"></i></a>简介</h3>
+      
+<p>position 定位属性，是CSS中非常重要的属性。除了文档流布局，就是定位布局了。<br>
+但是很多人都不清楚position参数。详细解读一下position 以及参数。</p>
+
+        <h3 id="1w3c介绍">
+          <a href="#1w3c介绍" class="heading-link"><i class="fas fa-link"></i></a>1.W3c介绍</h3>
+      
+<ul>
+<li>
+<p>定义和用法<br>
+position 属性规定元素的定位类型。</p>
+<pre><code>  说明
+  这个属性定义建立元素布局所用的定位机制。任何元素都可以定位，不过绝对或固定元素会生成一个块级框，而不论该元素本身是什么类型。相对定位元素会相对于它在正常流中的默认位置偏移。
+  
+  默认值：	static
+  继承性：	no
+  版本：	CSS2
+  JavaScript 语法：	object.style.position=&quot;absolute&quot;
+</code></pre>
+</li>
+<li>
+<p>可能的值<br>
+值	描述<br>
+absolute	<br>
+生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。</p>
+<pre><code>  元素的位置通过 &quot;left&quot;, &quot;top&quot;, &quot;right&quot; 以及 &quot;bottom&quot; 属性进行规定。
+  
+  fixed	
+  生成绝对定位的元素，相对于浏览器窗口进行定位。
+  
+  元素的位置通过 &quot;left&quot;, &quot;top&quot;, &quot;right&quot; 以及 &quot;bottom&quot; 属性进行规定。
+  
+  relative	
+  生成相对定位的元素，相对于其正常位置进行定位。
+  
+  因此，&quot;left:20&quot; 会向元素的 LEFT 位置添加 20 像素。
+  
+  static	默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。
+  inherit	规定应该从父元素继承 position 属性的值。
+</code></pre>
+</li>
+</ul>
+
+        <h3 id="1基础解释">
+          <a href="#1基础解释" class="heading-link"><i class="fas fa-link"></i></a>1.基础解释</h3>
+      
+<p><code>static</code> 默认值，就是没有定位，那就没必要多解释了。<code>inherit</code> 继承父元素，基本上这个参数用得相当少，所以也不做过多的解释。</p>
+
+        <h3 id="2文档流布局的概念">
+          <a href="#2文档流布局的概念" class="heading-link"><i class="fas fa-link"></i></a>2.文档流布局的概念</h3>
+      
+<p>什么是文档流布局？我百度了一下相对严谨的解释:</p>
+<p><strong>将窗体自上而下分成一行行， 并在每行中按从左至右的顺序排放元素，即为文档流。 <br>
+每个非浮动块级元素都独占一行， 浮动元素则按规定浮在行的一端。 若当前行容不下， 则另起新行再浮动。<br>
+内联元素也不会独占一行。 几乎所有元素(包括块级，内联和列表元素）均可生成子行， 用于摆放子元素。 <br>
+有三种情况将使得元素脱离文档流而存在，分别是 浮动，绝对定位， 固定定位。 但是在IE6中浮动元素也存在于文档流中。</strong></p>
+<p>关于浮动会脱离文档流，这里我就不解释了。因为我们一般会大力避免这种问题，而使用清除浮动的方法。上面引用的文字中，绝对定位 是指 position:absolute ，而 固定定位 是指 position:fixed。</p>
+<p><img src="http://ww2.sinaimg.cn/mw690/459e195ajw1eye7cznpydj20ee06uwej.jpg" alt><br>
+如上图所示，这就是正常的文档流布局。一个一个挨着的，到头了，另起一行，接着排布。</p>
+<p>理解文档流布局，是理解本文的基础，文档流布局也是css布局最基础的知识。这里就不详细赘述了。</p>
+
+        <h3 id="3positionrelative-相对定位">
+          <a href="#3positionrelative-相对定位" class="heading-link"><i class="fas fa-link"></i></a>3.position:relative 相对定位</h3>
+      
+<p>什么是相对定位？相对什么定位？这是重要的问题。我的回答是——<strong>相对自己文档流中的原始位置定位。它的特点是——不会脱离文档流。</strong></p>
+<p>也就是说，使用position:relative定位，其元素依旧在文档流中，他的位置可以使用 left、right、top、bottom、z-index等定位参数，但是，他的存在，还是会影响文档中紧跟在他周围的元素的。</p>
+<p>无论多少文字描述，可能都无法让你理解。下面，我们看一下实际效果。</p>
+<p>position:relative定位效果</p>
+<p>如上图的演示，我给test3加上了position:relative定位效果。代码如下：</p>
+<p>position: relative;left: -20px;top: 20px;<br>
+<img src="http://ww2.sinaimg.cn/large/459e195ajw1eye7u70wnuj20ef06v0t2.jpg" alt></p>
+<p>大家可以清晰的从图上看出来，test3根据CSS参数left: -20px;top: 20px;发生了位移。</p>
+<p>但是！但是！但是！重要的事情说三遍，**它的唯一并没有对周围的元素有任何的影响！！<br>
+它依然存在于文档流中。它的位移是根据它在文档流中的原始位置发生的！！**这一点非常非常重要。</p>
+<p>通过上面的图片和阐释，我相信大家都对position:relative参数有了深刻的理解了。但这没完。下面我们还有关于它的内容。</p>
+
+        <h3 id="4positionfixed-相对浏览器定位">
+          <a href="#4positionfixed-相对浏览器定位" class="heading-link"><i class="fas fa-link"></i></a>4.position:fixed 相对浏览器定位</h3>
+      
+<p>相比而言，这个参数是最好理解的。它相对于浏览器的窗口进行定位。同时——它会脱离文档流</p>
+<p>好，还是上图片。<br>
+<img src="http://ww4.sinaimg.cn/large/459e195ajw1eye84a2kb8j20mm0afdh1.jpg" alt></p>
+<p>position:fixed相对浏览器定位效果一</p>
+<p>代码如下：</p>
+<p>position: fixed;right:20px;top: 20px;<br>
+1</p>
+<p>这是初始状态，<strong>我们可以看到它的特点：</strong></p>
+<ul>
+<li>它脱离了文档流，原来文档流中不存在它的位置，test4好像test3不存在一样的紧贴在了test2的后面。</li>
+<li>它的right:20px;top: 20px;参数是相对浏览器窗口定位的。</li>
+</ul>
+<p>好，我们再来看一下，当页面发生滚动的效果图。<br>
+<img src="http://ww2.sinaimg.cn/large/459e195ajw1eye8454x0sj20mm0afq3x.jpg" alt></p>
+<p>position:fixed相对浏览器定位效果二</p>
+<p>当页面发生了滚动，我们可以看到，页面的内容已经根据滚动条的位置发生了位移。但是我们的test3 依旧是在相对于浏览器的位置。</p>
+<p>通过上面的图文阐释，我相信，大家对于 position:fixed 参数已经有了深刻的理解了。</p>
+<p>其实position:fixed不难理解。</p>
+
+        <h3 id="5positionabsolute-绝对定位">
+          <a href="#5positionabsolute-绝对定位" class="heading-link"><i class="fas fa-link"></i></a>5.position:absolute 绝对定位</h3>
+      
+<p>绝对定位是一个非常牛逼的属性，牛逼到，你不知道会发生什么。<br>
+注意，它的解释是什么——“生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。”</p>
+<p>也就是说，它可以相对于各种各样的东西进行定位。除了 static 其他都可以！！！注意！注意！注意！ 是 除了 ！</p>
+<p>也正是因为这一牛逼特性，导致很多人对此概念混乱。其实，这个一点也不混乱，我们可以将概念理顺了，分成几个情况来说。</p>
+<pre><code>PS:position:absolute和position:fixed一样是会脱离文档流的。这里就不解释脱离文档流的问题，主要研究它的定位问题。
+</code></pre>
+
+        <h3 id="6它的所有父元素的属性都是-positionstatic">
+          <a href="#6它的所有父元素的属性都是-positionstatic" class="heading-link"><i class="fas fa-link"></i></a>6.它的所有父元素的属性都是 position:static</h3>
+      
+<p>怎么理解这个标题？position:static 是所有html元素默认参数。就是说，这个元素的所有上级元素，你都没有使用过定位方式。</p>
+<p>我们通过如下代码模拟一个场景：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        div {font-size: 15px;color: #fff;}
+        .test1 {width: 500px;height: 500px;background: #123;}
+        .test2 {width: 400px;height: 400px;background: #234;}
+        .test3 {width: 300px;height: 300px;background: #345;position: absolute;right: 20px;top: 20px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;test1&quot;&gt;
+        test1
+        &lt;div class=&quot;test2&quot;&gt;
+            test2
+            &lt;div class=&quot;test3&quot;&gt;test3&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>如上，test3是test2的子元素，test1的孙元素。我们来看一下效果图：<br>
+<img src="http://ww2.sinaimg.cn/large/459e195ajw1eye8ok45vuj20o20i50u0.jpg" alt="position:absolute效果一"></p>
+<p><strong>如上图所示。我们可以看到，test3既没有相对于父元素定位，也没有相对于爷元素定位。它居然和position:fixed一样！相对于浏览器定位了！！</strong></p>
+<p>！！！这是一个错觉！！</p>
+<p>我们来看一下浏览器发生滚动之后的效果，如下图所示：</p>
+<p><img src="http://ww3.sinaimg.cn/large/459e195ajw1eye936bxeyj20o20i5t9t.jpg" alt="position:absolute效果2"></p>
+<p>如上图所示，它并非是相对于浏览器定位，而是相对于文档定位。</p>
+<p>如果你有一点js基础的话，那么应该很容易理解。<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mi>d</mi><mi>o</mi><mi>c</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo stretchy="false">)</mo><mi mathvariant="normal">和</mi></mrow><annotation encoding="application/x-tex">(document)和</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">d</span><span class="mord mathdefault">o</span><span class="mord mathdefault">c</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mord cjk_fallback">和</span></span></span></span>(window)的差别（为了看得清楚，用了JQ写法）</p>
+<p>相对于文档，就是相对于整个页面来进行布局，而相对于窗口，则是相对于浏览器的可视区域进行定位，这二者有本质的区别的。</p>
+<p>这种情况在实际应用中有，但是不多。下面，我们再来看其他情况。</p>
+
+        <h3 id="它的父元素的属性是-positionrelative">
+          <a href="#它的父元素的属性是-positionrelative" class="heading-link"><i class="fas fa-link"></i></a>它的父元素的属性是 position:relative</h3>
+      
+<p>上面，我们已经说过了，position:relative是相对于自身原始位置定位，其自身并没有脱离文档流。而它的子元素，使用position:absolute参数是什么效果呢？我们来做个试验。下面是代码：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        div {font-size: 15px;color: #fff;}
+        .test1 {width: 500px;height: 500px;background: #123;}
+        .test2 {width: 400px;height: 400px;background: #234;position: relative;left: 50px;top: 50px;}
+        .test3 {width: 300px;height: 300px;background: #345;position: absolute;right: -20px;top: -20px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;test1&quot;&gt;
+        test1
+        &lt;div class=&quot;test2&quot;&gt;
+            test2
+            &lt;div class=&quot;test3&quot;&gt;test3&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>我们给test2加上了position:relative属性，并给出了偏移值，然后，再给test3使用绝对定位，使用了为负数的偏移值，我们来看一下效果图，如下：</p>
+<p><img src="http://ww4.sinaimg.cn/large/459e195ajw1eyechudvxxj20i10hx75a.jpg" alt></p>
+<p>从上图我们可以看到，test2如我们所愿的，相对于自身的位置发生了偏移，而test3则相对于test2发生了偏移。</p>
+<p>从这个试验我们可以看出，当一个元素设置了position:absolute属性之后，而它的父元素的属性为position:relative则，<strong>它不再是相对于文档定位，而是相对于父元素定位</strong>。</p>
+<p>这一点非常重要。最最重要的是，父元素设置为position:relative并不会脱离文档流，也就是说——利用给父元素设置position:relative属性，再将子元素设置为position:absolute就可以在文档流中实现需要的定位</p>
+<p>这一点异常重要，也是非常常用的方法！<br>
+（PS:<strong>基本上焦点图等常见应用，都是使用了这种方式</strong>）</p>
+
+        <h3 id="它的父元素的属性是-positionfixed">
+          <a href="#它的父元素的属性是-positionfixed" class="heading-link"><i class="fas fa-link"></i></a>它的父元素的属性是 position:fixed</h3>
+      
+<p>上面，我们说了父元素为position:relative的情况，这种情况比较常见，那么它的父元素为 position:fixed 又是什么情况呢？如果你聪明的话，应该有了答案。我们来做一个试验，来印证一下你的想法。代码如下：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        div {font-size: 15px;color: #fff;}
+        .test1 {width: 500px;height: 500px;background: #123;}
+        .test2 {width: 400px;height: 400px;background: #234;position: fixed;right: 20px;top: 20px;}
+        .test3 {width: 300px;height: 300px;background: #345;position: absolute;left: -40px;top: 40px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;test1&quot;&gt;
+        test1
+        &lt;div class=&quot;test2&quot;&gt;
+            test2
+            &lt;div class=&quot;test3&quot;&gt;test3&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>好，我们可以看到我给test2加上了position: fixed;right: 20px;top: 20px; 它会相对于浏览器窗口定位，而test3作为test2的子元素，我们加上了position: absolute;left: -40px;top: 40px;那么，根据我们的想象，它应该相对于test2作出偏移。那么是不是这个情况呢？我们来看一下效果图：<br>
+<img src="http://ww2.sinaimg.cn/large/459e195ajw1eyedejrgpbj20la0i6my7.jpg" alt></p>
+<p>如上图所示，看到了具体的效果了吧！是不是和你想象的是一样的呢？</p>
+
+        <h3 id="它的父元素的属性是-positionabsolute">
+          <a href="#它的父元素的属性是-positionabsolute" class="heading-link"><i class="fas fa-link"></i></a>它的父元素的属性是 position:absolute</h3>
+      
+<p>好，我们来看一下，如果position:absolute嵌套position:absolute元素将会出现什么情况呢？</p>
+<p>写了这么多，其实你应该有了一定的预见性了吧？好，我们来做试验，代码如下：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        div {font-size: 15px;color: #fff;}
+        .test1 {width: 500px;height: 500px;background: #123;}
+        .test2 {width: 400px;height: 400px;background: #234;position: absolute;right: 20px;top: 20px;}
+        .test3 {width: 300px;height: 300px;background: #345;position: absolute;right: 20px;top: 20px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;test1&quot;&gt;
+        test1
+        &lt;div class=&quot;test2&quot;&gt;
+            test2
+            &lt;div class=&quot;test3&quot;&gt;test3&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>如上所示，test2我们使用了position: absolute;right: 20px;top: 20px;参数，那么，它会相对于<strong>文档</strong>作出设定的偏移值。而我们给test3使用了同样的css样式。如果test3也是<strong>相对于文档定位</strong>的话，那么它和test2应该是重叠的。</p>
+<p>但是，我们根据上面的解释，test3应该相对于test2定位才对，那么是不是呢？我们看效果图：<br>
+<img src="http://ww4.sinaimg.cn/large/459e195ajw1eyedktnqnoj20la0i6dgw.jpg" alt></p>
+<p>如上图所示，果然，test2相对于文档偏移，而test3相对于test2偏移。</p>
+
+        <h3 id="position-以及参数总结">
+          <a href="#position-以及参数总结" class="heading-link"><i class="fas fa-link"></i></a>position 以及参数总结</h3>
+      
+<ul>
+<li>position: relative;不会脱离文档流，position: fixed;position: absolute;会脱离文档流</li>
+<li>position: relative; 相对于自己在文档流中的初始位置偏移定位。</li>
+<li>position: fixed; 相对于浏览器窗口定位。</li>
+<li>position: absolute; 是相对于父级非position:static 浏览器定位。<br>
+如果没有任何一个父级元素是非position:static属性，则会相对于文档定位。<br>
+这里它的父级元素是包含爷爷级元素、祖爷爷级元素、祖宗十八代级元素的。任意一级都可以。<br>
+如果它的父级元素和爷爷级元素都是非position:static 属性，则，它会选择距离最近的父元素。</li>
+</ul>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/02/03/position详解/">https://yichangkong.github.io/2020/02/03/position详解/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/知识点讲解/">知识点讲解</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/03/11/Stack/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Stack</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/01/28/HTML5技术概述/"><span class="paginator-prev__text">HTML5技术概述</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#css-详细解读定位属性-position-以及参数"><span class="toc-number">1.</span> <span class="toc-text">
+          Css 详细解读定位属性 position 以及参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简介"><span class="toc-number">1.0.1.</span> <span class="toc-text">
+          简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1w3c介绍"><span class="toc-number">1.0.2.</span> <span class="toc-text">
+          1.W3c介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1基础解释"><span class="toc-number">1.0.3.</span> <span class="toc-text">
+          1.基础解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2文档流布局的概念"><span class="toc-number">1.0.4.</span> <span class="toc-text">
+          2.文档流布局的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3positionrelative-相对定位"><span class="toc-number">1.0.5.</span> <span class="toc-text">
+          3.position:relative 相对定位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4positionfixed-相对浏览器定位"><span class="toc-number">1.0.6.</span> <span class="toc-text">
+          4.position:fixed 相对浏览器定位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5positionabsolute-绝对定位"><span class="toc-number">1.0.7.</span> <span class="toc-text">
+          5.position:absolute 绝对定位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6它的所有父元素的属性都是-positionstatic"><span class="toc-number">1.0.8.</span> <span class="toc-text">
+          6.它的所有父元素的属性都是 position:static</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#它的父元素的属性是-positionrelative"><span class="toc-number">1.0.9.</span> <span class="toc-text">
+          它的父元素的属性是 position:relative</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#它的父元素的属性是-positionfixed"><span class="toc-number">1.0.10.</span> <span class="toc-text">
+          它的父元素的属性是 position:fixed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#它的父元素的属性是-positionabsolute"><span class="toc-number">1.0.11.</span> <span class="toc-text">
+          它的父元素的属性是 position:absolute</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#position-以及参数总结"><span class="toc-number">1.0.12.</span> <span class="toc-text">
+          position 以及参数总结</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-gitee"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">66</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = 'nick,mail,link';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#valine-container',
+    appId: 'xuXblFdHlR0fcnQsdkLwkqvG-gzGzoHsz',
+    appKey: 'ac3XS1leXcL95PWUhYV6gx0E',
+    notify: true,
+    verify: true,
+    placeholder: 'Just go go',
+    avatar: 'mp',
+    meta: guest_info,
+    pageSize: '10' || 10,
+    visitor: true,
+    recordIP: false,
+    lang: '' || 'zh-cn',
+    path: window.location.pathname
+  });
+}
+
+if (false) {
+  loadValine();
+} else {
+  window.addEventListener('DOMContentLoaded', loadValine, false);
+}</script><script src="/js/utils.js?v=2.0.0-rc.0"></script><script src="/js/stun-boot.js?v=2.0.0-rc.0"></script><script src="/js/scroll.js?v=2.0.0-rc.0"></script><script src="/js/header.js?v=2.0.0-rc.0"></script><script src="/js/sidebar.js?v=2.0.0-rc.0"></script></body></html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.0.0-rc.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.0.0-rc.0" type="image/png" sizes="32x32"><meta name="description" content="1.图          题目    题目解析  无向连通图不一定有边，但两个顶点之间有路径。">
+<meta name="keywords" content="软件设计师考题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年03月04日软件设计师每日一练">
+<meta property="og:url" content="https://yichangkong.github.io/2020/04/15/2020年03月04日软件设计师每日一练/index.html">
+<meta property="og:site_name" content="YiChangKong">
+<meta property="og:description" content="1.图          题目    题目解析  无向连通图不一定有边，但两个顶点之间有路径。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415212919.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415213317.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415213736.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415213813.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415213914.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415214102.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415214259.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415214628.png">
+<meta property="og:updated_time" content="2020-04-17T12:36:53.836Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2020年03月04日软件设计师每日一练">
+<meta name="twitter:description" content="1.图          题目    题目解析  无向连通图不一定有边，但两个顶点之间有路径。">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415212919.png"><meta name="keywords" content="Liu Jun, YiChangKong"><meta name="description" content="爱了"><title>2020年03月04日软件设计师每日一练</title><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">2020年03月04日软件设计师每日一练</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-04-15</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-17</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2020/04/15/2020年03月04日软件设计师每日一练/" data-flag-title="2020年03月04日软件设计师每日一练"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value leancloud-visitors-count"></span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body">
+        <h3 id="1图">
+          <a href="#1图" class="heading-link"><i class="fas fa-link"></i></a>1.图</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415212919.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>无向连通图不一定有边，但两个顶点之间有路径。</p>
+</blockquote>
+<a id="more"></a>                                                                             
+</li>
+</ol>
+
+        <h3 id="2软件成本估算">
+          <a href="#2软件成本估算" class="heading-link"><i class="fas fa-link"></i></a>2.软件成本估算</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415213317.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>软件成本估算比较常用的模型有Putnam模型，功能点模型，COCOMO模型和后续的COCOMO II模型。其中以COCOMO II模型的使用最为广泛，它是cocomo模型的改进，以成本为主要因素，考虑多成本驱动因素。因此本题选择D选项COCOMO II模型。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="3线性表">
+          <a href="#3线性表" class="heading-link"><i class="fas fa-link"></i></a>3.线性表</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415213736.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>采用单向循环链表存储的特点之一是从表中任意结点出发都能遍历整个链表，另外便于元素的元素节点的删除与插入。如需要对表中的任意节点进行随机访问需采用顺序存储结构。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="4其他">
+          <a href="#4其他" class="heading-link"><i class="fas fa-link"></i></a>4.其他</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415213813.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>逆向工程是在软件维护时，由于缺少文档资料，而对软件的一种分析。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="5数据库设计过程">
+          <a href="#5数据库设计过程" class="heading-link"><i class="fas fa-link"></i></a>5.数据库设计过程</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415213914.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<ul>
+<li>
+<p>需求分析：分析用户的需求，包括数据、功能和性能需求；得到数据流图、数据字典和需求说明书。</p>
+</li>
+<li>
+<p>概念设计：用数据模型明确地表示用户的数据需求。其反映了用户的现实工作环境，与数据库的具体实现技术无关。（E-R模型）。</p>
+</li>
+<li>
+<p>逻辑设计：根据概念数据模型及软件的数据模型特性，按照一定的转换规则和规范化理论，把概念模型转换为逻辑数据模型，如层次模型、网状模型、关系模型等。<strong>关系规范化是在逻辑设计阶段进行</strong>。</p>
+</li>
+<li>
+<p>物理设计：为一个确定的逻辑数据模型选择一个最适合应用要求的物理结构的过程。</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="6面向对象的基本概念">
+          <a href="#6面向对象的基本概念" class="heading-link"><i class="fas fa-link"></i></a>6.面向对象的基本概念</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415214102.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>面向对象系统中的<strong>封装单位是对象</strong>，对象之间只能通过接口进行信息交流，对象外部不能对对象中的数据随意地进行访问。</p>
+<p><strong>封装是一种信息隐藏技术</strong>，目的是使对象的定义和实现分离，这样，就能减少耦合，类内部的实现可以自由改变而不会影响其他的类或对象。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="7规范化理论">
+          <a href="#7规范化理论" class="heading-link"><i class="fas fa-link"></i></a>7.规范化理论</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415214259.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题看起来逻辑很复杂，但解题相对比较简单。根据函数依赖集，可以简单分析，在本题中</p>
+<p><strong>唯一入度为0的属性为A2，</strong>  <code>这里好像就 A２A５　没有被其他函数映射</code></p>
+<p>因此，A2一定属于候选键集合，在选项中只有B选项符合要求。<br></p>
+<p>第二空，根据第一空可知R的一个主键为A2A5，由函数依赖集F可知，存在A2A5àA6，A5A6àA1，A1àA3，这里存在传递函数依赖，故A、B选项均不正确，C选项本身不正确，存在非主属性对候选键的传递函数依赖，是不满足3NF的。因此本题选择D选项。</p>
+<p>也可将完整的依赖图示绘制出来判断本题A2A5为候选键，并且每个非主属性完全函数依赖于主键。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="8html语言">
+          <a href="#8html语言" class="heading-link"><i class="fas fa-link"></i></a>8.HTML语言</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415214628.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题考查的是HTML基本标签的使用。</p>
+<ul>
+<li>alink用于设置正在<strong>被击中</strong>的链接的颜色。</li>
+<li>vlink用于设置<strong>已使用</strong>的链接的颜色。</li>
+<li>background用于设置背景图片的URL。</li>
+<li>bgcolor用于设置文档整体背景颜色。</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/04/15/2020年03月04日软件设计师每日一练/">https://yichangkong.github.io/2020/04/15/2020年03月04日软件设计师每日一练/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/软件设计师考题/">软件设计师考题</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/04/16/2020年03月05日软件设计师每日一练/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">2020年03月05日软件设计师每日一练</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/04/14/2020年03月03日软件设计师每日一练/"><span class="paginator-prev__text">2020年03月03日软件设计师每日一练</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1图"><span class="toc-number">1.</span> <span class="toc-text">
+          1.图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2软件成本估算"><span class="toc-number">2.</span> <span class="toc-text">
+          2.软件成本估算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3线性表"><span class="toc-number">3.</span> <span class="toc-text">
+          3.线性表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4其他"><span class="toc-number">4.</span> <span class="toc-text">
+          4.其他</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5数据库设计过程"><span class="toc-number">5.</span> <span class="toc-text">
+          5.数据库设计过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6面向对象的基本概念"><span class="toc-number">6.</span> <span class="toc-text">
+          6.面向对象的基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7规范化理论"><span class="toc-number">7.</span> <span class="toc-text">
+          7.规范化理论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8html语言"><span class="toc-number">8.</span> <span class="toc-text">
+          8.HTML语言</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-gitee"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">66</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = 'nick,mail,link';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#valine-container',
+    appId: 'xuXblFdHlR0fcnQsdkLwkqvG-gzGzoHsz',
+    appKey: 'ac3XS1leXcL95PWUhYV6gx0E',
+    notify: true,
+    verify: true,
+    placeholder: 'Just go go',
+    avatar: 'mp',
+    meta: guest_info,
+    pageSize: '10' || 10,
+    visitor: true,
+    recordIP: false,
+    lang: '' || 'zh-cn',
+    path: window.location.pathname
+  });
+}
+
+if (false) {
+  loadValine();
+} else {
+  window.addEventListener('DOMContentLoaded', loadValine, false);
+}</script><script src="/js/utils.js?v=2.0.0-rc.0"></script><script src="/js/stun-boot.js?v=2.0.0-rc.0"></script><script src="/js/scroll.js?v=2.0.0-rc.0"></script><script src="/js/header.js?v=2.0.0-rc.0"></script><script src="/js/sidebar.js?v=2.0.0-rc.0"></script></body></html>

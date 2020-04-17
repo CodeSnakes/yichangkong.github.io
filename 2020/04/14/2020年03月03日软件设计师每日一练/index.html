@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.0.0-rc.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.0.0-rc.0" type="image/png" sizes="32x32"><meta name="description" content="1.有限自动机          题目    题目解析  本题因为是不确定的有限自动机，中间内容有多种可能，但由图可以看到， 从初态0开始，首字符只能为0，到终态结束之前，尾字符也只能为0，根据选项可以排除，本题选择A选项。">
+<meta name="keywords" content="软件设计考题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年03月03日软件设计师每日一练">
+<meta property="og:url" content="https://yichangkong.github.io/2020/04/14/2020年03月03日软件设计师每日一练/index.html">
+<meta property="og:site_name" content="YiChangKong">
+<meta property="og:description" content="1.有限自动机          题目    题目解析  本题因为是不确定的有限自动机，中间内容有多种可能，但由图可以看到， 从初态0开始，首字符只能为0，到终态结束之前，尾字符也只能为0，根据选项可以排除，本题选择A选项。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414153659.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414153809.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414154303.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414154600.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414154657.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414155019.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414155355.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414155518.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414155641.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414155757.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414160124.png">
+<meta property="og:updated_time" content="2020-04-17T12:37:17.935Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2020年03月03日软件设计师每日一练">
+<meta name="twitter:description" content="1.有限自动机          题目    题目解析  本题因为是不确定的有限自动机，中间内容有多种可能，但由图可以看到， 从初态0开始，首字符只能为0，到终态结束之前，尾字符也只能为0，根据选项可以排除，本题选择A选项。">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414153659.png"><meta name="keywords" content="Liu Jun, YiChangKong"><meta name="description" content="爱了"><title>2020年03月03日软件设计师每日一练</title><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">2020年03月03日软件设计师每日一练</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-04-14</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-17</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2020/04/14/2020年03月03日软件设计师每日一练/" data-flag-title="2020年03月03日软件设计师每日一练"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value leancloud-visitors-count"></span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body">
+        <h3 id="1有限自动机">
+          <a href="#1有限自动机" class="heading-link"><i class="fas fa-link"></i></a>1.有限自动机</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414153659.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题因为是<strong>不确定的有限自动机</strong>，中间内容有多种可能，但由图可以看到，</p>
+<p>从初态0开始，首字符只能为0，到终态结束之前，尾字符也只能为0，根据选项可以排除，本题选择A选项。</p>
+</blockquote>
+<a id="more"></a>
+</li>
+</ol>
+
+        <h3 id="2运算器和控制器">
+          <a href="#2运算器和控制器" class="heading-link"><i class="fas fa-link"></i></a>2.运算器和控制器</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414153809.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题考查计算机硬件组成基础知识。</p>
+<p><strong>CPU是计算机的控制中心</strong>，主要由</p>
+<ul>
+<li>运算器</li>
+<li>控制器 （它是发布命令的“决策机构”，即完成协调和指挥整个计算机系统的操作）
+<ul>
+<li>程序计数器
+<ul>
+<li>程序计数器(PC)是专用寄存器，具有寄存信息和计数两种功能，又称为指令计数器</li>
+<li>在程序开始执行前，将程序的起始地址送入PC，该地址在程序加载到内存时确定，因此PC的初始内容即是程序第一条指令的地址</li>
+<li>执行指令时，CPU将自动修改PC的内容，以便使其保持的总是将要执行的下一条指令的地址。由于大多数指令都是按顺序执行的，因此修改的过程通常只是简单地对PC加1。当遇到转移指令时，后继指令的地址根据当前指令的地址加上一个向前或向后转移的位移量得到，或者根据转移指令给出的直接转移的地址得到。</li>
+</ul>
+</li>
+<li>指令寄存器</li>
+<li>指令译码器</li>
+<li>时序产生器</li>
+<li>操作控制器</li>
+<li>它的主要功能有：从内存中取出一条指令，并指出下一条指令在内存中的位置；对指令进行译码或测试，并产生相应的操作控制信号，以便启动规定的动作；指挥并控制CPU、内存和输入输出设备之间数据的流动。</li>
+</ul>
+</li>
+<li>寄存器组</li>
+<li>内部总线</li>
+</ul>
+<p>等部件组成。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="3路由器">
+          <a href="#3路由器" class="heading-link"><i class="fas fa-link"></i></a>3.路由器</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414154303.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>路由器是网络层设备，它可以起到<strong>隔离子网、抑制广播风暴</strong>的作用。</p>
+<p>路由器还能进行地址转换，<strong>通常用于把私网地址转换成公网地址</strong>，或者进行相反的转换。在路由表中，对于同一目标，可以设置不同的通路，提供不同的服务。</p>
+<p>IPv4数据报头的第二个字节（如下图所示）是服务类型字段（Type of Service ）。该字段规定了不同的优先级（Precedence）延迟（Delay ），吞吐率（Throughput）和可靠性（Reliability ），为上层协议提供不同的服务质量。</p>
+<p>IP数据报中的目标地址（Destinaion address）字段可以是广播地址、组播地址和单播地址，当目标地址为前两种类型时，路由器可以实现<strong>点到多点的传输</strong>。</p>
+<p><strong>IP数据报格式</strong></p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414154600.png" alt></p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="4设计模式">
+          <a href="#4设计模式" class="heading-link"><i class="fas fa-link"></i></a>4.设计模式</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414154657.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>生成器模式将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。<br><br>
+实用范围<br></p>
+<ul>
+<li>当创建复杂对象的算法应该独立于该对象的组成部分以及它们的装配方式时。</li>
+<li>当构造过程必须允许被构造的对象有不同表示时。</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="5内存容量">
+          <a href="#5内存容量" class="heading-link"><i class="fas fa-link"></i></a>5.内存容量</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414155019.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题考查内存容量的计算。<br><br>
+　　给定起、止地址码的内存容量=终止地址-起始地址+1。<br><br>
+　　 将终止地址加1等于E000H，再减去起始地址，即E0000H-A0000H=40000H。十六进制的（40000）<sub>16</sub>=2<sup>18</sup>。<br><br>
+　　组成内存储器的芯片数量=内存储器的容量/单个芯片的容量。<br><br>
+　　　　　　　　2<sup>18</sup>/（32*2<sup>10</sup>）=2<sup>18</sup>/2<sup>15</sup>=2<sup>3</sup>。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="6uml">
+          <a href="#6uml" class="heading-link"><i class="fas fa-link"></i></a>6.UML</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414155355.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>顺序图（sequence diagram，序列图）。</p>
+<p>顺序图是一种交互图（interaction diagram），交互图展现了一种交互，它由</p>
+<p>一组对象或参与者以及它们之间可能发送的消息构成。交互图专注于系统的动态视图。顺序图是强调消息的时间次序的交互图。<br></p>
+<p>本题图示为序列图。序列图展示了<strong>1个用例和多个对象</strong>的行为</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="7编译与解析">
+          <a href="#7编译与解析" class="heading-link"><i class="fas fa-link"></i></a>7.编译与解析</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414155518.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>编译语言是一种以<strong>编译器来实现的编程语言</strong>。</p>
+<p>它不像<strong>直译语言</strong>一样，由解释器将代码一句一句运行，而是<strong>以编译器，先将代码编译为机器码</strong>，再加以运行。将某一种程序设计语言写的程序翻译成等价的另一种语言的程序的程序, 称之为编译程序。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="8设计模式">
+          <a href="#8设计模式" class="heading-link"><i class="fas fa-link"></i></a>8.设计模式</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414155641.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>模式是一种问题的解决思路，它已经适用于一个实践环境，并且可以适用于其它环境。设计模式通常是对于某一类软件设计问题的可重用的解决方案，将设计模式引入软件设计和开发过程，其目的就在于要重用成功的软件开发经验。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="9多媒体技术概念">
+          <a href="#9多媒体技术概念" class="heading-link"><i class="fas fa-link"></i></a>9.多媒体技术概念</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414155757.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p><strong>矢量图形</strong>是用一系列计算机<strong>指令来描述和记录</strong>一幅图的内容，</p>
+<p>即通过指令描述构成一幅图的所有直线、曲线、圆、圆弧、矩形等图元的位置、维数和形状，也可以用更为复杂的形式表示图像中曲面、光照和材质等效果。矢量图法实质上是用数学的方式（算法和特征）来描述一幅图形图像，在处理图形图像时根据图元对应的数学表达式进行编辑和处理。在屏幕上显示一幅图形图像时，首先要解释这些指令，然后将描述图形图像的指令转换成屏幕上显示的形状和颜色。</p>
+<p><strong>编辑矢量图</strong>的软件通常称为绘图软件，如适于绘制机械图、电路图的AutoCAD软件等。</p>
+<p>这种软件可以产生和操作矢量图的各个成分，并对矢量图形进行移动、缩放、叠加、旋转和扭曲等变换。编辑图形时将指令转变成屏幕上所显示的形状和颜色，显示时也往往能看到绘图的过程。由于所有的矢量图形部分都可以用数学的方法加以描述，从而使得计算机可以对其进行任意放大、缩小、旋转、变形、扭曲、移动和叠加等变换，而不会破坏图像的画面。但是，用矢量图形格式表示复杂图像（如人物、风景照片），并且要求很高时，将需要花费大量的时间进行变换、着色和处理光照效果等。因此，矢量图形主要用于表示线框型的图画、工程制图和美术字等。</p>
+<p>​</p>
+<p><strong>位图图像是指用像素点来描述的图</strong>。图像一般是用摄像机或扫描仪等输入设备捕捉实际场景画面，离散化为空间、亮度、颜色（灰度）的<strong>序列值</strong>，即把一幅彩色图或灰度图分成许许多多的像素（点），</p>
+<p>每个像素用若干二进制位来指定该像素的颜色、亮度和属性。位图图像在计算机内存中由一组二进制位组成，这些位定义图像中每个像素点的颜色和亮度。</p>
+<p><strong>图像适合于表现比较细腻，层次较多，色彩较丰富，包含大量细节的图像</strong>，并可直接、快速地在屏幕上显示出来。</p>
+<p>但占用存储空间较大，一般需要进行数据压缩。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="10软件质量保证">
+          <a href="#10软件质量保证" class="heading-link"><i class="fas fa-link"></i></a>10.软件质量保证</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200414160124.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>模块结构评审时，主要包括以下方面的评审：</p>
+<p>1、控制流结构：规定了处理模块与处理模块之间的流程关系。检查处理模块之间的控制转移关系与控制转移形式（调用方式）。</p>
+<p>2、数据流结构：规定了数据模块是如何被处理模块进行加工的流程关系。检查处理模块与数据模块之间的对应关系；处理模块与数据模块之间的存取关系，如建立、删除、查询、修改等。</p>
+<p>3、模块结构与功能结构之间的对应关系：包括功能结构与控制流结构的对应关系；功能结构与数据流结构的对应关系；每个模块的定义（包括功能、输入与输出数据）。</p>
+</blockquote>
+</li>
+</ol>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/04/14/2020年03月03日软件设计师每日一练/">https://yichangkong.github.io/2020/04/14/2020年03月03日软件设计师每日一练/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/软件设计考题/">软件设计考题</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/04/15/2020年03月04日软件设计师每日一练/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">2020年03月04日软件设计师每日一练</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/04/13/算法复杂度/"><span class="paginator-prev__text">算法复杂度</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1有限自动机"><span class="toc-number">1.</span> <span class="toc-text">
+          1.有限自动机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2运算器和控制器"><span class="toc-number">2.</span> <span class="toc-text">
+          2.运算器和控制器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3路由器"><span class="toc-number">3.</span> <span class="toc-text">
+          3.路由器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4设计模式"><span class="toc-number">4.</span> <span class="toc-text">
+          4.设计模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5内存容量"><span class="toc-number">5.</span> <span class="toc-text">
+          5.内存容量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6uml"><span class="toc-number">6.</span> <span class="toc-text">
+          6.UML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7编译与解析"><span class="toc-number">7.</span> <span class="toc-text">
+          7.编译与解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8设计模式"><span class="toc-number">8.</span> <span class="toc-text">
+          8.设计模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9多媒体技术概念"><span class="toc-number">9.</span> <span class="toc-text">
+          9.多媒体技术概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10软件质量保证"><span class="toc-number">10.</span> <span class="toc-text">
+          10.软件质量保证</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-gitee"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">66</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = 'nick,mail,link';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#valine-container',
+    appId: 'xuXblFdHlR0fcnQsdkLwkqvG-gzGzoHsz',
+    appKey: 'ac3XS1leXcL95PWUhYV6gx0E',
+    notify: true,
+    verify: true,
+    placeholder: 'Just go go',
+    avatar: 'mp',
+    meta: guest_info,
+    pageSize: '10' || 10,
+    visitor: true,
+    recordIP: false,
+    lang: '' || 'zh-cn',
+    path: window.location.pathname
+  });
+}
+
+if (false) {
+  loadValine();
+} else {
+  window.addEventListener('DOMContentLoaded', loadValine, false);
+}</script><script src="/js/utils.js?v=2.0.0-rc.0"></script><script src="/js/stun-boot.js?v=2.0.0-rc.0"></script><script src="/js/scroll.js?v=2.0.0-rc.0"></script><script src="/js/header.js?v=2.0.0-rc.0"></script><script src="/js/sidebar.js?v=2.0.0-rc.0"></script></body></html>

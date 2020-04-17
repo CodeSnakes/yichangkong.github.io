@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.0.0-rc.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.0.0-rc.0" type="image/png" sizes="32x32"><meta name="description" content="1.逻辑网络设计                            1.题目                             2.题目解析        本题考查的是网络系统设计原则，其中答案A不符合其中的实用性原则， 网络方案设计中应把握“够用”和“实用”原则。网络系统应采用成熟可靠的技术和设备，达到实用、经济和有效的目的。答案B不符合可扩展性">
+<meta name="keywords" content="软件设计师考题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年02月09日软件设计师每日一练">
+<meta property="og:url" content="https://yichangkong.github.io/2020/03/22/2020年02月09日软件设计师每日一练/index.html">
+<meta property="og:site_name" content="YiChangKong">
+<meta property="og:description" content="1.逻辑网络设计                            1.题目                             2.题目解析        本题考查的是网络系统设计原则，其中答案A不符合其中的实用性原则， 网络方案设计中应把握“够用”和“实用”原则。网络系统应采用成熟可靠的技术和设备，达到实用、经济和有效的目的。答案B不符合可扩展性">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322205126.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322205328.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322210043.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322210137.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322210225.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322210251.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322210354.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322210849.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322210925.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322211103.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322211258.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322211352.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322211524.png">
+<meta property="og:updated_time" content="2020-03-22T13:26:59.786Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2020年02月09日软件设计师每日一练">
+<meta name="twitter:description" content="1.逻辑网络设计                            1.题目                             2.题目解析        本题考查的是网络系统设计原则，其中答案A不符合其中的实用性原则， 网络方案设计中应把握“够用”和“实用”原则。网络系统应采用成熟可靠的技术和设备，达到实用、经济和有效的目的。答案B不符合可扩展性">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322205126.png"><meta name="keywords" content="Liu Jun, YiChangKong"><meta name="description" content="爱了"><title>2020年02月09日软件设计师每日一练</title><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">2020年02月09日软件设计师每日一练</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-22</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-22</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2020/03/22/2020年02月09日软件设计师每日一练/" data-flag-title="2020年02月09日软件设计师每日一练"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value leancloud-visitors-count"></span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body">
+        <h3 id="1逻辑网络设计">
+          <a href="#1逻辑网络设计" class="heading-link"><i class="fas fa-link"></i></a>1.逻辑网络设计</h3>
+      
+
+        <h4 id="1题目">
+          <a href="#1题目" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322205126.png" alt></p>
+
+        <h4 id="2题目解析">
+          <a href="#2题目解析" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<p>本题考查的是网络系统设计原则，其中答案A不符合其中的实用性原则，</p>
+<p>网络方案设计中应把握“<code>够用</code>”和“<code>实用</code>”原则。网络系统应采用成熟可靠的技术和设备，达到实用、经济和有效的目的。答案B不符合可扩展性原则，网络总体设计不仅要考虑到近期目标，也要为网络的进一步发展留有扩展的余地。</p>
+<p><code>答案C说法正确</code>，符合开放性原则。答案D不正确，网络需求分析必须依赖于应用系统的需求分析。故答案选C.</p>
+
+        <h3 id="2传值与传址">
+          <a href="#2传值与传址" class="heading-link"><i class="fas fa-link"></i></a>2.传值与传址</h3>
+      
+
+        <h4 id="1题目-2">
+          <a href="#1题目-2" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322205328.png" alt></p>
+
+        <h4 id="2题目解析-2">
+          <a href="#2题目解析-2" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<p>答案 C</p>
+<p>传值调用最显著的特征就是被调用的函数内部对形参的修改不影响实参的值。引用调用是将实参的地址传递给形参，使得形参的地址就是实参的地址，函数中对形参的修改会导致原实参值的改变，因此可以实现实参与形参之间数据的双向传递。 在传值调用中，实参可以是变量，也可以是常量和表达式，而在传址调用中，实参不能是常量。</p>
+
+        <h3 id="3树与二叉树">
+          <a href="#3树与二叉树" class="heading-link"><i class="fas fa-link"></i></a>3.树与二叉树</h3>
+      
+
+        <h4 id="1题目-3">
+          <a href="#1题目-3" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322210043.png" alt></p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322210137.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322210225.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322210251.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322210354.png" alt></p>
+
+        <h4 id="2题目解析-3">
+          <a href="#2题目解析-3" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<p>    本题考查哈夫曼树。<br><br>
+    构造最优二叉树的哈夫曼算法如下。<br><br>
+    ① 根据给定的n个权值｛w1， w2，…，Wn｝构成n棵二叉树的集合F= {T1.T2，…，Tn}，其中每棵树T;中只有一个带权为w;的根结点，其左右子树均空。<br><br>
+    ② 在F中选取两棵根结点的权值最小的树作为左右子树，构造一棵新的二叉树，置新构造二叉树的根结点的权值为其左、右子树根结点的权值之和。<br><br>
+    ③从F中删除这两棵树，同时将新得到的二叉树加入到F中。<br><br>
+    重复②、③，直到F中只含一棵树时为止。这棵树便是最优二叉树（哈夫曼树）。从树中一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称为路径长度。树的路径长度是从树根到每一个结点的路径长度之和。树的带权路径长度为树中所有叶子结点的带权路径长度之和。<br><br>
+    因此，C为最优二叉树，其带权路径长度（12+6）<em>3+15</em>2+23<em>2+29</em>2=188。<br><br>
+<img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322210849.png" alt></p>
+
+        <h3 id="4多媒体技术概念">
+          <a href="#4多媒体技术概念" class="heading-link"><i class="fas fa-link"></i></a>4.多媒体技术概念</h3>
+      
+
+        <h4 id="1题目-4">
+          <a href="#1题目-4" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322210925.png" alt></p>
+
+        <h4 id="2题目解析-4">
+          <a href="#2题目解析-4" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<p>通过话筒传入计算机的是我们人类的声音，而这种声音信号是一种连续的<code>模拟信号</code>，而非离散的数字信号，在接收到模拟信号以后，经过采样、量化等工作将模拟信号转换为数字信号在计算机中处理。</p>
+
+        <h3 id="5有限自动机">
+          <a href="#5有限自动机" class="heading-link"><i class="fas fa-link"></i></a>5.有限自动机</h3>
+      
+
+        <h4 id="1题目-5">
+          <a href="#1题目-5" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322211103.png" alt></p>
+
+        <h4 id="2题目解析-5">
+          <a href="#2题目解析-5" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<p>本题考查程序语言方面的基础知识。	　　对于题中自动机的状态图，先忽略状态q0的自环（识别若干个0），从初态q0到终态q1，该自动机可识别的字符串为1、101、10101、…，显然，该自动机识别的0、1串中1不能连续出现。</p>
+
+        <h4 id="3技术引申">
+          <a href="#3技术引申" class="heading-link"><i class="fas fa-link"></i></a>3.技术引申</h4>
+      
+<p><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/lk1822791193/article/details/83343226?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">网址</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="6多媒体技术">
+          <a href="#6多媒体技术" class="heading-link"><i class="fas fa-link"></i></a>6.多媒体技术</h3>
+      
+
+        <h4 id="1题目-6">
+          <a href="#1题目-6" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322211258.png" alt></p>
+
+        <h4 id="2题目解析-6">
+          <a href="#2题目解析-6" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<p>本题考查计算机音乐信息处理技术的相关知识。WAV格式记录的是对于音乐信号的波形采样数据，它可以使用反映自然声音的信号采样序列来记录和回放声音信息。MIDI格式记录的是采用音乐信息序列交换的标准格式MIDI （ Musical Instrument Digital interface）标准来存贮和表达音乐的演奏信息，这些演奏信息包含每个音符演奏的时间信息、音量信息、长度信息、乐器或音色信息等，MID工消息序列可以间接反映出音乐的曲谱演奏信息。</p>
+
+        <h3 id="7er模型">
+          <a href="#7er模型" class="heading-link"><i class="fas fa-link"></i></a>7.ER模型</h3>
+      
+
+        <h4 id="1题目-7">
+          <a href="#1题目-7" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322211352.png" alt></p>
+
+        <h4 id="2题目解析-7">
+          <a href="#2题目解析-7" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<p>
+	本题考查的是应试者对数据库系统中E-R模型方面的基础知识。<br>
+	根据题意，学生S关系中一个学生属于一个院系，一个院系有多个学生，因此学生S和部门院系D之间是一个一对多的联系，故(a)应为1&nbsp; * ；又因为一个学生可以选择多门课程，一门课程可由多名学生选择，所以学生S和课程C关系之间是一个多对多的联系，故(b)应为* &nbsp;* 。<br>
+	假设一对多联系(a)不转换为一个独立的关系模式，那么按照E-R模型向关系模型转换的规则，应当将一端的主键并入多端。所以，生成的关系模式学生S中应加入关系模式D的主键。</p>
+
+        <h3 id="8规范化理论">
+          <a href="#8规范化理论" class="heading-link"><i class="fas fa-link"></i></a>8.规范化理论</h3>
+      
+
+        <h4 id="1题目-8">
+          <a href="#1题目-8" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200322211524.png" alt></p>
+
+        <h4 id="2题目解析-8">
+          <a href="#2题目解析-8" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<p>答案 D B</p>
+<p>1、函数依赖关系为的函数依赖集 F={培训科目→→培训师，（学生，培训科目）→成绩，（时间，教室）→培训科目，（时间，培训师）→教室，（时间，学生）→教室}。可以得出，（时间，学生）→教室 →培训科目 →成绩 ，（时间，学生）→教室 →培训科目 →培训师时间和学生共同组合，可以推导出所有的属性，描述出所有的函数依赖关系。 所以主键是时间和学生的组合键。</p>
+<p>2、存在传递函数依赖，时间和教室—&gt;培训科目； 培训科目→培训师。</p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/03/22/2020年02月09日软件设计师每日一练/">https://yichangkong.github.io/2020/03/22/2020年02月09日软件设计师每日一练/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/软件设计师考题/">软件设计师考题</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/03/23/2020年02月10日软件设计师每日一练/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">2020年02月10日软件设计师每日一练</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/03/21/简单算法优化/"><span class="paginator-prev__text">简单算法优化</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1逻辑网络设计"><span class="toc-number">1.</span> <span class="toc-text">
+          1.逻辑网络设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目"><span class="toc-number">1.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析"><span class="toc-number">1.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2传值与传址"><span class="toc-number">2.</span> <span class="toc-text">
+          2.传值与传址</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-2"><span class="toc-number">2.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-2"><span class="toc-number">2.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3树与二叉树"><span class="toc-number">3.</span> <span class="toc-text">
+          3.树与二叉树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-3"><span class="toc-number">3.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-3"><span class="toc-number">3.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4多媒体技术概念"><span class="toc-number">4.</span> <span class="toc-text">
+          4.多媒体技术概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-4"><span class="toc-number">4.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-4"><span class="toc-number">4.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5有限自动机"><span class="toc-number">5.</span> <span class="toc-text">
+          5.有限自动机</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-5"><span class="toc-number">5.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-5"><span class="toc-number">5.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3技术引申"><span class="toc-number">5.3.</span> <span class="toc-text">
+          3.技术引申</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6多媒体技术"><span class="toc-number">6.</span> <span class="toc-text">
+          6.多媒体技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-6"><span class="toc-number">6.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-6"><span class="toc-number">6.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7er模型"><span class="toc-number">7.</span> <span class="toc-text">
+          7.ER模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-7"><span class="toc-number">7.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-7"><span class="toc-number">7.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8规范化理论"><span class="toc-number">8.</span> <span class="toc-text">
+          8.规范化理论</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-8"><span class="toc-number">8.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-8"><span class="toc-number">8.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-gitee"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">66</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = 'nick,mail,link';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#valine-container',
+    appId: 'xuXblFdHlR0fcnQsdkLwkqvG-gzGzoHsz',
+    appKey: 'ac3XS1leXcL95PWUhYV6gx0E',
+    notify: true,
+    verify: true,
+    placeholder: 'Just go go',
+    avatar: 'mp',
+    meta: guest_info,
+    pageSize: '10' || 10,
+    visitor: true,
+    recordIP: false,
+    lang: '' || 'zh-cn',
+    path: window.location.pathname
+  });
+}
+
+if (false) {
+  loadValine();
+} else {
+  window.addEventListener('DOMContentLoaded', loadValine, false);
+}</script><script src="/js/utils.js?v=2.0.0-rc.0"></script><script src="/js/stun-boot.js?v=2.0.0-rc.0"></script><script src="/js/scroll.js?v=2.0.0-rc.0"></script><script src="/js/header.js?v=2.0.0-rc.0"></script><script src="/js/sidebar.js?v=2.0.0-rc.0"></script></body></html>

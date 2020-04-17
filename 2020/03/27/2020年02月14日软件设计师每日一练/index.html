@@ -1,0 +1,279 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.0.0-rc.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.0.0-rc.0" type="image/png" sizes="32x32"><meta name="description" content="1.拓扑排序                            1.题目         答案：A 我的答案：C                     2.题目解析         本题考查图数据结构。 　　对有向图进行拓扑排序的方法如下： 　　（1）在AOV网中选择一个入度为0（没有前驱）的顶点且输出它。 　　（2）从网中删除该顶点及其与该顶点有关的">
+<meta name="keywords" content="软件设计师考题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年02月14日软件设计师每日一练">
+<meta property="og:url" content="https://yichangkong.github.io/2020/03/27/2020年02月14日软件设计师每日一练/index.html">
+<meta property="og:site_name" content="YiChangKong">
+<meta property="og:description" content="1.拓扑排序                            1.题目         答案：A 我的答案：C                     2.题目解析         本题考查图数据结构。 　　对有向图进行拓扑排序的方法如下： 　　（1）在AOV网中选择一个入度为0（没有前驱）的顶点且输出它。 　　（2）从网中删除该顶点及其与该顶点有关的">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327204350.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327204644.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205318.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205423.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205555.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205704.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205856.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327210006.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327210157.png">
+<meta property="og:updated_time" content="2020-03-27T13:02:40.629Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2020年02月14日软件设计师每日一练">
+<meta name="twitter:description" content="1.拓扑排序                            1.题目         答案：A 我的答案：C                     2.题目解析         本题考查图数据结构。 　　对有向图进行拓扑排序的方法如下： 　　（1）在AOV网中选择一个入度为0（没有前驱）的顶点且输出它。 　　（2）从网中删除该顶点及其与该顶点有关的">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327204350.png"><meta name="keywords" content="Liu Jun, YiChangKong"><meta name="description" content="爱了"><title>2020年02月14日软件设计师每日一练</title><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">2020年02月14日软件设计师每日一练</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-27</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-27</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2020/03/27/2020年02月14日软件设计师每日一练/" data-flag-title="2020年02月14日软件设计师每日一练"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value leancloud-visitors-count"></span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body">
+        <h3 id="1拓扑排序">
+          <a href="#1拓扑排序" class="heading-link"><i class="fas fa-link"></i></a>1.拓扑排序</h3>
+      
+
+        <h4 id="1题目">
+          <a href="#1题目" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327204350.png" alt></p>
+<p>答案：A</p>
+<p>我的答案：C</p>
+
+        <h4 id="2题目解析">
+          <a href="#2题目解析" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>本题考查图数据结构。<br>
+　　对有向图进行拓扑排序的方法如下：<br>
+　　（1）在AOV网中选择一个入度为0（没有前驱）的顶点且输出它。<br>
+　　（2）从网中删除该顶点及其与该顶点有关的所有边。<br>
+　　（3）重复上述两步，直至网中不存在入度为0的顶点为止。<br>
+　　执行的结果会有两种情况：一种是所有顶点己输出，此时整个拓扑排序完成，说明网中不存在回路；另一种是尚有未输出的顶点，剩余的顶点均有前驱顶点，表明网中存在回路，拓扑排序无法进行下去。</p>
+</blockquote>
+
+        <h3 id="2容量的计算">
+          <a href="#2容量的计算" class="heading-link"><i class="fas fa-link"></i></a>2.容量的计算</h3>
+      
+
+        <h4 id="1题目-2">
+          <a href="#1题目-2" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327204644.png" alt></p>
+
+        <h4 id="2题目解析-2">
+          <a href="#2题目解析-2" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>本题考查内存容量的计算。<br><br>
+给定起、止地址码的内存容量=终止地址-起始地址+1。<br></p>
+<p>将终止地址加1等于E000H，再减去起始地址，即E0000H-A0000H=40000H。十六进制的（40000）<sub>16</sub>=2<sup>18</sup><br>
+　　组成内存储器的芯片数量=内存储器的容量/单个芯片的容量。 答案：C</p>
+</blockquote>
+
+        <h3 id="3数字证书">
+          <a href="#3数字证书" class="heading-link"><i class="fas fa-link"></i></a>3.数字证书</h3>
+      
+
+        <h4 id="1题目-3">
+          <a href="#1题目-3" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205318.png" alt></p>
+
+        <h4 id="2题目解析-3">
+          <a href="#2题目解析-3" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p><code>数字证书</code>就是互联网通讯中标志通讯各方身份信息的一系列数据，就好比日常生活中个人身份证一样。</p>
+<p>数字证书是由一个权威机构证书授权中心（CA）发行的。</p>
+<p>最简单的证书包含一个公开密钥、名称以及证书授权中心的数字签名。</p>
+<p>其中证书授权中心的数字签名是用它自己的私钥完成的，而它的公钥也是公开的，大家可以通过它的公钥来验证该证书是否是某证书授权中心发行的，以达到验证数字证书的真实性。因此本题答案选C。</p>
+</blockquote>
+
+        <h3 id="4程序语言">
+          <a href="#4程序语言" class="heading-link"><i class="fas fa-link"></i></a>4.程序语言</h3>
+      
+
+        <h4 id="1题目-4">
+          <a href="#1题目-4" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205423.png" alt></p>
+
+        <h4 id="2题目解析-4">
+          <a href="#2题目解析-4" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>程序设计语言的基本成分包括</p>
+<p>数据、运算、控制和传输等。</p>
+<p>程序设计语言的控制成分包括<strong>顺序、选择和循环3种结构</strong>。<br>
+所以本题选择A选项。</p>
+</blockquote>
+
+        <h3 id="5软件测试">
+          <a href="#5软件测试" class="heading-link"><i class="fas fa-link"></i></a>5.软件测试</h3>
+      
+
+        <h4 id="1题目-5">
+          <a href="#1题目-5" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205555.png" alt></p>
+
+        <h4 id="2题目解析-5">
+          <a href="#2题目解析-5" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>本题考查系统测试中的确认测试。</p>
+<p>确认测试首先要进行有效性测试以及软件配置审查，然后进行验收测试和安装测试。</p>
+<p>其中有效性测试，就是在模拟环境下，通过黑盒测试检验所开发的软件是否与需求规格说明书一致。</p>
+</blockquote>
+
+        <h3 id="6数据表示">
+          <a href="#6数据表示" class="heading-link"><i class="fas fa-link"></i></a>6.数据表示</h3>
+      
+
+        <h4 id="1题目-6">
+          <a href="#1题目-6" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205704.png" alt></p>
+
+        <h4 id="2题目解析-6">
+          <a href="#2题目解析-6" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>本题考查计算机系统<strong>数据编码基础知识</strong>。<br><br>
+　　设机器字长为n（即采用n个二进制位表示数据），最高位是符号位，0表示正号，1表示负号。<br><br>
+　　原码表示方式下，除符号位外，n-1位表示数值的绝对值。因此，n为8时，[+0]原=0 0000000，[-0]原=1 0000000。<br><br>
+　　正数的反码与原码相同，负数的反码则是其绝对值按位求反。n为8时，数值0的反码表示有两种形式：[+0]反=0 0000000，[-0]反=11111111。<br><br>
+　　正数的补码与其原码和反码相同，负数的补码则等于其反码的末尾加1。在补码表示中，0有唯一的编码：[+0]补=0 0000000，[-0]补=00000000。<br><br>
+　　移码表示法是在数X上增加一个偏移量来定义的，常用于表示浮点数中的阶码。机器字长为n时，在偏移量为2<sup>n-1</sup>的情况下，只要将补码的符号位取反便可获得相应的移码表示。</p>
+</blockquote>
+
+        <h3 id="7传址与传值">
+          <a href="#7传址与传值" class="heading-link"><i class="fas fa-link"></i></a>7.传址与传值</h3>
+      
+
+        <h4 id="1题目-7">
+          <a href="#1题目-7" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327205856.png" alt></p>
+<p>答案：D</p>
+<p>我的：A</p>
+
+        <h4 id="2题目解析-7">
+          <a href="#2题目解析-7" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>传值调用中，形参取的是实参的值，形参的改变不会导致调用点所传的实参的值发生改变；而引用（传址）调用中，形参取的是实参的地址，即相当于实参存储单元的地址引用，因此其值的改变同时就改变了实参的值。<br><br>
+x = 2*10-1=19；<br><br>
+a是引用传递，所以a=a+x=10+19=29，结果为29。</p>
+</blockquote>
+
+        <h3 id="8运算器和控制器">
+          <a href="#8运算器和控制器" class="heading-link"><i class="fas fa-link"></i></a>8.运算器和控制器</h3>
+      
+
+        <h4 id="1题目-8">
+          <a href="#1题目-8" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327210006.png" alt></p>
+
+        <h4 id="2题目解析-8">
+          <a href="#2题目解析-8" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>CPU是一台计算机的<strong>运算核心</strong>和<strong>控制核心</strong>，</p>
+<p>其由<strong>运算器、控制器、寄存器</strong>及实现它们之间联系的数据、控制及状态的总线构成。其中</p>
+<ul>
+<li>运算器负责相关的逻辑、算术运算，</li>
+<li>寄存器用来存放一些相关的数据，而</li>
+<li>内部总线负责各部件间信息的传递，而</li>
+<li>控制器不仅要保证指令的正确执行，还要能够处理异常事件。</li>
+</ul>
+</blockquote>
+
+        <h3 id="9面向对象的基本概念">
+          <a href="#9面向对象的基本概念" class="heading-link"><i class="fas fa-link"></i></a>9.面向对象的基本概念</h3>
+      
+
+        <h4 id="1题目-9">
+          <a href="#1题目-9" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200327210157.png" alt></p>
+
+        <h4 id="2题目解析-9">
+          <a href="#2题目解析-9" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p><code>多态</code>：同一操作作用于不同的对象，可以有不同的解释，产生不同的执行结果。在运行时，可以通过指向基类的指针，来调用实现派生类中的方法。也就是说客户类其实在调用方法时，并不需要知道特定子类的实现，都会用统一的方式来调用。</p>
+</blockquote>
+<h4 id><a class="markdownIt-Anchor" href="#"></a> </h4>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/03/27/2020年02月14日软件设计师每日一练/">https://yichangkong.github.io/2020/03/27/2020年02月14日软件设计师每日一练/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/软件设计师考题/">软件设计师考题</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/03/28/2020年02月15日软件设计师每日一练/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">2020年02月15日软件设计师每日一练</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/03/26/2020年02月13日软件设计师每日一练/"><span class="paginator-prev__text">2020年02月13日软件设计师每日一练</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1拓扑排序"><span class="toc-number">1.</span> <span class="toc-text">
+          1.拓扑排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目"><span class="toc-number">1.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析"><span class="toc-number">1.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2容量的计算"><span class="toc-number">2.</span> <span class="toc-text">
+          2.容量的计算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-2"><span class="toc-number">2.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-2"><span class="toc-number">2.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3数字证书"><span class="toc-number">3.</span> <span class="toc-text">
+          3.数字证书</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-3"><span class="toc-number">3.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-3"><span class="toc-number">3.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4程序语言"><span class="toc-number">4.</span> <span class="toc-text">
+          4.程序语言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-4"><span class="toc-number">4.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-4"><span class="toc-number">4.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5软件测试"><span class="toc-number">5.</span> <span class="toc-text">
+          5.软件测试</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-5"><span class="toc-number">5.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-5"><span class="toc-number">5.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6数据表示"><span class="toc-number">6.</span> <span class="toc-text">
+          6.数据表示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-6"><span class="toc-number">6.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-6"><span class="toc-number">6.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7传址与传值"><span class="toc-number">7.</span> <span class="toc-text">
+          7.传址与传值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-7"><span class="toc-number">7.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-7"><span class="toc-number">7.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8运算器和控制器"><span class="toc-number">8.</span> <span class="toc-text">
+          8.运算器和控制器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-8"><span class="toc-number">8.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-8"><span class="toc-number">8.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9面向对象的基本概念"><span class="toc-number">9.</span> <span class="toc-text">
+          9.面向对象的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1题目-9"><span class="toc-number">9.1.</span> <span class="toc-text">
+          1.题目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2题目解析-9"><span class="toc-number">9.2.</span> <span class="toc-text">
+          2.题目解析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">9.3.</span> <span class="toc-text"> </span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-gitee"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">66</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = 'nick,mail,link';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#valine-container',
+    appId: 'xuXblFdHlR0fcnQsdkLwkqvG-gzGzoHsz',
+    appKey: 'ac3XS1leXcL95PWUhYV6gx0E',
+    notify: true,
+    verify: true,
+    placeholder: 'Just go go',
+    avatar: 'mp',
+    meta: guest_info,
+    pageSize: '10' || 10,
+    visitor: true,
+    recordIP: false,
+    lang: '' || 'zh-cn',
+    path: window.location.pathname
+  });
+}
+
+if (false) {
+  loadValine();
+} else {
+  window.addEventListener('DOMContentLoaded', loadValine, false);
+}</script><script src="/js/utils.js?v=2.0.0-rc.0"></script><script src="/js/stun-boot.js?v=2.0.0-rc.0"></script><script src="/js/scroll.js?v=2.0.0-rc.0"></script><script src="/js/header.js?v=2.0.0-rc.0"></script><script src="/js/sidebar.js?v=2.0.0-rc.0"></script></body></html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.0.0-rc.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.0.0-rc.0" type="image/png" sizes="32x32"><meta name="keywords" content="知识点讲解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法复杂度">
+<meta property="og:url" content="https://yichangkong.github.io/2020/04/13/算法复杂度/index.html">
+<meta property="og:site_name" content="YiChangKong">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413162417.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413163922.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413163936.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164208.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164222.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164650.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164635.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413165537.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413171319.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413165059.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415220226.png">
+<meta property="og:updated_time" content="2020-04-17T12:36:34.051Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="算法复杂度">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413162417.png"><meta name="keywords" content="Liu Jun, YiChangKong"><meta name="description" content="爱了"><title>算法复杂度</title><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">算法复杂度</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-04-13</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-17</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2020/04/13/算法复杂度/" data-flag-title="算法复杂度"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value leancloud-visitors-count"></span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413162417.png" alt="常用算法的时间复杂度和空间复杂度"></p>
+<a id="more"></a>
+
+        <h3 id="1简单介绍">
+          <a href="#1简单介绍" class="heading-link"><i class="fas fa-link"></i></a>1.简单介绍</h3>
+      
+<ul>
+<li><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/yeshengCqupt/p/12495526.html" target="_blank" rel="noopener">算法复杂度O</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>包括时间复杂度、空间复杂度</li>
+</ul>
+
+        <h3 id="2时间复杂度">
+          <a href="#2时间复杂度" class="heading-link"><i class="fas fa-link"></i></a>2.时间复杂度</h3>
+      
+<ol>
+<li>
+<p><strong>介绍</strong></p>
+</li>
+<li>
+<p>赋值语句决定了程序运行时间，赋值语句越多，时间越长。</p>
+</li>
+<li>
+<p>大O表示法：**T(n)**表示主导的数量级</p>
+</li>
+<li>
+<p>一般情况下，算法中的基本操作语句的重复执行次数是问题规模n的某个函数，用T(n)表示，若有某个辅助函数f(n)，使得当n趋近于无穷大时，T(n) / f(n) 的极限值为不等于零的常数，则称f(n)是T(n)的同数量级函数。记作 T(n)=Ｏ( f(n) )，称Ｏ( f(n) )  为算法的渐进时间复杂度，简称时间复杂度。</p>
+</li>
+<li>
+<p>T(n) 不同，但时间复杂度可能相同。 如：T(n)=n²+7n+6 与 T(n)=3n²+2n+2 它们的T(n) 不同，但时间复杂度相同，都为O(n²)。</p>
+</li>
+<li>
+<p>计算时间复杂度的方法：</p>
+<ul>
+<li>用常数1代替运行时间中的所有加法常数  T(n)=n²+7n+6  =&gt; T(n)=n²+7n+1</li>
+<li>修改后的运行次数函数中，只保留最高阶项  T(n)=n²+7n+1 =&gt; T(n) = n²</li>
+<li>去除最高阶项的系数 T(n) = n² =&gt; T(n) = n² =&gt; O(n²)</li>
+</ul>
+</li>
+<li>
+<p><strong>计算方式</strong></p>
+<ul>
+<li><strong>事后统计</strong>的方法: 这种方法可行, 但是有两个问题：一是要想对设计的算法的运行性能进行评测，需要实际运行该程序；二是所得时间的统计量依赖于计算机的硬件、软件等环境因素, 这种方式，要在同一台计算机的相同状态下运行，才能比较那个算法速度更快。</li>
+<li><strong>事前估算</strong>的方法: 通过分析某个算法的时间复杂度来判断哪个算法更优.</li>
+</ul>
+</li>
+<li>
+<p><strong>时间频度</strong></p>
+<ul>
+<li>
+<p>时间频度：一个算法花费的时间与算法中语句的执行次数成正比例，哪个算法中语句执行次数多，它花费时间就多。一个算法中的语句执行次数称为语句频度或时间频度。记为T(n)</p>
+</li>
+<li>
+<p>举例说明</p>
+<p>比如计算1-100所有数字之和, 我们设计两种算法：</p>
+<p>​    int total = 0;<br>
+​	int end = 100;<br>
+​	//使用for循环计算<br>
+​	for(int i=0;i&lt;=end;i++){<br>
+​    	total+=i;<br>
+​	}<br>
+​	//时间复杂度T(n)=n+1;</p>
+<p>//直接计算<br>
+total=(1+end)*end/2;</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>计算时可进行忽略部分</strong></p>
+<ul>
+<li>忽略常数项
+<ol>
+<li><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413163922.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413163936.png" alt></li>
+<li>结论
+<ul>
+<li>2n+20 和 2n 随着n 变大，执行曲线无限接近, 20可以忽略</li>
+<li>3n+10 和 3n 随着n 变大，执行曲线无限接近, 10可以忽略</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>忽略低次项</li>
+</ul>
+<ol>
+<li><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164208.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164222.png" alt></li>
+<li>结论
+<ul>
+<li>2n^2+3n+10 和 2n^2 随着n 变大, 执行曲线无限接近, 可以忽略 3n+10</li>
+<li>n^2+5n+20 和 n^2 随着n 变大,执行曲线无限接近, 可以忽略 5n+20</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>忽略系数</li>
+</ul>
+<ol>
+<li><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164650.png" alt> <img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413164635.png" alt></li>
+<li>结论
+<ul>
+<li>随着n值变大，5n^2+7n 和 3n^2 + 2n ，执行曲线重合, 说明  这种情况下, 5和3可以忽略。</li>
+<li>而n^3+5n 和 6n^3+4n  ，执行曲线分离，说明多少次方式关键</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>常见的时间复杂度</strong></p>
+<ol>
+<li>
+<p>常数阶O(1)</p>
+<ul>
+<li>
+<p>无论代码执行了多少行，只要是没有循环等复杂结构，那这个代码的时间复杂度就都是O(1)</p>
+</li>
+<li>
+<p>int i = 1;<br>
+int j = 2;<br>
+<ins>i;<br>
+j</ins>;<br>
+int m = i + j;</p>
+</li>
+<li>
+<p>上述代码在执行的时候，它消耗的时候并不随着某个变量的增长而增长，那么无论这类代码有多长，即使有几万几十万行，都可以用O(1)来表示它的时间复杂度。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>对数阶O(log2n)</p>
+<ul>
+<li>int i = 1;<br>
+while(i&lt;n){<br>
+i = i * 2;<br>
+}</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+<p>说明：在while循环里面，每次都将 i 乘以 2，乘完之后，i 距离 n 就越来越近了。假设循环x次之后，i 就大于 2 了，此时这个循环就退出了，也就是说 2 的 x 次方等于 n，那么 x = log2n也就是说当循环 log2n 次以后，这个代码就结束了。因此这个代码的时间复杂度为：O(log2n)  。 O(log2n) 的这个2 时间上是根据代码变化的，i = i * 3 ，则是 O(log3n)</p>
+<ul>
+<li>
+<img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413165537.png" style="zoom:150%;">
+</li>
+</ul>
+</li>
+<li>
+<p>N=2^x  <strong>&gt;</strong>  n= 2^i    ;  1024=2^10  log2(1024)=10</p>
+</li>
+<li>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413171319.png" alt></p>
+</li>
+</ul>
+<ol start="3">
+<li>
+<p>线性阶O(n)</p>
+<ul>
+<li>for (int i = 1; i&lt;=n; <ins>i){<br>
+j = i;<br>
+j</ins>;<br>
+}</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>这段代码，for循环里面的代码会执行n遍，因此它消耗的时间是随着n的变化而变化的，因此这类代码都可以用O(n)来表示它的时间复杂度</li>
+</ul>
+<ol start="4">
+<li>
+<p>线性对数阶O(nlog2n)</p>
+<ul>
+<li>
+<p>for(m = 1;m&lt;n;m++){<br>
+i=1;<br>
+while(i&lt;n){<br>
+i = 1 * 2;<br>
+}<br>
+}</p>
+</li>
+<li>
+<p>线性对数阶O(nlogN) 其实非常容易理解，将时间复杂度为O(logn)的代码循环N遍的话，那么它的时间复杂度就是 n * O(logN)，也就是了O(nlogN)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>平方阶O(n^2)</p>
+<ul>
+<li>
+<p>for(x = 1;x&lt;=n;x++){<br>
+for (i = 1; i&lt;=n; i++){</p>
+<p>}<br>
+}</p>
+</li>
+<li>
+<p>平方阶O(n²) 就更容易理解了，如果把 O(n) 的代码再嵌套循环一遍，它的时间复杂度就是 O(n²)，这段代码其实就是嵌套了2层n循环，它的时间复杂度就是 O(n<em>n)，即  O(n²) 如果将其中一层循环的n改成m，那它的时间复杂度就变成了 O(m</em>n)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>立方阶O(n^3)</p>
+</li>
+<li>
+<p>k次方阶O(n^k)</p>
+</li>
+<li>
+<p>指数阶O(2^n)</p>
+</li>
+<li>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200413165059.png" alt></p>
+</li>
+<li>
+<p><strong>说明</strong></p>
+<ul>
+<li>常见的算法时间复杂度由小到大依次为：<strong>Ο(1)＜Ο(log2n)＜Ο(n)＜Ο(nlog2n)＜Ο(n2)＜Ο(n3)＜ Ο(nk) ＜Ο(2n)</strong> ，随着问题规模n的不断增大，上述时间复杂度不断增大，算法的执行效率越低</li>
+<li>从图中可见，我们应该尽可能避免使用指数阶的算法</li>
+</ul>
+</li>
+<li>
+<p><strong>平均时间复杂度和最坏时间复杂度</strong></p>
+<ol>
+<li>
+<p>平均时间复杂度是指所有可能的输入实例均以等概率出现的情况下，该算法的运行时间。</p>
+</li>
+<li>
+<p>最坏情况下的时间复杂度称最坏时间复杂度。一般讨论的时间复杂度均是最坏情况下的时间复杂度。 这样做的原因是：最坏情况下的时间复杂度是算法在任何输入实例上运行时间的界限，这就保证了算法的运行时间不会比最坏情况更长。</p>
+</li>
+<li>
+<p>平均时间复杂度和最坏时间复杂度是否一致，和算法有关(如图:)。</p>
+</li>
+<li>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415220226.png" alt></p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
+        <h3 id="3空间复杂度">
+          <a href="#3空间复杂度" class="heading-link"><i class="fas fa-link"></i></a>3.空间复杂度</h3>
+      
+<ol>
+<li>基本介绍
+<ul>
+<li>类似于时间复杂度的讨论，一个算法的空间复杂度(Space Complexity)定义为该算法所耗费的存储空间，它也是问题规模n的函数。</li>
+<li>空间复杂度(Space Complexity)是对一个算法在运行过程中临时占用存储空间大小的量度。有的算法需要占用的临时工作单元数与解决问题的规模n有关，它随着n的增大而增大，当n较大时，将占用较多的存储单元，例如快速排序和归并排序算法就属于这种情况</li>
+<li>在做算法分析时，主要讨论的是时间复杂度。从用户使用体验上看，更看重的程序执行的速度。一些缓存产品(redis, memcache)和算法(基数排序)本质就是用空间换时间.</li>
+</ul>
+</li>
+<li><strong>空间复杂度</strong>
+<ul>
+<li>算法的空间复杂度通过计算算法所需的存储空间实现，</li>
+<li>算法的空间复杂度的计算公式记作：S(n)=O(f(n))，其中，n为问题的规模，f(n)为语句关于n所占存储空间的函数，也是一种“渐进表示法”，这些所需要的内存空间通常分为“<strong>固定空间内存</strong>”</li>
+<li>（包括基本程序代码、常数、变量等）和“变动空间内存”（随程序运行时而改变大小的使用空间）。</li>
+</ul>
+</li>
+<li>计算方法
+<ul>
+<li>例如递归算法。忽略常数，用O(1)表示 ，递归算法的空间复杂度=递归深度N*每次递归所要的辅助空间， 对于单线程来说，递归有运行时堆栈，求的是递归最深的那一次压栈所耗费的空间的个数，因为递归最深的那一次所耗费的空间足以容纳它所有递归过程。</li>
+</ul>
+</li>
+</ol>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/04/13/算法复杂度/">https://yichangkong.github.io/2020/04/13/算法复杂度/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/知识点讲解/">知识点讲解</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/04/14/2020年03月03日软件设计师每日一练/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">2020年03月03日软件设计师每日一练</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/04/13/2020年03月02日软件设计师每日一练/"><span class="paginator-prev__text">2020年03月02日软件设计师每日一练</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1简单介绍"><span class="toc-number">1.</span> <span class="toc-text">
+          1.简单介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2时间复杂度"><span class="toc-number">2.</span> <span class="toc-text">
+          2.时间复杂度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3空间复杂度"><span class="toc-number">3.</span> <span class="toc-text">
+          3.空间复杂度</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-gitee"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">66</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = 'nick,mail,link';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#valine-container',
+    appId: 'xuXblFdHlR0fcnQsdkLwkqvG-gzGzoHsz',
+    appKey: 'ac3XS1leXcL95PWUhYV6gx0E',
+    notify: true,
+    verify: true,
+    placeholder: 'Just go go',
+    avatar: 'mp',
+    meta: guest_info,
+    pageSize: '10' || 10,
+    visitor: true,
+    recordIP: false,
+    lang: '' || 'zh-cn',
+    path: window.location.pathname
+  });
+}
+
+if (false) {
+  loadValine();
+} else {
+  window.addEventListener('DOMContentLoaded', loadValine, false);
+}</script><script src="/js/utils.js?v=2.0.0-rc.0"></script><script src="/js/stun-boot.js?v=2.0.0-rc.0"></script><script src="/js/scroll.js?v=2.0.0-rc.0"></script><script src="/js/header.js?v=2.0.0-rc.0"></script><script src="/js/sidebar.js?v=2.0.0-rc.0"></script></body></html>
