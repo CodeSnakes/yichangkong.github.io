@@ -676,7 +676,7 @@ body::after {
   font-size: 16px;
 }
 .content-wrap {
-  width: calc(100% - 330px);
+  width: calc(100% - 430px);
   float: left;
 }
 .content {
@@ -982,7 +982,7 @@ body::after {
   padding: 1rem 2rem;
   background-color: var(--color-card);
   padding: 1rem;
-  width: 300px;
+  width: 400px;
   font-size: 16px;
 }
 .sidebar--sticky {
@@ -999,7 +999,7 @@ body::after {
   display: none;
 }
 .sidebar-wrap {
-  width: 300px;
+  width: 400px;
   float: right;
 }
 .sidebar-nav {
@@ -2447,12 +2447,24 @@ html.nightmode {
   font-size: 0.9em;
   color: #999;
 }
-@media (min-width: 1138px) {
+.busuanzi-siteuv__icon,
+.busuanzi-sitepv__icon,
+.busuanzi-siteuv__info,
+.busuanzi-sitepv__info,
+.busuanzi-siteuv__value,
+.busuanzi-sitepv__value {
+  margin: 0 2px;
+}
+.busuanzi > span:nth-child(2)::before {
+  content: '|';
+  margin: 0 10px;
+}
+@media (min-width: 1320px) {
   .header-nav-inner {
-    width: 1138px;
+    width: 1320px;
   }
   .main-inner {
-    width: 1138px;
+    width: 1320px;
   }
 }
 @media (min-width: 991.98px) {
