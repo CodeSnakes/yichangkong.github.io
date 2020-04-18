@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="position详解">
 <meta name="twitter:description" content="Css 详细解读定位属性 position 以及参数        参考链接                     简介        position 定位属性，是CSS中非常重要的属性。除了文档流布局，就是定位布局了。 但是很多人都不清楚position参数。详细解读一下position 以及参数。                     1.W">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/007SCiiVgy1gbj7vr8hu0j30i207d3ym.jpg"><meta name="keywords" content="Liu Jun, YiChangKong"><meta name="description" content="爱了"><title>position详解</title><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><script>var Stun = window.Stun || {};
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/007SCiiVgy1gbj7vr8hu0j30i207d3ym.jpg"><meta name="keywords" content="Liu Jun, YiChangKong"><meta name="description" content="爱了"><title>position详解</title><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/5.13.0/css/all.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><script>var Stun = window.Stun || {};
 var CONFIG = {
   root: '/',
   algolia: undefined,
@@ -43,7 +43,7 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__icon"><i class="fas fa-"></i></span><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="fas fa-"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__icon"><i class="fas fa-"></i></span><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">position详解</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-02-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-13</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2020/02/03/position详解/" data-flag-title="position详解"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value leancloud-visitors-count"></span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><div style="text-align: center;">
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">position详解</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-02-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-13</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">3.3k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">21分</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2020/02/03/position详解/" data-flag-title="position详解"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value leancloud-visitors-count"></span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><div style="text-align: center;">
 <img src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbj7vr8hu0j30i207d3ym.jpg">
 </div>
 
@@ -71,7 +71,7 @@ position 属性规定元素的定位类型。</p>
   默认值：	static
   继承性：	no
   版本：	CSS2
-  JavaScript 语法：	object.style.position=&quot;absolute&quot;
+  JavaScript 语法：	object.style.position="absolute"
 </code></pre>
 </li>
 <li>
@@ -79,17 +79,17 @@ position 属性规定元素的定位类型。</p>
 值	描述<br>
 absolute	<br>
 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。</p>
-<pre><code>  元素的位置通过 &quot;left&quot;, &quot;top&quot;, &quot;right&quot; 以及 &quot;bottom&quot; 属性进行规定。
+<pre><code>  元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
   
   fixed	
   生成绝对定位的元素，相对于浏览器窗口进行定位。
   
-  元素的位置通过 &quot;left&quot;, &quot;top&quot;, &quot;right&quot; 以及 &quot;bottom&quot; 属性进行规定。
+  元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
   
   relative	
   生成相对定位的元素，相对于其正常位置进行定位。
   
-  因此，&quot;left:20&quot; 会向元素的 LEFT 位置添加 20 像素。
+  因此，"left:20" 会向元素的 LEFT 位置添加 20 像素。
   
   static	默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。
   inherit	规定应该从父元素继承 position 属性的值。
@@ -106,10 +106,10 @@ absolute	<br>
           <a href="#2文档流布局的概念" class="heading-link"><i class="fas fa-link"></i></a>2.文档流布局的概念</h3>
       
 <p>什么是文档流布局？我百度了一下相对严谨的解释:</p>
-<p><strong>将窗体自上而下分成一行行， 并在每行中按从左至右的顺序排放元素，即为文档流。 <br>
-每个非浮动块级元素都独占一行， 浮动元素则按规定浮在行的一端。 若当前行容不下， 则另起新行再浮动。<br>
-内联元素也不会独占一行。 几乎所有元素(包括块级，内联和列表元素）均可生成子行， 用于摆放子元素。 <br>
-有三种情况将使得元素脱离文档流而存在，分别是 浮动，绝对定位， 固定定位。 但是在IE6中浮动元素也存在于文档流中。</strong></p>
+<p><strong>将窗体自上而下分成一行行，&nbsp;并在每行中按从左至右的顺序排放元素，即为文档流。&nbsp;<br>
+每个非浮动块级元素都独占一行，&nbsp;浮动元素则按规定浮在行的一端。&nbsp;若当前行容不下，&nbsp;则另起新行再浮动。<br>
+内联元素也不会独占一行。&nbsp;几乎所有元素(包括块级，内联和列表元素）均可生成子行，&nbsp;用于摆放子元素。&nbsp;<br>
+有三种情况将使得元素脱离文档流而存在，分别是 浮动，绝对定位，&nbsp;固定定位。&nbsp;但是在IE6中浮动元素也存在于文档流中。</strong></p>
 <p>关于浮动会脱离文档流，这里我就不解释了。因为我们一般会大力避免这种问题，而使用清除浮动的方法。上面引用的文字中，绝对定位 是指 position:absolute ，而 固定定位 是指 position:fixed。</p>
 <p><img src="http://ww2.sinaimg.cn/mw690/459e195ajw1eye7cznpydj20ee06uwej.jpg" alt><br>
 如上图所示，这就是正常的文档流布局。一个一个挨着的，到头了，另起一行，接着排布。</p>
@@ -168,9 +168,9 @@ absolute	<br>
 <p>怎么理解这个标题？position:static 是所有html元素默认参数。就是说，这个元素的所有上级元素，你都没有使用过定位方式。</p>
 <p>我们通过如下代码模拟一个场景：</p>
 <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
+&lt;html lang="en"&gt;
 &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta charset="UTF-8"&gt;
     &lt;title&gt;Document&lt;/title&gt;
     &lt;style&gt;
         div {font-size: 15px;color: #fff;}
@@ -180,11 +180,11 @@ absolute	<br>
     &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;div class=&quot;test1&quot;&gt;
+    &lt;div class="test1"&gt;
         test1
-        &lt;div class=&quot;test2&quot;&gt;
+        &lt;div class="test2"&gt;
             test2
-            &lt;div class=&quot;test3&quot;&gt;test3&lt;/div&gt;
+            &lt;div class="test3"&gt;test3&lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/body&gt;
@@ -206,9 +206,9 @@ absolute	<br>
       
 <p>上面，我们已经说过了，position:relative是相对于自身原始位置定位，其自身并没有脱离文档流。而它的子元素，使用position:absolute参数是什么效果呢？我们来做个试验。下面是代码：</p>
 <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
+&lt;html lang="en"&gt;
 &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta charset="UTF-8"&gt;
     &lt;title&gt;Document&lt;/title&gt;
     &lt;style&gt;
         div {font-size: 15px;color: #fff;}
@@ -218,11 +218,11 @@ absolute	<br>
     &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;div class=&quot;test1&quot;&gt;
+    &lt;div class="test1"&gt;
         test1
-        &lt;div class=&quot;test2&quot;&gt;
+        &lt;div class="test2"&gt;
             test2
-            &lt;div class=&quot;test3&quot;&gt;test3&lt;/div&gt;
+            &lt;div class="test3"&gt;test3&lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/body&gt;
@@ -241,9 +241,9 @@ absolute	<br>
       
 <p>上面，我们说了父元素为position:relative的情况，这种情况比较常见，那么它的父元素为 position:fixed 又是什么情况呢？如果你聪明的话，应该有了答案。我们来做一个试验，来印证一下你的想法。代码如下：</p>
 <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
+&lt;html lang="en"&gt;
 &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta charset="UTF-8"&gt;
     &lt;title&gt;Document&lt;/title&gt;
     &lt;style&gt;
         div {font-size: 15px;color: #fff;}
@@ -253,11 +253,11 @@ absolute	<br>
     &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;div class=&quot;test1&quot;&gt;
+    &lt;div class="test1"&gt;
         test1
-        &lt;div class=&quot;test2&quot;&gt;
+        &lt;div class="test2"&gt;
             test2
-            &lt;div class=&quot;test3&quot;&gt;test3&lt;/div&gt;
+            &lt;div class="test3"&gt;test3&lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/body&gt;
@@ -273,9 +273,9 @@ absolute	<br>
 <p>好，我们来看一下，如果position:absolute嵌套position:absolute元素将会出现什么情况呢？</p>
 <p>写了这么多，其实你应该有了一定的预见性了吧？好，我们来做试验，代码如下：</p>
 <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
+&lt;html lang="en"&gt;
 &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta charset="UTF-8"&gt;
     &lt;title&gt;Document&lt;/title&gt;
     &lt;style&gt;
         div {font-size: 15px;color: #fff;}
@@ -285,11 +285,11 @@ absolute	<br>
     &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;div class=&quot;test1&quot;&gt;
+    &lt;div class="test1"&gt;
         test1
-        &lt;div class=&quot;test2&quot;&gt;
+        &lt;div class="test2"&gt;
             test2
-            &lt;div class=&quot;test3&quot;&gt;test3&lt;/div&gt;
+            &lt;div class="test3"&gt;test3&lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/body&gt;
@@ -312,7 +312,25 @@ absolute	<br>
 这里它的父级元素是包含爷爷级元素、祖爷爷级元素、祖宗十八代级元素的。任意一级都可以。<br>
 如果它的父级元素和爷爷级元素都是非position:static 属性，则，它会选择距离最近的父元素。</li>
 </ul>
-</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/02/03/position详解/">https://yichangkong.github.io/2020/02/03/position详解/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/知识点讲解/">知识点讲解</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/03/11/Stack/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Stack</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/01/28/HTML5技术概述/"><span class="paginator-prev__text">HTML5技术概述</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#css-详细解读定位属性-position-以及参数"><span class="toc-number">1.</span> <span class="toc-text">
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/02/03/position详解/">https://yichangkong.github.io/2020/02/03/position详解/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/知识点讲解/">知识点讲解</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/03/11/Stack/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Stack</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/01/28/HTML5技术概述/"><span class="paginator-prev__text">HTML5技术概述</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#css-详细解读定位属性-position-以及参数"><span class="toc-number">1.</span> <span class="toc-text">
           Css 详细解读定位属性 position 以及参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简介"><span class="toc-number">1.0.1.</span> <span class="toc-text">
           简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1w3c介绍"><span class="toc-number">1.0.2.</span> <span class="toc-text">
           1.W3c介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1基础解释"><span class="toc-number">1.0.3.</span> <span class="toc-text">
@@ -325,7 +343,7 @@ absolute	<br>
           它的父元素的属性是 position:relative</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#它的父元素的属性是-positionfixed"><span class="toc-number">1.0.10.</span> <span class="toc-text">
           它的父元素的属性是 position:fixed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#它的父元素的属性是-positionabsolute"><span class="toc-number">1.0.11.</span> <span class="toc-text">
           它的父元素的属性是 position:absolute</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#position-以及参数总结"><span class="toc-number">1.0.12.</span> <span class="toc-text">
-          position 以及参数总结</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">66</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
+          position 以及参数总结</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">65</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.json';
 
