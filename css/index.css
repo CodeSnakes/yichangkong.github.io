@@ -624,7 +624,7 @@ body::after {
   position: fixed;
   height: 100vh;
   z-index: -2;
-  background: url("https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417192442.png") no-repeat center/cover;
+  background: url("") no-repeat center/cover;
 }
 .container {
   white-space: normal;
