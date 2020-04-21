@@ -1,0 +1,605 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.0.0-rc.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.0.0-rc.0" type="image/png" sizes="32x32"><meta name="360-site-verification" content="85f7e8dc96dcd0b1a29c6f1cc30c4a73"><meta name="description" content="1.需求分析          题目">
+<meta name="keywords" content="软件设计师考题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年03月07日软件设计师每日一练">
+<meta property="og:url" content="https://yichangkong.github.io/2020/04/21/2020年03月07日软件设计师每日一练/index.html">
+<meta property="og:site_name" content="YiChangKong">
+<meta property="og:description" content="1.需求分析          题目">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421162750.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421162959.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421163302.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421163455.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421163809.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421164508.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421165220.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421165759.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421165850.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421170252.png">
+<meta property="og:updated_time" content="2020-04-21T09:44:53.594Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2020年03月07日软件设计师每日一练">
+<meta name="twitter:description" content="1.需求分析          题目">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421162750.png"><meta name="keywords" content="Liu Jun, YiChangKong"><meta name="description" content="爱了"><title>2020年03月07日软件设计师每日一练</title><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/5.13.0/css/all.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">2020年03月07日软件设计师每日一练</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-04-21</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-21</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">4k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">22分</span></span><span class="post-meta-item post-meta-item--visitors leancloud_visitors" id="/2020/04/21/2020年03月07日软件设计师每日一练/" data-flag-title="2020年03月07日软件设计师每日一练"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value leancloud-visitors-count"></span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><h3 id="1需求分析">
+          <a href="#1需求分析" class="heading-link"><i class="fas fa-link"></i></a>1.需求分析</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421162750.png" alt></p>
+<a id="more"></a>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>数据流图的设计原则：</p>
+<p>​	①&nbsp; 数据守恒原则<br><br>
+​	②&nbsp; 守恒加工原则<br><br>
+​	③&nbsp; 对于每个加工，必须既有输入数据流，又有输出数据流<br></p>
+<p>​	④&nbsp; 外部实体与外部实体之间不存在数据流<br><br>
+​	⑤&nbsp; 外部实体与外部存储之间不存在数据流<br><br>
+​	⑥&nbsp; 数据存储与数据存储之间不存在数据流<br><br>
+​	⑦&nbsp; 父图与子图的平衡原则<br><br>
+​	⑧&nbsp; 数据流与加工有关，且必须经过加工<br></p>
+<p>​	DF2违背④，DF6违背⑤，DF7违背⑥，P1和P3缺少数据流违背③，P4违背②，因此共有六个错误。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="23g与4g标准">
+          <a href="#23g与4g标准" class="heading-link"><i class="fas fa-link"></i></a>2.3G与4G标准</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421162959.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>1、802.11n无线局域网：传输距离在100-300m，功耗10-50mA。</p>
+<p>2、Zigbee，传输距离50-300M，功耗5mA，最大特点是可自组网，网络节点数最大可达65000个。</p>
+<p>3、蓝牙，传输距离2-30M，速率1Mbps，功耗介于zigbee和WIFI之间。&nbsp;&nbsp;<br></p>
+<p>知识扩展：</p>
+<p>ZigBee，也称紫蜂，是一种低速短距离传输的无线网上协议，底层是采用[IEEE 802.15.4](<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/IEEE" target="_blank" rel="noopener">https://baike.baidu.com/item/IEEE</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> 802.15.4)标准规范的媒体访问层与<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%89%A9%E7%90%86%E5%B1%82" target="_blank" rel="noopener">物理层</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>。主要特色有低速、低耗电、低成本、支持大量网上节点、支持多种网上拓扑、低复杂度、快速、可靠、安全。</p>
+
+        <h2 id="简介">
+          <a href="#简介" class="heading-link"><i class="fas fa-link"></i></a>简介</h2>
+      
+<p>ZigBee是一项新型的<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E6%97%A0%E7%BA%BF%E9%80%9A%E4%BF%A1/80254" target="_blank" rel="noopener">无线通信</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>技术，适用于传输范围短数据传输速率低的一系列电子元器件设备之间。 ZigBee无线通信技术可于数以千计的微小<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E4%BC%A0%E6%84%9F%E5%99%A8/26757" target="_blank" rel="noopener">传感器</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>相互间，依托专门的无线电标准达成相互协调通信，因而该项技术常被称为Home RF Lite无线技术、FireFly无线技术。ZigBee无线通信技术还可应用于小范围的基于无线通信的控制及自动化等领域，可省去计算机设备、一系列数字设备相互间的有线电缆，更能够实现多种不同数字设备相互间的无线组网，使它们实现相互通信，或者接入<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%9B%A0%E7%89%B9%E7%BD%91/114119" target="_blank" rel="noopener">因特网</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>。 [1]</p>
+<p>ZigBee译为"<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%B4%AB%E8%9C%82" target="_blank" rel="noopener">紫蜂</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>"，它与<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E8%93%9D%E7%89%99" target="_blank" rel="noopener">蓝牙</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>相类似。是一种新兴的短距离无线通信技术，用于传感控制应用(Sensor and Control)。由[IEEE 802.15](<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/IEEE" target="_blank" rel="noopener">https://baike.baidu.com/item/IEEE</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> 802.15)工作组中提出，并由其TG4工作组制定规范。</p>
+<p>ZigBee无线通信技术是基于蜜蜂相互间联系的方式而研发生成的一项应用于互联网通信的网络技术。 相较于传统网络通信技术，ZigBee无线通信技术表现出更为高效、便捷的特征。作为一项近距离、低成本、低功耗的无线网络技术，ZigBee无线通信技术其关于组网、 安全及应用软件方面的技术是基于<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/IEEE/150905" target="_blank" rel="noopener">IEEE</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>批准的802 15.4无线标准。该项技术尤为适用于数据流量偏小的业务，可尤为便捷地在一系列固定式、便携式移动终端中进行安装，与此同时，ZigBee无线通信技术还可实现<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/GPS/214654" target="_blank" rel="noopener">GPS</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>功能。 [1]</p>
+<p>ZigBee技术本质上是一种速率比较低的双向无线网络技术，其由IEEE.802.15.4无线标准开发而来，拥有低复杂度和短距离以及低成本和低功耗等优点。其使用了2.4GHz频段，这个标准定义了ZigBee技术在IEEE.802.15.4标准媒体上支持的应用服务。ZigBee联盟的主要发展方向是建立一个基础构架，这个构架基于互操作平台以及配置文件，并拥有低成本和可伸缩嵌入式的优点。搭建物联网开发平台，有利于研究成果的转化和产学研对，是实现物联网的 简单途径。 [2]</p>
+
+        <h2 id="优点">
+          <a href="#优点" class="heading-link"><i class="fas fa-link"></i></a>优点</h2>
+      
+<p>ZigBee技术是一种新型技术，它最近出现，主要是依靠无线网络进行传输，它能够近距离的进行无线连接，属于无线网络通讯技术。在以数据信息为载体进行的传输中，ZigBee技术是主要的技术指标， 它使用起来比较安全，而且它的容量性很强，被广泛应用到人类的日常通信传输中。 [3]</p>
+<p>第一、实际生活的数据信息传输是以ZigBee无线传感技术为通信网络的依靠，可以建立很多网络连接点，同时依靠网络辅助器还可以实时传输数据通讯。因此，信息容量大的数据传输是ZigBee技术的主要特点，为了避免在传输数据的时候发生信号碰撞，产生不稳定的传输，它采用了高效的碰撞避免机制，较好地保障了数据的安全传输。 ZigBee技术的另外一个优点是兼容性能很强大，在进行操作时，可以连接家庭中的控制网络，而且不会发生碰撞，能很好地与网络相融合。 [3]</p>
+<p>第二、ZigBee系统的持续时间不长，启动它的通信运作，用十五到三十分钟就可以了，在这么简短的时间内，系统能够快速地接收到用户发来的一切信息，而且在使用ZigBee技术的时候，它的工作时间很短，能耗非常的低，能节约成本地持续发展下去。 ZigBee在收发信息时，每个节点都能很好节约电。工作时间能够持续一到两年，满足每个家庭的普通需要。总的来说，ZigBee技术具有很多优点，作为一种新型技术，被普遍使用在很多网络技术上。 [3]</p>
+
+        <h2 id="特征">
+          <a href="#特征" class="heading-link"><i class="fas fa-link"></i></a>特征</h2>
+      
+<p>ZigBee作为一项新型的无线通信技术，其具有传统网络通信技术所不可比拟的优势，既能够实现近距离操作，又可降低能源的消耗。又如，相较于蓝牙等无线通信技术，ZigBee无线通信技术可有效降低使用成本， 即便数据处理的速率并不高，然而，值得肯定的是，ZigBee无线通信技术更为便利，可作为众多用户的理想选择。对于ZigBee无线通信技术的特征而言，主要表现为： [1]</p>
+<p>其一，ZigBee能源消耗显著低于其他无线通信技术。通常而言，ZigBee开展传输处理过程中对应需求的功率为1MW。倘若ZigBee进入休眠状态，则其所需的功率将更低。通俗来讲，通过为装置有ZigBee的设备配备两节5号电池，该设备便可持续运行超过6个月的时间。 [1]</p>
+<p>其二，ZigBee研发及使用所需投入的成本偏低。现阶段，ZigBee的成本普遍无需交付专利费。通常情况下，应用ZigBee过程中仅需交付最初的6美元，后续的实际操作便不会产生更高的费用。由此表明，ZigBee的研发及使用成本可为广大用户所接受。 [1]</p>
+<p>其三， ZigBee具有较高的安全可靠性。 ZigBee可实现十分完备的检测功能，同时在应用ZigBee时需要进行反复的检验流程。如此一来，切实确保了ZigBee的安全可靠性。另外，ZigBee在传输数据过程中可确保数据流的相对平行性，换而言之，ZigBee可为数据提供宽广的传输空间。 [1]</p>
+<p>详细介绍：</p>
+<p>①低功耗。在低耗电待机模式下，2节5号干电池可支持1个节点工作6～24个月，甚至更长。这是ZigBee的突出优势。相比较，蓝牙能工作数周、WiFi可工作数小时。</p>
+<p>TI公司和德国的Micropelt公司共同推出新能源的ZigBee节点。该节点采用Micropelt公司的热电发电机给TI公司的ZigBee提供电源。</p>
+<p>②低成本。通过大幅简化协议(不到蓝牙的1/10)，降低了对通信控制器的要求，按预测分析，以8051的8位微控制器测算，全功能的主节点需要32KB代码，子功能节点少至4KB代码，而且ZigBee免协议专利费。每块芯片的价格大约为2美元。</p>
+<p>③低速率。ZigBee工作在20～250kbps的速率，分别提供250 kbps(2.4GHz)、40kbps(915 MHz)和20kbps(868 MHz)的原始数据吞吐率，满足低速率传输数据的应用需求。</p>
+<p>④近距离。传输范围一般介于10～100m之间，在增加发射功率后，亦可增加到1～3km。这指的是相邻节点间的距离。如果通过路由和节点间通信的接力，传输距离将可以更远。</p>
+<p>⑤短时延。ZigBee的响应速度较快，一般从睡眠转入工作状态只需15ms，节点连接进入网络只需30ms，进一步节省了电能。相比较，蓝牙需要3～10s、WiFi 需要3 s。</p>
+<p>⑥高容量。ZigBee可采用星状、片状和网状网络结构，由一个主节点管理若干子节点，最多一个主节点可管理254个子节点；同时主节点还可由上一层网络节点管理，最多可组成65000 个节点的大网。</p>
+<p>⑦高安全。ZigBee提供了三级安全模式，包括安全设定、使用访问控制清单(Access Control List, ACL) 防止非法获取数据以及采用高级加密标准(AES 128)的对称密码，以灵活确定其安全属性。</p>
+<p>⑧免执照<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E9%A2%91%E6%AE%B5" target="_blank" rel="noopener">频段</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>。使用工业科学医疗(ISM)频段，915MHz(美国), 868MHz(欧洲), 2.4GHz(全球) 。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="3uml">
+          <a href="#3uml" class="heading-link"><i class="fas fa-link"></i></a>3.UML</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421163302.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>事物：模型中的基本成员。UML中包括结构事物、行为事物、分组事物和注释事物。</p>
+<div>
+	（1）结构事物：</div>
+<div>
+	&nbsp; &nbsp; &nbsp;模型中静态部分。</div>
+<div>
+	&nbsp; &nbsp; 【类Class】+【接口Interface】+【协作Collaboration】</div>
+<div>
+	&nbsp; &nbsp; +【用例Use Case】+【活动类】+【组件Commponent】</div>
+<div>
+	&nbsp; &nbsp; +【结点Node】</div>
+<div>
+	（2）行为事物：</div>
+<div>
+	&nbsp; &nbsp; &nbsp;模型中的动态部分。</div>
+<div>
+	&nbsp; &nbsp; &nbsp;【交互】+【状态机】</div>
+<div>
+	（3）分组事物</div>
+<div>
+	&nbsp; &nbsp; 可以把分组事物看成是一个"盒子"，模型可以在其中被分解。目前只有一种分组事物，即包（package）。结构事物、动作事物甚至分组事物都有可能放在一个包中。包纯粹是概念上的，只存在于开发阶段，而组件在运行时存在。</div>
+<div>
+	（4）注释事物</div>
+<div>
+	&nbsp; &nbsp; 注释事物是UML模型的解释部分。
+</div></blockquote>
+</li>
+</ol>
+
+        <h3 id="4文法">
+          <a href="#4文法" class="heading-link"><i class="fas fa-link"></i></a>4.文法</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421163455.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题考查程序语言基础知识。<br><br>
+　　推导就是从文法的开始符号S出发，反复使用产生式，将产生式左部的非终结符替换为右部的文法符号序列（展开产生式用=＞表示），直到产生一个终结符的序列时为止。从题中给出的分析树可得到如下的一个最左推导过程<br><br>
+S=＞aAcB=＞aAaBcB=＞acaBcB =＞acabcB=＞acabcbScA=＞acabcbBdcA=＞acabcbdcA=＞acabcbdcc，因此，acabcbdcc是该方法推导出的一个句子。其中用到的产生式如下：<br><br>
+　　S-＞aAcB S-＞Bd<br><br>
+　　A-＞AaB&nbsp; A-＞c<br><br>
+　　B-＞bScA B-＞b&nbsp; B-＞ε<br><br>
+　　从起始符号S出发也可以如下推导：S=＞Bd=＞εd=＞d，即该文法推导出的句子也可以为d，因此选项A错误。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="5输入输出控制方式">
+          <a href="#5输入输出控制方式" class="heading-link"><i class="fas fa-link"></i></a>5.输入输出控制方式</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421163809.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题主要考查I/O控制的各种方法。其中可以使得设备与主存间的数据块传送不需要CPU干预的是DMA方式。DMA方式正是为了将CPU从输入输出控制中解放出来而产生的。在数据的传送过程中由DMA进行管理。<br><br>
+实现DMA传送的基本操作如下：</p>
+<p>​	（1）外设可通过DMA控制器向CPU发出DMA请求：　　<br><br>
+​	（2）CPU响应DMA请求，系统转变为DMA工作方式，并把总线控制权交给DMA控制器； 　　<br><br>
+​	（3）由DMA控制器发送存储器地址，并决定传送数据块的长度； 　　<br><br>
+​	（4）执行DMA传送； 　　<br><br>
+​	（5）DMA操作结束，并把总线控制权交还CPU。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="6编译与解释">
+          <a href="#6编译与解释" class="heading-link"><i class="fas fa-link"></i></a>6.编译与解释</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421164508.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>编译程序的功能是把某高级语言书写的源程序翻译成与之等价的目标程序（汇编语言或机器语言）。</p>
+<p>编译程序的工作过程可以分为</p>
+<p><strong>词法分析、语法分析、语义分析、中间代码生成、代码优化和目标代码生成</strong>五个阶段，</p>
+<p>以及出错处理和符号表管理。</p>
+<p>其中，<strong>中间代码生成和代码优化阶段不是必需的</strong>。</p>
+<p>目标代码生成时才考虑与具体机器相关的处理，寄存器分配处于代码生成阶段的工作。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="7树与二叉树">
+          <a href="#7树与二叉树" class="heading-link"><i class="fas fa-link"></i></a>7.树与二叉树</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421165220.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题考查平衡二叉树的基本概念。</p>
+<p>平衡二叉树又称为AVL树，它或者是一棵空树，或者是具有下列性质的二叉树；</p>
+<p>它的左子树和右子树都是平衡二叉树，且左子树和右子树的深度之差的绝对值不超过1。</p>
+<p>若将二叉树结点的平衡因子（Balance Factor， BF）定义为该结点的左子树的深度减去其右子树的深度，则平衡二叉树上所有结点的平衡因子只可能是一1， 0和1。</p>
+<p>只要树上有一个结点的平衡因子的绝对值大于1，则该二叉树就是不平衡的。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="8有限自动机">
+          <a href="#8有限自动机" class="heading-link"><i class="fas fa-link"></i></a>8.有限自动机</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421165759.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题主要考查有限自动机。</p>
+<p>​	在题目中，0是初始状态，3是终止状态，通过选项中的字符串可以从初始状态到达终止状态，则说明该字符串能被题目中的自动机识别。也可以理解为依次输入选项中的字符串，可以在该自动机中找到相应的路径。<br><br>
+​	对于选项A的字符串abab，通过ab可以达到终止状态，然后输入a任然可以有路径，但再输入b时，没有路径与其对应。因此A不可被该自动机识别。同样的道理，我们可以找到字符串aaaa能被该自动机识别。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="9线性表">
+          <a href="#9线性表" class="heading-link"><i class="fas fa-link"></i></a>9.线性表</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421165850.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>一共5个元素a,b,c,d,e，而d被要求作为第一个元素出栈。当d出栈后的情况应为：<br><br>
+有一个元素e还未入栈，而栈中已有a，b，c。栈中的a，b，c出栈顺序是已无可变性，必须是：c，b，a，此时，只是分析e在什么位置出栈即可。<br><br>
+c，b，a，三个元素，有四个空位，所以可以产生的序列可能为：<br><br>
+（1）d，e，c，b，a<br><br>
+（2）d，c，e，b，a<br><br>
+（3）d，c，b，e，a<br><br>
+（4）d，c，b，a，e</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="10软件过程改进">
+          <a href="#10软件过程改进" class="heading-link"><i class="fas fa-link"></i></a>10.软件过程改进</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200421170252.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>软件能力成熟度模型是美国卡内基·梅隆大学提出的用于评估软件机构的能力成熟度方法和标准，现已被业界广泛重视。该模型将软件机构能力成熟度分为5个级别.</p>
+<p>**从第三级（定义级）到最高级（优化级），都要求软件开发过程及相应的管理工作必须标准化、文档化，**并综合为软件机构的标准软件过程:并必须建立完善的培训制度和专家评审制度。</p>
+</blockquote>
+</li>
+</ol>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/04/21/2020年03月07日软件设计师每日一练/">https://yichangkong.github.io/2020/04/21/2020年03月07日软件设计师每日一练/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/软件设计师考题/">软件设计师考题</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/04/21/2020年03月08日软件设计师每日一练/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">2020年03月08日软件设计师每日一练</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/04/17/2020年03月06日软件设计师每日一练/"><span class="paginator-prev__text">2020年03月06日软件设计师每日一练</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1需求分析"><span class="toc-number">1.</span> <span class="toc-text">
+          1.需求分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#23g与4g标准"><span class="toc-number">2.</span> <span class="toc-text">
+          2.3G与4G标准</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number"></span> <span class="toc-text">
+          简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优点"><span class="toc-number"></span> <span class="toc-text">
+          优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特征"><span class="toc-number"></span> <span class="toc-text">
+          特征</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3uml"><span class="toc-number">1.</span> <span class="toc-text">
+          3.UML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4文法"><span class="toc-number">2.</span> <span class="toc-text">
+          4.文法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5输入输出控制方式"><span class="toc-number">3.</span> <span class="toc-text">
+          5.输入输出控制方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6编译与解释"><span class="toc-number">4.</span> <span class="toc-text">
+          6.编译与解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7树与二叉树"><span class="toc-number">5.</span> <span class="toc-text">
+          7.树与二叉树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8有限自动机"><span class="toc-number">6.</span> <span class="toc-text">
+          8.有限自动机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9线性表"><span class="toc-number">7.</span> <span class="toc-text">
+          9.线性表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10软件过程改进"><span class="toc-number">8.</span> <span class="toc-text">
+          10.软件过程改进</span></a></li></ol></li></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">68</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">21</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
+  var isXML = true;
+  var search_path = 'search.json';
+
+  if (!search_path) {
+    search_path = 'search.xml';
+  } else if (/json$/i.test(search_path)) {
+    isXML = false;
+  }
+
+  var path = '/' + search_path;
+  $.ajax({
+    url: path,
+    dataType: isXML ? 'xml' : 'json',
+    async: true,
+    success: function (res) {
+      var datas = isXML ? $('entry', res).map(function () {
+        // 将 XML 转为 JSON
+        return {
+          title: $('title', this).text(),
+          content: $('content', this).text(),
+          url: $('url', this).text()
+        };
+      }).get() : res;
+      var $input = $('.search-input input');
+      var $result = $('.search-results');
+      // 搜索对象（标题、内容）的权重，影响显示顺序
+      var WEIGHT = { title: 100, content: 1 };
+      var searchPost = function () {
+        var searchText = $input.val().toLowerCase().trim();
+        // 根据空白字符分隔关键字
+        var keywords = searchText.split(/[\s]+/);
+        // 搜索结果
+        var matchPosts = [];
+
+        // 有多个关键字时，将原文字整个保存下来
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        // 防止未输入字符时搜索
+        if (searchText.length > 0) {
+          datas.forEach(function (data) {
+            var isMatch  = false;
+            // 没有标题的文章使用预设的 i18n 变量代替
+            var title = (data.title && data.title.trim()) || '[ 文章无标题 ]';
+            var titleLower = title && title.toLowerCase();
+            // 删除 HTML 标签 和 所有空白字符
+            var content = data.content && data.content.replace(/<[^>]+>/g, '');
+            var contentLower = content && content.toLowerCase();
+            // 删除重复的 /
+            var postURL = data.url && decodeURI(data.url).replace(/\/{2,}/g, '/');
+            // 标题中匹配到的关键词
+            var titleHitSlice = [];
+            // 内容中匹配到的关键词
+            var contentHitSlice = [];
+
+            keywords.forEach(function (keyword) {
+              /**
+              * 获取匹配的关键词的索引
+              * @param {String} keyword 要匹配的关键字
+              * @param {String} text 原文字
+              * @param {Boolean} caseSensitive 是否区分大小写
+              * @param {Number} weight 匹配对象的权重。权重大的优先显示
+              * @return {Array}
+              */
+              function getIndexByword (word, text, caseSensitive, weight) {
+                if (!word || !text) {
+                  return [];
+                };
+
+                var startIndex = 0; // 每次匹配的开始索引
+                var index = -1;     // 匹配到的索引值
+                var result = [];    // 匹配结果
+
+                if (!caseSensitive) {
+                  word = word.toLowerCase();
+                  text = text.toLowerCase();
+                }
+
+                while((index = text.indexOf(word, startIndex)) !== -1) {
+                  var hasMatch = false;
+                  // 索引位置相同的关键词，保留长度较长的
+                  titleHitSlice.forEach(function (hit) {
+                    if (hit.index === index && hit.word.length < word.length) {
+                      hit.word = word;
+                      hasMatch = true;
+                    }
+                  });
+                  startIndex = index + word.length;
+                  !hasMatch && result.push({ index: index, word: word, weight: weight });
+                }
+                return result;
+              }
+              titleHitSlice = titleHitSlice.concat(getIndexByword(keyword, titleLower, false, WEIGHT.title));
+              contentHitSlice = contentHitSlice.concat(getIndexByword(keyword, contentLower, false, WEIGHT.content));
+            });
+
+            var hitTitle = titleHitSlice.length;
+            var hitContent = contentHitSlice.length;
+
+            if (hitTitle > 0 || hitContent > 0) {
+              isMatch = true;
+            }
+            if (isMatch) {
+              ;[titleHitSlice, contentHitSlice].forEach(function (hit) {
+                // 按照匹配文字的索引的递增顺序排序
+                hit.sort(function (left, right) {
+                  return left.index - right.index;
+                });
+              });
+              /**
+              * 给文本中匹配到的关键词添加标记，从而进行高亮显示
+              * @param {String} text 原文本
+              * @param {Array} hitSlice 匹配项的索引信息
+              * @param {Number} start 开始索引
+              * @param {Number} end 结束索引
+              * @return {String}
+              */
+              function highlightKeyword (text, hitSlice, start, end) {
+                if (!text || !hitSlice || !hitSlice.length) {
+                  return;
+                }
+
+                var result = '';
+                var startIndex = start;
+                var endIndex = end;
+                hitSlice.forEach(function (hit) {
+                  if (hit.index < startIndex) {
+                    return;
+                  }
+
+                  var hitWordEnd = hit.index + hit.word.length;
+                  result += text.slice(startIndex, hit.index);
+                  result += '<b>' + text.slice(hit.index, hitWordEnd) + '</b>';
+                  startIndex = hitWordEnd;
+                });
+                result += text.slice(startIndex, endIndex);
+                return result;
+              }
+
+              var postData = {};
+              // 文章总的搜索权重
+              var postWeight = titleHitSlice.length * WEIGHT.title + contentHitSlice.length * WEIGHT.content;
+              // 标记匹配关键词后的标题
+              var postTitle = highlightKeyword(title, titleHitSlice, 0, title.length) || title;
+              // 标记匹配关键词后的内容
+              var postContent;
+              // 显示内容的长度
+              var SHOW_WORD_LENGTH = 200;
+              // 命中关键词前的字符显示长度
+              var SHOW_WORD_FRONT_LENGTH = 20;
+              var SHOW_WORD_END_LENGTH = SHOW_WORD_LENGTH - SHOW_WORD_FRONT_LENGTH;
+
+              // 截取匹配的第一个字符，前后共 200 个字符来显示
+              if (contentHitSlice.length > 0) {
+                var firstIndex = contentHitSlice[0].index;
+                var start = firstIndex > SHOW_WORD_FRONT_LENGTH ? firstIndex - SHOW_WORD_FRONT_LENGTH : 0;
+                var end = firstIndex + SHOW_WORD_END_LENGTH;
+                postContent = highlightKeyword(content, contentHitSlice, start, end);
+              } else { // 未匹配到内容，直接截取前 200 个字符来显示
+                postContent = content.slice(0, SHOW_WORD_LENGTH);
+              }
+              postData.title = postTitle;
+              postData.content = postContent;
+              postData.url = postURL;
+              postData.weight = postWeight;
+              matchPosts.push(postData);
+            }
+          });
+        }
+
+        var resultInnerHtml = '';
+        if (matchPosts.length) {
+          // 按权重递增的顺序排序，使权重大的优先显示
+          matchPosts.sort(function (left, right) {
+            return right.weight - left.weight;
+          });
+          resultInnerHtml += '<ul>';
+          matchPosts.forEach(function (post) {
+            resultInnerHtml += '<li><a class="search-results-title" href="' + post.url + '">';
+            resultInnerHtml += post.title;
+            resultInnerHtml += '</a><div class="search-results-content">';
+            resultInnerHtml += post.content;
+            resultInnerHtml += '</div></li>';
+          });
+          resultInnerHtml += '</ul>';
+        } else {
+          resultInnerHtml += '<div class="search-results-none"><i class="far fa-meh"></i></div>';
+        }
+        $result.html(resultInnerHtml);
+      };
+      $input.on('input', searchPost);
+      $input.on('keyup', function (e) {
+        if (e.keyCode === Stun.utils.codeToKeyCode('Enter')) {
+          searchPost();
+        }
+      });
+    }
+  });
+}
+
+function closeSearch () {
+  $('body').css({ overflow: 'auto' });
+  $('.search-popup').css({ display: 'none' });
+  $('.search-mask').css({ display: 'none' });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  Stun.utils.pjaxReloadLocalSearch = function () {
+    $('.header-nav-search').on('click', function (e) {
+      e.stopPropagation();
+      $('body').css('overflow', 'hidden');
+      $('.search-popup')
+        .velocity('stop')
+        .velocity('transition.expandIn', {
+          duration: 300,
+          complete: function () {
+            $('.search-popup input').focus();
+          }
+        });
+      $('.search-mask')
+        .velocity('stop')
+        .velocity('transition.fadeIn', {
+          duration: 300
+        });
+
+      initSearch();
+    });
+    $('.search-mask, .search-close').on('click', function () {
+      closeSearch();
+    });
+    $(document).on('keydown', function (e) {
+      // Escape <=> 27
+      if (e.keyCode === Stun.utils.codeToKeyCode('Escape')) {
+        closeSearch();
+      }
+    });
+  };
+
+  Stun.utils.pjaxReloadLocalSearch();
+}, false);</script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = 'nick,mail,link';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#valine-container',
+    appId: 'xuXblFdHlR0fcnQsdkLwkqvG-gzGzoHsz',
+    appKey: 'ac3XS1leXcL95PWUhYV6gx0E',
+    notify: true,
+    verify: true,
+    placeholder: 'Just go go',
+    avatar: 'mp',
+    meta: guest_info,
+    pageSize: '10' || 10,
+    visitor: true,
+    recordIP: false,
+    lang: '' || 'zh-cn',
+    path: window.location.pathname
+  });
+}
+
+if (false) {
+  loadValine();
+} else {
+  window.addEventListener('DOMContentLoaded', loadValine, false);
+}</script><script src="/js/utils.js?v=2.0.0-rc.0"></script><script src="/js/stun-boot.js?v=2.0.0-rc.0"></script><script src="/js/scroll.js?v=2.0.0-rc.0"></script><script src="/js/header.js?v=2.0.0-rc.0"></script><script src="/js/sidebar.js?v=2.0.0-rc.0"></script></body></html>
