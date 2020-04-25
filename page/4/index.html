@@ -31,7 +31,338 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">YiChangKong</div><div class="header-banner-info__subtitle">Coding is my life, But not all!</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/03/27/2020年02月14日软件设计师每日一练/">2020年02月14日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-27</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-27</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">1.4k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">7分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1拓扑排序">
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">YiChangKong</div><div class="header-banner-info__subtitle">Coding is my life, But not all!</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/03/28/2020年02月15日软件设计师每日一练/">2020年02月15日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-28</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">7.5k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">39分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1开发模型">
+          <a href="#1开发模型" class="heading-link"><i class="fas fa-link"></i></a>1.开发模型</h3>
+      
+
+        <h4 id="1题目">
+          <a href="#1题目" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200328181826.png" alt></p>
+
+        <h4 id="2解析">
+          <a href="#2解析" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
+      
+<blockquote>
+<p><strong>增量模型</strong>又称为<strong>渐增模型</strong>，也称为有计划的产品改进模型，</p>
+<p>它从一组给定的需求开始，通过构造一系列可执行中间版本来实施开发活动。第一个版本纳入一部分需求，下一个版本纳入更多的需求，依此类推，直到系统完成。每个中间版本都要执行必需的过程、活动和任务。</p>
+<ul>
+<li>增量模型是瀑布模型和原型进化模型的综合，它对软件过程的考虑是：</li>
+<li>在整体上按照瀑布模型的流程实施项目开发，以方便对项目的管理；</li>
+<li>但在软件的实际创建中，则将软件系统按功能分解为许多增量构件，并以构件为单位逐个地创建与交付，</li>
+<li>直到全部增量构件创建完毕，并都被集成到系统之中交付用户使用。</li>
+<li>比较瀑布模型、原型进化模型，增量模型具有非常显著的优越性。</li>
+</ul>
+<p>但增量模型对软件设计有更高的技术要求，特别是对软件体系结构，要求它具有很好的<strong>开放性与稳定性</strong>，能够顺利地实现构件的集成。增量模型有以下不足之处：如果没有对用户的变更要求进行规划，那么产生的初始增量可能会造成后来增量的不稳定；如果需要不像早期思考的那样稳定和完整，那么一些增量就可能需要重新开发，重新发布；管理发生的成本、进度和配置的复杂性可能会超出组织的能力。一开始需求不清晰，会影响开发的进度，D选项错误。</p>
+</blockquote>
+
+        <h3 id="2开发模型">
+          <a href="#2开发模型" class="heading-link"><i class="fas fa-link"></i></a>2.开发模型</h3>
+      
+
+        <h4 id="1题目-2">
+          <a href="#1题目-2" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200328182147.png" alt></p>
+
+        <h4 id="2解析-2">
+          <a href="#2解析-2" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
+      
+<blockquote>
+<ol>
+<li><strong>瀑布模型</strong>具有可强迫开发人员采用规范的方法；严格规定了各阶段必须提交的文档；要求每个阶段结束后，都要进行严格的评审等优点。但瀑布模型过于理想化，而且缺乏灵活性，无法在开发过程中逐渐明确用户难以确切表达或一时难以想到的需求。</li>
+<li><strong>原型模型</strong>一般是基于需求不容易明确这一事实：并非所有的需求在系统开发之前都能准确地说明和定义。因此，它不追求也不可能要求对需求的严格定义，而是采用了动态定义需求的方法。快速原型法适用于需求不够明确的项目。</li>
+<li><strong>V模型</strong>一种典型的测试模型，该模型强调开发过程中测试贯穿始终。</li>
+<li><strong>螺旋模型</strong>综合了瀑布模型和演化模型的优点，并在此基础上还增加了风险分析。采用螺旋模型时，软件开发沿着螺旋线自内向外旋转，每转一圈都要对风险进行识别和分析，并采取相应的对策。</li>
+<li>本题描述的是一个大型项目，那么对文档的要求应该相应较高，而且具备了相关领域及类似规模系统的开发经验，那么系统的需求应该较明确，综合考虑，应该采用瀑布模型。</li>
+</ol>
+</blockquote>
+
+        <h3 id="3软件开发人员管理">
+          <a href="#3软件开发人员管理" class="heading-link"><i class="fas fa-link"></i></a>3.软件开发人员管理</h3>
+      
+
+        <h4 id="1题目-3">
+          <a href="#1题目-3" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200328190934.png" alt></p>
+
+        <h4 id="2解析-3">
+          <a href="#2解析-3" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
+      
+<blockquote>
+<p>本题考查的是项目管理的人力资源方面的问题，在团队组建时，需要考虑企业的事业环境因素对项目的影响。<br><br>
+在项目中由于分工不同，</p>
+<p>每个团队人员不需要充分参与开发过程的所有阶段，并且在软件项目中，</p>
+<p>开发只是其中一个阶段，所有不能仅根据开发人员的能力来组织团队，当进度滞后时，增加开发人员不一定能加快开发速度，并且，由于加入新的团队成员，已经成熟的团队会回到磨合期，可能会造成进度更加滞后。<br><br>
+综上，本题只有A选项是正确的。</p>
+</blockquote>
+
+        <h3 id="4网络攻击">
+          <a href="#4网络攻击" class="heading-link"><i class="fas fa-link"></i></a>4.网络攻击</h3>
+      
+
+        <h4 id="1题目-4">
+          <a href="#1题目-4" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200328191055.png" alt></p>
+
+        <h4 id="2知识引申">
+          <a href="#2知识引申" class="heading-link"><i class="fas fa-link"></i></a>2.知识引申</h4>
+      
+<blockquote>
+
+        <h2 id="攻击分类">
+          <a href="#攻击分类" class="heading-link"><i class="fas fa-link"></i></a>攻击分类</h2>
+      
+
+        <h3 id="主动攻击">
+          <a href="#主动攻击" class="heading-link"><i class="fas fa-link"></i></a>主动攻击</h3>
+      
+<p>主动攻击会导致某些数据流的篡改和虚假数据流的产生。这类攻击可分为篡改、伪造消息数据和终端（拒绝服务）。</p>
+<p>（1）篡改消息</p>
+<p>篡改消息是指一个合法消息的某些部分被改变、删除，消息被延迟或改变顺序，通常用以产生一个未授权的效果。如修改传输消息中的数据，将“允许甲执行操作”改为“允许乙执行操作”。</p>
+<p>（2）伪造</p>
+<p>伪造指的是某个实体（人或系统）发出含有其他实体身份信息的数据信息，假扮成其他实体，从而以欺骗方式获取一些合法用户的权利和特权。</p>
+<p>（3）拒绝服务</p>
+<p>拒绝服务即常说的DoS（Deny of Service），会导致对通讯设备正常使用或管理被无条件地中断。通常是对整个网络实施破坏，以达到降低性能、终端服务的目的。这种攻击也可能有一个特定的目标，如到某一特定目的地（如安全审计服务）的所有数据包都被阻止。</p>
+
+        <h3 id="被动攻击">
+          <a href="#被动攻击" class="heading-link"><i class="fas fa-link"></i></a>被动攻击</h3>
+      
+<p>被动攻击中攻击者不对数据信息做任何修改，截取/窃听是指在未经用户同意和认可的情况下攻击者获得了信息或相关数据。通常包括窃听、流量分析、破解弱加密的数据流等攻击方式。</p>
+<p>（1）流量分析</p>
+<p>流量分析攻击方式适用于一些特殊场合，例如敏感信息都是保密的，攻击者虽然从截获的消息中无法的到消息的真实内容，但攻击者还能通过观察这些数据报的模式，分析确定出通信双方的位置、通信的次数及消息的长度，获知相关的敏感信息，这种攻击方式称为流量分析。</p>
+<p>（2）窃听</p>
+<p>窃听是最常用的手段。应用最广泛的<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%B1%80%E5%9F%9F%E7%BD%91" target="_blank" rel="noopener">局域网</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>上的数据传送是基于广播方式进行的，这就使一台主机有可能受到本子网上传送的所有信息。而计算机的网卡工作在杂收模式时，它就可以将网络上传送的所有信息传送到上层，以供进一步分析。如果没有采取加密措施，通过协议分析，可以完全掌握通信的全部内容，窃听还可以用无限截获方式得到信息，通过高灵敏接受装置接收网络站点辐射的电磁波或网络连接设备辐射的电磁波，通过对电磁信号的分析恢复原数据信号从而获得网络信息。尽管有时数据信息不能通过电磁信号全部恢复，但可能得到极有价值的情报。</p>
+<p>由于被动攻击不会对被攻击的信息做任何修改，留下痕迹很好，或者根本不留下痕迹，因而非常难以检测，所以抗击这类攻击的重点在于预防，具体措施包括虚拟专用网<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/VPN" target="_blank" rel="noopener">VPN</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，采用加密技术保护信息以及使用交换式网络设备等。被动攻击不易被发现，因而常常是主动攻击的前奏。</p>
+<p>被动攻击虽然难以检测，但可采取措施有效地预防，而要有效地防止攻击是十分困难的，开销太大，抗击主动攻击的主要技术手段是检测，以及从攻击造成的破坏中及时地恢复。检测同时还具有某种威慑效应，在一定程度上也能起到防止攻击的作用。具体措施包括自动审计、入侵检测和完整性恢复等。</p>
+
+        <h2 id="攻击层次">
+          <a href="#攻击层次" class="heading-link"><i class="fas fa-link"></i></a>攻击层次</h2>
+      
+<p>从浅入深的分为以下几个层次：</p>
+<p>（1）简单拒绝服务。</p>
+<p>（2）<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E6%9C%AC%E5%9C%B0%E7%94%A8%E6%88%B7" target="_blank" rel="noopener">本地用户</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>获得非授权读权限。</p>
+<p>（3）本地用户获得非授权写权限。</p>
+<p>（4）<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E8%BF%9C%E7%A8%8B%E7%94%A8%E6%88%B7" target="_blank" rel="noopener">远程用户</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>获得非授权账号信息。</p>
+<p>（5）远程用户获得特权文件的读权限。</p>
+<p>（6）远程用户获得特权文件的写权限。</p>
+<p>（7）远程用户拥有了<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%98" target="_blank" rel="noopener">系统管理员</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>权限。</p>
+
+        <h2 id="攻击方法">
+          <a href="#攻击方法" class="heading-link"><i class="fas fa-link"></i></a>攻击方法</h2>
+      
+
+        <h3 id="口令入侵">
+          <a href="#口令入侵" class="heading-link"><i class="fas fa-link"></i></a>口令入侵</h3>
+      
+<p>所谓口令入侵是指使用某些合法用户的账号和口令登录到目的主机，然后再实施攻击活动。这种方法的前提是必须先得到该主机上的某个合法用户的账号，然后再进行合法用户口令的破译。获得普通用户账号的方法非常多，如</p>
+<p>利用目标主机的Finger功能：当用Finger命令查询时，<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E4%B8%BB%E6%9C%BA%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">主机系统</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>会将保存的用户资料（如用户名、登录时间等）显示在<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%BB%88%E7%AB%AF" target="_blank" rel="noopener">终端</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>或计算机上；</p>
+<p>利用目标主机的X.500服务：有些主机没有关闭X.500的目录查询服务，也给攻击者提供了获得信息的一条简易途径；</p>
+<p>从<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E5%9C%B0%E5%9D%80" target="_blank" rel="noopener">电子邮件地址</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>中收集：有些用户电子邮件地址常会透露其在目标主机上的账号；</p>
+<p>查看主机是否有习惯性的账号：有经验的用户都知道，非常多系统会使用一些习惯性的账号，造成账号的泄露。</p>
+
+        <h3 id="特洛伊木马">
+          <a href="#特洛伊木马" class="heading-link"><i class="fas fa-link"></i></a>特洛伊木马</h3>
+      
+<p>放置特洛伊木马程式能直接侵入用户的计算机并进行破坏，他常被伪装成工具程式或游戏等诱使用户打开带有特洛伊木马程式的邮件附件或从网上直接下载，一旦用户打开了这些邮件的附件或执行了这些程式之后，他们就会像古特洛伊人在敌人城外留下的藏满士兵的木马相同留在自己的计算机中，并在自己的<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">计算机系统</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>中隐藏一个能在<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/Windows/165458" target="_blank" rel="noopener">Windows</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>启动时悄悄执行的程式。当你连接到因特网上时，这个程式就会通知攻击者，来报告你的IP地址及预先设定的端口。攻击者在收到这些信息后，再利用这个潜伏在其中的程式，就能任意地修改你的计算机的参数设定、复制文件、窥视你整个硬盘中的内容等，从而达到控制你的计算机的目的。</p>
+
+        <h3 id="www欺骗">
+          <a href="#www欺骗" class="heading-link"><i class="fas fa-link"></i></a>WWW欺骗</h3>
+      
+<p>在网上用户能利用IE等<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E6%B5%8F%E8%A7%88%E5%99%A8" target="_blank" rel="noopener">浏览器</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>进行各种各样的WEB站点的访问，如阅读新闻组、咨询产品价格、订阅报纸、电子商务等。然而一般的用户恐怕不会想到有这些问题存在：正在访问的网页已被<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E9%BB%91%E5%AE%A2" target="_blank" rel="noopener">黑客</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>篡改过，网页上的信息是虚假的！例如黑客将用户要浏览的网页的URL改写为指向黑客自己的服务器，当用户浏览目标网页的时候，实际上是向黑客服务器发出请求，那么黑客就能达到欺骗的目的了。</p>
+<p>一般Web欺骗使用两种技术手段，即URL地址重写技术和相关信关信息掩盖技术。利用URL地址，使这些地址都指向攻击者的Web服务器，即攻击者能将自己的Web地址加在所有URL地址的前面。这样，当用户和站点进行安全链接时，就会毫不防备地进入攻击者的服务器，于是用记的所有信息便处于攻击者的监视之中。但由于浏览器材一般均设有<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%9C%B0%E5%9D%80%E6%A0%8F" target="_blank" rel="noopener">地址栏</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>和状态栏，当浏览器和某个站点边接时，能在地址栏和状态样中获得连接中的Web站点地址及其相关的传输信息，用户由此能发现问题，所以攻击者往往在URL地址重写的同时，利用相关信息排盖技术，即一般用JavaScript程式来重写地址样和状枋样，以达到其排盖欺骗的目的。</p>
+
+        <h3 id="电子邮件">
+          <a href="#电子邮件" class="heading-link"><i class="fas fa-link"></i></a>电子邮件</h3>
+      
+<p>电子邮件是互联网上运用得十分广泛的一种通讯方式。攻击者能使用一些<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E9%82%AE%E4%BB%B6%E7%82%B8%E5%BC%B9" target="_blank" rel="noopener">邮件炸弹</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>软件或CGI程式向目的邮箱发送大量内容重复、无用的<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%9E%83%E5%9C%BE%E9%82%AE%E4%BB%B6" target="_blank" rel="noopener">垃圾邮件</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，从而使目的邮箱被撑爆而无法使用。当垃圾邮件的发送流量特别大时，更有可能造成<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">邮件系统</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>对于正常的工作反映缓慢，甚至瘫痪。相对于其他的攻击手段来说，这种攻击方法具有简单、见效快等好处。</p>
+
+        <h3 id="节点攻击">
+          <a href="#节点攻击" class="heading-link"><i class="fas fa-link"></i></a>节点攻击</h3>
+      
+<p>攻击者在突破一台主机后，往往以此主机作为根据地，攻击其他主机（以隐蔽其入侵路径，避免留下蛛丝马迹）。他们能使用<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E7%9B%91%E5%90%AC" target="_blank" rel="noopener">网络监听</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>方法，尝试攻破同一网络内的其他主机；也能通过IP欺骗和主机信任关系，攻击其他主机。</p>
+<p>这类攻击非常狡猾，但由于某些技术非常难掌控，如TCP/IP欺骗攻击。攻击者通过外部计算机伪装成另一台合法机器来实现。他能磙坏两台机器间通信链路上的数据，其伪装的目的在于哄骗网络中的其他机器误将其攻击者作为合法机器加以接受，诱使其他机器向他发送据或允许他修改数据。TCP/IP欺骗能发生TCP/IP系统的所有层次上，包括<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82" target="_blank" rel="noopener">数据链路层</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>、<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%B1%82" target="_blank" rel="noopener">网络层</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>、<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E8%BF%90%E8%BE%93%E5%B1%82" target="_blank" rel="noopener">运输层</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>及<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%BA%94%E7%94%A8%E5%B1%82" target="_blank" rel="noopener">应用层</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>均容易受到影响。如果底层受到损害，则应用层的所有协议都将处于危险之中。另外由于用户本身不直接和底层相互相交流，因而对底层的攻击更具有欺骗性。</p>
+
+        <h3 id="网络监听">
+          <a href="#网络监听" class="heading-link"><i class="fas fa-link"></i></a>网络监听</h3>
+      
+<p><span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E7%9B%91%E5%90%AC" target="_blank" rel="noopener">网络监听</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>是<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E4%B8%BB%E6%9C%BA" target="_blank" rel="noopener">主机</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>的一种工作模式，在这种模式下，主机能接收到本<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%BD%91%E6%AE%B5" target="_blank" rel="noopener">网段</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>在同一条物理通道上传输的所有信息，而不管这些信息的发送方和接收方是谁。因为系统在进行密码校验时，用户输入的密码需要从用户端传送到服务器端，而攻击者就能在两端之间进行数据监听。此时若两台主机进行通信的信息没有加密，只要使用某些网络监听工具（如NetXRay for 视窗系统95/98/NT、Sniffit for Linux、Solaries等）就可轻而易举地截取包括口令和账号在内的信息资料。虽然网络监听获得的用户账号和口令具有一定的局限性，但监听者往往能够获得其所在网段的所有用户账号及口令。</p>
+
+        <h3 id="黑客软件">
+          <a href="#黑客软件" class="heading-link"><i class="fas fa-link"></i></a>黑客软件</h3>
+      
+<p>利用黑客软件攻击是互连网上比较多的一种攻击手法。Back Orifice2000、冰河等都是比较著名的<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%89%B9%E6%B4%9B%E4%BC%8A%E6%9C%A8%E9%A9%AC" target="_blank" rel="noopener">特洛伊木马</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，他们能非法地取得用户计算机的终极用户级权利，能对其进行完全的控制，除了能进行文件操作外，同时也能进行对方<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E6%A1%8C%E9%9D%A2" target="_blank" rel="noopener">桌面</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E6%8A%93%E5%9B%BE" target="_blank" rel="noopener">抓图</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>、取得密码等操作。这些黑客软件分为服务器端和用户端，当黑客进行攻击时，会使用用户端程式登陆上已安装好服务器端程式的计算机，这些服务器端程式都比较小，一般会随附带于某些软件上。有可能当用户下载了一个小游戏并运行时，黑客软件的服务器端就安装完成了，而且大部分黑客软件的重生能力比较强，给用户进行清除造成一定的麻烦。特别是一种TXT文件欺骗手法，表面看上去是个TXT文本文件，但实际上却是个附带黑客程式的可执行程式，另外有些程式也会伪装成图片和其他格式的文件。</p>
+
+        <h3 id="安全漏洞">
+          <a href="#安全漏洞" class="heading-link"><i class="fas fa-link"></i></a>安全漏洞</h3>
+      
+<p>许多系统都有这样那样的安全漏洞（Bugs）。其中一些是操作系统或应用软件本身具有的。如<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA%E6%94%BB%E5%87%BB" target="_blank" rel="noopener">缓冲区溢出攻击</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>。由于非常多系统在不检查程式和缓冲之间变化的情况，就任意接受任意长度的数据输入，把溢出的数据放在<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%A0%86%E6%A0%88" target="_blank" rel="noopener">堆栈</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>里，系统还照常执行命令。这样攻击者只要发送超出缓冲区所能处理的长度的指令，系统便进入不稳定状态。若攻击者特别设置一串准备用作攻击的字符，他甚至能访问根目录，从而拥有对整个网络的绝对控制权。另一些是利用协议漏洞进行攻击。如攻击者利用POP3一定要在根目录下运行的这一漏洞发动攻击，破坏的根目录，从而获得终极用户的权限。又如，ICMP协议也经常被用于发动<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1%E6%94%BB%E5%87%BB" target="_blank" rel="noopener">拒绝服务攻击</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>。他的具体手法就是向目的服务器发送大量的<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%8C%85" target="_blank" rel="noopener">数据包</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，几乎占取该服务器所有的网络宽带，从而使其无法对正常的服务请求进行处理，而导致网站无法进入、网站响应速度大大降低或服务器瘫痪。常见的<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E8%A0%95%E8%99%AB%E7%97%85%E6%AF%92" target="_blank" rel="noopener">蠕虫病毒</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>或和其同类的病毒都能对服务器进行<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1%E6%94%BB%E5%87%BB" target="_blank" rel="noopener">拒绝服务攻击</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>的进攻。他们的繁殖能力很强，一般通过Microsoft的Outlook软件向众多邮箱发出带有病毒的<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E9%82%AE%E4%BB%B6" target="_blank" rel="noopener">邮件</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，而使<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener">邮件服务器</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>无法承担如此庞大的数据处理量而瘫痪。对于个人上网用户而言，也有可能遭到大量数据包的攻击使其无法进行正常的网络操作。</p>
+
+        <h3 id="端口扫描">
+          <a href="#端口扫描" class="heading-link"><i class="fas fa-link"></i></a>端口扫描</h3>
+      
+<p>所谓端口扫描，就是利用Socket编程和目标主机的某些端口建立TCP连接、进行<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">传输协议</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>的验证等，从而侦知目标主机的扫描端口是否是处于激活状态、主机提供了哪些服务、提供的服务中是否含有某些缺陷等等。常用的扫描方式有：Connect扫描、Fragmentation扫描。</p>
+
+        <h2 id="攻击位置">
+          <a href="#攻击位置" class="heading-link"><i class="fas fa-link"></i></a>攻击位置</h2>
+      
+
+        <h3 id="远程攻击">
+          <a href="#远程攻击" class="heading-link"><i class="fas fa-link"></i></a>远程攻击</h3>
+      
+<p>指外部攻击者通过各种手段，从该<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%AD%90%E7%BD%91" target="_blank" rel="noopener">子网</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>以外的地方向该子网或者该子网内的系统发动攻击。</p>
+
+        <h3 id="本地攻击">
+          <a href="#本地攻击" class="heading-link"><i class="fas fa-link"></i></a>本地攻击</h3>
+      
+<p>指本单位的内部人员，通过所在的局域网，向本单位的其他系统发动攻击，在本级上进行非法越权访问。</p>
+
+        <h3 id="伪远程攻击">
+          <a href="#伪远程攻击" class="heading-link"><i class="fas fa-link"></i></a>伪远程攻击</h3>
+      
+<p>指内部人员为了掩盖攻击者的身份，从本地获取目标的一些必要信息后，攻击过程从外部远程发起，造成外部入侵的现象。</p>
+
+        <h2 id="攻击工具">
+          <a href="#攻击工具" class="heading-link"><i class="fas fa-link"></i></a>攻击工具</h2>
+      
+
+        <h3 id="dos攻击">
+          <a href="#dos攻击" class="heading-link"><i class="fas fa-link"></i></a>DOS攻击</h3>
+      
+<p>DOS攻击例如：WinNuke通过发送OOB漏洞导致系统蓝屏；Bonk通过发送大量伪造的UDP数据包导致系统重启；TearDrop通过发送重叠的IP碎片导致系统的TCP/IP栈崩溃；WinArp通过发特别数据包在对方机器上产生大量的窗口；Land通过发送大量伪造源IP的基于SYN的TCP请求导致系统重启动；FluShot通过发送特定IP包导致系统凝固；Bloo通过发送大量的ICMP数据包导致系统变慢甚至凝固；PIMP通过IGMP漏洞导致系统蓝屏甚至重新启动；Jolt通过大量伪造的ICMP和UDP导致系统变得非常慢甚至重新启动。</p>
+
+        <h3 id="木马程式">
+          <a href="#木马程式" class="heading-link"><i class="fas fa-link"></i></a>木马程式</h3>
+      
+<p>（1）BO2000（BackOrifice）：他是功能最全的TCP/IP构架的攻击工具，能搜集信息，执行系统命令，重新设置机器，重新定向网络的<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%AE%A2%E6%88%B7%E7%AB%AF" target="_blank" rel="noopener">客户端</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>/服务器应用程式。BO2000支持多个<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">网络协议</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，他能利用TCP或UDP来传送，还能用XOR<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95" target="_blank" rel="noopener">加密算法</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>或更高级的3DES加密算法加密。感染BO2000后机器就完全在别人的控制之下，<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E9%BB%91%E5%AE%A2" target="_blank" rel="noopener">黑客</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>成了终极用户，你的所有操作都可由BO2000自带的“秘密摄像机”录制成“录像带”。</p>
+<p>（2）“冰河”：冰河是个国产木马程式，具有简单的中文使用界面，且只有少数流行的反病毒、<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E9%98%B2%E7%81%AB%E5%A2%99" target="_blank" rel="noopener">防火墙</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>才能查出冰河的存在。冰河的功能比起国外的木马程式来一点也不逊色。他能自动跟踪目标机器的屏幕变化，能完全模拟键盘及鼠标输入，即在使被控端屏幕变化和监视端产生同步的同时，被监视端的一切键盘及鼠标操作将反映在控端的屏幕。他能记录各种口令信息，包括开机口令、屏保口令、各种共享资源口令及绝大多数在对话框中出现过的口令信息；他能获取系统信息；他还能进行注册表操作，包括对主键的浏览、增删、复制、<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E9%87%8D%E5%91%BD%E5%90%8D" target="_blank" rel="noopener">重命名</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>和对键值的读写等所有注册表操作。</p>
+<p>（3）NetSpy：能运行于视窗系统95/98/NT/2000等多种平台上，他是个基于TCP/IP的简单的文件传送软件，但实际上你能将他看作一个没有权限控制的增强型FTP服务器。通过他，攻击者能神不知鬼不觉地下载和上传目标机器上的任意文件，并能执行一些特别的操作。</p>
+<p>（4）Glacier：该程式能自动跟踪目标计算机的屏幕变化、获取目标计算机登录口令及各种密码类信息、获取目标<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">计算机系统</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>信息、限制目标计算机系统功能、任意操作目标<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%96%87%E4%BB%B6" target="_blank" rel="noopener">计算机文件</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>及目录、远程关机、发送信息等多种监视功能。类似于BO2000。</p>
+<p>（5）KeyboardGhost：视窗系统是个以<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E6%B6%88%E6%81%AF%E5%BE%AA%E7%8E%AF" target="_blank" rel="noopener">消息循环</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>（<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/MessageLoop" target="_blank" rel="noopener">MessageLoop</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>）为基础的操作系统。系统的核心区保留了一定的字节作为键盘输入的缓冲区，其数据结构形式是队列。键盘幽灵正是通过直接访问这一队列，使键盘上输入你的电子邮箱、代理的账号、密码Password（显示在<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%B1%8F%E5%B9%95" target="_blank" rel="noopener">屏幕</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>上的是星号）得以记录，一切涉及以星号形式显示出来的密码窗口的所有符号都会被记录下来，并在系统根目录下生成一文件名为KG.DAT的隐含文件。</p>
+<p>（6）<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/ExeBind" target="_blank" rel="noopener">ExeBind</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>：这个程式能将指定的攻击程式捆绑到所有一个广为传播的热门软件上，使宿主程式执行时，寄生程式也在后台被执行，且支持多重捆绑。实际上是通过多次分割文件，多次从<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%88%B6%E8%BF%9B%E7%A8%8B" target="_blank" rel="noopener">父进程</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>中调用子进程来实现的。</p>
+
+        <h2 id="应对策略">
+          <a href="#应对策略" class="heading-link"><i class="fas fa-link"></i></a>应对策略</h2>
+      
+<p>在对网络攻击进行上述分析和识别的基础上，我们应当认真制定有针对性的策略。明确安全对象，设置强有力的安全保障体系。有的放矢，在网络中层层设防，发挥网络的每层作用，使每一层都成为一道关卡，从而让攻击者无隙可钻、无计可使。还必须做到未雨绸缪，预防为主，将重要的数据备份并时刻注意系统运行状况。以下是针对众多令人担心的<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8" target="_blank" rel="noopener">网络安全</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>问题，提出的几点建议</p>
+
+        <h3 id="提高安全意识">
+          <a href="#提高安全意识" class="heading-link"><i class="fas fa-link"></i></a>提高安全意识</h3>
+      
+<p>（1）不要随意打开来历不明的<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6" target="_blank" rel="noopener">电子邮件</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>及文件，不要随便运行不太了解的人给你的程式，比如“特洛伊”类<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E9%BB%91%E5%AE%A2" target="_blank" rel="noopener">黑客</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>程式就需要骗你运行。</p>
+<p>（2）尽量避免从Internet下载不知名的软件、游戏程式。即使从知名的网站下载的软件也要及时用最新的病毒和木马查杀软件对软件和系统进行扫描。</p>
+<p>（3）密码设置尽可能使用字母数字混排，单纯的英文或数字非常容易穷举。将常用的密码设置不同，防止被人查出一个，连带到重要密码。重要密码最佳经常更换。</p>
+<p>（4）及时下载安装<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%B3%BB%E7%BB%9F%E8%A1%A5%E4%B8%81" target="_blank" rel="noopener">系统补丁</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>程式。</p>
+<p>（5）不随便运行<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E9%BB%91%E5%AE%A2" target="_blank" rel="noopener">黑客</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>程式，不少这类程式运行时会发出你的个人信息。</p>
+<p>（6）在支持HTML的BBS上，如发现提交警告，先看原始码，非常可能是骗取密码的陷阱。</p>
+
+        <h3 id="防火墙软件">
+          <a href="#防火墙软件" class="heading-link"><i class="fas fa-link"></i></a>防火墙软件</h3>
+      
+<p>使用防毒、防黑等防火墙软件。<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E9%98%B2%E7%81%AB%E5%A2%99" target="_blank" rel="noopener">防火墙</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>是个用以阻止网络中的黑客访问某个机构网络的屏障，也可称之为控制进/出两个方向通信的门槛。在<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E8%BE%B9%E7%95%8C" target="_blank" rel="noopener">网络边界</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>上通过建立起来的相应<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1" target="_blank" rel="noopener">网络通信</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>监视系统来隔离内部和外部网络，以阻挡外部网络的侵入。</p>
+
+        <h3 id="代理服务器">
+          <a href="#代理服务器" class="heading-link"><i class="fas fa-link"></i></a>代理服务器</h3>
+      
+<p>设置代理服务器，隐藏自己IP地址。保护自己的IP地址是非常重要的。事实上，即便你的机器上被安装了木马程式，若没有你的IP地址，攻击者也是没有办法的，而保护IP地址的最佳方法就是设置<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener">代理服务器</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>。代理服务器能起到外部网络申请访问内部网络的中间转接作用，其功能类似于一个数据转发器，他主要控制哪些用户能访问哪些服务类型。当外部网络向内部网络申请某种网络服务时，代理服务器接受申请，然后他根据其服务类型、服务内容、被服务的对象、服务者申请的时间、申请者的域名范围等来决定是否接受此项服务，如果接受，他就向内部网络转发这项请求。</p>
+
+        <h3 id="其他策略">
+          <a href="#其他策略" class="heading-link"><i class="fas fa-link"></i></a>其他策略</h3>
+      
+<p>将防毒、防黑当成日常例性工作，定时更新防毒组件，将防毒软件保持在常驻状态，以完全防毒；</p>
+<p>由于黑客经常会针对特定的日期发动攻击，计算机用户在此期间应特别提高警戒；</p>
+<p>对于重要的个人资料做好严密的保护，并养成资料备份的习惯。</p>
+</blockquote>
+
+        <h3 id="5面向对象的基本概念">
+          <a href="#5面向对象的基本概念" class="heading-link"><i class="fas fa-link"></i></a>5.面向对象的基本概念</h3>
+      
+
+        <h4 id="1题目-5">
+          <a href="#1题目-5" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200328191420.png" alt></p>
+
+        <h4 id="2解析-4">
+          <a href="#2解析-4" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
+      
+<blockquote>
+<p>多态分为两种：<strong>通用的多态和特定的多态</strong>。两者的区别是前者对工作的类型不加限制，允许对不同类型的值执行相同的代码；后者只对有限数量的类型有效，而且对不同类型的值可能要执行不同的代码。</p>
+<p>通用的多态又分为参数多态（parametric）和包含多态（inclusion）；特定的多态分为过载多态（overloading）和强制多态（coercion）。</p>
+<p>强制多态：编译程序通过语义操作，把操作对象的类型强行加以变换，以符合函数或操作符的要求。程序设计语言中基本类型的大多数操作符，在发生不同类型的数据进行混合运算时，编译程序一般都会进行强制多态。程序员也可以显示地进行强制多态的操作(Casting)。举个例子，比如，int+double，编译系统一般会把int转换为double，然后执行double+double运算，这个int-》double的转换，就实现了强制多态，即可是隐式的，也可显式转换。</p>
+<p>过载（overloading）多态：同一个名（操作符﹑函数名）在不同的上下文中有不同的类型。程序设计语言中基本类型的大多数操作符都是过载多态的。通俗的讲法，就是c++中的函数重载。在此处中“overload”译为“过载”，其实就是所谓的“重载”，也许“overload”就应翻译为“过载，重载”吧，那“override”就只能是“覆盖”了。</p>
+<p>参数多态：采用参数化模板，通过给出不同的类型参数，使得一个结构有多种类型。</p>
+<p>包含多态：同样的操作可用于一个类型及其子类型。（注意是子类型，不是子类。）包含多态一般需要进行运行时的类型检查。</p>
+</blockquote>
+
+        <h3 id="6cocomo">
+          <a href="#6cocomo" class="heading-link"><i class="fas fa-link"></i></a>6.COCOMO ||</h3>
+      
+
+        <h4 id="1题目-6">
+          <a href="#1题目-6" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200328192347.png" alt></p>
+
+        <h4 id="2解析-5">
+          <a href="#2解析-5" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
+      
+<blockquote>
+<p>COCOMOII模型也需要使用规模估算信息，在模型层次结构中有3种不同规模估算选择，即：对象点、功能点和代码行。</p>
+</blockquote>
+
+        <h3 id="7多种程序语言的特点">
+          <a href="#7多种程序语言的特点" class="heading-link"><i class="fas fa-link"></i></a>7.多种程序语言的特点</h3>
+      
+
+        <h4 id="1题目-7">
+          <a href="#1题目-7" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200328192451.png" alt></p>
+
+        <h4 id="2解析-6">
+          <a href="#2解析-6" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
+      
+<blockquote>
+<p>变量是内存单元的抽象，用于在程序中表示数据。当变量存储的是内存单元地址时，称为指针变量，或者说指针变量指向了另一个变量。指针变量可以定义在函数或复合语句内，也可以定义在所有的函数之外，即可以是全局变量，也可以是局部变量。需要区分指针变量与指针所指向的变量，无论指针变量指向何种变量，其存储空间大小都是一样的。当指针变量指向数组中的一个元素时，对指针变量进行算术运算可以使其指向同一个数组中的其他元素。</p>
+</blockquote>
+
+        <h3 id="8文法">
+          <a href="#8文法" class="heading-link"><i class="fas fa-link"></i></a>8.文法</h3>
+      
+
+        <h4 id="1题目-8">
+          <a href="#1题目-8" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200328192645.png" alt></p>
+
+        <h4 id="2解析-7">
+          <a href="#2解析-7" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
+      
+<blockquote>
+<p>上下文无关文法：形式语言理论中一种重要的变换文法，用来描述上下文无关语言，在乔姆斯基分层中称为2型文法。由于程序设计语言的语法基本上都是上下文无关文法，因此应用十分广泛。</p>
+</blockquote>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/03/27/2020年02月14日软件设计师每日一练/">2020年02月14日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-27</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-27</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">1.4k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">7分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1拓扑排序">
           <a href="#1拓扑排序" class="heading-link"><i class="fas fa-link"></i></a>1.拓扑排序</h3>
       
 
@@ -1622,175 +1953,7 @@ CRC(32位) = X32+X26+X23+X16+X12+X11+X10+X8+X7+X5+X4+X2+X+1<br>
             });
             document.body.appendChild(img);
           });
-      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/03/20/2020年02月07日软件设计师每日一练/">2020年02月07日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-20</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-20</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">1.4k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">7分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1面向对象的基本概念">
-          <a href="#1面向对象的基本概念" class="heading-link"><i class="fas fa-link"></i></a>1.面向对象的基本概念</h3>
-      
-
-        <h4 id="1题目">
-          <a href="#1题目" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320232539.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320232729.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320232750.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320232817.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320232842.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320232906.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320232925.png" alt></p>
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320232948.png" alt></p>
-
-        <h4 id="2解析">
-          <a href="#2解析" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
-      
-<ul>
-<li>
-<p><code>开-闭原则</code>要求一个软件实体应当对扩展开放，对修改关闭。也就是说，我们在设计一个模块的时候，应当使这个模块可以在不被修改的前提下被扩展，换句话说就是，应当可以在不必修改源代码的情况下改变这个模块的行为。<br></p>
-</li>
-<li>
-<p><code>里氏代换原则</code>要求子类型必须能够替换它们的基类型，所以在里氏代换原则中，任何可基类对象可以出现的地方，子类对象也一定可以出现。</p>
-</li>
-<li>
-<p><code>依赖倒转原则</code>是：要依赖于抽象，不要依赖于具体。也就是常说的要针对接口编程，不要针对实现编程。</p>
-</li>
-</ul>
-
-        <h3 id="2排序与查找">
-          <a href="#2排序与查找" class="heading-link"><i class="fas fa-link"></i></a>2.排序与查找</h3>
-      
-
-        <h4 id="1题目-2">
-          <a href="#1题目-2" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320233237.png" alt></p>
-
-        <h4 id="2解析-2">
-          <a href="#2解析-2" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320233252.png" alt></p>
-
-        <h3 id="3树与二叉树">
-          <a href="#3树与二叉树" class="heading-link"><i class="fas fa-link"></i></a>3.树与二叉树</h3>
-      
-
-        <h4 id="1题目-3">
-          <a href="#1题目-3" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320235547.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320233412.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320235039.png" alt></p>
-
-        <h4 id="2解析-3">
-          <a href="#2解析-3" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320233454.png" alt></p>
-
-        <h3 id="4数据库的设计过程">
-          <a href="#4数据库的设计过程" class="heading-link"><i class="fas fa-link"></i></a>4.数据库的设计过程.</h3>
-      
-
-        <h4 id="1题目-4">
-          <a href="#1题目-4" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320233649.png" alt></p>
-
-        <h4 id="2解析-4">
-          <a href="#2解析-4" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
-      
-<p>软件设计必须依据对软件的需求来进行，结构化分析的结果为结构化设计提供了最基本的输入信息。从分析到设计往往经历以下流程：<br></p>
-<p>（1）研究、分析和审查数据流图。根据穿越系统边界的信息流初步确定系统与外部接口。<br><br>
-（2）根据数据流图决定问题的类型。数据处理问题通常有两种类型：变换型和事务型。针对两种不同的类型分别进行分析处理。<br><br>
-（3）由数据流图推导出系统的初始结构图。<br><br>
-（4）利用一些启发式原则来改进系统的初始结构图，直到得到符合要求的结构图为止。<br><br>
-（5）根据分析模型中的实体关系图和数据字典进行数据设计，包括数据库设计或数据文件的设计。<br><br>
-（6）在设计的基础上，依旧分析模型中的加工规格说明、状态转换图进行过程设计。<br><br>
-所以接口设计的主要依据是数据流图，接口设计的任务主要是描述软件与外部环境之间的交互关系，软件内模块之间的调用关系。<br></p>
-
-        <h3 id="5设计模式">
-          <a href="#5设计模式" class="heading-link"><i class="fas fa-link"></i></a>5.设计模式</h3>
-      
-
-        <h4 id="1题目-5">
-          <a href="#1题目-5" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320233939.png" alt></p>
-
-        <h4 id="2解析-5">
-          <a href="#2解析-5" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
-      
-<ul>
-<li>
-<p>享元模式提供支持大量细粒度对象共享的有效方法。</p>
-</li>
-<li>
-<p>组合模式（Composite）：将对象组合成树型结构以表示“整体-部分”的层次结构，使得用户对单个对象和组合对象的使用具有一致性。</p>
-</li>
-<li>
-<p>迭代器模式（Iterator）：提供一种方法来顺序访问一个聚合对象中的各个元素，而不需要暴露该对象的内部表示。<br></p>
-</li>
-<li>
-<p>备忘录模式（Memento）在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态，从而可以在以后将该对象恢复到原先保存的状态。</p>
-</li>
-</ul>
-
-        <h3 id="6面向对象的基本概念">
-          <a href="#6面向对象的基本概念" class="heading-link"><i class="fas fa-link"></i></a>6.面向对象的基本概念</h3>
-      
-
-        <h4 id="1题目-6">
-          <a href="#1题目-6" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320234103.png" alt></p>
-
-        <h4 id="2解析-6">
-          <a href="#2解析-6" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
-      
-<p>本题考查面向对象分析与设计的基本概念。<br><br>
-&nbsp;&nbsp;&nbsp; 面向对象分析主要强调理解问题是什么，不考虑问题的解决方案，因此答案A、C是正确的。面向对象设计侧重问题的解决方案，并且需要考虑实现细节问题，因此选项D的说法是不正确的。</p>
-
-        <h3 id="7专业英语">
-          <a href="#7专业英语" class="heading-link"><i class="fas fa-link"></i></a>7.专业英语</h3>
-      
-
-        <h4 id="1题目-7">
-          <a href="#1题目-7" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320234247.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320234330.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320234406.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320235147.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320235227.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320235256.png" alt></p>
-
-        <h4 id="2解析-7">
-          <a href="#2解析-7" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
-      
-<p>软件实体的尺寸比任何其他人类构造更复杂，因为没有两个部分相同（至少在语句级上）。如果是，我们将两个相似的部分分成一个，一个（71），开放或关闭。在这方面，软件系统与计算机，建筑物或汽车有着深刻的区别，其中重复的元素很多。<br></p>
-<p>数字电脑本身比大多数人理解的很多情况都要更复杂。这使得构思，描述和测试他们非常复杂。软件系统比计算机更多（72）数量级。<br><br>
-同样地，软件实体的放大不仅仅是较大尺寸的相同元素的重复;必然增加不同要素的数量。在大多数情况下，这些元素以（73）的方式彼此相互作用，并且整体的复杂性比线性增加更多。<br><br>
-软件的复杂性是（74）的属性，而不是偶然的。因此，消除其复杂性的软件实体的描述往往会抽象出其本质。数学和物理科学通过构建复杂现象的简化模型，从模型中导出属性，并通过实验验证这些属性，在三个世纪以来取得了长足的进步。这是因为模型中被忽略的复杂性（75）不是现象的基本属性。当复杂性是本质时，它不起作用。<br><br>
-开发软件产品的许多经典问题源于这一重要的复杂性，其非线性随着尺寸而增加。不仅技术问题，管理问题也来自于复杂性。<br></p>
-
-        <h3 id="7计算机指令">
-          <a href="#7计算机指令" class="heading-link"><i class="fas fa-link"></i></a>7.计算机指令</h3>
-      
-
-        <h4 id="1题目-8">
-          <a href="#1题目-8" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200320234631.png" alt></p>
-
-        <h4 id="2解析-8">
-          <a href="#2解析-8" class="heading-link"><i class="fas fa-link"></i></a>2.解析</h4>
-      
-<p>指令平均时钟数约为<br><br>
-　　　（160000×1+30000×2 +24000×4+16000×8）/（160000+30000+24000+16000）<br><br>
-&nbsp;&nbsp;&nbsp; =444000/230000≈1.93<br><br>
-　　该计算机的运算速度约为</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">70</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">21</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
+      </script></div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">71</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">21</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.json';
 

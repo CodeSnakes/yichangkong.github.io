@@ -31,7 +31,342 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">YiChangKong</div><div class="header-banner-info__subtitle">Coding is my life, But not all!</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/08/03/Tomcat的坑或者eclipse的坑/">Tomcat的坑或者eclipse的坑</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-08-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-08-05</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">434</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">2分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1错误展示">
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">YiChangKong</div><div class="header-banner-info__subtitle">Coding is my life, But not all!</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/08/06/SpringMVC学习/">SpringMVC学习</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-08-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-08-12</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">2.3k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">18分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1介绍">
+          <a href="#1介绍" class="heading-link"><i class="fas fa-link"></i></a>1.介绍</h3>
+      
+<blockquote></blockquote>
+<pre><code>Spring MVC是Spring提供的一个强大而灵活的web框架。`借助于注解`，Spring MVC提供了几乎是POJO的开发
+模式，使得控制器的开发和测试更加简单。这些控制器一般不直接处理请求，而是将其委托给Spring上下文中 
+的其他bean，通过Spring的依赖注入功能，这些bean被注入到控制器中。
+
+Spring MVC是Spring家族中应用于Web应用的一个模块，是Spring提供的一个基于MVC设计模式的Web开发框
+架，可以将它理解为Servlet。在MVC模式中，Spring MVC作为控制器（Controller）来建立模型与视图的数
+据交互，是结构最清晰的JSP Model2实现，可以说是一个典型的MVC框架。
+
+除此之外，Spring MVC框架采用松耦合、可插拔的组件结构，具有高度可配置性，比起其他的MVC框架更具有
+扩展性和灵活性。并且它本身就是Spring家族的一部分，与Spring框架整合更是天衣无缝。
+
+在Spring MVC框架中，Controller替换Servlet来担负控制器的职责。Controller接收请求，调用相应的
+Model进行处理，Model处理完之后将结果返回给Controller，Controller再指派相应的View对处理结果进
+行渲染，最终响应给客户端进行展示。
+</code></pre>
+<hr>
+
+        <h3 id="2重要组成部分">
+          <a href="#2重要组成部分" class="heading-link"><i class="fas fa-link"></i></a>2.重要组成部分</h3>
+      
+<pre><code>Spring MVC主要由DispatcherServlet、处理器映射HandlerMapping【找那个控制器】映射有具有多种方式、
+适配器【使用和调用控制器的方法】、控制器【业务】、Views视图解析器、视图组成。
+</code></pre>
+<hr>
+
+        <h3 id="3快速入门配置">
+          <a href="#3快速入门配置" class="heading-link"><i class="fas fa-link"></i></a>3.快速入门配置</h3>
+      
+<ol>
+<li>
+<p>web.xml 配置 DispatcherServlet</p>
+<pre><code> &lt;servlet&gt;
+ &lt;servlet-name&gt;DispatcherServlet&lt;/servlet-name&gt;
+ &lt;servlet-class&gt;
+       org.springframework.web.servlet.DispatcherServlet
+ &lt;/servlet-class&gt;
+ &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+ &lt;/servlet&gt;
+ 
+ &lt;servlet-mapping&gt;
+ &lt;servlet-name&gt;DispatcherServlet&lt;/servlet-name&gt;
+ &lt;url-pattern&gt;*.do&lt;/url-pattern&gt;
+ &lt;/servlet-mapping&gt;
+</code></pre>
+</li>
+<li>
+<p>在WEB-INF目录下创建DispatcherServlet-servlet.xml</p>
+<pre><code> &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ 	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+ 	http://www.springframework.org/schema/mvc 
+ 	http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd 
+ 	http://www.springframework.org/schema/context 
+ 	http://www.springframework.org/schema/context/spring-context-3.2.xsd 
+ 	http://www.springframework.org/schema/aop 
+ 	http://www.springframework.org/schema/aop/spring-aop-3.2.xsd 
+ 	http://www.springframework.org/schema/tx 
+ 	http://www.springframework.org/schema/tx/spring-tx-3.2.xsd"&gt;
+</code></pre>
+ 
+</li>
+<li>
+<p>配置DispatcherServlet-servlet.xml</p>
+<pre><code> &lt;!-- 1. 配置处理器映射，springmvc默认的处理器映射器
+ 	 BeanNameUrlHandlerMapping:根据bean的name属性的url去找handlerController --&gt;
+ &lt;bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/&gt;
+ &lt;!-- 2. 配置处理器适配置器执行Controller --&gt;
+ &lt;bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/&gt;
+ &lt;!-- 3.配置一个控制器 --&gt;
+ &lt;bean name="/user.do" class="com.gyf.backoffice.web.controller.UserController"/&gt;
+ &lt;!-- 4.配置springmvc视图解析器
+ 	视图解析器解析的视频路径为：前缀 + 后缀 --&gt;
+ &lt;bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"&gt;
+ 	&lt;property name="prefix" value="/WEB-INF/views"/&gt;
+ 	&lt;property name="suffix" value=".jsp"/&gt;
+ &lt;/bean&gt;
+</code></pre>
+</li>
+<li>
+<p>应用流程</p>
+<pre><code> springMVC的流程如下： 
+ 1.前端控制器DispatchServlet接受客户端浏览器发送的请求 
+ 2.前端控制器DispatchServlet调用处理器映射器HandlerMapping查找相应的处理器 
+ 3.处理器映射器根据URL查找处理器Handler，并给前端控制器返回生成的处理器和相应的处理器拦截器HandlerIntercepter 
+ 4.前端控制器调用处理器适配器HandlerAdapter 
+ 5.处理器适配器调用相应的处理器 
+ 6.处理器给处理器适配器返回ModelAndView(包含逻辑视图名) 
+ 7.处理器将ModelAndView返回给前端控制器 
+ 8.前端控制器将ModelAndView传给视图解析器ViewResolver 
+ 9.视图解析器ViewResolver解析后将具体的视图View返回给前端控制器 
+ 10.前端控制器对视图进行渲染（视图渲染：将模型数据（在ModelAndView中）填充到request域中） 
+ 11.前端控制器将视图返回给客户端浏览器
+</code></pre>
+</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5wxvlml4zj30x70ib43w.jpg" alt="SpringMVC架构图"></p>
+<hr>
+
+        <h3 id="4处理器映射">
+          <a href="#4处理器映射" class="heading-link"><i class="fas fa-link"></i></a>4.处理器映射</h3>
+      
+<ol>
+<li>
+<p><strong>非注解的处理器</strong></p>
+</li>
+<li>
+<p>BeanNameUrlHandlerMapping，这个类的映射规则是将 bean 的 name 作为 url 进行查找，需要在配置 Handler 时指定 beanname，其示例代码如下：</p>
+<pre><code>  这时的 url 地址就会根据 bean 的 name 去查找，也就是示例中配置的 name 的值 test.do，且这个必须以 / 开头。
+ &lt;bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"&gt;
+  &lt;bean name="/test.do" class="com.fageweiketang.controller.TestController"/&gt;
+</code></pre>
+</li>
+<li>
+<p>SimpleUrlHandlerMapping，它可以通过内部参数去配置请求的 url 和 handler 之间的映射关系，其示例配置如下：</p>
+<pre><code> &lt;bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"&gt;
+     &lt;property name="interceptors"&gt;
+         &lt;list&gt;
+             &lt;ref bean="someCheckInterceptor1"/&gt;
+             &lt;ref bean="someCheckInterceptor2"/&gt;
+         &lt;/list&gt;
+     &lt;/property&gt;
+     &lt;property name="mapping"&gt;
+         &lt;props&gt;
+             &lt;prop key="user.action"&gt;userController&lt;/prop&gt;
+             &lt;prop key="product.action"&gt;productController&lt;/prop&gt;
+             &lt;prop key="other.action"&gt;otherController&lt;/prop&gt;
+         &lt;/props&gt;            
+     &lt;/property&gt;
+ &lt;/bean&gt;其中 property 属性可以配置 interceptors 拦截器，也可以配置 mapping（Handler 处理器和 url 的映射关系）。
+</code></pre>
+</li>
+<li>
+<p>ControllerClassNameHandlerMapping，它是将 Controller 控制器的名字作为映射的 url 地址，例如 TestController 控制器则映射的地址就为 / test*，如果是 test 控制器下的 test 方法，则 url 为 test/test.action，示例代码如下：</p>
+<pre><code> &lt;bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/&gt;
+</code></pre>
+</li>
+</ol>
+<hr>
+<ol>
+<li>
+<p><strong>注解适配的处理器</strong>（开发常用这种）</p>
+</li>
+<li>
+<p>注解处理方式不需要在 xml 中进行配置，只需要在指定的地方声明一些注解信息即可。SpringMVC3.1 版本之后默认的处理器映射器是 RequestMappingHandlerMapping，位于 SpringMVC 的核心 jar 包 org.springframework.web.servlet.mvc.method.annotation 中。</p>
+</li>
+<li>
+<p>注解配置方式有两种.</p>
+</li>
+<li>
+<p>第一种是在 springmvc.xml 中配置，声明相关的 bean 和实现即可，示例代码如下：</p>
+<pre><code>        &lt;bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/&gt;
+</code></pre>
+</li>
+<li>
+<p>第二种是使用 <span class="exturl"><a class="exturl__link" href="mvc:annotation-driven/" target="_blank" rel="noopener">mvc:annotation-driven/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> 标签来配置，这个标签是一种简写方式，它会自动去注册处理器映射器，配置示例如下：</p>
+<pre><code>    &lt;mvc:annotation-driven&gt;&lt;/mvc:annotation-driven&gt;
+</code></pre>
+</li>
+<li>
+<p>使用Controller来标识它是一个控制器</p>
+<pre><code> @Controller
+ 	public class TestControllerTest{
+ 	    @RequestMapping("/testurl")
+ 	    public ModelAndView testurl() throws Exception{
+ 	        //逻辑代码
+ 	    }
+ 	}
+
+ 	在以上代码中 @Controller 是注解信息，表示该类是一个控制器类，可以被注解的处理器适配器找
+     到，而 TestControllerTest 类中的 testurl 方法上有一个 @RequestMapping 注解信息，作用是指定一个 url 与该方法绑定。
+</code></pre>
+</li>
+<li>
+<p>这时为了让注解的处理器映射器能找到 Handler 控制器，需要在 springmvc.xml 做下配置，<br>
+方式有两种：</p>
+<ul>
+<li>
+<p>在 springmcv.xml 中声明 bean 信息，示例代码如下：</p>
+<pre><code> 	&lt;bean class="com.fageweiketang.controller.TestController"&gt;&lt;/bean&gt;
+</code></pre>
+</li>
+<li>
+<p>第二种是扫描配置，对某一个包下的所有类进行扫描，找出所有使用 @Controller 注解的 Handler 控制器类，示例代码如下：</p>
+<pre><code>   &lt;context:component-scan base-package="com.fageweiketang.controller"&gt;&lt;/context:component-scan&gt;
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+
+        <h3 id="5案例图示-注解下开发">
+          <a href="#5案例图示-注解下开发" class="heading-link"><i class="fas fa-link"></i></a>5.案例图示 注解下开发###</h3>
+      
+<ul>
+<li>
+<p><strong>配置xml。</strong></p>
+<pre><code>  &lt;!-- 1.配置注解扫描位置 --&gt;
+  &lt;context:component-scan base-package="com.gyf.backoffice.web.controller"/&gt;
+  		
+  &lt;!-- 2. 配置处理器映射，通过注解来查找 --&gt;
+  &lt;bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/&gt;
+  &lt;!-- 3.配置注解处理适配器来执行控制器的方法 --&gt;	
+  &lt;bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/&gt;
+  		
+  &lt;!-- 配置springmvc视图解析器
+  			视图解析器解析的视频路径为：前缀 + 后缀 --&gt;
+  &lt;bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"&gt;
+  	&lt;property name="prefix" value="/WEB-INF/views"/&gt;
+  	&lt;property name="suffix" value=".jsp"/&gt;
+  &lt;/bean&gt;
+</code></pre>
+</li>
+<li></li>
+<li>
+<p><strong>配置控制器 返回指定网页。</strong></p>
+</li>
+</ul>
+<h2 id><a class="markdownIt-Anchor" href="#"></a> <img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5xav0fqjbj30ha059aa3.jpg" alt></h2>
+<ul>
+<li><strong>优化mvc配置文件</strong></li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5xaxkztw1j30w708ymxp.jpg" alt></p>
+<ul>
+<li><strong>RequestMapping讲解</strong></li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5xb1az5o9j30jj0io0vj.jpg" alt></p>
+<ul>
+<li>
+<p><strong>有关于参数传递的问题 回看教案。</strong></p>
+</li>
+<li>
+<p><strong>转发和重定</strong></p>
+</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5xbaoc1k9j30eo0hmq3k.jpg" alt></p>
+<ul>
+<li><strong>RequestParam</strong></li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5xbdymyuuj30j50c1abk.jpg" alt></p>
+<ul>
+<li>
+<p><strong>ResponseBody和RequestBody</strong></p>
+<pre><code>  @ResponseBody把后台pojo转换json对象，返回到页面。
+  @RequestBody接受前台json数据，把json数据自动封装javaBean
+</code></pre>
+</li>
+</ul>
+
+        <h2 id="-2">
+          <a href="#-2" class="heading-link"><i class="fas fa-link"></i></a></h2>
+      
+<p><img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5xbimndimj30iw042aa1.jpg" alt></p>
+
+        <h3 id="6springmvc多视图">
+          <a href="#6springmvc多视图" class="heading-link"><i class="fas fa-link"></i></a>6.Springmvc多视图</h3>
+      
+<ol>
+<li>
+<p>配置xml</p>
+<pre><code>  &lt;bean
+ 	class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver"&gt;
+ 	&lt;!-- 配置支持媒体类型 --&gt;
+ 	&lt;property name="contentNegotiationManager"&gt;
+ 		&lt;bean
+ 			class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean"&gt;
+ 			&lt;property name="mediaTypes"&gt;
+ 				&lt;map&gt;
+ 					&lt;entry key="json" value="application/json"&gt;&lt;/entry&gt;
+ 					&lt;entry key="xml" value="application/xml"&gt;&lt;/entry&gt;
+ 				&lt;/map&gt;
+ 			&lt;/property&gt;
+ 		&lt;/bean&gt;
+ 	&lt;/property&gt;
+
+ 	&lt;!-- 指定默认视图 --&gt;
+ 	&lt;property name="defaultViews"&gt;
+ 		&lt;!-- 支持多个视图 --&gt;
+ 		&lt;list&gt;
+ 			&lt;!-- 对josn格式视图支持 --&gt;
+ 			&lt;bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView"/&gt;
+
+ 			&lt;!-- xml格式视图支持 --&gt;
+ 			&lt;bean class="org.springframework.web.servlet.view.xml.MarshallingView"&gt;
+ 				&lt;constructor-arg&gt;
+ 					&lt;bean class="org.springframework.oxm.jaxb.Jaxb2Marshaller"&gt;
+ 						&lt;property name="classesToBeBound"&gt;
+ 							&lt;list&gt;
+ 								&lt;value&gt;com.gyf.backoffice.domain.Student&lt;/value&gt;
+ 							&lt;/list&gt;
+ 						&lt;/property&gt;
+ 					&lt;/bean&gt;
+ 				&lt;/constructor-arg&gt;
+ 			&lt;/bean&gt;
+ 		&lt;/list&gt;
+ 	&lt;/property&gt;
+ &lt;/bean&gt;
+</code></pre>
+</li>
+<li>
+<p>控制器提供一个接口</p>
+</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5xbmbh0vzj30je05jt9a.jpg" alt></p>
+<hr>
+
+        <h3 id="未完结">
+          <a href="#未完结" class="heading-link"><i class="fas fa-link"></i></a>未完结！</h3>
+      
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/08/03/Tomcat的坑或者eclipse的坑/">Tomcat的坑或者eclipse的坑</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-08-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-08-05</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">434</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">2分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1错误展示">
           <a href="#1错误展示" class="heading-link"><i class="fas fa-link"></i></a>1.错误展示</h3>
       
 <blockquote>
@@ -677,54 +1012,7 @@ jdk1.7支持2.2版本。
             });
             document.body.appendChild(img);
           });
-      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/07/03/hello-world/">Hello World</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-07-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-07-03</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">130</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">1分</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>Welcome to <span class="exturl"><a class="exturl__link" href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>! This is your very first post. Check <span class="exturl"><a class="exturl__link" href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl"><a class="exturl__link" href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> or you can ask me on <span class="exturl"><a class="exturl__link" href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>.</p>
-
-        <h2 id="quick-start">
-          <a href="#quick-start" class="heading-link"><i class="fas fa-link"></i></a>Quick Start</h2>
-      
-
-        <h3 id="create-a-new-post">
-          <a href="#create-a-new-post" class="heading-link"><i class="fas fa-link"></i></a>Create a new post</h3>
-      
-<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></div></figure>
-<p>More info: <span class="exturl"><a class="exturl__link" href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-
-        <h3 id="run-server">
-          <a href="#run-server" class="heading-link"><i class="fas fa-link"></i></a>Run server</h3>
-      
-<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></div></figure>
-<p>More info: <span class="exturl"><a class="exturl__link" href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-
-        <h3 id="generate-static-files">
-          <a href="#generate-static-files" class="heading-link"><i class="fas fa-link"></i></a>Generate static files</h3>
-      
-<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></div></figure>
-<p>More info: <span class="exturl"><a class="exturl__link" href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-
-        <h3 id="deploy-to-remote-sites">
-          <a href="#deploy-to-remote-sites" class="heading-link"><i class="fas fa-link"></i></a>Deploy to remote sites</h3>
-      
-<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></div></figure>
-<p>More info: <span class="exturl"><a class="exturl__link" href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/page/6/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">70</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">21</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
+      </script></div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/page/6/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/8/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">71</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">21</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.json';
 
