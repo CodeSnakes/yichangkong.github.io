@@ -31,7 +31,34 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">YiChangKong</div><div class="header-banner-info__subtitle">Coding is my life, But not all!</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/04/14/2020年03月03日软件设计师每日一练/">2020年03月03日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-04-14</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-18</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">2.2k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">11分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1有限自动机">
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">YiChangKong</div><div class="header-banner-info__subtitle">Coding is my life, But not all!</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/04/16/2020年03月05日软件设计师每日一练/">2020年03月05日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-04-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-17</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">1.7k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">10分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1风险分析">
+          <a href="#1风险分析" class="heading-link"><i class="fas fa-link"></i></a>1.风险分析</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200416145928.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题考查软件开发过程中的风险分析基础知识。</p>
+<p>风险分析包括风险识别、风险预测、风险评估和风险控制等4个不同活动，</p>
+<p>在<strong>风险识别过程</strong>中，要识别潜在的预算、进度、个体、资源、用户和需求等方面的问题以及对整个项目的影响，并建立<strong>风险条目检查表</strong>，列出<strong>所有可能的风险事项</strong>。</p>
+<p>在风险预测过程中，需要建立一个表示风险可能性的参考标准，描述风险条目的结果，估计风险对项目的影响等。</p>
+</blockquote></li></ol></div><div class="post-readmore"><a class="post-readmore__link" href="/2020/04/16/2020年03月05日软件设计师每日一练/"><span class="post-readmore__text">阅读全文</span><span class="post-readmore__icon"><i class="fas fa-long-arrow-alt-right"></i></span></a></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/04/15/2020年03月04日软件设计师每日一练/">2020年03月04日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-04-15</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-17</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">950</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">5分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1图">
+          <a href="#1图" class="heading-link"><i class="fas fa-link"></i></a>1.图</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200415212919.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>无向连通图不一定有边，但两个顶点之间有路径。</p>
+</blockquote></li></ol></div><div class="post-readmore"><a class="post-readmore__link" href="/2020/04/15/2020年03月04日软件设计师每日一练/"><span class="post-readmore__text">阅读全文</span><span class="post-readmore__icon"><i class="fas fa-long-arrow-alt-right"></i></span></a></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/04/14/2020年03月03日软件设计师每日一练/">2020年03月03日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-04-14</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-18</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">2.2k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">11分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1有限自动机">
           <a href="#1有限自动机" class="heading-link"><i class="fas fa-link"></i></a>1.有限自动机</h3>
       
 <ol>
@@ -158,349 +185,7 @@ window.CONFIG = CONFIG;</script></head><body><div class="container" id="containe
             });
             document.body.appendChild(img);
           });
-      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/04/09/2020年02月27日软件设计师每日一练/">2020年02月27日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-04-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-09</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">2.3k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">12分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1正规式">
-          <a href="#1正规式" class="heading-link"><i class="fas fa-link"></i></a>1.正规式</h3>
-      
-
-        <h4 id="1题目">
-          <a href="#1题目" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409160004.png" alt></p>
-
-        <h4 id="2题目解析">
-          <a href="#2题目解析" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p>B项从0到1然后走不了了，C项在3状态结束，不对；D项也只到1状态。</p>
-</blockquote>
-
-        <h3 id="2其他">
-          <a href="#2其他" class="heading-link"><i class="fas fa-link"></i></a>2.其他</h3>
-      
-
-        <h4 id="1题目-2">
-          <a href="#1题目-2" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409160055.png" alt></p>
-
-        <h4 id="2题目解析-2">
-          <a href="#2题目解析-2" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p>运行Web浏览器的计算机与网页所在的计算机首先要建立TCP连接，采用HTTP协议传输网页文件。</p>
-<p>HTTF是Hyper Text Transportation Protocol（超文本传输协议）的缩写，是计算机之间交换数据的方式。</p>
-<p>HTTP应用的相当广泛，其主要任务是用来浏览网页，但也能用来下载。用户是按照一定的规则（协议）和提供文件的服务器取得联系，并将相关文件传输到用户端的计算机中来。</p>
-</blockquote>
-
-        <h3 id="3专业英语">
-          <a href="#3专业英语" class="heading-link"><i class="fas fa-link"></i></a>3.专业英语</h3>
-      
-
-        <h4 id="1题目-3">
-          <a href="#1题目-3" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409160447.png" alt></p>
-
-        <h4 id="2题目解析-3">
-          <a href="#2题目解析-3" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p>一个项目是一个(临时)独特的、复杂的、相关的活动序列，它有一个目标或目的,必须在特定的时间完成,在预算之内,并且遵循相关说明书。</p>
-<p>项目管理是针对在有限时间内以最低成本完成一个可接受系统的开发，其范围、计划、人员、组织、指导和控制的过程。</p>
-<p><span>对于任何系统开发项目而言，有效的项目管理</span>是必要的</p>
-<p>以一个可接受的预算开发和实现，并且符合用户的期望和规范。</p>
-<p>项目管理是一个从项目开始，到项目结束，贯穿整个项目，直到项目完成才结束的过程。</p>
-<p>良好的项目管理的先决条件是定义良好的系统开发过程。过程管理是一种持续的活动，它记录、管理和改进组织为系统开发所选择的方法(“过程”)。流程管理涉及的活动、可交付成果和质量标准适用于所有的项目。</p>
-<p>（1）A-任务&nbsp; &nbsp; B-工作&nbsp; &nbsp; C-序列&nbsp; &nbsp; D-活动</p>
-<p>（2）A-规格说明书  B-规则  C-估计  D-设计</p>
-<p>（3）A-完美的  B-可接受的  C-受约束的  D-完整的</p>
-<p>（4）A-工期  B-规范  C-期望  D-需求</p>
-<p>（5）A-单个的  B-特定的  C-一些的  D-所有的</p>
-</blockquote>
-
-        <h3 id="4多媒体技术">
-          <a href="#4多媒体技术" class="heading-link"><i class="fas fa-link"></i></a>4.多媒体技术</h3>
-      
-
-        <h4 id="1题目-4">
-          <a href="#1题目-4" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409165125.png" alt></p>
-
-        <h4 id="2题目解析-4">
-          <a href="#2题目解析-4" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p>本题考查计算机音乐信息处理技术的相关知识。WAV格式记录的是对于音乐信号的波形采样数据，它可以使用反映自然声音的信号采样序列来记录和回放声音信息。MIDI格式记录的是采用音乐信息序列交换的标准格式MIDI （ Musical Instrument Digital interface）标准来存贮和表达音乐的演奏信息，这些演奏信息包含每个音符演奏的时间信息、音量信息、长度信息、乐器或音色信息等，MID工消息序列可以间接反映出音乐的曲谱演奏信息。</p>
-</blockquote>
-
-        <h3 id="5软件开发模型">
-          <a href="#5软件开发模型" class="heading-link"><i class="fas fa-link"></i></a>5.软件开发模型</h3>
-      
-
-        <h4 id="1题目-5">
-          <a href="#1题目-5" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409165454.png" alt></p>
-
-        <h4 id="2题目解析-5">
-          <a href="#2题目解析-5" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p>本题考查的是常见的软件开发模型的基本概念。<br><br>
-&nbsp;&nbsp;&nbsp; 瀑布模型给出了软件生存周期中制定开发计划、需求分析、软件设计、编码、测试和维护等阶段以及各阶段的固定顺序，上一阶段完成后才能进入到下一阶段，整个过程如同瀑布流水。该模型为软件的开发和维护提供了一种有效的管理模式，但在大量的实践中暴露出其缺点，其中最为突出的是缺乏灵活性，特别是无法解决软件需求不明确或不准确的问题。这些问题有可能造成开发出的软件并不是用户真正需要的，并且这一点只有在开发过程完成后才能发现。所以瀑布模型适用于需求明确，且很少发生较大变化的项目。<br><br>
-&nbsp;&nbsp;&nbsp; 为了克服瀑布模型的上述缺点，演化模型允许在获取了一组基本需求后，通过快速分析构造出软件的一个初始可运行版本（称作原型），然后根据用户在适用原型的过程中提出的意见对原型进行改进，从而获得原型的新版本。这一过程重复进行，直到得到令用户满意的软件。该模型和螺旋模型、喷泉模型等适用于对软件需求缺乏明确认识的项目。<br><br>
-&nbsp;&nbsp;&nbsp; 螺旋模型将瀑布模型和演化模型进行结合，在保持二者优点的同时，增加了风险分析，从而弥补了二者的不足。该模型沿着螺线旋转，并通过笛卡尔坐标的四个象限分别表示四个方面的活动：制定计划、风险分析、实施工程和客户评估。螺旋模型为项目管理人员及时调整管理决策提供了方便，进而可降低开发风险.<br><br>
-&nbsp;&nbsp;&nbsp; 喷泉模型是以面向对象的软件开发方法为基础.以用户需求为动力，以对象来驱动的模型。该模型主要用于描述面向对象的开发过程，体现了面向对象开发过程的迭代和无间隙特性。迭代指模型中的活动通常需要重复多次，相关功能在每次迭代中被加入新的系统。无间隙是指在各开发活动（如分析、设计、编码）之间没有明显边界。</p>
-</blockquote>
-
-        <h3 id="6行业标准">
-          <a href="#6行业标准" class="heading-link"><i class="fas fa-link"></i></a>6.行业标准</h3>
-      
-
-        <h4 id="1题目-6">
-          <a href="#1题目-6" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409165657.png" alt></p>
-
-        <h4 id="2题目解析-6">
-          <a href="#2题目解析-6" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p>《标准化法》第二章第七条规定“国家标准、行业标准分为强制性标准和推荐性标准。保障人体健康，人身、财产安全的标准和法律、行政法规规定强制执行的标准是强制性标准，其他标准是推荐性标准。<br><br>
-&nbsp;&nbsp;&nbsp; “省、自治区、直辖市标准化行政主管部门制定的工业产品的安全、卫生要求的地方标准，在本行政区域内是强制性标准。”<br><br>
-&nbsp;&nbsp;&nbsp; 按照我国《标准化法》的规定，上海市标准化行政主管部门制定并发布的工业产品的安全、卫生要求的标准，在其行政区域内是强制性标准。</p>
-</blockquote>
-
-        <h3 id="7er模型">
-          <a href="#7er模型" class="heading-link"><i class="fas fa-link"></i></a>7.ER模型</h3>
-      
-
-        <h4 id="1题目-7">
-          <a href="#1题目-7" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409165944.png" alt></p>
-
-        <h4 id="2题目解析-7">
-          <a href="#2题目解析-7" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p>不同的数据模型具有不同的数据结构形式。目前最常用的数据结构模型有层次模型（hierarchical model）、网状模型（network model）、关系模型（relational Model）和面向对象数据模型（object oriented model）。其中层次模型和网状模型统称为非关系模型。非关系模型的数据库系统在20 世纪70年代非常流行，在数据库系统产品中占据了主导地位。到了20年纪80年代，逐渐被关系模型的数据库系统取代，但某些地方，由于历史的原因，目前层次和网状数据库系统仍在使用。</p>
-<p>关系模型是目前最常用的数据模型之一。关系数据库系统采用关系模型作为数据的组织方式，在关系模型中用二维表格结构表达实体集以及实体集之间的联系，其最大特色是描述的一致性。关系模型是由若干个关系模式组成的集合。一个关系模式相当于一个记录烈，对应于程序设计语言中类型定义的概念。关系是一个实例，也是一张表，对应于程序设计语言中变量的概念。给定变量的值随时间可能发生变化；类似地，当关系被更新时，关系实例的内容也随时间发生了变化。</p>
-</blockquote>
-
-        <h3 id="8开发系统互连参考模型">
-          <a href="#8开发系统互连参考模型" class="heading-link"><i class="fas fa-link"></i></a>8.开发系统互连参考模型</h3>
-      
-
-        <h4 id="1题目-8">
-          <a href="#1题目-8" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409170023.png" alt></p>
-
-        <h4 id="2题目解析-8">
-          <a href="#2题目解析-8" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p>中继器是物理层设备，其作用是对接收的信号进行再生放大，以延长传输的距离。</p>
-<p>网桥是数据链路层设备，可以识别MAC地址，进行帧转发。</p>
-<p>交换机是由硬件构成的多端口网桥，也是一种数据链路层设备。路由器是网络层设备，可以识别IP地址，进行数据包的转发。</p>
-</blockquote>
-
-        <h3 id="9数字证书">
-          <a href="#9数字证书" class="heading-link"><i class="fas fa-link"></i></a>9.数字证书</h3>
-      
-
-        <h4 id="1题目-9">
-          <a href="#1题目-9" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200409170206.png" alt></p>
-
-        <h4 id="2题目解析-9">
-          <a href="#2题目解析-9" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p>第一空考查的是关于用户身份进行认证也就是数字签名的认证，这里使用的应该是发送方的公钥，这4个选项中，能包含发送方公钥的只有A选项数字证书；<br></p>
-<p>第二空确保消息不可否认，也就是考查确保发送者身份的不可抵赖，所以这里使用的应该是发送方的数字签名。</p>
-</blockquote>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/04/08/2020年02月26日软件设计师每日一练/">2020年02月26日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-04-08</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-08</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">1.5k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">8分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1编译与解释">
-          <a href="#1编译与解释" class="heading-link"><i class="fas fa-link"></i></a>1.编译与解释</h3>
-      
-
-        <h4 id="1题目">
-          <a href="#1题目" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200408162457.png" alt></p>
-
-        <h4 id="2题目解析">
-          <a href="#2题目解析" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p>本题考查程序语言基础知识。<br></p>
-<p>对C源程序进行编译时，需建立符号表，其作用是记录源程序中<strong>各个符号（变量等）的必要信息</strong>，以辅助语义的正确性检查和代码生成，在编译过程中需要对符号表进行快速有效地查找、插入、修改和删除等操作。符号表的建立可以始于词法分析阶段，也可以放到语法分析和语义分析阶段，但符号表的使用有时会延续到目标代码的运行阶段。</p>
-</blockquote>
-
-        <h3 id="2数据的表示">
-          <a href="#2数据的表示" class="heading-link"><i class="fas fa-link"></i></a>2.数据的表示</h3>
-      
-
-        <h4 id="1题目-2">
-          <a href="#1题目-2" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200408162658.png" alt></p>
-
-        <h4 id="2题目解析-2">
-          <a href="#2题目解析-2" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p><strong>对阶时，小数向大数看齐；对阶是通过较小数的尾数右移实现的。</strong></p>
-</blockquote>
-
-        <h3 id="3cisc和risc">
-          <a href="#3cisc和risc" class="heading-link"><i class="fas fa-link"></i></a>3.CISC和RISC</h3>
-      
-
-        <h4 id="1题目-3">
-          <a href="#1题目-3" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200408162908.png" alt></p>
-
-        <h4 id="2题目解析-3">
-          <a href="#2题目解析-3" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<p>本题考查计算机复杂指令集。 答案 A</p>
-<div>
-	CISC计算机指复杂指令集计算机，是20世纪六、七十年代发展起来的系列计算机。这种计算机所支持的指令系统趋于多用途、强功能化。指令系统围绕着缩小与高级语言的语义差距以及有利于操作系统的优化而设计。指令系统的复杂化使得设计周期变长，正确性难于保证，不易维护。而且在复杂的指令系统中，只有少数基本指令是经常使用的，需要大量硬件支持的复杂指令利用率却很低。所以在70年代末，随着VLSI技术的发展产生了RISC计算机。</div>
-<br>
-<div>
-	RISC计算机指精简指令集计算机，这种计算机有下列特点。</div>
-<div>
-	(1)指令系统中只包含使用频率较高但不复杂的指令。</div>
-<div>
-	(2)指令长度固定，指令格式少，寻址方式少。</div>
-<div>
-	(3)只有存取数指令访问主存，其他指令都在寄存器之间运算。</div>
-<div>
-	(4)大部分指令在一个机器周期内完成，采用流水技术。</div>
-<div>
-	(5)CPU中增加了通用寄存器的数量。</div>
-<div>
-	(6)硬联逻辑控制，不用微程序控制技术。</div>
-<div>
-	(7)采用优化的编译，以有效地支持高级语言。</div>
-<p>​</p>
-
-        <h3 id="4分布式数据库">
-          <a href="#4分布式数据库" class="heading-link"><i class="fas fa-link"></i></a>4.分布式数据库</h3>
-      
-
-        <h4 id="1题目-4">
-          <a href="#1题目-4" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200408163059.png" alt></p>
-
-        <h4 id="2题目解析-4">
-          <a href="#2题目解析-4" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p>本题考查的是分布式数据库相关知识。<br></p>
-<ul>
-<li>分片透明：是指用户不必关系数据是如何分片的，它们对数据的操作在全局关系上进行，即关系如何分片对用户是透明的，因此，当分片改变时应用程序可以不变。分片透明性是最高层次的透明性，如果用户能在全局关系一级操作，则数据如何分布，如何存储等细节自不必关系，其应用程序的编写与集中式数据库相同。<br></li>
-<li>复制透明：用户不用关心数据库在网络中各个节点的复制情况，被复制的数据的更新都由系统自动完成。在分布式数据库系统中，可以把一个场地的数据复制到其他场地存放，应用程序可以使用复制到本地的数据在本地完成分布式操作，避免通过网络传输数据，提高了系统的运行和查询效率。但是对于复制数据的更新操作，就要涉及到对所有复制数据的更新。<br></li>
-<li>位置透明：是指用户不必知道所操作的数据放在何处，即数据分配到哪个或哪些站点存储对用户是透明的<br><br>
-局部映像透明性（逻辑透明）是最低层次的透明性，该透明性提供数据到局部数据库的映像，即用户不必关系局部DBMS支持哪种数据模型、使用哪种数据操纵语言，数据模型和操纵语言的转换是由系统完成的。因此，局部映像透明性对异构型和同构异质的分布式数据库系统是非常重要的。<br></li>
-</ul>
-<p>本题提到不需要了解具体如何分块存储，如果描述为不需要了解物理存储或存储位置，则为位置透明，而涉及到如果分块存储，应该为分片透明。对于分布式数据库，分片是一种大局性的划分，而物理上的存储位置则更为底层，所以对于如何分块存储，强调更多的是分片而不是物理位置。</p>
-</blockquote>
-
-        <h3 id="5数据的表示">
-          <a href="#5数据的表示" class="heading-link"><i class="fas fa-link"></i></a>5.数据的表示</h3>
-      
-
-        <h4 id="1题目-5">
-          <a href="#1题目-5" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200408163249.png" alt></p>
-
-        <h4 id="2题目解析-5">
-          <a href="#2题目解析-5" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p>​    在计算机中，n位补码（表示数据位），表示范围是-2<sup>n-1</sup>~+2<sup>n-1</sup>-1，其中最小值为人为定义，以n=8为例，其中-128的补码是人为定义的1000 0000。</p>
-</blockquote>
-
-        <h3 id="6白盒测试案例">
-          <a href="#6白盒测试案例" class="heading-link"><i class="fas fa-link"></i></a>6.白盒测试案例</h3>
-      
-
-        <h4 id="1题目-6">
-          <a href="#1题目-6" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200408163440.png" alt></p>
-
-        <h4 id="2题目解析-6">
-          <a href="#2题目解析-6" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p>本题考查软件测试方法中白盒测试的基础知识。<br></p>
-<p>**白盒测试也称为结构测试，**根据程序的内部结构和逻辑来设计测试用例，对程序的执行路径和过程进行测试，检查是否满足设计的需要。白盒测试常用的技术涉及不同覆盖标准，在测试时需根据指定的覆盖标准确定测试数据。</p>
-</blockquote>
-
-        <h3 id="7面向对象的基本概念">
-          <a href="#7面向对象的基本概念" class="heading-link"><i class="fas fa-link"></i></a>7.面向对象的基本概念</h3>
-      
-
-        <h4 id="1题目-7">
-          <a href="#1题目-7" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200408163547.png" alt></p>
-
-        <h4 id="2题目解析-7">
-          <a href="#2题目解析-7" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<blockquote>
-<p>单一职责原则：设计目的单一的类，本题描述“就一个类而言，应该仅有一个引起它变化的原因”属于单一职责原则。</p>
-<p>开放-封闭原则：对扩展开放，对修改封闭<br></p>
-<p>里氏（Liskov）替换原则：子类可以替换父类<br></p>
-<p>接口隔离原则：使用多个专门的接口比使用单一的总接口要好</p>
-</blockquote>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">71</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">21</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
+      </script></div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">73</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.json';
 

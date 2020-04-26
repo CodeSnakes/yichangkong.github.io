@@ -31,7 +31,414 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">YiChangKong</div><div class="header-banner-info__subtitle">Coding is my life, But not all!</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/03/28/2020年02月15日软件设计师每日一练/">2020年02月15日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-28</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">7.5k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">39分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1开发模型">
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">YiChangKong</div><div class="header-banner-info__subtitle">Coding is my life, But not all!</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/03/30/2020年02月17日软件设计师每日一练/">2020年02月17日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-30</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-30</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">1.8k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">10分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1总线系统">
+          <a href="#1总线系统" class="heading-link"><i class="fas fa-link"></i></a>1.总线系统</h3>
+      
+
+        <h4 id="1题目">
+          <a href="#1题目" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225223.png" alt></p>
+
+        <h4 id="2题目解析">
+          <a href="#2题目解析" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>总线复用，顾名思义就是一条总线实现多种功能。</p>
+<p>常见的总线复用方式有<strong>总线分时复用</strong>，它是指在不同时段利用总线上同一个信号线传送不同信号，例如，地址总线和数据总线共用一组信号线。采用这种方式的目的是减少总线数量，提高总线的利用率。</p>
+</blockquote>
+
+        <h3 id="2编译与解释">
+          <a href="#2编译与解释" class="heading-link"><i class="fas fa-link"></i></a>2.编译与解释</h3>
+      
+
+        <h4 id="1题目-2">
+          <a href="#1题目-2" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225434.png" alt></p>
+
+        <h4 id="2题目解析-2">
+          <a href="#2题目解析-2" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>​	用高级语言编写的程序不能直接被机器执行，而是经过相关的处理后，将其变成目标程序后才能被机器执行，而这一过程就是一个编译的过程，而实现这个功能的程序就称为编译程序。</p>
+</blockquote>
+
+        <h3 id="3算法基础与常见的算法">
+          <a href="#3算法基础与常见的算法" class="heading-link"><i class="fas fa-link"></i></a>3.算法基础与常见的算法</h3>
+      
+
+        <h4 id="1题目-3">
+          <a href="#1题目-3" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225525.png" alt></p>
+
+        <h4 id="2题目解析-3">
+          <a href="#2题目解析-3" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<ul>
+<li>
+<p><strong>分治法</strong>的设计思想是将一个难以直接解决的大问题分解成一些规模较少的相同问题以便各个击破，分而治之。<br></p>
+</li>
+<li>
+<p><strong>动态规划法</strong>与分治法类似，其基本思想也是将待求解问题分解成若干个子问题，先求解子问题，然后从这些子问题的解得到原问题的解。与分治法不同的是，适合于用动态规划法求解的问题，经分解得到的子问题往往不是独立的。若用分治法来解这类问题，则相同的子问题会被求解多次，以至于最后解决原问题需要耗费指数级时间。动态规划法可求解的问题一般具有最优子结构和重叠子问题，因此本题第一空选择B选项动态规划法。<br></p>
+</li>
+<li>
+<p><strong>贪心法</strong>经常用于解决最优化问题，但他的最优往往是从局部最优来考虑的，每一步都选最优的方案，但这种方案不一定能得到整体上的最优解。<br></p>
+</li>
+<li>
+<p><strong>回溯法</strong>是一种既带有系统性又带有跳跃性的搜索算法。它在包含问题的所有解的解空间树中，按照深度优先的策略，从根节点出发搜索解空间树。因此本题第二空选择C选项回溯法。</p><p></p>
+</li>
+</ul>
+</blockquote>
+
+        <h3 id="4gant图和pert图">
+          <a href="#4gant图和pert图" class="heading-link"><i class="fas fa-link"></i></a>4.Gant图和Pert图</h3>
+      
+
+        <h4 id="1题目-4">
+          <a href="#1题目-4" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225658.png" alt></p>
+
+        <h4 id="2题目解析-4">
+          <a href="#2题目解析-4" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>本题考查软件项目计划基础知识。<br></p>
+<p>软件项目计划的一个重要内容是<strong>安排进度</strong>，</p>
+<p>常用的方法有Gantt图和PERT图。</p>
+<ul>
+<li>Gantt图用水平条状图描述，它以日历为基准描述项目任务，可以清楚地表示任务的持续时间和任务之间的并行，但是不能清晰地描述各个任务之间的<strong>依赖关系</strong>。</li>
+<li>PERT图是一种网络模型，描述一个项目任务之间的关系。可以明确表达任务之间的依赖关系，即哪些任务完成后才能开始另一些任务，以及如期完成整个工程的关键路径。<br></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp; 图中任务流1→2→5→7→9的持续时间是15， 1→2→5→8→9的持续时间是13，1→3→6→8→9的持续时间是8， 4→6→8→9的持续时间为9。所以项目关键路径长度为15。事件6在非关键路径上，其后的任务需要时间为5，所以最晚开始时间=15-5=10。</p>
+</blockquote>
+
+        <h3 id="5多媒体技术概念">
+          <a href="#5多媒体技术概念" class="heading-link"><i class="fas fa-link"></i></a>5.多媒体技术概念</h3>
+      
+
+        <h4 id="1题目-5">
+          <a href="#1题目-5" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225921.png" alt></p>
+
+        <h4 id="2题目解析-5">
+          <a href="#2题目解析-5" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>图像分辨率与显示分辨率是两个不同的概念。图像分辨率确定的是组成一幅图像像素的数目，而显示分辨率确定的是显示图像的区域大小。它们之间的关系是:<br><br>
+　　①图像分辨率大于显示分辨率时，在屏幕上只能显示部分图像。例如，当图像分辨率为800 X 600，屏幕分辨率为640 X 480时，屏幕上只能显示一幅图像的64%左右。<br><br>
+　　②图像分辨率小于屏幕分辨率时，图像只占屏幕的一部分。例如，当图像分辨率为320 X 240，屏幕分辨率为640 X 480时，图像只占屏幕的1/4 。</p>
+</blockquote>
+
+        <h3 id="6cvs">
+          <a href="#6cvs" class="heading-link"><i class="fas fa-link"></i></a>6.CVS</h3>
+      
+
+        <h4 id="1题目-6">
+          <a href="#1题目-6" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230047.png" alt></p>
+
+        <h4 id="2题目解析-6">
+          <a href="#2题目解析-6" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>CVS的全称是Concurrent Version System，它是一个免费的协同版本控制工具，主要用于软件源码的维护。此外CVS可以维护任意文档的开发和使用，例如共享文件的编辑修改，而不仅仅局限于程序设计。CVS维护的文件类型可以是文本类型也可以是二进制类型。CVS基于客户端朋及务器模式，多个用户可通过网络（或本地）方式同时访问，从而使得CVS成为位于不同地点的人同时处理数据文件（特别是程序的源代码）时的首选。</p>
+</blockquote>
+
+        <h3 id="7数据库模式">
+          <a href="#7数据库模式" class="heading-link"><i class="fas fa-link"></i></a>7.数据库模式</h3>
+      
+
+        <h4 id="1题目-7">
+          <a href="#1题目-7" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230256.png" alt></p>
+
+        <h4 id="2题目解析-7">
+          <a href="#2题目解析-7" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230416.png" alt></p>
+
+        <h3 id="8tcpip协议族">
+          <a href="#8tcpip协议族" class="heading-link"><i class="fas fa-link"></i></a>8.TCP/IP协议族</h3>
+      
+
+        <h4 id="1题目-8">
+          <a href="#1题目-8" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230441.png" alt></p>
+
+        <h4 id="2题目解析-8">
+          <a href="#2题目解析-8" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>DHCP客户端可从DHCP服务器获得本机IP地址、DNS服务器的地址、DHCP服务器的地址、默认网关的地址等，但没有Web服务器、邮件服务器地址。</p>
+</blockquote>
+
+        <h3 id="9协议">
+          <a href="#9协议" class="heading-link"><i class="fas fa-link"></i></a>9.协议</h3>
+      
+
+        <h4 id="1题目-9">
+          <a href="#1题目-9" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330230555.png" alt></p>
+
+        <h4 id="2题目解析-9">
+          <a href="#2题目解析-9" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>IEEE 802.11标准定义的分布式协调功能采用了载波监听多路访问肿突避免（CSMA/CA协议）。在无线网中进行冲突检测是有困难的。例如，两个站由于距离过大或中间障碍物的分隔而检测不到冲突，但是位于它们之间的第三个站可能会检测到冲突，这就是所谓隐蔽终端问题。采用冲突避免的办法可以解决隐蔽终端的问题。802.11定义了一个帧间隔（Inter Frame Spacing ，IFS ）时间。另外还有一个后退计数器，其初始值是由随机数发生器设置的，递减计数直到0。基本的操作过程如下：<br><br>
+　　（1）如果一个站有数据要发送并且监听到信道忙，则产生一个随机数设置自己的后退计数器并坚持监听；<br><br>
+　　（2）监听到信道空闲后等待一个IFS时间，然后开始计数，最先计数完的站可以开始发送；<br><br>
+　　（3）其他站在监听到有新的站开始发送后暂停计数，在新的站发送完成后再等待一个 IFS时间继续计数，直到计数完成开始发送。<br><br>
+　　CSMA/CA协议可以采用载波检测方法发现信道空闲，也可以采用能量检测方法发现信道空闲。这个算法对参与竞争的站是公平的，基本上是按先来先服务的顺序获得发送的机会。</p>
+</blockquote>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/03/29/2020年02月16日软件设计师每日一练/">2020年02月16日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-30</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">2.4k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">13分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1代数关系">
+          <a href="#1代数关系" class="heading-link"><i class="fas fa-link"></i></a>1.代数关系</h3>
+      
+
+        <h4 id="1题目">
+          <a href="#1题目" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223304.png" alt></p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223332.png" alt><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223359.png" alt></p>
+
+        <h4 id="2题目解析">
+          <a href="#2题目解析" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223454.png" alt></p>
+</blockquote>
+
+        <h3 id="2编译与解析">
+          <a href="#2编译与解析" class="heading-link"><i class="fas fa-link"></i></a>2.编译与解析</h3>
+      
+
+        <h4 id="1题目-2">
+          <a href="#1题目-2" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223521.png" alt></p>
+
+        <h4 id="2题目解析-2">
+          <a href="#2题目解析-2" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>在编译时产生的<strong>目标文件</strong>都是从地址0开始的，连接时将各个目标文件进行符号替换，这时会修改相应的地址，最后产生一个从地址0开始的可执行文件。在该可执行文件中的地址称为逻辑地址。</p>
+</blockquote>
+
+        <h3 id="3数据压缩技术">
+          <a href="#3数据压缩技术" class="heading-link"><i class="fas fa-link"></i></a>3.数据压缩技术</h3>
+      
+
+        <h4 id="1题目-3">
+          <a href="#1题目-3" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330223635.png" alt></p>
+
+        <h4 id="2题目解析-3">
+          <a href="#2题目解析-3" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>本题主要考查编码方法。<br></p>
+<p>根据解码后数据与原始数据是否完全一致可以分为两大类：</p>
+<p>一类是熵编码、冗余压缩法，也称无损压缩法、无失真压缩法；</p>
+<p>二是熵压缩法，也称有损压缩法、有失真压缩法。其中熵编码的一个重要特征就是解码后数据与原始数据完全一致，要达到这种效果，显然，那么压缩比就较低。这种方法一般适用于文本、数据的压缩，当然，如果要求有高质量的视音频的话，也可以采用这种方式压缩。</p>
+<p>常见的熵编码方法有</p>
+<p>​			LZ编码（Lempel-Zev编码）、行程编码、哈夫曼编码（Huffman编码）。而小波变换编码、线性预测编			码、		PCM、DPCM都是有损压缩。<br></p>
+<p>哈夫曼编码是一种可变长的编码方式，该方法完全依据字符出现的概率来构造异字头的平均长度最短的码字。<br><br>
+小波变换编码的原理是因为大多数语音和图像信号倾向于非均匀频谱，即只集中在某一时间段的某一频段，小波包基表示信号时正好有这种自适应性，可通过选定一个阈值将这此时间段和频段的相应系数保留编码而丢弃其他时间段和频段上的小幅值的系数；另外，小波包基的每次分解都把信号分成低频和高频两部分，而多数的语音和图像信号的统计特性表明大幅值的系数往往集中在低频区内，这样可给那些小幅值系数分配很少的比特数，甚至可以不传输或存储，从而压缩了数据。<br></p>
+<p>线性预测编码中被预测的信号各样值都是此前样值的线性组合的预测编码。<br></p>
+<p>PCM（脉冲编码调制）是把一个时间连续，取值连续的模拟信号变换成时间离散，取值离散的数字信号后在信道中传输。脉冲编码调制就是对模拟信号先抽样，再对样值幅度量化，编码的过程。</p>
+</blockquote>
+
+        <h3 id="4tcpip协议族">
+          <a href="#4tcpip协议族" class="heading-link"><i class="fas fa-link"></i></a>4.TCP/IP协议族</h3>
+      
+
+        <h4 id="1题目-4">
+          <a href="#1题目-4" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224044.png" alt></p>
+
+        <h4 id="2题目解析-4">
+          <a href="#2题目解析-4" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>TCP与UDP区别：</p>
+<p>1、TCP面向连接（如打电话要先拨号建立连接）;UDP是无连接的，即发送数据之前不需要建立连接；</p>
+<p>2、TCP提供可靠的服务。也就是说，通过TCP连接传送的数据，无差错，不丢失，不重复，且按序到达;UDP尽最大努力交付，即不保证可靠交付；</p>
+<p>3、TCP面向字节流，实际上是TCP把数据看成一连串无结构的字节流;UDP是面向报文的；UDP没有拥塞控制，因此网络出现拥塞不会使源主机的发送速率降低（对实时应用很有用，如IP电话，实时视频会议等）；</p>
+<p>4、每一条TCP连接只能是点到点的;UDP支持一对一，一对多，多对一和多对多的交互通信；</p>
+<p>5、TCP首部开销20字节;UDP的首部开销小，只有8个字节；</p>
+<p>6、TCP的逻辑通信信道是全双工的可靠信道，UDP则是不可靠信道，整体来看UDP开销较小。</p>
+</blockquote>
+
+        <h3 id="5面向对象的基本概念">
+          <a href="#5面向对象的基本概念" class="heading-link"><i class="fas fa-link"></i></a>5.面向对象的基本概念</h3>
+      
+
+        <h4 id="1题目-5">
+          <a href="#1题目-5" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224346.png" alt></p>
+
+        <h4 id="2题目解析-5">
+          <a href="#2题目解析-5" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>静态绑定：绑定的是对象的静态类型，某特性（比如函数）依赖于对象的静态类型，发生在编译期。<br><br>
+动态绑定：绑定的是对象的动态类型，某特性（比如函数）依赖于对象的动态类型，发生在运行期。</p>
+</blockquote>
+
+        <h3 id="6数据库设计过程">
+          <a href="#6数据库设计过程" class="heading-link"><i class="fas fa-link"></i></a>6.数据库设计过程</h3>
+      
+
+        <h4 id="1题目-6">
+          <a href="#1题目-6" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224441.png" alt></p>
+
+        <h4 id="2题目解析-6">
+          <a href="#2题目解析-6" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>软件设计必须依据对软件的需求来进行，结构化分析的结果为结构化设计提供了最基本的输入信息。从分析到设计往往经历以下流程：<br></p>
+<p>（1）研究、分析和审查数据流图。根据穿越系统边界的信息流初步确定系统与外部接口。<br><br>
+（2）根据数据流图决定问题的类型。数据处理问题通常有两种类型：变换型和事务型。针对两种不同的类型分别进行分析处理。<br><br>
+（3）由数据流图推导出系统的初始结构图。<br><br>
+（4）利用一些启发式原则来改进系统的初始结构图，直到得到符合要求的结构图为止。<br><br>
+（5）根据分析模型中的实体关系图和数据字典进行数据设计，包括数据库设计或数据文件的设计。<br><br>
+（6）在设计的基础上，依旧分析模型中的加工规格说明、状态转换图进行过程设计。<br><br>
+所以接口设计的主要依据是数据流图，接口设计的任务主要是描述软件与外部环境之间的交互关系，软件内模块之间的调用关系。</p>
+</blockquote>
+
+        <h3 id="7排序与查找">
+          <a href="#7排序与查找" class="heading-link"><i class="fas fa-link"></i></a>7.排序与查找</h3>
+      
+
+        <h4 id="1题目-7">
+          <a href="#1题目-7" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224700.png" alt></p>
+
+        <h4 id="2题目解析-7">
+          <a href="#2题目解析-7" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>装填因子α表示了哈希表的装满程度，显然，α越大发生冲突的可能性就越大。</p>
+</blockquote>
+
+        <h3 id="8保护期限">
+          <a href="#8保护期限" class="heading-link"><i class="fas fa-link"></i></a>8.保护期限</h3>
+      
+
+        <h4 id="1题目-8">
+          <a href="#1题目-8" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224756.png" alt></p>
+
+        <h4 id="2题目解析-8">
+          <a href="#2题目解析-8" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>根据《中华人民共和国商标法》第三十八条：注册商标有效期满，需要继续使用的，应当在期满前六个月内申请续展注册。专利权和著作权到期后都无法延长，而商业秘密权无期限限制</p>
+</blockquote>
+
+        <h3 id="9dns查询">
+          <a href="#9dns查询" class="heading-link"><i class="fas fa-link"></i></a>9.DNS查询</h3>
+      
+
+        <h4 id="1题目-9">
+          <a href="#1题目-9" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330224858.png" alt></p>
+
+        <h4 id="2题目解析-9">
+          <a href="#2题目解析-9" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+
+        <h4 id="3知识引申">
+          <a href="#3知识引申" class="heading-link"><i class="fas fa-link"></i></a>3.知识引申</h4>
+      
+<blockquote>
+<p>DNS域名系统（服务）协议</p>
+<p>域名系统（服务）协议（DNS）<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E6%98%AF" target="_blank" rel="noopener">是</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>一种<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%88%86%E5%B8%83%E5%BC%8F%E7%BD%91%E7%BB%9C/8951687" target="_blank" rel="noopener">分布式网络</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%9B%AE%E5%BD%95%E6%9C%8D%E5%8A%A1/10413830" target="_blank" rel="noopener">目录服务</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，主要用于域名与 IP 地址的相互转换，以及控制因特网的电子邮件的发送。</p>
+<p>大多数因特网服务依赖于 DNS 而工作，一旦 DNS 出错，就无法连接 Web 站点，电子邮件的发送也会中止。</p>
+<p>DNS 有两个独立的方面 ：</p>
+<p>定义了命名语法和规范，以利于通过名称委派域名权限。基本语法是： local.group.site； 定义了如何实现一个<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">分布式计算机系统</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，以便有效地将域名转换成 IP 地址</p>
+<p>在 DNS 命名方式中，采用了分散和分层的机制来实现域名空间的委派授权以及域名与地址相转换的授权。通过使用 DNS 的命名方式来为遍布全球的<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87" target="_blank" rel="noopener">网络设备</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>分配域名，而这则是由分散在世界各地的服务器实现的。</p>
+<p>理论上， DNS 协议中的域名标准阐述了一种可用任意标签值的分布式的抽象域名空间。任何组织都可以建立域名系统，为其所有分布结构选择标签，但大多数 DNS 协议用户遵循官方因特网域名系统使用的分级标签。常见的顶级域是： COM 、 EDU 、 GOV 、 NET 、 ORG 、 BIZ ，另外还有一些带国家代码的顶级域。</p>
+<p>DNS 的分布式机制支持有效且可靠的名字到 IP 地址的映射。多数名字可以在本地映射，不同站点的服务器相互合作能够解决大网络的名字与 IP 地址的映射问题。单个服务器的故障不会影响 DNS 的正确操作。 DNS 是一种通用协议，它并不仅限于网络设备名称。</p>
+
+        <h2 id="域名系统">
+          <a href="#域名系统" class="heading-link"><i class="fas fa-link"></i></a>域名系统</h2>
+      
+<p>域名系统（Domain Name System缩写DNS，Domain Name被译为域名）是因特网的一项核心服务，它作为可以将域名和IP地址相互映射的一个分布式数据库，能够使人更方便的访问互联网，而不用去记住能够被机器直接读取的IP数串。</p>
+<p>域名系统(Domain Name System,DNS)是Internet上解决网上机器命名的一种系统。就像拜访朋友要先知道别人家怎么走一样，Internet上当一台主机要访问另外一台主机时，必须首先获知其地址，TCP/IP中的IP地址是由四段以“.”分开的数字组成，记起来总是不如名字那么方便，所以，就采用了域名系统来管理名字和IP的对应关系。</p>
+</blockquote>
+
+        <h3 id="10内存">
+          <a href="#10内存" class="heading-link"><i class="fas fa-link"></i></a>10.内存</h3>
+      
+
+        <h4 id="1题目-10">
+          <a href="#1题目-10" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
+      
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200330225104.png" alt></p>
+
+        <h4 id="2题目解析-10">
+          <a href="#2题目解析-10" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
+      
+<blockquote>
+<p>本题考查计算机组成基础知识。<br><br>
+本题是按<strong>字节编址</strong>，因此一个存储单元容量为1B，直接计算16进制地址包含的存储单元个数即可。<br><br>
+DABFFH-B3000H+1=27C00H=12<em>16<sup>2</sup>+7</em>16<sup>3</sup>+2*16<sup>4</sup>=159K，按字节编址，故此区域的存储容量为159KB。<br></p>
+</blockquote>
+<h4 id><a class="markdownIt-Anchor" href="#"></a> </h4>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/03/28/2020年02月15日软件设计师每日一练/">2020年02月15日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-28</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">7.5k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">39分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1开发模型">
           <a href="#1开发模型" class="heading-link"><i class="fas fa-link"></i></a>1.开发模型</h3>
       
 
@@ -1714,246 +2121,7 @@ CRC(32位) = X32+X26+X23+X16+X12+X11+X10+X8+X7+X5+X4+X2+X+1<br>
             });
             document.body.appendChild(img);
           });
-      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/03/21/简单算法优化/">简单算法优化</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-21</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-21</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">52</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">1分</span></span></div></header><div class="post-body"><div class="post-excerpt"><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/03/21/2020年02月08日软件设计师每日一练/">2020年02月08日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-21</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-21</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">2.9k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">17分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1数据结构">
-          <a href="#1数据结构" class="heading-link"><i class="fas fa-link"></i></a>1…数据结构</h3>
-      
-
-        <h4 id="1题目">
-          <a href="#1题目" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200321220324.png" alt></p>
-
-        <h4 id="2题目解析">
-          <a href="#2题目解析" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<p>在<code>不考虑字对齐规则</code>的情况下，C语言中一个结构体变量的存储区大小就是其所有成员所需存储区大小之和，一个联合体变量的存储区大小就是其各成员所需存储区大小中的<code>最大者</code>。因此题目中给定的联合体union T变量需要的存储区大小就是存储一个double类型变量的大小（即8字节），struct T类型变量的存储区最小应为int类型成员w存储区大小（4字节）与union T类型成员U的存储区大小之和，即12字节。</p>
-
-        <h3 id="2uml">
-          <a href="#2uml" class="heading-link"><i class="fas fa-link"></i></a>2.uml</h3>
-      
-
-        <h4 id="1题目-2">
-          <a href="#1题目-2" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200321220620.png" alt></p>
-
-        <h4 id="2题目解析-2">
-          <a href="#2题目解析-2" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<p>
-	活动图可以更好地描述出行为的细节，阐明了业务用例实现的工作流程。活动图主要由以下一些元素组成：<br>
-	（1）初始节点和活动终点。在活动图中有两个特殊的节点，一个用来表示活动的初始节点，它用一个实心圆表示，在一张不包括子图的活动图中有且只有一个初始节点。而另一个则是表示活动处理完成的活动终点，它用一个圆圈内加一个实心圆来表示，在活动图中可能包含多个活动终点。<br>
-	（2）活动状态。是活动图中最主要的元素之一，它用来表示一个活动，如图中的a11等。<br>
-	（3）转换。当一个活动结束时，控制流就会马上传递给下一个活动状态，在活动图中称之为转换，用一条带箭头的直线来表示，转移表示各种活动状态的先后顺序。<br>
-	（4）分支与监护条件。对于任何一个控制流而言，都一定会存在分支、循环等形式的控制流。在活动图中，分支用一个菱形表示，它有一个进入转换（箭头从外指向分支符号），一个或多个离开转换（箭头从分支符号指向外）。而每个离开转换上都会有一个监护条件，用来表示满足什么条件的时候执行该转换。但要注意，在多个离开转换上的监护条件不能有矛盾，否则就会使得流程产生混乱。<br>
-	（5）分岔与汇合。在实际的控制流中，除了顺序结构、分支结构和循环结构之外，还可能存在并发的事件流。在UML中，可以采用一个同步线来说明这些并行控制流的分岔和汇合。<br>
-	在本题中，要求出那些活动是可以同时执行的，这就要求他们没有先后关系，显然选项A和C不正确，而对于D选项，a66和a77分别是判定条件连个不同结果下要执行的活动，也不是可以同时执行的活动，因此答案选B。</p>
-
-        <h3 id="3软件开发过程基础知识">
-          <a href="#3软件开发过程基础知识" class="heading-link"><i class="fas fa-link"></i></a>3.软件开发过程基础知识</h3>
-      
-
-        <h4 id="1题目-3">
-          <a href="#1题目-3" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200321221047.png" alt></p>
-
-        <h4 id="2题目解析-3">
-          <a href="#2题目解析-3" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<ul>
-<li>本题考查软件开发过程中的风险分析基础知识。<br>
-风险分析包括风险识别、风险预测、风险评估和风险控制等4个不同活动，</li>
-<li>​    在风险识别过程中，要识别潜在的预算、进度、个体、资源、用户和需求等方面的问题以及对整个项目的影响，并建立风险条目检查表，列出所有可能的风险事项。</li>
-<li>​    在风险预测过程中，需要建立一个表示风险可能性的参考标准，描述风险条目的结果，估计风险对项目的影响等。</li>
-</ul>
-
-        <h4 id="3知识引申">
-          <a href="#3知识引申" class="heading-link"><i class="fas fa-link"></i></a>3.知识引申</h4>
-      
-<p><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/zhouzuoluo/article/details/102751168" target="_blank" rel="noopener">软件风险基础知识</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-
-        <h3 id="4进程的状态">
-          <a href="#4进程的状态" class="heading-link"><i class="fas fa-link"></i></a>4进程的状态.</h3>
-      
-
-        <h4 id="1题目-4">
-          <a href="#1题目-4" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200321221454.png" alt></p>
-
-        <h4 id="2题目解析-4">
-          <a href="#2题目解析-4" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<p>​               在多线程运行环境中，每个线程自己独有资源很少，只有：程序计数器，寄存器和栈，其它的资源均是共享进程的，所以也只有这些独有资源是不共享的。答案 C</p>
-
-        <h3 id="5ip地址与子网划分">
-          <a href="#5ip地址与子网划分" class="heading-link"><i class="fas fa-link"></i></a>5.IP地址与子网划分</h3>
-      
-
-        <h4 id="1题目-5">
-          <a href="#1题目-5" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200321221646.png" alt></p>
-
-        <h4 id="2题目">
-          <a href="#2题目" class="heading-link"><i class="fas fa-link"></i></a>2.题目</h4>
-      
-<p>变长子网的可用主机数计算公式为2<sup>n</sup>-2（n为表示主机的位数）/26即主机位为32-26=6，所以可用主机地址为64-2=62。</p>
-<p>用IP地址155.32.80.192与子网掩码进行逻辑与运算得出该IP地址所在的网络号为：155.32.80.192；所在网段的广播地址为：155.32.80.255；所以与该IP地址不在同一网段的是选项D</p>
-
-        <h3 id="6文法">
-          <a href="#6文法" class="heading-link"><i class="fas fa-link"></i></a>6.文法</h3>
-      
-
-        <h4 id="1题目-6">
-          <a href="#1题目-6" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200321222023.png" alt></p>
-
-        <h4 id="2题目解析-5">
-          <a href="#2题目解析-5" class="heading-link"><i class="fas fa-link"></i></a>2.题目解析</h4>
-      
-<p>本题考查程序语言基础知识。<br><br>
-　　推导就是从文法的开始符号S出发，反复使用产生式，将产生式左部的非终结符替换为右部的文法符号序列〔展开产生式用功表示），直到产生一个终结符的序列时为止.从文法G的开始符号出发，能推导出的终结符号序列（句子）的全体称为文法G产生的语言。<br><br>
-　　对于上下文无关文法S→11 | 1001|S0|SS，从S出发可推导出11，1001， 110， 1111，11110和10010等，将这些二进制序列转换成对应的十进制数可知，它们都能被3整除。</p><p></p>
-
-        <h4 id="3知识引申编译原理文法">
-          <a href="#3知识引申编译原理文法" class="heading-link"><i class="fas fa-link"></i></a>3.知识引申(编译原理——文法)</h4>
-      
-<p><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/Helloyongwei/article/details/79638785" target="_blank" rel="noopener">知识博客</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-
-        <h3 id="7软件质量保证">
-          <a href="#7软件质量保证" class="heading-link"><i class="fas fa-link"></i></a>7.软件质量保证</h3>
-      
-
-        <h4 id="1题目-7">
-          <a href="#1题目-7" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200321222412.png" alt></p>
-
-        <h4 id="2题目-2">
-          <a href="#2题目-2" class="heading-link"><i class="fas fa-link"></i></a>2.题目</h4>
-      
-<p>ISO/IEC 9126软件质量模型，该模型的质量特性和质量子特性如下：<br></p>
-<ol>
-<li>功能性（适合性、准确性、互用性、依从性、安全性）；</li>
-<li>可靠性（成熟性、容错性、易恢复性）；</li>
-<li>易使用性（易理解性、易学性、易操作性）；</li>
-<li>效率（时间特性、资源特性）；</li>
-<li>可维护性（易分析性、易改变性、稳定性、易测试性）；</li>
-<li>可移植性（适应性、易安装性、一致性、易替换性）。</li>
-<li>安全性是功能特性的子特性。</li>
-</ol>
-
-        <h3 id="8后缀表达式">
-          <a href="#8后缀表达式" class="heading-link"><i class="fas fa-link"></i></a>8.后缀表达式</h3>
-      
-
-        <h4 id="1题目-8">
-          <a href="#1题目-8" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200321222904.png" alt></p>
-
-        <h4 id="2题目-3">
-          <a href="#2题目-3" class="heading-link"><i class="fas fa-link"></i></a>2.题目</h4>
-      
-<p>参考答案 D 我是 C</p>
-<p>本题考查逻辑表达式的计算及程序语言处理基础知识。<br><br>
-&nbsp; “逻辑与运算”的优先级高于“逻辑或运算”。<br><br>
-&nbsp; “逻辑与运算”表达式“x∧Y”的短路求值逻辑是：若x为假，则可知“x∧Y”的值为假，无需&nbsp;&nbsp;&nbsp; 再对y求值，因此只有在x为真时继续对y求值。<br><br>
-&nbsp; “逻辑或运算”表达式“x∨y”的短路求值逻辑是：若x为真，则可知“x∨y”的值为真，无需再对y求值，因此只有在x为假时继续对y求值。<br><br>
-&nbsp;&nbsp;&nbsp; 对于逻辑表达式“a∧b∨c∧（b ∨ x&gt;0）”，从运算符的优先级方面考虑需先对“a∧b”求值，然后对“c∧（b∨ x&gt;0）”求值，最后进行“∨”运算，因此后缀式为“ab∧cbx0&gt;∨∧∨”。</p><p></p>
-
-        <h4 id="3算法实现">
-          <a href="#3算法实现" class="heading-link"><i class="fas fa-link"></i></a>3.算法实现</h4>
-      
-<blockquote>
-<p>将一个普通的中序<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E8%A1%A8%E8%BE%BE%E5%BC%8F" target="_blank" rel="noopener">表达式</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>转换为<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F" target="_blank" rel="noopener">逆波兰表达式</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>的一般算法是：</p>
-<p>首先需要分配2个栈，一个作为临时存储运算符的栈S1（含一个结束符号），一个作为输入逆波兰式的栈S2（空栈），S1栈可先放入优先级最低的运算符#，注意，中缀式应以此最低优先级的运算符结束。可指定其他字符，不一定非#不可。从中缀式的左端开始取字符，逐序进行如下步骤：</p>
-<p>（1）若取出的字符是<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E6%93%8D%E4%BD%9C%E6%95%B0" target="_blank" rel="noopener">操作数</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，则分析出完整的运算数，该操作数直接送入S2栈</p>
-<p>（2）若取出的字符是<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E8%BF%90%E7%AE%97%E7%AC%A6" target="_blank" rel="noopener">运算符</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，则将该运算符与S1栈栈顶元素比较，如果该<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7" target="_blank" rel="noopener">运算符优先级</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>(不包括括号运算符)大于S1栈栈顶运算符优先级，则将该运算符进S1栈，否则，将S1栈的栈顶运算符弹出，送入S2栈中，直至S1栈栈顶运算符低于（不包括等于）该运算符优先级，最后将该运算符送入S1栈。</p>
-<p>（3）若取出的字符是“（”，则直接送入S1栈顶。</p>
-<p>（4）若取出的字符是“）”，则将距离S1栈栈顶最近的“（”之间的运算符，逐个<span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%87%BA%E6%A0%88" target="_blank" rel="noopener">出栈</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>，依次送入S2栈，此时抛弃“（”。</p>
-<p>（5）重复上面的1~4步，直至处理完所有的输入字符</p>
-<p>（6）若取出的字符是“#”，则将S1栈内所有运算符（不包括“#”），逐个出栈，依次送入S2栈。</p>
-<p>完成以上步骤，S2栈便为逆波兰式输出结果。不过S2应做一下逆序处理。便可以按照逆波兰式的计算方法计算了！</p>
-</blockquote>
-
-        <h3 id="9专业英语">
-          <a href="#9专业英语" class="heading-link"><i class="fas fa-link"></i></a>9.专业英语</h3>
-      
-
-        <h4 id="1题目-9">
-          <a href="#1题目-9" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p>​	&nbsp; &nbsp; &nbsp; &nbsp;Observe that for the programmer， as for the chef， the urgency of the patron（顾客）may govern the scheduled completion of the task， but it cannot govern the actual completion. An omelette（煎鸡蛋）， promised in two minutes， may appear to be progressing nicely.But when it has not set in two minutes， the customer has two choices—waits or eats it raw.Software customers have had（ &nbsp;）choices.<br></p>
-<p>​	　　Now I do not think software（ &nbsp;）have less inherent courage and firmness than chefs， nor than other engineering managers. But false（ &nbsp;）to match the patron’s desired date is much more common in our discipline than elsewhere in engineering. It is very（ &nbsp;）to make a vigorous， plausible， and job risking defense of an estimate that is derived by no quantitative method， supported by little data， and certified chiefly by the hunches of the managers.</p>
-<p>​			Clearly two solutions are needed.We need to develop and publicize productivity figures， bug-incidence figures， estimating rules， and so on. The whole profession can only profit from（ &nbsp;）such data.Until estimating is on a sounder basis， individual managers will need to stiffen their backbones and defend their estimates with the assurance that their poor hunches are better than wish derived estimates.</p>
-
-        <h4 id="2题目翻译">
-          <a href="#2题目翻译" class="heading-link"><i class="fas fa-link"></i></a>2.题目翻译</h4>
-      
-<p>
-	&nbsp; &nbsp; &nbsp; &nbsp;观察一下编程人员，你可能会发现，同厨师一样，某项任务的计划进度，可能受限于顾客要求的紧迫程度，但紧迫程度无法控制实际的完成情况。就像约好在两分钟内完成一个煎蛋，看上去可能进行得非常好。但当它无法在两分钟内完成时，顾客只能选择等待或者生吃煎蛋。软件顾客的情况类似。<br>
-	　　我现在并不认为软件经理内在的勇气和坚持不如厨师，或者不如其他工程经理。但为了满足顾客期望的日期而造成的不合理进度安排，在软件领域中却比其他的任何工程领域要普遍得多。而且，非量化方法的采用，少得可怜的数据支特，加上完全借助软件经理的直觉，这样的方式很难生产出健壮可靠和规避风险的估计。<br>
-	　　显然我们需要两种解决方案。开发并推行生产率图表、缺陷率、估算规则等，整个组织最终会从这些数据的共享上获益。或者在基于可靠基础的估算出现之前，项目经理需要挺直腰杆并坚持他们的估计，确信自己的经验和直觉总比从期望得出的估计要强得多。</p>
-
-        <h3 id="10编译与解析">
-          <a href="#10编译与解析" class="heading-link"><i class="fas fa-link"></i></a>10.编译与解析</h3>
-      
-
-        <h4 id="1题目-10">
-          <a href="#1题目-10" class="heading-link"><i class="fas fa-link"></i></a>1.题目</h4>
-      
-<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200321223914.png" alt></p>
-
-        <h4 id="2题目-4">
-          <a href="#2题目-4" class="heading-link"><i class="fas fa-link"></i></a>2.题目</h4>
-      
-<ol>
-<li>目标代码生成阶段应考虑直接影响到目标代码速度的三个问题：</li>
-<li>一是如何生成较短的目标代码；</li>
-<li>二是如何充分利用计算机中的寄存器，减少目标代码访问存储单元的次数；</li>
-<li>三是如何充分利用计算机指令系统的特点，以提高目标代码的质量。</li>
-</ol>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">71</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">21</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
+      </script></div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">73</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.json';
 
