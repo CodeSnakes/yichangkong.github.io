@@ -31,7 +31,304 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">YiChangKong</div><div class="header-banner-info__subtitle">Coding is my life, But not all!</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/02/03/position详解/">position详解</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-02-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-13</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">3.3k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">21分</span></span></div></header><div class="post-body"><div class="post-excerpt"><div style="text-align: center;">
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">YiChangKong</div><div class="header-banner-info__subtitle">Coding is my life, But not all!</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/03/14/2020年02月01日软件设计师每日一练/">2020年02月01日软件设计师每日一练</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-14</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-14</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">1.9k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">12分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1正规式">
+          <a href="#1正规式" class="heading-link"><i class="fas fa-link"></i></a>1.正规式</h3>
+      
+<ol>
+<li>
+<p>技术点解析</p>
+<p><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/apollo_miracle/article/details/101829315" target="_blank" rel="noopener">正规式解释引用网址</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><strong>单词的描述工具-正规式</strong> ：多数程序设计语言的单词的语法均可用正规文法来表示。<br>
+正规文法 (3型文法) ：任一产生式的形式都为A→aB或A→a，其中A∈VN ，B∈VN ，a∈VT * , 正规文法描述的是VT上的正规集。</p>
+<p>**例：**程序设计语言中几类单词的描述规则：标识符、无符号整数、运算符…。</p>
+<p><strong>正规式（regular expression也叫正则表达式）</strong>：正规式是定义正规集的数学工具，是说明单词的模式(pattern)的一种表示法，用它描述单词符号时一般比正规文法更简洁。正规式和正规集 (即其描述的语言) 的定义可以用递归的形式给出。</p>
+<p><strong>正规式 :</strong></p>
+<pre><code> 设∑是有穷字母表，并定义辅助字母表∑’={Φ, ε, | , . , *, (, )}
+ ε,Φ都是∑上的正规式，它们所表示的正规集为{ε}, Φ ;
+ 任何a是一个正规式，若a∈∑，它所表示的正规集为{a}；
+ 
+ 如果R1和R2是正规式，它们表示的正规集分别为L1和L2，则 R1|R2 , R1·R2 , R1* , (R1) 也是正规式，
+ 并且它们所表示的正规集分别为L1∪L2 ；L1L2；L1* ； L1
+ 仅有有限次使用上述三步骤而定义的表达式才是∑上的正规式，仅有这些正规式表示的字集才是∑上的正规集。
+ 
+ 注意： 不要混淆Φ和ε，正规表达式ε描述的语言只含一个空字符串ε，而Φ表示的语言不含有任何字符串。
+ 程序设计语言的单词都能用正规式来定义。若两个正规式e1,e2表示的正规集相同，则称它们等价。记作:e1=e2
+
+ 例 : 令∑={a,b},则∑上的正规式和相应正规集为
+ 
+ 正规式		正规集
+ a			{a}
+ a|b			{a,b}
+ ab			{ab}
+ (a|b)(a|b)	{aa,ab,ba,bb}
+ a*	  		{ε ,a,aa, ……任意个a的串}
+ (a|b)*		{ε ,a,aa, ……任意个a的串}{ε ,a,b,aa,ab,bb ……所有由 a和b组成的串}
+ (a|b)* (aa|bb)(a|b)*	∑上所有含有两个相继的a或两个相继的b组成的串}
+ 
+ 例 : 令∑={a，d}，其中a代表字母,d代表数字，则∑上的正规式 r=a(a|d) * 定义的正规集为
+ 
+ {a,aa,ad,add,……}， 即：字母(字母|数字) * ,它表示的正规集中的每个元素的模式是“字母打头的字母数字串”,也就是多数程序语言中标识符的词法规则.
+</code></pre>
+</li>
+<li>
+<p>题型</p>
+ <p>
+ 以下关于语言L={a<sup>n</sup>b<sup>n</sup>|n&gt;=1}的叙述中，正确的是（ &nbsp;）。</p>
+<p>A.可用正规式“aa<em>bb</em>”描述，但不能通过有限自动机识别 <br><br>
+B.可用正规式“a<sup>m</sup>b<sup>m</sup>”表示，但可用有限自动机识别 <br></p>
+<p>C.不能用正规式表示，但可用有限自动机识别 <br><br>
+D.既不能用正规式表示，也不能通过有限自动机识别<br><br></p>
+</li>
+<li>
+<p>题型解析</p>
+<p>与L语言最接近的正规式为：aa<em>bb</em><br>
+与L语言最接近的有限自动机为：</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/%E6%AD%A3%E8%A7%84%E5%BC%8F.jpg" alt></p>
+<p>但无论如何无法构造出完全等价的正规式，因为在L语言中，n的取值无论为多少，a与b的数量都相等，而aa<em>bb</em>无法保障这一点。</p>
+</li>
+<li>
+<p>引申正规表达式 》<span class="exturl"><a class="exturl__link" href="https://www.runoob.com/regexp/regexp-rule.html" target="_blank" rel="noopener">菜鸟</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>正则表达式 - 语法<br>
+正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等。</p>
+</li>
+</ol>
+
+        <h3 id="2网络规划与设计">
+          <a href="#2网络规划与设计" class="heading-link"><i class="fas fa-link"></i></a>2.网络规划与设计</h3>
+      
+<pre><code>层次化网络设计中各个层次的主要功能包括：&lt;br&gt;
+接入层：用户接入、计费管理、MAC地址认证、收集用户信息。&lt;br&gt;
+汇聚层：网络访问策略控制、数据包处理、过滤、寻址。&lt;br&gt;
+核心层：高速数据交换，常用冗余机制。
+</code></pre>
+
+        <h3 id="3编译与解析">
+          <a href="#3编译与解析" class="heading-link"><i class="fas fa-link"></i></a>3.编译与解析</h3>
+      
+<pre><code>用高级语言编写的程序不能直接被机器执行，而是经过相关的处理后，
+将其变成目标程序后才能被机器执行，而这一过程就是一个编译的过程，而实现这个功能的程序就称为编译程序。
+</code></pre>
+
+        <h3 id="4多媒体技术基本概念">
+          <a href="#4多媒体技术基本概念" class="heading-link"><i class="fas fa-link"></i></a>4.多媒体技术基本概念</h3>
+      
+<pre><code>dpi是Donts Per Inch 的缩写，也就是每英寸的像素
+</code></pre>
+
+        <h3 id="5计算机硬件基础">
+          <a href="#5计算机硬件基础" class="heading-link"><i class="fas fa-link"></i></a>5.计算机硬件基础</h3>
+      
+<ol>
+<li>题</li>
+</ol>
+<p>某计算机系统由下图所示的部件构成，假定每个部件的千小时可靠度R均为0.9，则该系统的千小时可靠度约为（）。<br>
+<img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200314204140.png" alt></p>
+<ol start="2">
+<li>解析 <p>
+  本题考查系统可靠度的概念。<br>
+  串联部件的可靠度=各部件的可靠度的乘积。<br>
+  并联部件的可靠度=1－各部件失效率的乘积。<br>
+  题目中给出的系统由两个部件分别串联然后并联，
+ 最好将并联的组成再与一个部件串联，要求解这类问题，应该首先计算出并联中的串联，计算结果为&nbsp;0.9*0.9，如何两部分并联，计算结果为（1-（1-0.9*0.9）*（1-0.9*0.9）），最后再串联，计算结果为&nbsp;&nbsp; 0.9*（1-（1-0.9*0.9）*（1-0.9*0.9））=0.867。</p>
+</li>
+</ol>
+
+        <h3 id="6颜色深度">
+          <a href="#6颜色深度" class="heading-link"><i class="fas fa-link"></i></a>6.颜色深度</h3>
+      
+<pre><code>  颜色深度决定了彩色图像中可出现的最多颜色数，或灰度图像中的最大灰度等级。如一幅图像的图像深度为b位，则该图像的最多颜色数或灰度级为2b种.
+显然，表示一个像索颜色的位数越多，它能表达的颜色数或灰度级就越多。一幅彩色图像的每个像素有16位，
+则最大颜色数目为216=65 536。就是说像素的深度为16位，每个像素可以是216种颜色中的一种。
+表示一个像索的位数越多，它能表达的颜色数目就越多，它的深度就越深。
+</code></pre>
+
+        <h3 id="7数组与矩阵">
+          <a href="#7数组与矩阵" class="heading-link"><i class="fas fa-link"></i></a>7.数组与矩阵</h3>
+      
+<p>1.题</p>
+<pre><code>设某n阶三对角矩阵A&lt;sub&gt;nxn&lt;/sub&gt;的示意图如下图所示。若将该三对角矩阵的非零元素
+按行存储在一维数组B （1≤k≤3*n-2）中，则k与i、j的对应关系是（ &amp;nbsp;）。&lt;/p&gt;  
+</code></pre>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200314205206.png" alt></p>
+<p>2.解析</p>
+<pre><code>该题最简单的解题思路是代入法。当i=1,j=1时，k=1。&lt;br&gt;
+选项A：k=2i+j-2=2+1-2=1；&lt;br&gt;
+选项B：k=2i-j+2=2-1+2=3；&lt;br&gt;
+选项C：k=3i+j-1=3+1-1=3；&lt;br&gt;
+选项D：k=3i-j+2=3+1+2=4。&lt;br&gt;
+此时可以除排B，C，D，直接选A。若用一个例子，不能排除所有错误选项， 
+则而举一个例子来进行代入，排除更多错误选项。&lt;br&gt;
+</code></pre>
+
+        <h3 id="8内存">
+          <a href="#8内存" class="heading-link"><i class="fas fa-link"></i></a>8.内存</h3>
+      
+<p>1.题<br>
+若某计算机字长为32位，内存容量为2GB，按字编址，则可寻址范围为（ &nbsp;）。<br>
+2.解析</p>
+<pre><code>计算机字长为32位，按字编址（即1个字32个位，4个字节），
+则总容量为2GB的内存可规划的单元地址数量为：2GB/32bit=2GB/4B=0.5G=512M。 p&gt; 
+</code></pre>
+
+        <h3 id="9fm音乐合成">
+          <a href="#9fm音乐合成" class="heading-link"><i class="fas fa-link"></i></a>9.FM音乐合成</h3>
+      
+<pre><code>改变数字载波频率可以改变乐音的音调。&lt;br&gt;
+改变它的幅度就可以改变乐音的音高。&lt;br&gt;
+</code></pre>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/03/11/Stack/">Stack</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-03-11</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-03-12</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">611</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">4分</span></span></div></header><div class="post-body"><div class="post-excerpt"><p><img src="https://gitee.com//yichangkong/FigureBed/raw/master/img/stack.png" alt></p>
+
+        <h3 id="1简介">
+          <a href="#1简介" class="heading-link"><i class="fas fa-link"></i></a>1.简介</h3>
+      
+<p>栈（stack）又名堆栈，它是一种运算受限的线性表。限定仅在表尾进行插入和删除操作的线性表。这一端被称为栈顶，相对地，把另一端称为栈底。向一个栈插入新元素又称作进栈、入栈或压栈，它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；从一个栈删除元素又称作出栈或退栈，它是把栈顶元素删除掉，使其相邻的元素成为新的栈顶元素。</p>
+
+        <h3 id="2基本算法">
+          <a href="#2基本算法" class="heading-link"><i class="fas fa-link"></i></a>2.基本算法</h3>
+      
+<pre><code>1．进栈（PUSH）算法
+	①若TOP≥n时，则给出溢出信息，作出错处理（进栈前首先检查栈是否已满，满则溢出；不满则作②）；
+	②置TOP=TOP+1（栈指针加1，指向进栈地址）；
+	③S(TOP)=X，结束（X为新进栈的元素）；
+2．退栈（POP）算法
+	①若TOP≤0，则给出下溢信息，作出错处理(退栈前先检查是否已为空栈， 空则下溢；不空则作②)；
+	②X=S(TOP)，（退栈后的元素赋给X）：
+	③TOP=TOP-1，结束（栈指针减1，指向栈顶）。
+</code></pre>
+
+        <h3 id="3项目实践">
+          <a href="#3项目实践" class="heading-link"><i class="fas fa-link"></i></a>3.项目实践</h3>
+      
+<pre><code>	package DataStructures.Stack;
+	
+	/**
+	 * @author yichangkong
+	 * @create 2020-03-10-16:29
+	 * &lt;p&gt;用数组模拟栈结构
+	 */
+	public class ArrayStackDemo {
+	
+	    public static void main(String[] args) {
+	
+	        //测试
+	        //添加数据
+	        ArrayStack stack = new ArrayStack(8);
+	
+	        stack.push(1);
+	        stack.push(2);
+	        stack.push(8);
+	        stack.push(4);
+	        stack.push(5);
+	        stack.list();
+	    }
+	    static class ArrayStack {
+	        private int maxSize;//栈的大小
+	        private int[] stack;//数组模拟栈  测试数据放在数组
+	        private int top = -1;
+	
+	        //构造器
+	        public ArrayStack(int maxSize) {
+	            this.maxSize = maxSize;
+	            stack = new int[this.maxSize];
+	        }
+	
+	
+	        //判断是否栈满
+	        public boolean ifFull() {
+	            return top == maxSize - 1;
+	
+	        }
+	
+	        //判断栈是否为空
+	        public boolean ifEmpty() {
+	
+	            return top == -1;
+	        }
+	
+	        //入栈
+	        public void push(int value) {
+	
+	            //判断是否栈满
+	            if (ifFull()) return;
+	            //添加
+	            top++;
+	            stack[top] = value;
+	
+	        }
+	
+	        //出栈 先入后出
+	        public int pop() {
+	
+	            //判断是否kong
+	            if (ifEmpty()) {
+	                System.out.println("栈空 请插入数据进行测试");
+	                return 0;
+	            }
+	            //try { return stack[top]; } finally { top--; }这个方法着实有些撒比了
+	            //以为 show 和 pop两个之间的top会影响
+	
+	            int cur = top;
+	
+	            int value = stack[top];
+	            top--;
+	            return value;
+	
+	        }
+	        //显示栈的情况 比如栈的size
+	
+	        public void list() {
+	            if (ifEmpty()) {
+	                System.out.println("栈空 请插入数据进行测试");
+	                return;
+	            }
+	            for (int i = top; i &gt; -1; i--) {
+	
+	                System.out.println(stack[i]);
+	
+	            }
+	
+	        }
+	    }
+	
+	}
+</code></pre>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/02/03/position详解/">position详解</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-02-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-13</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">3.3k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">21分</span></span></div></header><div class="post-body"><div class="post-excerpt"><div style="text-align: center;">
 <img src="http://ww1.sinaimg.cn/large/007SCiiVgy1gbj7vr8hu0j30i207d3ym.jpg">
 </div>
 
@@ -879,73 +1176,7 @@ return “redirect:/list.html”;<br>
             });
             document.body.appendChild(img);
           });
-      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/09/06/石英调度/">石英调度</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-09-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-09-06</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">52</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">1分</span></span></div></header><div class="post-body"><div class="post-excerpt"><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/09/02/mybatis报错/">mybatis报错java.lang.UnsupportedOperationException原因及处理方法</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-09-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-09-02</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">487</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">3分</span></span></div></header><div class="post-body"><div class="post-excerpt"><ol>
-<li>起因</li>
-</ol>
-<p>今天在请求数据库数据时报错java.lang.UnsupportedOperationException，从字面上理解错误的含义就是不支持的操作异常，后面定位到错误发生在数据库sql语句中，具体原因就是resultType="java.util.List"有问题。返回的结果是一个List类型的集合，所有我用了这个resultType，但是不对的。需要使用string。</p>
-<hr>
-<ol start="2">
-<li>解释</li>
-</ol>
-<p>下面是我百度出来，别人总结的resultType可用类型</p>
-<pre><code>	resultType: 
-	1. 基本类型 ：resultType=基本类型 
-	2. List类型： resultType=List中元素的类型 
-	3. Map类型 单条记录：resultType =map 
-</code></pre>
-<p>多条记录：resultType =Map中value的类型</p>
-<pre><code>1. 如果返回值为基本类型，则resultType=基本类型，比如resultType=java.lang.Integer,
-那sql语句中只返回一个int类型数据，通常用于统计数量 
-2. 如果返回值为list类型，则resultType=List中元素的类型，比如你需要返回一个List类型的数据，那么这里
-resultType=”java.lang.String”，如果需要返回一个实体类，那么resultType=”com.pjf.mybatis.car”以此类推。 
-3. 如果返回值为map单条类型，比如{username=”张三”}，那么resultType =”map”。 
-4. 如果返回值为map多条记录，比如{res=”实体类”}，实体类就是你要请求的数据实体类，
-那么resultType =Map中value的类型，比如resultType=”com.pjf.mybatis.car”
-</code></pre>
-<p>返回多条记录的map时，key为任意一属性，值为对象类型，不过key需要通过@MapKey(“hotelName”)指定对象中一个属性名为key</p>
-<pre><code>	public interface HotelMapper {
-	    @MapKey("hotelName")
-	    public Map&lt;String, Hotel&gt; getHotel(Integer i);
-	}
-</code></pre>
-<p>所以错误java.lang.UnsupportedOperationException主要是因为xml返回值类型有问题导致的，当然可能也有其他原因造成的。</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/page/5/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">73</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
+      </script></div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/page/5/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">75</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.json';
 

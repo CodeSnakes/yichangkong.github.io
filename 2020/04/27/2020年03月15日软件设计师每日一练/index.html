@@ -1,0 +1,518 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.0.0-rc.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.0.0-rc.0" type="image/png" sizes="32x32"><meta name="360-site-verification" content="85f7e8dc96dcd0b1a29c6f1cc30c4a73"><meta name="description" content="1.多级存储系统          题目">
+<meta name="keywords" content="软件设计师考题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年03月15日软件设计师每日一练">
+<meta property="og:url" content="https://yichangkong.github.io/2020/04/27/2020年03月15日软件设计师每日一练/index.html">
+<meta property="og:site_name" content="YiChangKong">
+<meta property="og:description" content="1.多级存储系统          题目">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427215541.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427215841.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427215909.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427220106.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427220220.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427220329.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427220429.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427220622.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427220917.png">
+<meta property="og:image" content="http://www.educity.cn/tiku/UploadFiles/2010-9/928_463451.jpg">
+<meta property="og:image" content="http://www.educity.cn/tiku/UploadFiles/2010-9/928_207154.jpg">
+<meta property="og:updated_time" content="2020-04-27T14:18:59.649Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2020年03月15日软件设计师每日一练">
+<meta name="twitter:description" content="1.多级存储系统          题目">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427215541.png"><meta name="keywords" content="Liu Jun, YiChangKong"><meta name="description" content="爱了"><title>2020年03月15日软件设计师每日一练</title><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/5.13.0/css/all.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">2020年03月15日软件设计师每日一练</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-04-27</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-27</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">3.1k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">17分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><h3 id="1多级存储系统">
+          <a href="#1多级存储系统" class="heading-link"><i class="fas fa-link"></i></a>1.多级存储系统</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427215541.png" alt></p>
+<a id="more"></a>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题考查计算机系统存储器方面的基础知识。</p>
+<p>​	&nbsp;&nbsp;&nbsp; 计算机系统的存储器按所处的位置可分为内存和外存。按构成存储器的材料可分为磁存储器、半导体存储器和光存储器。按存储器的工作方式可分为读写存储器和只读存储器。按访问方式可分为按地址访问的存储器和按内容访问的存储器。按寻址方式可分为随机存储器、顺序存储器和直接存储器。</p>
+<p>​	&nbsp;<strong>&nbsp;&nbsp; 相联存储器是一种按内容访问的存储器。</strong></p>
+</blockquote>
+</li>
+<li>
+<p>知识牵引</p>
+<blockquote>
+<p><span class="exturl"><a class="exturl__link" href="https://baike.baidu.com/item/%E5%85%B3%E8%81%94/165901" target="_blank" rel="noopener">关联</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>存储器（相联存储器），是一种不根据地址而是根据存储内容来进行存取的存储器，可以实现快速地查找块表。既可以按照地址寻址也可以按照内容寻址（通常是某些字段），为了与传统寄存器作区别，称为按内容寻址的存储器。</p>
+
+        <h2 id="原理">
+          <a href="#原理" class="heading-link"><i class="fas fa-link"></i></a>原理</h2>
+      
+<p>写入信息时按顺序写入，不需要地址。</p>
+<p>读出时，要求中央处理单元给出一个相联关键字，用它和存储器中所有单元中的一部分信息进行比较，若它们相等，则将此单元中余下的信息读出。这是实现存储器并行操作的一种有效途径，特别适合于信息的检索和更新。</p>
+<p>考虑表3-1所示的表格，假设它存放在计算机的主存储器中。该表格由五个记录所组成，每个记录包含四个子段：职工号、姓名、出生年月和工资数。</p>
+<p>在表3-1中，信息的存贮与检索问题往往涉及到访问一个记录中的某个子段，如“李四的出生年月是什么时间？”“职工号是5199109的人的姓名是什么？”这类问题如果采用传统的随机存储器，那么一定要确切地指出“李四”的那一项在表格中的物理地址(n+1)与职工号“5199109”和姓名“李四”没有逻辑上的关系，因而用常规方法寻找上述答案时，增加了程序的复杂性。</p>
+<p>表3-1 存放在存储器中的一张表格</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427215841.png" alt></p>
+<p>但是如果我们选择记录的一个子段作为地址来访问存储器时，那么会明显地带来好处，例如，我们选职工号5199109作为地址来访问存储器，那么很快就能知道5199109号是“李四”，“1960年09月”生，工资数为“4000元”。</p>
+<p>上述表格的问题采用相联存储器结构，就能圆满得到解决。一般而言，相联存储器是指其中任一存储项都可以直接用该项的内容作为地址来存取的存储器。选用来寻址存储器的子段叫做关键字，简称为键。这样，存放在相联存储器的项中的项可以看成具有下列格式：</p>
+<p>KEY，DATA</p>
+<p>其中键KEY是地址，而数据DATA是读写信息。</p>
+<p>由此可知，相联存储器的基本原理是把存储单元所存内容的某一部分作为检索项(即关键字项)，去检索该存储器，并将存储器中与该检索项符合的存储单元内容进行读出或写入。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="2软件质量保证">
+          <a href="#2软件质量保证" class="heading-link"><i class="fas fa-link"></i></a>2.软件质量保证</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427215909.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>McCall软件质量模型从软件产品的运行、修正和转移三个方面确定了11个质量特性，其中运行方面包含了正确性、可靠性、效率、完整性、使用性这些质量特性。修正方面包含了维护性、测试性、灵活性这3个质量特性。转移方面包含了维护性移植性、复用性、共运行性这3个质量特性。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="3其他">
+          <a href="#3其他" class="heading-link"><i class="fas fa-link"></i></a>3.其他</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427220106.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>按顺序方式执行时间为（4+2+3）△t * 600=5400△t</p>
+<p>流水线方式：单条指令所需时间+（n-1）*（流水线周期），其中，流水线周期是指：指令分段执行中时间最长的一段。该题中时间最长的一段为4△t，所以流水线的周期为：4△t；所以该题按照流水线方式执行的时间为：（4+2+3）△t+（600-1）4△t=2405△t</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="4白盒测试案例">
+          <a href="#4白盒测试案例" class="heading-link"><i class="fas fa-link"></i></a>4.白盒测试案例</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427220220.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>白盒测试常用的技术是逻辑覆盖，即考查用测试数据运行被测程序时对程序逻辑的覆盖程度。主要的覆盖标准有六种：语句覆盖、判定覆盖、条件覆盖、判定/条件覆盖、组合条件覆盖和路径覆盖。<br><br>
+<strong>（1）语句覆盖</strong><br><br>
+语句覆盖是指选择足够多的测试用例，使得运行这些测试用例时，被测程序的每个语句至少执行一次。很显然，语句覆盖是一种很弱的覆盖标准。<br><br>
+<strong>（2）判定覆盖</strong><br><br>
+判定覆盖又称分支覆盖，它的含义是，不仅每个语句至少执行一次，而且每个判定的每种可能的结果（分支）都至少执行一次。判定覆盖比语句覆盖强，但对程序逻辑的覆盖程度仍然不高。<br><br>
+<strong>（3）条件覆盖</strong><br><br>
+条件覆盖的含义是，不仅每个语句至少执行一次，而且使判定表达式中的每个条件都取到各种可能的结果。条件覆盖不一定包含判定覆盖，判定覆盖也不一定包含条件覆盖。<br><br>
+<strong>（4）判定/条件覆盖</strong><br><br>
+同时满足判定覆盖和条件覆盖的逻辑覆盖称为判定/条件覆盖。它的含义是，选取足够的测试用例，使得判定表达式中每个条件的所有可能结果至少出现一次，而且每个判定本身的所有可能结果也至少出现一次。<br><br>
+<strong>（5）条件组合覆盖</strong><br><br>
+条件组合覆盖的含义是，选取足够的测试用例，使得每个判定表达式中条件结果的所有可能组合至少出现一次。显然，满足条件组合覆盖的测试用例，也一定满足判定/条件覆盖。因此，条件组合覆盖是上述五种覆盖标准中最强的一种。然而，条件组合覆盖还不能保证程序中所有可能的路径都至少经过一次。<br><br>
+<strong>（6）路径覆盖</strong><br><br>
+路径覆盖的含义是，选取足够的测试用例，使得程序的每条可能执行到的路径都至少经过一次（如果程序中有环路，则要求每条环路径至少经过一次）。路径覆盖实际上考虑了程序中各种判定结果的所有可能组合，因此是一种较强的覆盖标准。<br><br>
+本题的第二问比较复杂，关键是我们要清楚程序流程图中有几条路径，然后为每条路径设置一个测试用例。<br><br>
+在本题给出的程序流程图中，如果我们将判定“x&lt;=15&amp;&amp;x&gt;0”规定为第1个判定，“x&gt;15”规定为第2个判定，“i&lt;3”规定为第3个判定的话，那么本题中的路径有：第1个判定为N，第2个判定为N；第1个判定为N，第2个判定为Y，第3个判定一直为Y，后再取N（这里要注意，由于在第3个判定前，给i赋初值为0，因此这个判定每次都是先为Y，循环后再为N）；第1个判定为Y，第3个判定先为Y，然后再为N。总共只有这3条路径，因此至少需要设置3个测试用例来满足路径覆盖。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="5数据的表示">
+          <a href="#5数据的表示" class="heading-link"><i class="fas fa-link"></i></a>5.数据的表示</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427220329.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>采用8位整数补码表示数据，数据的表示范围是-128至127，因此在各选择中运算会发生溢出的是C。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="6信息摘要与数字签名">
+          <a href="#6信息摘要与数字签名" class="heading-link"><i class="fas fa-link"></i></a>6.信息摘要与数字签名</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427220429.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>《软件设计师教程（第5版）》P45页：</p>
+<p>MD5是一种摘要算法，经过一系列处理后，算法的输出由四个32位分组组成，将这四个32位分组级联后将生成一个128位散列值。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="7传值与传址">
+          <a href="#7传值与传址" class="heading-link"><i class="fas fa-link"></i></a>7.传值与传址</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427220622.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题采用引用调用，会改变实参的值。对于实参a，传递给g(a)之后，在g(a)函数，表现为形参x。</p>
+<p>根据g(x)代码：m=5*2=10，x=10-1=9，返回值x+m=19；</p>
+<p>返回f()代码，此时a（即g(x)中的x）的值已经改变，为9；c等于g(a)的返回值，也就是19。</p>
+<p>最终可得f()的返回值a+c=28。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="8死锁">
+          <a href="#8死锁" class="heading-link"><i class="fas fa-link"></i></a>8.死锁</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200427220917.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题考查对操作系统死锁方面基本知识掌握的程度。系统中同类资源分配不当会引起死锁。一般情况下，若系统中有m个单位的存储器资源，它被n个进程使用，当每个进程都要求w个单位的存储器资源，当m&lt;nw时，可能会引起死锁。<br><br>
+　　情况a：m=2，n= 1，w=2，系统中有2个资源，1个进程使用，该进程最多要求2个资源，所以不会发生死锁。<br><br>
+　　情况b：m=2，n=2，w=1，系统中有2个资源，2个进程使用，每个进程最多要求1个资源，所以不会发生死锁。<br><br>
+　　情况c：m=2，n=2，w=2，系统中有2个资源，2个进程使用，每个进程最多要求2个资源，此时，采用的分配策略是轮流地为每个进程分配，则第一轮系统先为每个进程分配1个，此时，系统中已无可供分配的资源，使得各个进程都处于等待状态导致系统发生死锁，这时进程资源图如下图所示。</p><p></p>
+<p>
+	<img src="http://www.educity.cn/tiku/UploadFiles/2010-9/928_463451.jpg"></p>
+<p>
+	　　情况d：m=4，n=3，w=2，系统中有4个资源，3个进程使用，每个进程最多要求2个资源，此时，采用的分配策略是轮流地为每个进程分配，则第一轮系统先为每个进程分配1个资源，此时，系统中还剩1个资源，可以使其中的一个进程得到所需资源运行完毕，所以不会发生死锁。<br>
+	　　情况e：m=4，n=3，w=3，系统中有4个资源，3个进程使用，每个进程最多要求3个资源，此时，采用的分配策略是轮流地为每个进程分配，则第一轮系统先为每个进程分配1个，第二轮系统先为一个进程分配1个，此时，系统中已无可供分配的资源，使得各个进程都处于等待状态导致系统发生列锁，这时进程资源图如下图所示。</p>
+<p>
+	<img src="http://www.educity.cn/tiku/UploadFiles/2010-9/928_207154.jpg"><br>
+	&nbsp; &nbsp; &nbsp; &nbsp;因此，情况c和e可能会发生死锁。<br>
+	&nbsp;</p>
+<p>
+	　　第二空发分析如下：<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;对于c情况，若将m加1，则情况c：m=3，n=2，w=2，系统中有3个资源，2个进程使用，每个进程最多要求2个资源，系统先为每个进程分配1个，此时，系统中还剩1个可供分配的资源，使得其中的一个进程能得到所需资源执行完，并释放所有资源使另一个进程运行完；若将w减1，则情况c：m=2，n=2，w=1，系统中有2个资源，2个进程使用，每个进程最多要求1个资源，系统为每个进程分配1个，此时进程都能够运行完成，并释放所有资源，不会发生死锁。</p><p>对于情况e并没有正确的选项符合要求，只有B选项最贴近正确答案。<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; 因此，当m加1或w减1时，c和e不会发生死锁。
+</p></blockquote>
+</li>
+</ol>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/04/27/2020年03月15日软件设计师每日一练/">https://yichangkong.github.io/2020/04/27/2020年03月15日软件设计师每日一练/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/软件设计师考题/">软件设计师考题</a></span></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2020/04/27/2020年03月14日软件设计师每日一练/"><span class="paginator-prev__text">2020年03月14日软件设计师每日一练</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="minivaline-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1多级存储系统"><span class="toc-number">1.</span> <span class="toc-text">
+          1.多级存储系统</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#原理"><span class="toc-number"></span> <span class="toc-text">
+          原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2软件质量保证"><span class="toc-number">1.</span> <span class="toc-text">
+          2.软件质量保证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3其他"><span class="toc-number">2.</span> <span class="toc-text">
+          3.其他</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4白盒测试案例"><span class="toc-number">3.</span> <span class="toc-text">
+          4.白盒测试案例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5数据的表示"><span class="toc-number">4.</span> <span class="toc-text">
+          5.数据的表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6信息摘要与数字签名"><span class="toc-number">5.</span> <span class="toc-text">
+          6.信息摘要与数字签名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7传值与传址"><span class="toc-number">6.</span> <span class="toc-text">
+          7.传值与传址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8死锁"><span class="toc-number">7.</span> <span class="toc-text">
+          8.死锁</span></a></li></ol></li></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">75</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
+  var isXML = true;
+  var search_path = 'search.json';
+
+  if (!search_path) {
+    search_path = 'search.xml';
+  } else if (/json$/i.test(search_path)) {
+    isXML = false;
+  }
+
+  var path = '/' + search_path;
+  $.ajax({
+    url: path,
+    dataType: isXML ? 'xml' : 'json',
+    async: true,
+    success: function (res) {
+      var datas = isXML ? $('entry', res).map(function () {
+        // 将 XML 转为 JSON
+        return {
+          title: $('title', this).text(),
+          content: $('content', this).text(),
+          url: $('url', this).text()
+        };
+      }).get() : res;
+      var $input = $('.search-input input');
+      var $result = $('.search-results');
+      // 搜索对象（标题、内容）的权重，影响显示顺序
+      var WEIGHT = { title: 100, content: 1 };
+      var searchPost = function () {
+        var searchText = $input.val().toLowerCase().trim();
+        // 根据空白字符分隔关键字
+        var keywords = searchText.split(/[\s]+/);
+        // 搜索结果
+        var matchPosts = [];
+
+        // 有多个关键字时，将原文字整个保存下来
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        // 防止未输入字符时搜索
+        if (searchText.length > 0) {
+          datas.forEach(function (data) {
+            var isMatch  = false;
+            // 没有标题的文章使用预设的 i18n 变量代替
+            var title = (data.title && data.title.trim()) || '[ 文章无标题 ]';
+            var titleLower = title && title.toLowerCase();
+            // 删除 HTML 标签 和 所有空白字符
+            var content = data.content && data.content.replace(/<[^>]+>/g, '');
+            var contentLower = content && content.toLowerCase();
+            // 删除重复的 /
+            var postURL = data.url && decodeURI(data.url).replace(/\/{2,}/g, '/');
+            // 标题中匹配到的关键词
+            var titleHitSlice = [];
+            // 内容中匹配到的关键词
+            var contentHitSlice = [];
+
+            keywords.forEach(function (keyword) {
+              /**
+              * 获取匹配的关键词的索引
+              * @param {String} keyword 要匹配的关键字
+              * @param {String} text 原文字
+              * @param {Boolean} caseSensitive 是否区分大小写
+              * @param {Number} weight 匹配对象的权重。权重大的优先显示
+              * @return {Array}
+              */
+              function getIndexByword (word, text, caseSensitive, weight) {
+                if (!word || !text) {
+                  return [];
+                };
+
+                var startIndex = 0; // 每次匹配的开始索引
+                var index = -1;     // 匹配到的索引值
+                var result = [];    // 匹配结果
+
+                if (!caseSensitive) {
+                  word = word.toLowerCase();
+                  text = text.toLowerCase();
+                }
+
+                while((index = text.indexOf(word, startIndex)) !== -1) {
+                  var hasMatch = false;
+                  // 索引位置相同的关键词，保留长度较长的
+                  titleHitSlice.forEach(function (hit) {
+                    if (hit.index === index && hit.word.length < word.length) {
+                      hit.word = word;
+                      hasMatch = true;
+                    }
+                  });
+                  startIndex = index + word.length;
+                  !hasMatch && result.push({ index: index, word: word, weight: weight });
+                }
+                return result;
+              }
+              titleHitSlice = titleHitSlice.concat(getIndexByword(keyword, titleLower, false, WEIGHT.title));
+              contentHitSlice = contentHitSlice.concat(getIndexByword(keyword, contentLower, false, WEIGHT.content));
+            });
+
+            var hitTitle = titleHitSlice.length;
+            var hitContent = contentHitSlice.length;
+
+            if (hitTitle > 0 || hitContent > 0) {
+              isMatch = true;
+            }
+            if (isMatch) {
+              ;[titleHitSlice, contentHitSlice].forEach(function (hit) {
+                // 按照匹配文字的索引的递增顺序排序
+                hit.sort(function (left, right) {
+                  return left.index - right.index;
+                });
+              });
+              /**
+              * 给文本中匹配到的关键词添加标记，从而进行高亮显示
+              * @param {String} text 原文本
+              * @param {Array} hitSlice 匹配项的索引信息
+              * @param {Number} start 开始索引
+              * @param {Number} end 结束索引
+              * @return {String}
+              */
+              function highlightKeyword (text, hitSlice, start, end) {
+                if (!text || !hitSlice || !hitSlice.length) {
+                  return;
+                }
+
+                var result = '';
+                var startIndex = start;
+                var endIndex = end;
+                hitSlice.forEach(function (hit) {
+                  if (hit.index < startIndex) {
+                    return;
+                  }
+
+                  var hitWordEnd = hit.index + hit.word.length;
+                  result += text.slice(startIndex, hit.index);
+                  result += '<b>' + text.slice(hit.index, hitWordEnd) + '</b>';
+                  startIndex = hitWordEnd;
+                });
+                result += text.slice(startIndex, endIndex);
+                return result;
+              }
+
+              var postData = {};
+              // 文章总的搜索权重
+              var postWeight = titleHitSlice.length * WEIGHT.title + contentHitSlice.length * WEIGHT.content;
+              // 标记匹配关键词后的标题
+              var postTitle = highlightKeyword(title, titleHitSlice, 0, title.length) || title;
+              // 标记匹配关键词后的内容
+              var postContent;
+              // 显示内容的长度
+              var SHOW_WORD_LENGTH = 200;
+              // 命中关键词前的字符显示长度
+              var SHOW_WORD_FRONT_LENGTH = 20;
+              var SHOW_WORD_END_LENGTH = SHOW_WORD_LENGTH - SHOW_WORD_FRONT_LENGTH;
+
+              // 截取匹配的第一个字符，前后共 200 个字符来显示
+              if (contentHitSlice.length > 0) {
+                var firstIndex = contentHitSlice[0].index;
+                var start = firstIndex > SHOW_WORD_FRONT_LENGTH ? firstIndex - SHOW_WORD_FRONT_LENGTH : 0;
+                var end = firstIndex + SHOW_WORD_END_LENGTH;
+                postContent = highlightKeyword(content, contentHitSlice, start, end);
+              } else { // 未匹配到内容，直接截取前 200 个字符来显示
+                postContent = content.slice(0, SHOW_WORD_LENGTH);
+              }
+              postData.title = postTitle;
+              postData.content = postContent;
+              postData.url = postURL;
+              postData.weight = postWeight;
+              matchPosts.push(postData);
+            }
+          });
+        }
+
+        var resultInnerHtml = '';
+        if (matchPosts.length) {
+          // 按权重递增的顺序排序，使权重大的优先显示
+          matchPosts.sort(function (left, right) {
+            return right.weight - left.weight;
+          });
+          resultInnerHtml += '<ul>';
+          matchPosts.forEach(function (post) {
+            resultInnerHtml += '<li><a class="search-results-title" href="' + post.url + '">';
+            resultInnerHtml += post.title;
+            resultInnerHtml += '</a><div class="search-results-content">';
+            resultInnerHtml += post.content;
+            resultInnerHtml += '</div></li>';
+          });
+          resultInnerHtml += '</ul>';
+        } else {
+          resultInnerHtml += '<div class="search-results-none"><i class="far fa-meh"></i></div>';
+        }
+        $result.html(resultInnerHtml);
+      };
+      $input.on('input', searchPost);
+      $input.on('keyup', function (e) {
+        if (e.keyCode === Stun.utils.codeToKeyCode('Enter')) {
+          searchPost();
+        }
+      });
+    }
+  });
+}
+
+function closeSearch () {
+  $('body').css({ overflow: 'auto' });
+  $('.search-popup').css({ display: 'none' });
+  $('.search-mask').css({ display: 'none' });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  Stun.utils.pjaxReloadLocalSearch = function () {
+    $('.header-nav-search').on('click', function (e) {
+      e.stopPropagation();
+      $('body').css('overflow', 'hidden');
+      $('.search-popup')
+        .velocity('stop')
+        .velocity('transition.expandIn', {
+          duration: 300,
+          complete: function () {
+            $('.search-popup input').focus();
+          }
+        });
+      $('.search-mask')
+        .velocity('stop')
+        .velocity('transition.fadeIn', {
+          duration: 300
+        });
+
+      initSearch();
+    });
+    $('.search-mask, .search-close').on('click', function () {
+      closeSearch();
+    });
+    $(document).on('keydown', function (e) {
+      // Escape <=> 27
+      if (e.keyCode === Stun.utils.codeToKeyCode('Escape')) {
+        closeSearch();
+      }
+    });
+  };
+
+  Stun.utils.pjaxReloadLocalSearch();
+}, false);</script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/minivaline/dist/MiniValine.min.js"></script><script>function loadminivaline () {
+  new MiniValine({
+    el: '#minivaline-container',
+    appId: 'xuXblFdHlR0fcnQsdkLwkqvG-gzGzoHsz',
+    appKey: 'ac3XS1leXcL95PWUhYV6gx0E',
+    placeholder: 'Write a Comment',
+    lang: '',
+    adminEmailMd5: '',
+    math: true,
+    md: true
+  });
+
+}
+
+if (false) {
+  loadminivaline();
+} else {
+  window.addEventListener('DOMContentLoaded', loadminivaline, false);
+}</script><script src="/js/utils.js?v=2.0.0-rc.0"></script><script src="/js/stun-boot.js?v=2.0.0-rc.0"></script><script src="/js/scroll.js?v=2.0.0-rc.0"></script><script src="/js/header.js?v=2.0.0-rc.0"></script><script src="/js/sidebar.js?v=2.0.0-rc.0"></script></body></html>
