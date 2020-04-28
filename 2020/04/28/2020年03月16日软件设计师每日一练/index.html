@@ -1,0 +1,540 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.0.0-rc.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.0.0-rc.0" type="image/png" sizes="32x32"><meta name="360-site-verification" content="85f7e8dc96dcd0b1a29c6f1cc30c4a73"><meta name="description" content="1.数码压缩技术">
+<meta name="keywords" content="软件设计师考题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年03月16日软件设计师每日一练">
+<meta property="og:url" content="https://yichangkong.github.io/2020/04/28/2020年03月16日软件设计师每日一练/index.html">
+<meta property="og:site_name" content="YiChangKong">
+<meta property="og:description" content="1.数码压缩技术">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428165326.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428165509.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428165640.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428170014.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428170209.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428170828.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428171050.png">
+<meta property="og:updated_time" content="2020-04-28T09:16:27.026Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2020年03月16日软件设计师每日一练">
+<meta name="twitter:description" content="1.数码压缩技术">
+<meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428165326.png"><meta name="keywords" content="Liu Jun, YiChangKong"><meta name="description" content="爱了"><title>2020年03月16日软件设计师每日一练</title><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/5.13.0/css/all.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">2020年03月16日软件设计师每日一练</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-04-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-28</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">1.9k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">10分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><h3 id="1数码压缩技术">
+          <a href="#1数码压缩技术" class="heading-link"><i class="fas fa-link"></i></a>1.数码压缩技术</h3>
+      
+<a id="more"></a>
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428165326.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题主要考查编码方法。</p>
+<p>根据解码后数据与原始数据是否完全一致可以分为两大类：一类是熵编码、冗余压缩法，也称无损压缩法、无失真压缩法；二是熵压缩法，也称有损压缩法、有失真压缩法。其中熵编码的一个重要特征就是解码后数据与原始数据完全一致，要达到这种效果，显然，那么压缩比就较低。这种方法一般适用于文本、数据的压缩，当然，如果要求有高质量的视音频的话，也可以采用这种方式压缩。</p>
+<p>常见的<strong>熵编码方法</strong>有</p>
+<p><strong>LZ编码（Lempel-Zev编码）、行程编码、哈夫曼编码（Huffman编码）</strong>。</p>
+<p>而小波变换编码、线性预测编码、PCM、DPCM都是<strong>有损压缩</strong>。<br><br>
+哈夫曼编码是一种可变长的编码方式，该方法完全依据字符出现的概率来构造异字头的平均长度最短的码字。<br><br>
+小波变换编码的原理是因为大多数语音和图像信号倾向于非均匀频谱，即只集中在某一时间段的某一频段，小波包基表示信号时正好有这种自适应性，可通过选定一个阈值将这此时间段和频段的相应系数保留编码而丢弃其他时间段和频段上的小幅值的系数；另外，小波包基的每次分解都把信号分成低频和高频两部分，而多数的语音和图像信号的统计特性表明大幅值的系数往往集中在低频区内，这样可给那些小幅值系数分配很少的比特数，甚至可以不传输或存储，从而压缩了数据。<br><br>
+线性预测编码中被预测的信号各样值都是此前样值的线性组合的预测编码。<br><br>
+PCM（脉冲编码调制）是把一个时间连续，取值连续的模拟信号变换成时间离散，取值离散的数字信号后在信道中传输。脉冲编码调制就是对模拟信号先抽样，再对样值幅度量化，编码的过程</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="2防火墙技术">
+          <a href="#2防火墙技术" class="heading-link"><i class="fas fa-link"></i></a>2.防火墙技术</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428165509.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p><strong>DMZ是英文“demilitarized zone”的缩写，中文名称为“隔离区”，也称“非军事化区”。</strong></p>
+<p>它是为了解决安装防火墙后外部网络不能访问内部网络服务器的问题，而设立的一个非安全系统与安全系统之间的缓冲区，这个缓冲区位于企业内部网络和外部网络之间的小网络区域内，在这个小网络区域内可以放置一些必须公开的服务器设施，如<strong>企业Web服务器、FTP服务器和论坛</strong>等。</p>
+<p>另一方面，通过这样一个DMZ区域，更加有效地保护了内部网络，因为这种网络部署，比起一般的防火墙方案，对攻击者来说又多了一道关卡。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="3软件测试">
+          <a href="#3软件测试" class="heading-link"><i class="fas fa-link"></i></a>3.软件测试</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428165640.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>1、自顶向下集成</p>
+<ul>
+<li>
+<p>优点：</p>
+<p>较早地验证了主要控制和判断点；按深度优先可以首先实现和验证一个完整的软件功能；功能较早证实，带来信心；只需一个驱动，减少驱动器开发的费用；支持故障隔离。</p>
+</li>
+<li>
+<p>缺点：</p>
+<p>柱的开发量大；底层验证被推迟；底层组件测试不充分。</p>
+<p>适应于产品控制结构比较清晰和稳定；高层接口变化较小；底层接口未定义或经常可能被修改；产口控制组件具有较大的技术风险，需要尽早被验证；希望尽早能看到产品的系统功能行为。</p>
+</li>
+</ul>
+<p>2、自底向上集成</p>
+<ul>
+<li>
+<p>优点：</p>
+<p>对底层组件行为较早验证；工作最初可以并行集成，比自顶向下效率高；<strong>减少了桩的工作量；支持故障隔离。</strong></p>
+</li>
+<li>
+<p>缺点：</p>
+<p>驱动的开发工作量大；对高层的验证被推迟，设计上的错误不能被及时发现。</p>
+<p>适应于底层接口比较稳定；高层接口变化比较频繁；底层组件较早被完成。</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="4设计模式">
+          <a href="#4设计模式" class="heading-link"><i class="fas fa-link"></i></a>4.设计模式</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428170014.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>本题主要考查设计模式的相关知识。<br></p>
+<ol>
+<li>
+<p><strong>桥接模式</strong>将抽象部分与实现部分分离，使得它们两部分可以独立地变化。<br></p>
+</li>
+<li>
+<p><strong>策略模式</strong>定义一系列的算法，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化。<br></p>
+</li>
+<li>
+<p><strong>抽象工厂</strong>提供了一个创建一系列相关或相互依赖对象的接口，而无须指定它们具体的类。抽象工厂模式又称为Kit模式，属于对象创建型模式。<br></p>
+</li>
+<li>
+<p><strong>观察者模式</strong>定义对象间的一种一对多依赖关系，使得每当一个对象改变状态，则其相关依赖对象皆得到通知并被自动更新。<br></p>
+</li>
+</ol>
+<p>从本题给出的图我们可以判断是观察者模式，其中被观察对象（Subject），具体被观察对象（ConcreteSubject），观察者（Observer）及具体观察者（ConcreteObserver）。在本设计模式中，Observer需要维护至少一个Subject对象，一个Subject对象需要维护多个Observer对象，另外Subject需要通知Observer对象其自身的状态变化。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="5线性表">
+          <a href="#5线性表" class="heading-link"><i class="fas fa-link"></i></a>5.线性表</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428170209.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>对于循环队列，求队头元素的指针的计算公式为：<strong>(rear-len+1+M)%M</strong>。</p>
+<p>求队列中元素个数公式为：(rear-fear+M)%M。其中fear表示队列的对头指针。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="6保护范围和对象">
+          <a href="#6保护范围和对象" class="heading-link"><i class="fas fa-link"></i></a>6.保护范围和对象</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428170828.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>根据我国《著作权法》的规定，有三种类型的作品不受法律保护。 <strong>第一种是依法禁止出版、传播的作品。 第二种是不适用于《著作权法》的作品。它们包括下列作品</strong>：</p>
+<div>
+	（1）法律、法规，国家的决议、决定、命令和其他具有立法、行政、司法性质的文件，极其官方正式译文；</div>
+<div>
+	（2）时事新闻；</div>
+<div>
+	（3）历法、通用数表、通用表格和公式。</div>
+<div>
+	国务院颁布的《计算机软件保护条例》属于法律法规，所以不受著作权法保护。
+</div></blockquote>
+</li>
+</ol>
+
+        <h3 id="7位示图">
+          <a href="#7位示图" class="heading-link"><i class="fas fa-link"></i></a>7.位示图</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200428171050.png" alt></p>
+</li>
+<li>
+<p>题目解析</p>
+<blockquote>
+<p>计算机字长为64位，那么利用位示图表示时每个字能够表示64个物理块的存储情况；<br>磁盘的容量为1024GB，物理块的大小为4MB，则共有1024GB/4MB=（256×1024）个物理块。（注意单位转换）<br></p>
+<p>1024GB=1000*1024MB</p>
+<p>256<span style="font-size: 10.5pt; font-family: 宋体;">×</span>1024个物理块，每64个物理块占用一个字，所以需要256×1024/64=4096个字。</p>
+<ul>
+<li><strong>计算出共有多少物理块 总内存/单个物理块大小</strong></li>
+<li><strong>64位》 每64个物理块占用一个字</strong></li>
+</ul>
+</blockquote>
+</li>
+</ol>
+
+        <h3 id="8">
+          <a href="#8" class="heading-link"><i class="fas fa-link"></i></a>8.</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+</li>
+<li>
+<p>题目解析</p>
+</li>
+</ol>
+
+        <h3 id="9">
+          <a href="#9" class="heading-link"><i class="fas fa-link"></i></a>9.</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+</li>
+<li>
+<p>题目解析</p>
+</li>
+</ol>
+
+        <h3 id="10">
+          <a href="#10" class="heading-link"><i class="fas fa-link"></i></a>10.</h3>
+      
+<ol>
+<li>
+<p>题目</p>
+</li>
+<li>
+<p>题目解析</p>
+</li>
+</ol>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/04/28/2020年03月16日软件设计师每日一练/">https://yichangkong.github.io/2020/04/28/2020年03月16日软件设计师每日一练/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/软件设计师考题/">软件设计师考题</a></span></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2020/04/27/2020年03月15日软件设计师每日一练/"><span class="paginator-prev__text">2020年03月15日软件设计师每日一练</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="minivaline-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1数码压缩技术"><span class="toc-number">1.</span> <span class="toc-text">
+          1.数码压缩技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2防火墙技术"><span class="toc-number">2.</span> <span class="toc-text">
+          2.防火墙技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3软件测试"><span class="toc-number">3.</span> <span class="toc-text">
+          3.软件测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4设计模式"><span class="toc-number">4.</span> <span class="toc-text">
+          4.设计模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5线性表"><span class="toc-number">5.</span> <span class="toc-text">
+          5.线性表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6保护范围和对象"><span class="toc-number">6.</span> <span class="toc-text">
+          6.保护范围和对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7位示图"><span class="toc-number">7.</span> <span class="toc-text">
+          7.位示图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8"><span class="toc-number">8.</span> <span class="toc-text">
+          8.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9"><span class="toc-number">9.</span> <span class="toc-text">
+          9.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10"><span class="toc-number">10.</span> <span class="toc-text">
+          10.</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">76</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
+  var isXML = true;
+  var search_path = 'search.json';
+
+  if (!search_path) {
+    search_path = 'search.xml';
+  } else if (/json$/i.test(search_path)) {
+    isXML = false;
+  }
+
+  var path = '/' + search_path;
+  $.ajax({
+    url: path,
+    dataType: isXML ? 'xml' : 'json',
+    async: true,
+    success: function (res) {
+      var datas = isXML ? $('entry', res).map(function () {
+        // 将 XML 转为 JSON
+        return {
+          title: $('title', this).text(),
+          content: $('content', this).text(),
+          url: $('url', this).text()
+        };
+      }).get() : res;
+      var $input = $('.search-input input');
+      var $result = $('.search-results');
+      // 搜索对象（标题、内容）的权重，影响显示顺序
+      var WEIGHT = { title: 100, content: 1 };
+      var searchPost = function () {
+        var searchText = $input.val().toLowerCase().trim();
+        // 根据空白字符分隔关键字
+        var keywords = searchText.split(/[\s]+/);
+        // 搜索结果
+        var matchPosts = [];
+
+        // 有多个关键字时，将原文字整个保存下来
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        // 防止未输入字符时搜索
+        if (searchText.length > 0) {
+          datas.forEach(function (data) {
+            var isMatch  = false;
+            // 没有标题的文章使用预设的 i18n 变量代替
+            var title = (data.title && data.title.trim()) || '[ 文章无标题 ]';
+            var titleLower = title && title.toLowerCase();
+            // 删除 HTML 标签 和 所有空白字符
+            var content = data.content && data.content.replace(/<[^>]+>/g, '');
+            var contentLower = content && content.toLowerCase();
+            // 删除重复的 /
+            var postURL = data.url && decodeURI(data.url).replace(/\/{2,}/g, '/');
+            // 标题中匹配到的关键词
+            var titleHitSlice = [];
+            // 内容中匹配到的关键词
+            var contentHitSlice = [];
+
+            keywords.forEach(function (keyword) {
+              /**
+              * 获取匹配的关键词的索引
+              * @param {String} keyword 要匹配的关键字
+              * @param {String} text 原文字
+              * @param {Boolean} caseSensitive 是否区分大小写
+              * @param {Number} weight 匹配对象的权重。权重大的优先显示
+              * @return {Array}
+              */
+              function getIndexByword (word, text, caseSensitive, weight) {
+                if (!word || !text) {
+                  return [];
+                };
+
+                var startIndex = 0; // 每次匹配的开始索引
+                var index = -1;     // 匹配到的索引值
+                var result = [];    // 匹配结果
+
+                if (!caseSensitive) {
+                  word = word.toLowerCase();
+                  text = text.toLowerCase();
+                }
+
+                while((index = text.indexOf(word, startIndex)) !== -1) {
+                  var hasMatch = false;
+                  // 索引位置相同的关键词，保留长度较长的
+                  titleHitSlice.forEach(function (hit) {
+                    if (hit.index === index && hit.word.length < word.length) {
+                      hit.word = word;
+                      hasMatch = true;
+                    }
+                  });
+                  startIndex = index + word.length;
+                  !hasMatch && result.push({ index: index, word: word, weight: weight });
+                }
+                return result;
+              }
+              titleHitSlice = titleHitSlice.concat(getIndexByword(keyword, titleLower, false, WEIGHT.title));
+              contentHitSlice = contentHitSlice.concat(getIndexByword(keyword, contentLower, false, WEIGHT.content));
+            });
+
+            var hitTitle = titleHitSlice.length;
+            var hitContent = contentHitSlice.length;
+
+            if (hitTitle > 0 || hitContent > 0) {
+              isMatch = true;
+            }
+            if (isMatch) {
+              ;[titleHitSlice, contentHitSlice].forEach(function (hit) {
+                // 按照匹配文字的索引的递增顺序排序
+                hit.sort(function (left, right) {
+                  return left.index - right.index;
+                });
+              });
+              /**
+              * 给文本中匹配到的关键词添加标记，从而进行高亮显示
+              * @param {String} text 原文本
+              * @param {Array} hitSlice 匹配项的索引信息
+              * @param {Number} start 开始索引
+              * @param {Number} end 结束索引
+              * @return {String}
+              */
+              function highlightKeyword (text, hitSlice, start, end) {
+                if (!text || !hitSlice || !hitSlice.length) {
+                  return;
+                }
+
+                var result = '';
+                var startIndex = start;
+                var endIndex = end;
+                hitSlice.forEach(function (hit) {
+                  if (hit.index < startIndex) {
+                    return;
+                  }
+
+                  var hitWordEnd = hit.index + hit.word.length;
+                  result += text.slice(startIndex, hit.index);
+                  result += '<b>' + text.slice(hit.index, hitWordEnd) + '</b>';
+                  startIndex = hitWordEnd;
+                });
+                result += text.slice(startIndex, endIndex);
+                return result;
+              }
+
+              var postData = {};
+              // 文章总的搜索权重
+              var postWeight = titleHitSlice.length * WEIGHT.title + contentHitSlice.length * WEIGHT.content;
+              // 标记匹配关键词后的标题
+              var postTitle = highlightKeyword(title, titleHitSlice, 0, title.length) || title;
+              // 标记匹配关键词后的内容
+              var postContent;
+              // 显示内容的长度
+              var SHOW_WORD_LENGTH = 200;
+              // 命中关键词前的字符显示长度
+              var SHOW_WORD_FRONT_LENGTH = 20;
+              var SHOW_WORD_END_LENGTH = SHOW_WORD_LENGTH - SHOW_WORD_FRONT_LENGTH;
+
+              // 截取匹配的第一个字符，前后共 200 个字符来显示
+              if (contentHitSlice.length > 0) {
+                var firstIndex = contentHitSlice[0].index;
+                var start = firstIndex > SHOW_WORD_FRONT_LENGTH ? firstIndex - SHOW_WORD_FRONT_LENGTH : 0;
+                var end = firstIndex + SHOW_WORD_END_LENGTH;
+                postContent = highlightKeyword(content, contentHitSlice, start, end);
+              } else { // 未匹配到内容，直接截取前 200 个字符来显示
+                postContent = content.slice(0, SHOW_WORD_LENGTH);
+              }
+              postData.title = postTitle;
+              postData.content = postContent;
+              postData.url = postURL;
+              postData.weight = postWeight;
+              matchPosts.push(postData);
+            }
+          });
+        }
+
+        var resultInnerHtml = '';
+        if (matchPosts.length) {
+          // 按权重递增的顺序排序，使权重大的优先显示
+          matchPosts.sort(function (left, right) {
+            return right.weight - left.weight;
+          });
+          resultInnerHtml += '<ul>';
+          matchPosts.forEach(function (post) {
+            resultInnerHtml += '<li><a class="search-results-title" href="' + post.url + '">';
+            resultInnerHtml += post.title;
+            resultInnerHtml += '</a><div class="search-results-content">';
+            resultInnerHtml += post.content;
+            resultInnerHtml += '</div></li>';
+          });
+          resultInnerHtml += '</ul>';
+        } else {
+          resultInnerHtml += '<div class="search-results-none"><i class="far fa-meh"></i></div>';
+        }
+        $result.html(resultInnerHtml);
+      };
+      $input.on('input', searchPost);
+      $input.on('keyup', function (e) {
+        if (e.keyCode === Stun.utils.codeToKeyCode('Enter')) {
+          searchPost();
+        }
+      });
+    }
+  });
+}
+
+function closeSearch () {
+  $('body').css({ overflow: 'auto' });
+  $('.search-popup').css({ display: 'none' });
+  $('.search-mask').css({ display: 'none' });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  Stun.utils.pjaxReloadLocalSearch = function () {
+    $('.header-nav-search').on('click', function (e) {
+      e.stopPropagation();
+      $('body').css('overflow', 'hidden');
+      $('.search-popup')
+        .velocity('stop')
+        .velocity('transition.expandIn', {
+          duration: 300,
+          complete: function () {
+            $('.search-popup input').focus();
+          }
+        });
+      $('.search-mask')
+        .velocity('stop')
+        .velocity('transition.fadeIn', {
+          duration: 300
+        });
+
+      initSearch();
+    });
+    $('.search-mask, .search-close').on('click', function () {
+      closeSearch();
+    });
+    $(document).on('keydown', function (e) {
+      // Escape <=> 27
+      if (e.keyCode === Stun.utils.codeToKeyCode('Escape')) {
+        closeSearch();
+      }
+    });
+  };
+
+  Stun.utils.pjaxReloadLocalSearch();
+}, false);</script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/minivaline/dist/MiniValine.min.js"></script><script>function loadminivaline () {
+  new MiniValine({
+    el: '#minivaline-container',
+    appId: 'xuXblFdHlR0fcnQsdkLwkqvG-gzGzoHsz',
+    appKey: 'ac3XS1leXcL95PWUhYV6gx0E',
+    placeholder: 'Write a Comment',
+    lang: '',
+    adminEmailMd5: '',
+    math: true,
+    md: true
+  });
+
+}
+
+if (false) {
+  loadminivaline();
+} else {
+  window.addEventListener('DOMContentLoaded', loadminivaline, false);
+}</script><script src="/js/utils.js?v=2.0.0-rc.0"></script><script src="/js/stun-boot.js?v=2.0.0-rc.0"></script><script src="/js/scroll.js?v=2.0.0-rc.0"></script><script src="/js/header.js?v=2.0.0-rc.0"></script><script src="/js/sidebar.js?v=2.0.0-rc.0"></script></body></html>
