@@ -31,7 +31,172 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">YiChangKong</div><div class="header-banner-info__subtitle">Coding is my life, But not all!</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/08/06/SpringMVC学习/">SpringMVC学习</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-08-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-08-12</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">2.3k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">18分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1介绍">
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">YiChangKong</div><div class="header-banner-info__subtitle">Coding is my life, But not all!</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/09/06/石英调度/">石英调度</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-09-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-09-06</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">52</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">1分</span></span></div></header><div class="post-body"><div class="post-excerpt"><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/09/02/mybatis报错/">mybatis报错java.lang.UnsupportedOperationException原因及处理方法</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-09-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-09-02</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">487</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">3分</span></span></div></header><div class="post-body"><div class="post-excerpt"><ol>
+<li>起因</li>
+</ol>
+<p>今天在请求数据库数据时报错java.lang.UnsupportedOperationException，从字面上理解错误的含义就是不支持的操作异常，后面定位到错误发生在数据库sql语句中，具体原因就是resultType="java.util.List"有问题。返回的结果是一个List类型的集合，所有我用了这个resultType，但是不对的。需要使用string。</p>
+<hr>
+<ol start="2">
+<li>解释</li>
+</ol>
+<p>下面是我百度出来，别人总结的resultType可用类型</p>
+<pre><code>	resultType: 
+	1. 基本类型 ：resultType=基本类型 
+	2. List类型： resultType=List中元素的类型 
+	3. Map类型 单条记录：resultType =map 
+</code></pre>
+<p>多条记录：resultType =Map中value的类型</p>
+<pre><code>1. 如果返回值为基本类型，则resultType=基本类型，比如resultType=java.lang.Integer,
+那sql语句中只返回一个int类型数据，通常用于统计数量 
+2. 如果返回值为list类型，则resultType=List中元素的类型，比如你需要返回一个List类型的数据，那么这里
+resultType=”java.lang.String”，如果需要返回一个实体类，那么resultType=”com.pjf.mybatis.car”以此类推。 
+3. 如果返回值为map单条类型，比如{username=”张三”}，那么resultType =”map”。 
+4. 如果返回值为map多条记录，比如{res=”实体类”}，实体类就是你要请求的数据实体类，
+那么resultType =Map中value的类型，比如resultType=”com.pjf.mybatis.car”
+</code></pre>
+<p>返回多条记录的map时，key为任意一属性，值为对象类型，不过key需要通过@MapKey(“hotelName”)指定对象中一个属性名为key</p>
+<pre><code>	public interface HotelMapper {
+	    @MapKey("hotelName")
+	    public Map&lt;String, Hotel&gt; getHotel(Integer i);
+	}
+</code></pre>
+<p>所以错误java.lang.UnsupportedOperationException主要是因为xml返回值类型有问题导致的，当然可能也有其他原因造成的。</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/08/16/Maven项目关键点/">Maven项目关键点</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-08-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-08-16</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">309</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">2分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1maven打包-install">
+          <a href="#1maven打包-install" class="heading-link"><i class="fas fa-link"></i></a>1.Maven打包 install</h3>
+      
+<ol>
+<li>
+<p>因为使用ssm架构，所有存在java类文件下放Mapping的xml文件，但是maven 打包时是不会解析xml文件的，因为只是解析java文件成为class文件，所有测试路径时报错。</p>
+</li>
+<li>
+<p>解决方法，添加插件</p>
+<pre><code> 	 &lt;plugin&gt;
+ 	    &lt;artifactId&gt;maven-resources-plugin&lt;/artifactId&gt;
+ 	    &lt;version&gt;3.0.2&lt;/version&gt;
+ 	    &lt;executions&gt;
+ 	        &lt;execution&gt;
+ 	            &lt;id&gt;copy-xmls&lt;/id&gt;
+ 	            &lt;phase&gt;process-sources&lt;/phase&gt;
+ 	            &lt;goals&gt;
+ 	                &lt;goal&gt;copy-resources&lt;/goal&gt;
+ 	            &lt;/goals&gt;
+ 	            &lt;configuration&gt;
+ 	                &lt;outputDirectory&gt;${basedir}/target/classes&lt;/outputDirectory&gt;
+ 	                &lt;resources&gt;
+ 	                    &lt;resource&gt;
+ 	                        &lt;directory&gt;${basedir}/src/main/java&lt;/directory&gt;
+ 	                        &lt;includes&gt;
+ 	                            &lt;include&gt;**/*.xml&lt;/include&gt;
+ 	                        &lt;/includes&gt;
+ 	                    &lt;/resource&gt;
+ 	                &lt;/resources&gt;
+ 	            &lt;/configuration&gt;
+ 	        &lt;/execution&gt;
+ 	    &lt;/executions&gt;
+ 	&lt;/plugin&gt;
+</code></pre>
+</li>
+</ol>
+
+        <h3 id="2maven项目mybatis的mapperxml-项目找不到">
+          <a href="#2maven项目mybatis的mapperxml-项目找不到" class="heading-link"><i class="fas fa-link"></i></a>2.Maven项目myBatis的mapper.xml 项目找不到###</h3>
+      
+<ol>
+<li>
+<p>eclipse下一切配置多按照视频所操作，可是项目运行到tomcat上时就是找不到mapper的xml文件！</p>
+</li>
+<li>
+<p>解决方法 更改路径</p>
+<pre><code>之前：com/sdfadf/mapper/**.xml
+更改：com/sdfadf/**/**.xml这个包没有在 source package下
+</code></pre>
+</li>
+</ol>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/08/06/ssm简易整合记录/">ssm简易整合记录</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-08-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-08-06</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">110</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">1分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1环境搭建">
+          <a href="#1环境搭建" class="heading-link"><i class="fas fa-link"></i></a>1.环境搭建</h3>
+      
+<ol>
+<li>因为Sprin框架3.2jar版本没有和jdk1.8完全搭配，会有bug，所以采用jdk1.8加spring4.0.</li>
+<li>eclipse——web版本为3.0</li>
+<li>tomcat版本为8.5</li>
+</ol>
+
+        <h3 id="2如何在eclipse工程下建立资源文件夹">
+          <a href="#2如何在eclipse工程下建立资源文件夹" class="heading-link"><i class="fas fa-link"></i></a>2.如何在eclipse工程下建立资源文件夹</h3>
+      
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/08/06/SpringMVC学习/">SpringMVC学习</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-08-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-08-12</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">2.3k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">18分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h3 id="1介绍">
           <a href="#1介绍" class="heading-link"><i class="fas fa-link"></i></a>1.介绍</h3>
       
 <blockquote></blockquote>
@@ -763,256 +928,7 @@ jdk1.7支持2.2版本。
             });
             document.body.appendChild(img);
           });
-      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/07/22/bootStrap学习笔记/">BootStrap</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-07-22</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-04-13</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">476</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">3分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h4 id="bootstrap">
-          <a href="#bootstrap" class="heading-link"><i class="fas fa-link"></i></a>Bootstrap</h4>
-      
-<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1563776659689&amp;di=9ba05a212e9694b94544cf3f14c79db4&amp;imgtype=0&amp;src=http%3A%2F%2Fcodegeekz.com%2Fwp-content%2Fuploads%2FBootstrap.jpg" style="width: b9999_10000px;" alt></p>
-
-        <h3 id="1介绍">
-          <a href="#1介绍" class="heading-link"><i class="fas fa-link"></i></a>1.介绍</h3>
-      
-<blockquote>
-<p>Bootstrap，来自 Twitter，是目前最受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。Bootstrap 目前的<code>最新版本是 Bootstrap4</code>，利用我们提供的 Sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、基于 jQuery 的强大的插件系统，能够快速为你的想法开发出原型或者构建整个 app 。</p>
-</blockquote>
-
-        <h3 id="2特点">
-          <a href="#2特点" class="heading-link"><i class="fas fa-link"></i></a>2.特点</h3>
-      
-<ul>
-<li>
-<p>移动设备优先：自 Bootstrap 3 起，框架包含了贯穿于整个库的移动设备优先的样式。</p>
-</li>
-<li>
-<p>响应式设计：Bootstrap 的响应式 CSS 能够自适应于台式机、平板电脑和手机。</p>
-</li>
-</ul>
-
-        <h3 id="3bootstrap-包的内容">
-          <a href="#3bootstrap-包的内容" class="heading-link"><i class="fas fa-link"></i></a>3.Bootstrap 包的内容</h3>
-      
-<ul>
-<li>基本结构：Bootstrap 提供了一个带有网格系统、链接样式、背景的基本结构。这将在 Bootstrap 基本结构 部分详细讲解。</li>
-<li>CSS：Bootstrap 自带以下特性：全局的 CSS 设置、定义基本的 HTML 元素样式、可扩展的 class，以及一个先进的网格系统。这将在 Bootstrap CSS 部分详细讲解。</li>
-<li>组件：Bootstrap 包含了十几个可重用的组件，用于创建图像、下拉菜单、导航、警告框、弹出框等等。这将在 布局组件 部分详细讲解。</li>
-<li>JavaScript 插件：Bootstrap 包含了十几个自定义的 jQuery 插件。您可以直接包含所有的插件，也可以逐个包含这些插件。这将在 Bootstrap 插件 部分详细讲解。</li>
-<li>定制：您可以定制 Bootstrap 的组件、LESS 变量和 jQuery 插件来得到您自己的版本。</li>
-</ul>
-
-        <h3 id="问题点学习">
-          <a href="#问题点学习" class="heading-link"><i class="fas fa-link"></i></a>问题点学习</h3>
-      
-<p>1.<code>meta name="viewport" content="width=device-width,initial-scale=1.0" 解释</code></p>
-<blockquote>
-<p><span class="exturl"><a class="exturl__link" href="http://https://blog.csdn.net/u012402190/article/details/70172371" target="_blank" rel="noopener">详细解析网址</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</blockquote>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/07/17/spring-AOP/">spring_AOP</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-07-17</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-07-17</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">570</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">3分</span></span></div></header><div class="post-body"><div class="post-excerpt"><p><img src="http://img3.imgtn.bdimg.com/it/u=49453341,2859298398&amp;fm=26&amp;gp=0.jpg" alt></p>
-
-        <h3 id="1aop介绍">
-          <a href="#1aop介绍" class="heading-link"><i class="fas fa-link"></i></a>1.AOP介绍</h3>
-      
-<blockquote>
-<p><strong>aop的全称-Aspect Oriented Programming</strong></p>
-<p>1)意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。</p>
-<p>2)AOP是OOP（面向对象编程）的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。</p>
-<p>3)利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。</p>
-<p>4)AOP采取横向抽取机制，取代了传统纵向继承体系重复性代码</p>
-<p>5)经典应用：事务管理、性能监视、安全检查、缓存 、日志等【画图】</p>
-<p>6)Spring AOP使用纯Java实现，不需要专门的编译过程和类加载器，在运行期通过代理方式向目标类织入增强代码</p>
-<p>7)AspectJ是一个基于Java语言的AOP框架，Spring2.0开始，Spring AOP引入对Aspect的支持，AspectJ扩展了Java语言，提供了一个专门的编译器，在编译时提供横向代码的织入</p>
-</blockquote>
-
-        <h3 id="2spring-实现aop的两种原理">
-          <a href="#2spring-实现aop的两种原理" class="heading-link"><i class="fas fa-link"></i></a>2.spring 实现AOP的两种原理</h3>
-      
-<blockquote>
-<p>a.aop底层将采用代理机制进行实现。</p>
-<p>b.接口 + 实现类 ：spring采用 jdk 的动态代理Proxy。</p>
-<p>c.实现类：spring 采用 cglib字节码增强。</p>
-</blockquote>
-
-        <h3 id="3aop的术语">
-          <a href="#3aop的术语" class="heading-link"><i class="fas fa-link"></i></a>3.AOP的术语</h3>
-      
-<blockquote>
-<p>1.target：目标类，需要被代理的类。例如：UserService</p>
-</blockquote>
-<blockquote>
-<p>2.Joinpoint(连接点):所谓连接点是指那些可能被拦截到的方法。例如：所有的方法</p>
-</blockquote>
-<blockquote>
-<p>3.PointCut 切入点：已经被增强的连接点。例如：addUser()</p>
-</blockquote>
-<blockquote>
-<p>4.advice 通知/增强，增强代码。例如：after、before</p>
-</blockquote>
-<blockquote>
-<p>5.Weaving(织入):是指把增强advice应用到目标对象target来创建新的代理对象proxy的过程.</p>
-</blockquote>
-<blockquote>
-<p>6.proxy 代理类</p>
-</blockquote>
-<blockquote>
-<p>7.Aspect(切面): 是切入点pointcut和通知advice的结合</p>
-</blockquote>
-<p>一个线是一个特殊的面。<br>
-一个切入点和一个通知，组成成一个特殊的面。</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/07/06/Spring错误解决/">Spring错误解决？</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-07-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-07-16</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">160</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">1分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h2 id><a class="markdownIt-Anchor" href="#"></a> <img src="http://ww1.sinaimg.cn/large/007SCiiVly1g4q9dp09gbj314h0423yu.jpg" alt></h2>
-
-        <h4 id="在运行spring的注解时出的错误现在还没有找到答案应该是spring版本的问题运行环境是jdk18-spring32-commen-loggin12">
-          <a href="#在运行spring的注解时出的错误现在还没有找到答案应该是spring版本的问题运行环境是jdk18-spring32-commen-loggin12" class="heading-link"><i class="fas fa-link"></i></a>在运行spring的注解时出的错误，现在还没有找到答案，应该是Spring版本的问题，运行环境是jdk1.8、spring3.2、commen-loggin1.2。</h4>
-      
-<hr>
-
-        <h4 id="1解决办法更换spring框架版本">
-          <a href="#1解决办法更换spring框架版本" class="heading-link"><i class="fas fa-link"></i></a>1.解决办法，更换spring框架版本</h4>
-      
-<blockquote>
-<p>由原来的3.2版本更换为4，在除了核心jar包外，又加入了另一个依赖包</p>
-<p><img src="http://ww1.sinaimg.cn/large/007SCiiVly1g51y6942gcj309m04imx3.jpg" alt></p>
-</blockquote>
-
-        <h4 id="2在寻找错误时如果是test-下测试">
-          <a href="#2在寻找错误时如果是test-下测试" class="heading-link"><i class="fas fa-link"></i></a>2.在寻找错误时，如果是@Test 下测试</h4>
-      
-<blockquote>
-<p>可以借助 JUnil 进行错误查找。</p>
-</blockquote>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2019/07/04/git_cmd下搭建hexo博客/">git_cmd下搭建hexo博客</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2019-07-04</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2019-07-23</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">423</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">2分</span></span></div></header><div class="post-body"><div class="post-excerpt"><h2 id><a class="markdownIt-Anchor" href="#"></a> <img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1562314728184&amp;di=e9a138d51674a19e81a47cda7272ca7b&amp;imgtype=0&amp;src=http%3A%2F%2Fnewsimg.5054399.com%2Fuploads%2Fuserup%2F1902%2F151524461154.jpg" style="width: b9999_10000px;" alt></h2>
-
-        <h4 id="哈哈进入b站那么久了也早就了解到有博客这个东西因此就一直想着搭建一个属于自己的技术博客但是还是因为自己的技术问题以及等等还是停留了许久-竟然初心是记录自己的技术成长的过程-那便可不必纠结是否整个网站都是自己一点一滴的建立起来-因此我利用hexo这个博客框架来快速建立自己的小乐园-下面就一起来操作吧">
-          <a href="#哈哈进入b站那么久了也早就了解到有博客这个东西因此就一直想着搭建一个属于自己的技术博客但是还是因为自己的技术问题以及等等还是停留了许久-竟然初心是记录自己的技术成长的过程-那便可不必纠结是否整个网站都是自己一点一滴的建立起来-因此我利用hexo这个博客框架来快速建立自己的小乐园-下面就一起来操作吧" class="heading-link"><i class="fas fa-link"></i></a>哈哈，进入b站那么久了，也早就了解到有博客这个东西，因此就一直想着搭建一个属于自己的技术博客，但是还是因为自己的技术问题以及等等，还是停留了许久。竟然初心是记录自己的技术成长的过程。那便可不必纠结是否整个网站都是自己一点一滴的建立起来。因此我利用hexo这个博客框架来快速建立自己的小乐园。下面就一起来操作吧。</h4>
-      
-<hr>
-<p>一、下载git（安装就一直next)</p>
-<blockquote>
-<p>再下载安装nodejs you know!</p>
-</blockquote>
-
-        <h2 id="-2">
-          <a href="#-2" class="heading-link"><i class="fas fa-link"></i></a></h2>
-      
-<p>二、再下载安装nodejs you know!</p>
-<hr>
-<p>三、利用git cmd npm 进行命令行操作。</p>
-<blockquote></blockquote>
-<ol>
-<li>下载cnpm<br>
-<img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5a5ee5dijj30wz03kwfq.jpg" alt></li>
-<li>安装git部署插件<br>
-<img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5a4nrjknnj30pm0fl76d.jpg" alt></li>
-<li>cnpm下载hexo框架<br>
-<img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5a4pqxg1gj31gt0npjw8.jpg" alt></li>
-</ol>
-<hr>
-<p>四、建立个人博客文件夹（blog）。</p>
-<blockquote>
-<p>在系统盘下创建一个空文件夹,以便于等下hexo初始化。</p>
-</blockquote>
-<hr>
-<p>五、初始化Hexo博客。</p>
-<ol>
-<li><img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5a4x2yqf6j30kd055wel.jpg" alt></li>
-<li>利用命令行到进入自己刚刚创建的文件夹下，运行命令行 cd …</li>
-<li>
-<blockquote>
-<p><code>cd 保存内容的文件夹</code></p>
-<p><code>hexo init 你的用户名.github.io // 建议和创建仓库时使用同一个</code></p>
-</blockquote>
-</li>
-</ol>
-<hr>
-<p>六、本地运行loactlhost：4000。</p>
-<blockquote>
-<p>cmd进入文件下 <code>hexo server</code><br>
-<img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5a5c3ak4cj30iy06sq2z.jpg" alt><br>
-–效果图<br>
-<img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5a5j3mq90j31hb0szdt1.jpg" alt></p>
-</blockquote>
-<hr>
-<p>七、部署到GitHub或者Gitee（两者各有千秋）。</p>
-<blockquote>
-<p>作者我是直接部署在GitHub上的。<br>
-不过希望更多人看见自己的博客就可以考虑一下gitee。<br>
-<img src="http://ww1.sinaimg.cn/large/007SCiiVly1g5a55smtjmj30wi0o70u1.jpg" alt></p>
-</blockquote>
-<hr>
-<p>八、编写markdown的语法。</p>
-<blockquote>
-<p><span class="exturl"><a class="exturl__link" href="http://https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">详细网址教学</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</blockquote>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/page/7/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/9/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">81</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">23</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
+      </script></div></div></article></section><nav class="paginator"><div class="paginator-inner"><a class="extend prev" rel="prev" href="/page/7/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/9/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">85</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">11</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">27</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.json';
 
