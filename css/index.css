@@ -925,18 +925,7 @@ body::after {
   z-index: 0;
   width: 100%;
   height: 100%;
-  background: url("https://gitee.com/yichangkong/FigureBed/raw/master/img/blog背景.jpg") no-repeat center/cover;
-}
-.header-banner::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background: url("https://gitee.com/yichangkong/FigureBed/raw/master/img/20200514115543.png") no-repeat center/cover;
 }
 .header-banner-info {
   position: absolute;

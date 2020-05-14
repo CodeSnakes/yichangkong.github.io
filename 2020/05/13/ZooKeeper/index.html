@@ -5,7 +5,11 @@
 <meta property="og:site_name" content="YiChangKong">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200513175801.png">
-<meta property="og:updated_time" content="2020-05-13T09:59:33.476Z">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200514113024.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200514114641.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200514114819.png">
+<meta property="og:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200514114903.png">
+<meta property="og:updated_time" content="2020-05-14T03:51:59.701Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ZooKeeper">
 <meta name="twitter:image" content="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200513175801.png"><meta name="keywords" content="Liu Jun, YiChangKong"><meta name="description" content="爱了"><title>ZooKeeper</title><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/5.13.0/css/all.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.0-rc.0"><script>var Stun = window.Stun || {};
@@ -31,8 +35,166 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">ZooKeeper</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-05-13</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-05-13</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">52</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">1分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200513175801.png" alt></p>
-<a id="more"></a><script>
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="javascript:;" onclick="return false;"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">个人</span></a><div class="header-nav-submenu"><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Test/"><span class="header-nav-submenu-item__text">日常</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/About/"><span class="header-nav-submenu-item__icon"><i class="far fa-about"></i></span><span class="header-nav-submenu-item__text">关于</span></a></div><div class="header-nav-submenu-item"><a class="header-nav-submenu-item__link" href="/Poetry/"><span class="header-nav-submenu-item__text">诗歌</span></a></div></div></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">ZooKeeper</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2020-05-13</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2020-05-14</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon" data-popover="字数统计" data-popover-pos="up"><i class="far fa-file-word"></i></span><span class="post-meta-item__value">1.9k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon" data-popover="阅读时间" data-popover-pos="up"><i class="far fa-clock"></i></span><span class="post-meta-item__value">12分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon" data-popover="阅读次数" data-popover-pos="up"><i class="fas fa-eye"></i></span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200513175801.png" alt></p>
+<a id="more"></a>
+
+        <h3 id="1what-is-zookeeper">
+          <a href="#1what-is-zookeeper" class="heading-link"><i class="fas fa-link"></i></a>1.What is ZooKeeper?💫</h3>
+      
+<blockquote>
+<p>ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services.</p>
+<p>All of these kinds of services are used in some form or another by distributed applications. Each time they are implemented there is a lot of work that goes into fixing the bugs and race conditions that are inevitable.</p>
+<p>Because of the difficulty of implementing these kinds of services, applications initially usually skimp on them, which make them brittle in the presence of change and difficult to manage.</p>
+<p>Even when done correctly, different implementations of these services lead to management complexity when the applications are deployed.</p>
+<ul>
+<li>Zookeeper 作为一个分布式的服务框架，主要用来解决分布式集群中应用系统的<strong>一致性问题</strong>，它能提供基于类似于文件系统的目录节点树方式的数据存储，但是 Zookeeper 并不是用来专门存储数据的，它的作用主要是用来维护和监控你存储的数据的状态变化。通过监控这些数据状态的变化，从而可以达到基于数据的集群管理。</li>
+<li>**简单来说zookeeper=文件系统+监听通知机制。**令人头秃 👴</li>
+</ul>
+</blockquote>
+
+        <h3 id="2zookeeper-what-can-to-be-done">
+          <a href="#2zookeeper-what-can-to-be-done" class="heading-link"><i class="fas fa-link"></i></a>2.Zookeeper What can to be done?🙌</h3>
+      
+<blockquote>
+<ol>
+<li><strong>Zookeeper 是 Google 的 Chubby一个开源的实现，是 Hadoop 的分布式协调服务</strong></li>
+<li><strong>它包含一个简单的原语集，分布式应用程序可以基于它实现同步服务，配置维护和命名服务等</strong></li>
+<li>zookeeper功能非常强大，可以实现诸如</li>
+<li><strong>分布式应用配置管理、统一命名服务、状态同步服务、集群管理</strong>等功能</li>
+<li>我们这里拿比较简单的分布式应用配置管理为例来说明。</li>
+<li>假设我们的程序是分布式部署在多台机器上，如果我们要改变程序的配置文件，需要逐台机器去修改，非常麻烦，现在把这些配置全部放到zookeeper上去，保存在 zookeeper 的某个目录节点中，然后所有相关应用程序对这个目录节点进行监听，一旦配置信息发生变化，每个应用程序就会收到 zookeeper 的通知，然后从 zookeeper 获取新的配置信息应用到系统中。</li>
+<li>使用案例 mycat中使用zookeeper</li>
+<li><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200514113024.png" alt></li>
+</ol>
+</blockquote>
+
+        <h3 id="3特性">
+          <a href="#3特性" class="heading-link"><i class="fas fa-link"></i></a>3.特性</h3>
+      
+<blockquote>
+<p>1.<strong>全局数据一致</strong>：集群中每个服务器保存一份相同的数据副本，client无论连接到哪个服务器，展示的数据都是一致的，这是最重要的特征；<br>
+2.<strong>可靠性</strong>：如果消息被其中一台服务器接受，那么将被所有的服务器接受。<br>
+3.<strong>顺序性</strong>：包括全局有序和偏序两种：全局有序是指如果在一台服务器上消息a在消息b前发布，则在所有Server上消息a都将在消息b前被发布；偏序是指如果一个消息b在消息a后被同一个发送者发布，a必将排在b前面。<br>
+4.<strong>数据更新原子性</strong>：一次数据更新要么成功（半数以上节点成功），要么失败，不存在中间状态；<br>
+5.<strong>实时性</strong>：Zookeeper保证客户端将在一个时间间隔范围内获得服务器的更新信息，或者服务器失效的信息。</p>
+</blockquote>
+
+        <h3 id="4架构布局">
+          <a href="#4架构布局" class="heading-link"><i class="fas fa-link"></i></a>4.架构布局</h3>
+      
+<blockquote>
+<p>zookeeper本身可以是单机模式，也可以是集群模式，为了zookeeper本身不出现单点故障，通常情况使用集群模式，而且是master/slave模式的集群。</p>
+<p><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200514114641.png" alt></p>
+<ul>
+<li><strong>Zookeeper集群中的角色介绍</strong></li>
+</ul>
+<ol>
+<li><strong>Leader</strong> Leader不直接接受client的请求，但接受由其他Follower和Observer转发过来的Client请求，此外，Leader还负责投票的发起和决议，即时更新状态和数据。</li>
+<li><strong>Follower</strong> Follower角色接受客户端请求并返回结果，参与Leader发起的投票和选举，但不具有写操作的权限。</li>
+<li><strong>Observer</strong> Observer角色接受客户端连接，将写操作转给Leader，但Observer不参与投票（即不参加一致性协议的达成），只同步Leader节点的状态，Observer角色是为集群系统扩展而生的。</li>
+</ol>
+<ul>
+<li><strong>Zookeeper 的读写机制</strong></li>
+</ul>
+<ol>
+<li>Zookeeper是一个由多个server组成的集群</li>
+<li>一个leader，多个follower</li>
+<li>每个server保存一份数据副本</li>
+<li>全局数据一致</li>
+<li>分布式读写</li>
+<li>更新请求转发，由leader实施</li>
+</ol>
+<ul>
+<li><strong>Zookeeper 的保证</strong></li>
+</ul>
+<ol>
+<li>更新请求顺序进行，来自同一个client的更新请求按其发送顺序依次执行</li>
+<li>数据更新原子性，一次数据更新要么成功，要么失败</li>
+<li>全局唯一数据视图，client无论连接到哪个server，数据视图都是一致的</li>
+<li>实时性，在一定时间范围内，client能读到最新数据</li>
+</ol>
+<ul>
+<li><strong>Zookeeper节点数据操作流程</strong></li>
+</ul>
+<ol>
+<li>在Client向Follwer发出一个写的请求
+<ul>
+<li>Follwer把请求发送给Leader</li>
+<li>Leader接收到以后开始发起投票并通知Follwer进行投票</li>
+<li>Follwer把投票结果发送给Leader</li>
+<li>Leader将结果汇总后如果需要写入，则开始写入同时把写入操作通知给Follwer，然后</li>
+<li>commit;</li>
+<li>Follwer把请求结果返回给Client</li>
+</ul>
+</li>
+<li>Follower主要有四个功能：
+<ul>
+<li>向Leader发送请求（PING消息、REQUEST消息、ACK消息、REVALIDATE消息）；</li>
+<li>接收Leader消息并进行处理；</li>
+<li>接收Client的请求，如果为写请求，发送给Leader进行投票；</li>
+<li>返回Client结果。</li>
+</ul>
+</li>
+<li>Follower的消息循环处理如下几种来自Leader的消息
+<ul>
+<li>PING消息： 心跳消息；</li>
+<li>PROPOSAL消息：Leader发起的提案，要求Follower投票；</li>
+<li>COMMIT消息：服务器端最新一次提案的信息；</li>
+<li>UPTODATE消息：表明同步完成；</li>
+<li>REVALIDATE消息：根据Leader的REVALIDATE结果，关闭待revalidate的session还是允许其接受消息；</li>
+<li>SYNC消息：返回SYNC结果到客户端，这个消息最初由客户端发起，用来强制得到最新的更新。</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><strong>leader 选举</strong>
+<ol>
+<li>**选举流程图：**因为每个服务器都是独立的，在启动时均从初始状态开始参与选举，下面是简易流程图。</li>
+<li><img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200514114819.png" alt></li>
+<li><strong>选举状态图</strong>描述Leader选择过程中的状态变化，这是假设全部实例中均没有数据，假设服务器启动顺序分别为：A,B,C。<img src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200514114903.png" alt></li>
+<li>目前有5台服务器，每台服务器均没有数据，它们的编号分别是1,2,3,4,5,按编号依次启动，它们的选择举过程如下：</li>
+</ol>
+<ul>
+<li>服务器1启动，给自己投票，然后发投票信息，由于其它机器还没有启动所以它收不到反馈信息，服务器1的状态一直属于Looking。</li>
+<li>服务器2启动，给自己投票，同时与之前启动的服务器1交换结果，由于服务器2的编号大所以服务器2胜出，但此时投票数没有大于半数，所以两个服务器的状态依然是LOOKING。</li>
+<li>服务器3启动，给自己投票，同时与之前启动的服务器1,2交换信息，由于服务器3的编号最大所以服务器3胜出，此时投票数正好大于半数，所以服务器3成为领导者，服务器1,2成为小弟。</li>
+<li>服务器4启动，给自己投票，同时与之前启动的服务器1,2,3交换信息，尽管服务器4的编号大，但之前服务器3已经胜出，所以服务器4只能成为小弟。</li>
+<li>服务器5启动，后面的逻辑同服务器4成为小弟。</li>
+</ul>
+<ol start="5">
+<li></li>
+</ol>
+</li>
+</ul>
+</blockquote>
+
+        <h3 id="5借鉴网址">
+          <a href="#5借鉴网址" class="heading-link"><i class="fas fa-link"></i></a>5.借鉴网址</h3>
+      
+<blockquote>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align:center"><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/raphael5200/p/5285267.html" target="_blank" rel="noopener">https://www.cnblogs.com/raphael5200/p/5285267.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/java_66666/article/details/81015302" target="_blank" rel="noopener">https://blog.csdn.net/java_66666/article/details/81015302</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/weixin_43893397/article/details/103458575" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43893397/article/details/103458575</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/ASPNET2008/p/6421571.html" target="_blank" rel="noopener">https://www.cnblogs.com/ASPNET2008/p/6421571.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> 这个大🐂</td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/sunjin9418/article/details/80138370" target="_blank" rel="noopener">https://blog.csdn.net/sunjin9418/article/details/80138370</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+</tr>
+</tbody>
+</table></div>
+</blockquote>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -50,7 +212,12 @@ window.CONFIG = CONFIG;</script></head><body><div class="container" id="containe
             });
             document.body.appendChild(img);
           });
-      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/05/13/ZooKeeper/">https://yichangkong.github.io/2020/05/13/ZooKeeper/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/ZooKeeper/">ZooKeeper</a></span></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2020/05/13/NIO/"><span class="paginator-prev__text">NIO</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="minivaline-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">90</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">18</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">32</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://yichangkong.github.io">Liu Jun</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://yichangkong.github.io/2020/05/13/ZooKeeper/">https://yichangkong.github.io/2020/05/13/ZooKeeper/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://yichangkong.github.io/tags/ZooKeeper/">ZooKeeper</a></span></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2020/05/13/NIO/"><span class="paginator-prev__text">NIO</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="minivaline-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1what-is-zookeeper"><span class="toc-number">1.</span> <span class="toc-text">
+          1.What is ZooKeeper?💫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2zookeeper-what-can-to-be-done"><span class="toc-number">2.</span> <span class="toc-text">
+          2.Zookeeper What can to be done?🙌</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3特性"><span class="toc-number">3.</span> <span class="toc-text">
+          3.特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4架构布局"><span class="toc-number">4.</span> <span class="toc-text">
+          4.架构布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5借鉴网址"><span class="toc-number">5.</span> <span class="toc-text">
+          5.借鉴网址</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://gitee.com/yichangkong/FigureBed/raw/master/img/20200417183933.png" alt="avatar"></div><p class="sidebar-ov-author__text">繁华落尽一场空：风往尘香花已尽</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YichangKong" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://gitee.com/yichangkong" target="_blank" rel="noopener" data-popover="social.gitee" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-git"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/yichangkong" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">90</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">18</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">32</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Liu Jun</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v3.9.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0-rc.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zindex="-1"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.json';
 
